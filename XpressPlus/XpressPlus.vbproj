@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7EB23751-8DE5-4E79-AFA1-86961D5BD577}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>XpressPlus.My.MyApplication</StartupObject>
+    <RootNamespace>XpressPlus</RootNamespace>
+    <AssemblyName>XpressPlus</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>XpressPlus.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>XpressPlus.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dectextbox">
+      <HintPath>..\..\..\..\XpressPlus QT\Extdll\Source\Dectextbox\Dectextbox\bin\Debug\Dectextbox.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=14.1.0.32, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="Inttextbox">
+      <HintPath>..\..\..\..\XpressPlus QT\Extdll\Source\Inttextbox\Inttextbox\bin\Debug\Inttextbox.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Normtextbox">
+      <HintPath>..\..\..\..\XpressPlus QT\Extdll\Source\Normtextbox\Normtextbox\bin\Debug\Normtextbox.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Gbstatement\Gbclass.vb" />
+    <Compile Include="Gbstatement\ToolStripCheckBox.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Knitting\Dsknittdet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dsknittdet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Knitting\Dsyarndlvk.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dsyarndlvk.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Knitting\Formdlvnoknittlist.designer.vb">
+      <DependentUpon>Formdlvnoknittlist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Knitting\Formdlvnoknittlist.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Knitting\Formfabrictypelist.designer.vb">
+      <DependentUpon>Formfabrictypelist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Knitting\Formfabrictypelist.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Knitting\Formknitingfrmrpt.designer.vb">
+      <DependentUpon>Formknitingfrmrpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Knitting\Formknitingfrmrpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Knitting\Formknittingform.designer.vb">
+      <DependentUpon>Formknittingform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Knitting\Formknittingform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Knitting\Form_Test.Designer.vb">
+      <DependentUpon>Form_Test.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Knitting\Form_Test.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Knitting\Form_Test2.Designer.vb">
+      <DependentUpon>Form_Test2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Knitting\Form_Test2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Receivefab\Formaeformreceivefabcolors.designer.vb">
+      <DependentUpon>Formaeformreceivefabcolors.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Receivefab\Formaeformreceivefabcolors.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Receivefab\Formdyeddetlist.designer.vb">
+      <DependentUpon>Formdyeddetlist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Receivefab\Formdyeddetlist.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Receivefab\Formdyedlist.designer.vb">
+      <DependentUpon>Formdyedlist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Receivefab\Formdyedlist.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Receivefab\Formreceivefabcolors.designer.vb">
+      <DependentUpon>Formreceivefabcolors.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Receivefab\Formreceivefabcolors.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Receivefab\Formrefabcolorlotno.designer.vb">
+      <DependentUpon>Formrefabcolorlotno.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Receivefab\Formrefabcolorlotno.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="salerepor\Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="salerepor\Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="salerepor\Formsaleyarnrpt.designer.vb">
+      <DependentUpon>Formsaleyarnrpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="salerepor\Formsaleyarnrpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Waitdialog\Formwaitdialoque.designer.vb">
+      <DependentUpon>Formwaitdialoque.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Waitdialog\Formwaitdialoque.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ตัวอย่าง\Formbooking.designer.vb">
+      <DependentUpon>Formbooking.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ตัวอย่าง\Formbooking.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ตัวอย่าง\Formshipinglist.designer.vb">
+      <DependentUpon>Formshipinglist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ตัวอย่าง\Formshipinglist.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ตัวอย่าง\Formsupplierslist.designer.vb">
+      <DependentUpon>Formsupplierslist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ตัวอย่าง\Formsupplierslist.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ตัวอย่าง\Formyarnlist.designer.vb">
+      <DependentUpon>Formyarnlist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ตัวอย่าง\Formyarnlist.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Knitting\Formdlvnoknittlist.resx">
+      <DependentUpon>Formdlvnoknittlist.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Knitting\Formfabrictypelist.resx">
+      <DependentUpon>Formfabrictypelist.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Knitting\Formknitingfrmrpt.resx">
+      <DependentUpon>Formknitingfrmrpt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Knitting\Formknittingform.resx">
+      <DependentUpon>Formknittingform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Knitting\Form_Test.resx">
+      <DependentUpon>Form_Test.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Knitting\Form_Test2.resx">
+      <DependentUpon>Form_Test2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Knitting\Rptknittingform.rdlc" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivefab\Formaeformreceivefabcolors.resx">
+      <DependentUpon>Formaeformreceivefabcolors.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivefab\Formdyeddetlist.resx">
+      <DependentUpon>Formdyeddetlist.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivefab\Formdyedlist.resx">
+      <DependentUpon>Formdyedlist.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivefab\Formreceivefabcolors.resx">
+      <DependentUpon>Formreceivefabcolors.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivefab\Formrefabcolorlotno.resx">
+      <DependentUpon>Formrefabcolorlotno.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="salerepor\Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="salerepor\Formsaleyarnrpt.resx">
+      <DependentUpon>Formsaleyarnrpt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Waitdialog\Formwaitdialoque.resx">
+      <DependentUpon>Formwaitdialoque.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ตัวอย่าง\Formbooking.resx">
+      <DependentUpon>Formbooking.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ตัวอย่าง\Formshipinglist.resx">
+      <DependentUpon>Formshipinglist.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ตัวอย่าง\Formsupplierslist.resx">
+      <DependentUpon>Formsupplierslist.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ตัวอย่าง\Formyarnlist.resx">
+      <DependentUpon>Formyarnlist.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Knitting\Dsknittdet.xsc">
+      <DependentUpon>Dsknittdet.xsd</DependentUpon>
+    </None>
+    <None Include="Knitting\Dsknittdet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dsknittdet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Knitting\Dsknittdet.xss">
+      <DependentUpon>Dsknittdet.xsd</DependentUpon>
+    </None>
+    <None Include="Knitting\Dsyarndlvk.xsc">
+      <DependentUpon>Dsyarndlvk.xsd</DependentUpon>
+    </None>
+    <None Include="Knitting\Dsyarndlvk.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dsyarndlvk.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Knitting\Dsyarndlvk.xss">
+      <DependentUpon>Dsyarndlvk.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Addicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Backb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Closered.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delbelow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Deleteicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Downarrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Editicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fileb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Filenewbelow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Find16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Firsticon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Findicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lasticon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lefticon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Magnifierb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Newspaperdown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Righticon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Saveb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Updated.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Closewin.png" />
+    <Content Include="salerepor\Closewin.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

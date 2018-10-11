@@ -1,0 +1,580 @@
+C:\Users\S\Desktop\Test Project\XpressPlus\XpressPlus\XpressPlus\bin\Debug\XpressPlus.exe.config
+C:\Users\S\Desktop\Test Project\XpressPlus\XpressPlus\XpressPlus\obj\Debug\XpressPlus.vbprojResolveAssemblyReference.cache
+C:\Users\S\Desktop\Test Project\XpressPlus\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Form1.resources
+C:\Users\S\Desktop\Test Project\XpressPlus\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Resources.resources
+C:\Users\S\Desktop\Test Project\XpressPlus\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formwaitdialoque.resources
+C:\Users\S\Desktop\Test Project\XpressPlus\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formshipinglist.resources
+C:\Users\S\Desktop\Test Project\XpressPlus\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formsupplierslist.resources
+C:\Users\S\Desktop\Test Project\XpressPlus\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formyarnlist.resources
+C:\Users\S\Desktop\Test Project\XpressPlus\XpressPlus\XpressPlus\obj\Debug\XpressPlus.vbproj.GenerateResource.Cache
+C:\Users\S\Desktop\Test Project\XpressPlus\XpressPlus\XpressPlus\obj\Debug\XpressPlus.xml
+C:\Users\S\Desktop\Test Project\XpressPlus\XpressPlus\XpressPlus\bin\Debug\XpressPlus.exe
+C:\Users\S\Desktop\Test Project\XpressPlus\XpressPlus\XpressPlus\bin\Debug\XpressPlus.pdb
+C:\Users\S\Desktop\Test Project\XpressPlus\XpressPlus\XpressPlus\bin\Debug\XpressPlus.xml
+C:\Users\S\Desktop\Test Project\XpressPlus\XpressPlus\XpressPlus\bin\Debug\Dectextbox.dll
+C:\Users\S\Desktop\Test Project\XpressPlus\XpressPlus\XpressPlus\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Users\S\Desktop\Test Project\XpressPlus\XpressPlus\XpressPlus\bin\Debug\Inttextbox.dll
+C:\Users\S\Desktop\Test Project\XpressPlus\XpressPlus\XpressPlus\bin\Debug\Normtextbox.dll
+C:\Users\S\Desktop\Test Project\XpressPlus\XpressPlus\XpressPlus\bin\Debug\Dectextbox.pdb
+C:\Users\S\Desktop\Test Project\XpressPlus\XpressPlus\XpressPlus\bin\Debug\Dectextbox.xml
+C:\Users\S\Desktop\Test Project\XpressPlus\XpressPlus\XpressPlus\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Users\S\Desktop\Test Project\XpressPlus\XpressPlus\XpressPlus\bin\Debug\Inttextbox.pdb
+C:\Users\S\Desktop\Test Project\XpressPlus\XpressPlus\XpressPlus\bin\Debug\Inttextbox.xml
+C:\Users\S\Desktop\Test Project\XpressPlus\XpressPlus\XpressPlus\bin\Debug\Normtextbox.pdb
+C:\Users\S\Desktop\Test Project\XpressPlus\XpressPlus\XpressPlus\bin\Debug\Normtextbox.xml
+C:\Users\S\Desktop\Test Project\XpressPlus\XpressPlus\XpressPlus\obj\Debug\XpressPlus.exe
+C:\Users\S\Desktop\Test Project\XpressPlus\XpressPlus\XpressPlus\obj\Debug\XpressPlus.pdb
+C:\Users\S\Desktop\Test Project\XpressPlus\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formbooking.resources
+C:\Users\S\Desktop\Test Project\XpressPlus\XpressPlus\XpressPlus\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\S\Desktop\Test Project\XpressPlus\XpressPlus\XpressPlus\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\S\Desktop\Test Project\XpressPlus\XpressPlus\XpressPlus\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+C:\Users\S\Desktop\Test Project\XpressPlus\XpressPlus\XpressPlus\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\S\Desktop\Test Project\XpressPlus\XpressPlus\XpressPlus\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\S\Desktop\Test Project\XpressPlus\XpressPlus\XpressPlus\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+C:\Users\S\Desktop\Test Project\XpressPlus\XpressPlus\XpressPlus\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Users\S\Desktop\Test Project\XpressPlus\XpressPlus\XpressPlus\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Users\S\Desktop\Test Project\XpressPlus\XpressPlus\XpressPlus\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Users\S\Desktop\Test Project\XpressPlus\XpressPlus\XpressPlus\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Users\S\Desktop\Test Project\XpressPlus\XpressPlus\XpressPlus\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Users\S\Desktop\Test Project\XpressPlus\XpressPlus\XpressPlus\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\S\Desktop\Test Project\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.exe.config
+C:\Users\S\Desktop\Test Project\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.exe
+C:\Users\S\Desktop\Test Project\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.xml
+C:\Users\S\Desktop\Test Project\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.pdb
+C:\Users\S\Desktop\Test Project\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.vbprojResolveAssemblyReference.cache
+C:\Users\S\Desktop\Test Project\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formknittingform.resources
+C:\Users\S\Desktop\Test Project\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Resources.resources
+C:\Users\S\Desktop\Test Project\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formwaitdialoque.resources
+C:\Users\S\Desktop\Test Project\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formbooking.resources
+C:\Users\S\Desktop\Test Project\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formshipinglist.resources
+C:\Users\S\Desktop\Test Project\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formsupplierslist.resources
+C:\Users\S\Desktop\Test Project\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formyarnlist.resources
+C:\Users\S\Desktop\Test Project\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.vbproj.GenerateResource.Cache
+C:\Users\S\Desktop\Test Project\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.exe
+C:\Users\S\Desktop\Test Project\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.pdb
+C:\Users\S\Desktop\Test Project\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.xml
+C:\Users\S\Desktop\Test Project\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Dectextbox.dll
+C:\Users\S\Desktop\Test Project\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Users\S\Desktop\Test Project\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Inttextbox.dll
+C:\Users\S\Desktop\Test Project\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\S\Desktop\Test Project\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Normtextbox.dll
+C:\Users\S\Desktop\Test Project\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\S\Desktop\Test Project\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Dectextbox.pdb
+C:\Users\S\Desktop\Test Project\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Dectextbox.xml
+C:\Users\S\Desktop\Test Project\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Users\S\Desktop\Test Project\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Inttextbox.pdb
+C:\Users\S\Desktop\Test Project\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Inttextbox.xml
+C:\Users\S\Desktop\Test Project\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Normtextbox.pdb
+C:\Users\S\Desktop\Test Project\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Normtextbox.xml
+C:\Users\S\Desktop\Test Project\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+C:\Users\S\Desktop\Test Project\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\S\Desktop\Test Project\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\S\Desktop\Test Project\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+C:\Users\S\Desktop\Test Project\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Users\S\Desktop\Test Project\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Users\S\Desktop\Test Project\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Users\S\Desktop\Test Project\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Users\S\Desktop\Test Project\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Users\S\Desktop\Test Project\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\S\Desktop\Test Project\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formdlvnoknittlist.resources
+C:\Users\S\Desktop\Test Project\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formfabrictypelist.resources
+C:\Users\S\Desktop\Test Project\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formknitingfrmrpt.resources
+D:\VDO\GSC\ส่งให้ เจต\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.exe.config
+D:\VDO\GSC\ส่งให้ เจต\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.exe
+D:\VDO\GSC\ส่งให้ เจต\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.xml
+D:\VDO\GSC\ส่งให้ เจต\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.pdb
+D:\VDO\GSC\ส่งให้ เจต\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.vbprojResolveAssemblyReference.cache
+D:\VDO\GSC\ส่งให้ เจต\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formdlvnoknittlist.resources
+D:\VDO\GSC\ส่งให้ เจต\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formfabrictypelist.resources
+D:\VDO\GSC\ส่งให้ เจต\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formknitingfrmrpt.resources
+D:\VDO\GSC\ส่งให้ เจต\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formknittingform.resources
+D:\VDO\GSC\ส่งให้ เจต\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Resources.resources
+D:\VDO\GSC\ส่งให้ เจต\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formaeformreceivefabcolors.resources
+D:\VDO\GSC\ส่งให้ เจต\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formdyeddetlist.resources
+D:\VDO\GSC\ส่งให้ เจต\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formreceivefabcolors.resources
+D:\VDO\GSC\ส่งให้ เจต\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formrefabcolorlotno.resources
+D:\VDO\GSC\ส่งให้ เจต\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formwaitdialoque.resources
+D:\VDO\GSC\ส่งให้ เจต\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formbooking.resources
+D:\VDO\GSC\ส่งให้ เจต\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formshipinglist.resources
+D:\VDO\GSC\ส่งให้ เจต\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formsupplierslist.resources
+D:\VDO\GSC\ส่งให้ เจต\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formyarnlist.resources
+D:\VDO\GSC\ส่งให้ เจต\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.vbproj.GenerateResource.Cache
+D:\VDO\GSC\ส่งให้ เจต\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.exe
+D:\VDO\GSC\ส่งให้ เจต\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.pdb
+D:\VDO\GSC\ส่งให้ เจต\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.xml
+D:\VDO\GSC\ส่งให้ เจต\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\DevComponents.DotNetBar2.dll
+D:\VDO\GSC\ส่งให้ เจต\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\VDO\GSC\ส่งให้ เจต\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\VDO\GSC\ส่งให้ เจต\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Dectextbox.pdb
+D:\VDO\GSC\ส่งให้ เจต\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Dectextbox.xml
+D:\VDO\GSC\ส่งให้ เจต\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\DevComponents.DotNetBar2.xml
+D:\VDO\GSC\ส่งให้ เจต\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Inttextbox.pdb
+D:\VDO\GSC\ส่งให้ เจต\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Inttextbox.xml
+D:\VDO\GSC\ส่งให้ เจต\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Normtextbox.pdb
+D:\VDO\GSC\ส่งให้ เจต\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Normtextbox.xml
+D:\VDO\GSC\ส่งให้ เจต\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+D:\VDO\GSC\ส่งให้ เจต\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+D:\VDO\GSC\ส่งให้ เจต\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+D:\VDO\GSC\ส่งให้ เจต\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+D:\VDO\GSC\ส่งให้ เจต\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+D:\VDO\GSC\ส่งให้ เจต\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+D:\VDO\GSC\ส่งให้ เจต\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+D:\VDO\GSC\ส่งให้ เจต\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+D:\VDO\GSC\ส่งให้ เจต\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+D:\VDO\GSC\ส่งให้ เจต\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+D:\VDO\GSC\ส่งให้ เจต\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formdyedlist.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.exe.config
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.exe
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.xml
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.pdb
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.exe
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.pdb
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.xml
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Dectextbox.pdb
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Dectextbox.xml
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Inttextbox.pdb
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Inttextbox.xml
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Normtextbox.pdb
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Normtextbox.xml
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.vbprojResolveAssemblyReference.cache
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formdlvnoknittlist.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formfabrictypelist.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formknitingfrmrpt.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formknittingform.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Resources.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formaeformreceivefabcolors.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formdyeddetlist.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formdyedlist.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formreceivefabcolors.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formrefabcolorlotno.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formwaitdialoque.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formbooking.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formshipinglist.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formsupplierslist.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formyarnlist.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.vbproj.GenerateResource.Cache
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Old_GSC\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.exe.config
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Old_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.exe
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Old_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.xml
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Old_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.pdb
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Old_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.vbprojResolveAssemblyReference.cache
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Old_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formdlvnoknittlist.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Old_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formfabrictypelist.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Old_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formknitingfrmrpt.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Old_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formknittingform.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Old_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Resources.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Old_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formaeformreceivefabcolors.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Old_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formdyeddetlist.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Old_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formdyedlist.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Old_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formreceivefabcolors.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Old_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formrefabcolorlotno.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Old_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formwaitdialoque.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Old_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formbooking.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Old_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formshipinglist.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Old_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formsupplierslist.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Old_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formyarnlist.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Old_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.vbproj.GenerateResource.Cache
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Old_GSC\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.exe
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Old_GSC\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.pdb
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Old_GSC\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.xml
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Old_GSC\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Old_GSC\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Old_GSC\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Dectextbox.pdb
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Old_GSC\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Dectextbox.xml
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Old_GSC\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Old_GSC\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Inttextbox.pdb
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Old_GSC\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Inttextbox.xml
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Old_GSC\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Normtextbox.pdb
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Old_GSC\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Normtextbox.xml
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.exe.config
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.exe
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.pdb
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.xml
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Dectextbox.pdb
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Dectextbox.xml
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Inttextbox.pdb
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Inttextbox.xml
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Normtextbox.pdb
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Normtextbox.xml
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.vbprojResolveAssemblyReference.cache
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formdlvnoknittlist.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formfabrictypelist.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formknitingfrmrpt.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formknittingform.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Resources.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formaeformreceivefabcolors.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formdyeddetlist.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formdyedlist.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formreceivefabcolors.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formrefabcolorlotno.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formwaitdialoque.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formbooking.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formshipinglist.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formsupplierslist.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formyarnlist.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.vbproj.GenerateResource.Cache
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.exe
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.xml
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.pdb
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\RdlCompile.cache
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\RdlCompile.compiled
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formsaleyarnrpt.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Form1.resources
+C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Form_Test.resources
+E:\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.exe.config
+E:\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.exe
+E:\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.xml
+E:\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.pdb
+E:\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.exe
+E:\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.pdb
+E:\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.xml
+E:\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\DevComponents.DotNetBar2.dll
+E:\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+E:\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Dectextbox.pdb
+E:\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Dectextbox.xml
+E:\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\DevComponents.DotNetBar2.xml
+E:\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Inttextbox.pdb
+E:\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Inttextbox.xml
+E:\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Normtextbox.pdb
+E:\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Normtextbox.xml
+E:\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.vbprojResolveAssemblyReference.cache
+E:\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formdlvnoknittlist.resources
+E:\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formfabrictypelist.resources
+E:\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formknitingfrmrpt.resources
+E:\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formknittingform.resources
+E:\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Form_Test.resources
+E:\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Form_Test2.resources
+E:\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Resources.resources
+E:\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formaeformreceivefabcolors.resources
+E:\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formdyeddetlist.resources
+E:\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formdyedlist.resources
+E:\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formreceivefabcolors.resources
+E:\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formrefabcolorlotno.resources
+E:\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Form1.resources
+E:\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formsaleyarnrpt.resources
+E:\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formwaitdialoque.resources
+E:\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formbooking.resources
+E:\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formshipinglist.resources
+E:\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formsupplierslist.resources
+E:\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formyarnlist.resources
+E:\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.vbproj.GenerateResource.Cache
+E:\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\RdlCompile.cache
+E:\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\RdlCompile.compiled
+E:\Projects\GSC\Save_20180930\2300\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.exe.config
+E:\Projects\GSC\Save_20180930\2300\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.exe
+E:\Projects\GSC\Save_20180930\2300\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.xml
+E:\Projects\GSC\Save_20180930\2300\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.pdb
+E:\Projects\GSC\Save_20180930\2300\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.exe
+E:\Projects\GSC\Save_20180930\2300\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.pdb
+E:\Projects\GSC\Save_20180930\2300\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.xml
+E:\Projects\GSC\Save_20180930\2300\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\DevComponents.DotNetBar2.dll
+E:\Projects\GSC\Save_20180930\2300\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+E:\Projects\GSC\Save_20180930\2300\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Dectextbox.pdb
+E:\Projects\GSC\Save_20180930\2300\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Dectextbox.xml
+E:\Projects\GSC\Save_20180930\2300\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\DevComponents.DotNetBar2.xml
+E:\Projects\GSC\Save_20180930\2300\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Inttextbox.pdb
+E:\Projects\GSC\Save_20180930\2300\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Inttextbox.xml
+E:\Projects\GSC\Save_20180930\2300\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Normtextbox.pdb
+E:\Projects\GSC\Save_20180930\2300\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Normtextbox.xml
+E:\Projects\GSC\Save_20180930\2300\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.vbprojResolveAssemblyReference.cache
+E:\Projects\GSC\Save_20180930\2300\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formdlvnoknittlist.resources
+E:\Projects\GSC\Save_20180930\2300\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formfabrictypelist.resources
+E:\Projects\GSC\Save_20180930\2300\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formknitingfrmrpt.resources
+E:\Projects\GSC\Save_20180930\2300\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formknittingform.resources
+E:\Projects\GSC\Save_20180930\2300\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Form_Test.resources
+E:\Projects\GSC\Save_20180930\2300\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Form_Test2.resources
+E:\Projects\GSC\Save_20180930\2300\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Resources.resources
+E:\Projects\GSC\Save_20180930\2300\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formaeformreceivefabcolors.resources
+E:\Projects\GSC\Save_20180930\2300\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formdyeddetlist.resources
+E:\Projects\GSC\Save_20180930\2300\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formdyedlist.resources
+E:\Projects\GSC\Save_20180930\2300\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formreceivefabcolors.resources
+E:\Projects\GSC\Save_20180930\2300\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formrefabcolorlotno.resources
+E:\Projects\GSC\Save_20180930\2300\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Form1.resources
+E:\Projects\GSC\Save_20180930\2300\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formsaleyarnrpt.resources
+E:\Projects\GSC\Save_20180930\2300\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formwaitdialoque.resources
+E:\Projects\GSC\Save_20180930\2300\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formbooking.resources
+E:\Projects\GSC\Save_20180930\2300\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formshipinglist.resources
+E:\Projects\GSC\Save_20180930\2300\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formsupplierslist.resources
+E:\Projects\GSC\Save_20180930\2300\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formyarnlist.resources
+E:\Projects\GSC\Save_20180930\2300\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.vbproj.GenerateResource.Cache
+E:\Projects\GSC\Save_20180930\2300\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\RdlCompile.cache
+E:\Projects\GSC\Save_20180930\2300\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\RdlCompile.compiled
+E:\Projects\GSC\_@_Svae_2018104___OK\Start-20.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.exe.config
+E:\Projects\GSC\_@_Svae_2018104___OK\Start-20.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.exe
+E:\Projects\GSC\_@_Svae_2018104___OK\Start-20.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.xml
+E:\Projects\GSC\_@_Svae_2018104___OK\Start-20.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.pdb
+E:\Projects\GSC\_@_Svae_2018104___OK\Start-20.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.exe
+E:\Projects\GSC\_@_Svae_2018104___OK\Start-20.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.pdb
+E:\Projects\GSC\_@_Svae_2018104___OK\Start-20.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.xml
+E:\Projects\GSC\_@_Svae_2018104___OK\Start-20.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\DevComponents.DotNetBar2.dll
+E:\Projects\GSC\_@_Svae_2018104___OK\Start-20.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+E:\Projects\GSC\_@_Svae_2018104___OK\Start-20.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Dectextbox.pdb
+E:\Projects\GSC\_@_Svae_2018104___OK\Start-20.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Dectextbox.xml
+E:\Projects\GSC\_@_Svae_2018104___OK\Start-20.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\DevComponents.DotNetBar2.xml
+E:\Projects\GSC\_@_Svae_2018104___OK\Start-20.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Inttextbox.pdb
+E:\Projects\GSC\_@_Svae_2018104___OK\Start-20.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Inttextbox.xml
+E:\Projects\GSC\_@_Svae_2018104___OK\Start-20.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Normtextbox.pdb
+E:\Projects\GSC\_@_Svae_2018104___OK\Start-20.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Normtextbox.xml
+E:\Projects\GSC\_@_Svae_2018104___OK\Start-20.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.vbprojResolveAssemblyReference.cache
+E:\Projects\GSC\_@_Svae_2018104___OK\Start-20.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formdlvnoknittlist.resources
+E:\Projects\GSC\_@_Svae_2018104___OK\Start-20.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formfabrictypelist.resources
+E:\Projects\GSC\_@_Svae_2018104___OK\Start-20.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formknitingfrmrpt.resources
+E:\Projects\GSC\_@_Svae_2018104___OK\Start-20.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formknittingform.resources
+E:\Projects\GSC\_@_Svae_2018104___OK\Start-20.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Form_Test.resources
+E:\Projects\GSC\_@_Svae_2018104___OK\Start-20.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Form_Test2.resources
+E:\Projects\GSC\_@_Svae_2018104___OK\Start-20.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Resources.resources
+E:\Projects\GSC\_@_Svae_2018104___OK\Start-20.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formaeformreceivefabcolors.resources
+E:\Projects\GSC\_@_Svae_2018104___OK\Start-20.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formdyeddetlist.resources
+E:\Projects\GSC\_@_Svae_2018104___OK\Start-20.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formdyedlist.resources
+E:\Projects\GSC\_@_Svae_2018104___OK\Start-20.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formreceivefabcolors.resources
+E:\Projects\GSC\_@_Svae_2018104___OK\Start-20.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formrefabcolorlotno.resources
+E:\Projects\GSC\_@_Svae_2018104___OK\Start-20.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Form1.resources
+E:\Projects\GSC\_@_Svae_2018104___OK\Start-20.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formsaleyarnrpt.resources
+E:\Projects\GSC\_@_Svae_2018104___OK\Start-20.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formwaitdialoque.resources
+E:\Projects\GSC\_@_Svae_2018104___OK\Start-20.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formbooking.resources
+E:\Projects\GSC\_@_Svae_2018104___OK\Start-20.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formshipinglist.resources
+E:\Projects\GSC\_@_Svae_2018104___OK\Start-20.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formsupplierslist.resources
+E:\Projects\GSC\_@_Svae_2018104___OK\Start-20.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formyarnlist.resources
+E:\Projects\GSC\_@_Svae_2018104___OK\Start-20.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.vbproj.GenerateResource.Cache
+E:\Projects\GSC\_@_Svae_2018104___OK\Start-20.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\RdlCompile.cache
+E:\Projects\GSC\_@_Svae_2018104___OK\Start-20.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\RdlCompile.compiled
+E:\Projects\GSC\_@_Save_20181005\Start-09.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.exe.config
+E:\Projects\GSC\_@_Save_20181005\Start-09.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.exe
+E:\Projects\GSC\_@_Save_20181005\Start-09.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.xml
+E:\Projects\GSC\_@_Save_20181005\Start-09.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.pdb
+E:\Projects\GSC\_@_Save_20181005\Start-09.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.exe
+E:\Projects\GSC\_@_Save_20181005\Start-09.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.pdb
+E:\Projects\GSC\_@_Save_20181005\Start-09.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.xml
+E:\Projects\GSC\_@_Save_20181005\Start-09.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\DevComponents.DotNetBar2.dll
+E:\Projects\GSC\_@_Save_20181005\Start-09.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+E:\Projects\GSC\_@_Save_20181005\Start-09.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Dectextbox.pdb
+E:\Projects\GSC\_@_Save_20181005\Start-09.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Dectextbox.xml
+E:\Projects\GSC\_@_Save_20181005\Start-09.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\DevComponents.DotNetBar2.xml
+E:\Projects\GSC\_@_Save_20181005\Start-09.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Inttextbox.pdb
+E:\Projects\GSC\_@_Save_20181005\Start-09.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Inttextbox.xml
+E:\Projects\GSC\_@_Save_20181005\Start-09.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Normtextbox.pdb
+E:\Projects\GSC\_@_Save_20181005\Start-09.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Normtextbox.xml
+E:\Projects\GSC\_@_Save_20181005\Start-09.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.vbprojResolveAssemblyReference.cache
+E:\Projects\GSC\_@_Save_20181005\Start-09.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formdlvnoknittlist.resources
+E:\Projects\GSC\_@_Save_20181005\Start-09.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formfabrictypelist.resources
+E:\Projects\GSC\_@_Save_20181005\Start-09.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formknitingfrmrpt.resources
+E:\Projects\GSC\_@_Save_20181005\Start-09.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formknittingform.resources
+E:\Projects\GSC\_@_Save_20181005\Start-09.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Form_Test.resources
+E:\Projects\GSC\_@_Save_20181005\Start-09.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Form_Test2.resources
+E:\Projects\GSC\_@_Save_20181005\Start-09.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Resources.resources
+E:\Projects\GSC\_@_Save_20181005\Start-09.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formaeformreceivefabcolors.resources
+E:\Projects\GSC\_@_Save_20181005\Start-09.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formdyeddetlist.resources
+E:\Projects\GSC\_@_Save_20181005\Start-09.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formdyedlist.resources
+E:\Projects\GSC\_@_Save_20181005\Start-09.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formreceivefabcolors.resources
+E:\Projects\GSC\_@_Save_20181005\Start-09.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formrefabcolorlotno.resources
+E:\Projects\GSC\_@_Save_20181005\Start-09.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Form1.resources
+E:\Projects\GSC\_@_Save_20181005\Start-09.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formsaleyarnrpt.resources
+E:\Projects\GSC\_@_Save_20181005\Start-09.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formwaitdialoque.resources
+E:\Projects\GSC\_@_Save_20181005\Start-09.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formbooking.resources
+E:\Projects\GSC\_@_Save_20181005\Start-09.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formshipinglist.resources
+E:\Projects\GSC\_@_Save_20181005\Start-09.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formsupplierslist.resources
+E:\Projects\GSC\_@_Save_20181005\Start-09.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formyarnlist.resources
+E:\Projects\GSC\_@_Save_20181005\Start-09.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.vbproj.GenerateResource.Cache
+E:\Projects\GSC\_@_Save_20181005\Start-09.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\RdlCompile.cache
+E:\Projects\GSC\_@_Save_20181005\Start-09.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\RdlCompile.compiled
+E:\Projects\GSC\_@_Save_20181005\Start-09.40\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.exe.config
+E:\Projects\GSC\_@_Save_20181005\Start-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.exe
+E:\Projects\GSC\_@_Save_20181005\Start-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.xml
+E:\Projects\GSC\_@_Save_20181005\Start-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.pdb
+E:\Projects\GSC\_@_Save_20181005\Start-09.40\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.exe
+E:\Projects\GSC\_@_Save_20181005\Start-09.40\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.pdb
+E:\Projects\GSC\_@_Save_20181005\Start-09.40\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.xml
+E:\Projects\GSC\_@_Save_20181005\Start-09.40\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\DevComponents.DotNetBar2.dll
+E:\Projects\GSC\_@_Save_20181005\Start-09.40\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+E:\Projects\GSC\_@_Save_20181005\Start-09.40\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Dectextbox.pdb
+E:\Projects\GSC\_@_Save_20181005\Start-09.40\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Dectextbox.xml
+E:\Projects\GSC\_@_Save_20181005\Start-09.40\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\DevComponents.DotNetBar2.xml
+E:\Projects\GSC\_@_Save_20181005\Start-09.40\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Inttextbox.pdb
+E:\Projects\GSC\_@_Save_20181005\Start-09.40\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Inttextbox.xml
+E:\Projects\GSC\_@_Save_20181005\Start-09.40\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Normtextbox.pdb
+E:\Projects\GSC\_@_Save_20181005\Start-09.40\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Normtextbox.xml
+E:\Projects\GSC\_@_Save_20181005\Start-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.vbprojResolveAssemblyReference.cache
+E:\Projects\GSC\_@_Save_20181005\Start-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formdlvnoknittlist.resources
+E:\Projects\GSC\_@_Save_20181005\Start-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formfabrictypelist.resources
+E:\Projects\GSC\_@_Save_20181005\Start-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formknitingfrmrpt.resources
+E:\Projects\GSC\_@_Save_20181005\Start-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formknittingform.resources
+E:\Projects\GSC\_@_Save_20181005\Start-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Form_Test.resources
+E:\Projects\GSC\_@_Save_20181005\Start-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Form_Test2.resources
+E:\Projects\GSC\_@_Save_20181005\Start-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Resources.resources
+E:\Projects\GSC\_@_Save_20181005\Start-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formaeformreceivefabcolors.resources
+E:\Projects\GSC\_@_Save_20181005\Start-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formdyeddetlist.resources
+E:\Projects\GSC\_@_Save_20181005\Start-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formdyedlist.resources
+E:\Projects\GSC\_@_Save_20181005\Start-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formreceivefabcolors.resources
+E:\Projects\GSC\_@_Save_20181005\Start-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formrefabcolorlotno.resources
+E:\Projects\GSC\_@_Save_20181005\Start-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Form1.resources
+E:\Projects\GSC\_@_Save_20181005\Start-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formsaleyarnrpt.resources
+E:\Projects\GSC\_@_Save_20181005\Start-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formwaitdialoque.resources
+E:\Projects\GSC\_@_Save_20181005\Start-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formbooking.resources
+E:\Projects\GSC\_@_Save_20181005\Start-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formshipinglist.resources
+E:\Projects\GSC\_@_Save_20181005\Start-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formsupplierslist.resources
+E:\Projects\GSC\_@_Save_20181005\Start-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formyarnlist.resources
+E:\Projects\GSC\_@_Save_20181005\Start-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.vbproj.GenerateResource.Cache
+E:\Projects\GSC\_@_Save_20181005\Start-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\RdlCompile.cache
+E:\Projects\GSC\_@_Save_20181005\Start-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\RdlCompile.compiled
+E:\Projects\GSC\_@_Save_20181005\Start-11.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.exe.config
+E:\Projects\GSC\_@_Save_20181005\Start-11.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.exe
+E:\Projects\GSC\_@_Save_20181005\Start-11.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.xml
+E:\Projects\GSC\_@_Save_20181005\Start-11.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.pdb
+E:\Projects\GSC\_@_Save_20181005\Start-11.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.exe
+E:\Projects\GSC\_@_Save_20181005\Start-11.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.pdb
+E:\Projects\GSC\_@_Save_20181005\Start-11.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.xml
+E:\Projects\GSC\_@_Save_20181005\Start-11.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\DevComponents.DotNetBar2.dll
+E:\Projects\GSC\_@_Save_20181005\Start-11.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+E:\Projects\GSC\_@_Save_20181005\Start-11.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Dectextbox.pdb
+E:\Projects\GSC\_@_Save_20181005\Start-11.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Dectextbox.xml
+E:\Projects\GSC\_@_Save_20181005\Start-11.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\DevComponents.DotNetBar2.xml
+E:\Projects\GSC\_@_Save_20181005\Start-11.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Inttextbox.pdb
+E:\Projects\GSC\_@_Save_20181005\Start-11.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Inttextbox.xml
+E:\Projects\GSC\_@_Save_20181005\Start-11.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Normtextbox.pdb
+E:\Projects\GSC\_@_Save_20181005\Start-11.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Normtextbox.xml
+E:\Projects\GSC\_@_Save_20181005\Start-11.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.vbprojResolveAssemblyReference.cache
+E:\Projects\GSC\_@_Save_20181005\Start-11.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formdlvnoknittlist.resources
+E:\Projects\GSC\_@_Save_20181005\Start-11.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formfabrictypelist.resources
+E:\Projects\GSC\_@_Save_20181005\Start-11.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formknitingfrmrpt.resources
+E:\Projects\GSC\_@_Save_20181005\Start-11.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formknittingform.resources
+E:\Projects\GSC\_@_Save_20181005\Start-11.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Form_Test.resources
+E:\Projects\GSC\_@_Save_20181005\Start-11.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Form_Test2.resources
+E:\Projects\GSC\_@_Save_20181005\Start-11.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Resources.resources
+E:\Projects\GSC\_@_Save_20181005\Start-11.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formaeformreceivefabcolors.resources
+E:\Projects\GSC\_@_Save_20181005\Start-11.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formdyeddetlist.resources
+E:\Projects\GSC\_@_Save_20181005\Start-11.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formdyedlist.resources
+E:\Projects\GSC\_@_Save_20181005\Start-11.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formreceivefabcolors.resources
+E:\Projects\GSC\_@_Save_20181005\Start-11.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formrefabcolorlotno.resources
+E:\Projects\GSC\_@_Save_20181005\Start-11.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Form1.resources
+E:\Projects\GSC\_@_Save_20181005\Start-11.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formsaleyarnrpt.resources
+E:\Projects\GSC\_@_Save_20181005\Start-11.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formwaitdialoque.resources
+E:\Projects\GSC\_@_Save_20181005\Start-11.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formbooking.resources
+E:\Projects\GSC\_@_Save_20181005\Start-11.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formshipinglist.resources
+E:\Projects\GSC\_@_Save_20181005\Start-11.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formsupplierslist.resources
+E:\Projects\GSC\_@_Save_20181005\Start-11.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formyarnlist.resources
+E:\Projects\GSC\_@_Save_20181005\Start-11.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.vbproj.GenerateResource.Cache
+E:\Projects\GSC\_@_Save_20181005\Start-11.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\RdlCompile.cache
+E:\Projects\GSC\_@_Save_20181005\Start-11.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\RdlCompile.compiled
+D:\Work_GSC\_@_Save_20181005\Strat-16.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.exe.config
+D:\Work_GSC\_@_Save_20181005\Strat-16.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.exe
+D:\Work_GSC\_@_Save_20181005\Strat-16.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.xml
+D:\Work_GSC\_@_Save_20181005\Strat-16.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.pdb
+D:\Work_GSC\_@_Save_20181005\Strat-16.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.exe
+D:\Work_GSC\_@_Save_20181005\Strat-16.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.pdb
+D:\Work_GSC\_@_Save_20181005\Strat-16.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.xml
+D:\Work_GSC\_@_Save_20181005\Strat-16.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\DevComponents.DotNetBar2.dll
+D:\Work_GSC\_@_Save_20181005\Strat-16.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\Work_GSC\_@_Save_20181005\Strat-16.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Dectextbox.pdb
+D:\Work_GSC\_@_Save_20181005\Strat-16.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Dectextbox.xml
+D:\Work_GSC\_@_Save_20181005\Strat-16.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\DevComponents.DotNetBar2.xml
+D:\Work_GSC\_@_Save_20181005\Strat-16.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Inttextbox.pdb
+D:\Work_GSC\_@_Save_20181005\Strat-16.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Inttextbox.xml
+D:\Work_GSC\_@_Save_20181005\Strat-16.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Normtextbox.pdb
+D:\Work_GSC\_@_Save_20181005\Strat-16.00\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Normtextbox.xml
+D:\Work_GSC\_@_Save_20181005\Strat-16.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.vbprojResolveAssemblyReference.cache
+D:\Work_GSC\_@_Save_20181005\Strat-16.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formdlvnoknittlist.resources
+D:\Work_GSC\_@_Save_20181005\Strat-16.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formfabrictypelist.resources
+D:\Work_GSC\_@_Save_20181005\Strat-16.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formknitingfrmrpt.resources
+D:\Work_GSC\_@_Save_20181005\Strat-16.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formknittingform.resources
+D:\Work_GSC\_@_Save_20181005\Strat-16.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Form_Test.resources
+D:\Work_GSC\_@_Save_20181005\Strat-16.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Form_Test2.resources
+D:\Work_GSC\_@_Save_20181005\Strat-16.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Resources.resources
+D:\Work_GSC\_@_Save_20181005\Strat-16.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formaeformreceivefabcolors.resources
+D:\Work_GSC\_@_Save_20181005\Strat-16.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formdyeddetlist.resources
+D:\Work_GSC\_@_Save_20181005\Strat-16.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formdyedlist.resources
+D:\Work_GSC\_@_Save_20181005\Strat-16.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formreceivefabcolors.resources
+D:\Work_GSC\_@_Save_20181005\Strat-16.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formrefabcolorlotno.resources
+D:\Work_GSC\_@_Save_20181005\Strat-16.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Form1.resources
+D:\Work_GSC\_@_Save_20181005\Strat-16.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formsaleyarnrpt.resources
+D:\Work_GSC\_@_Save_20181005\Strat-16.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formwaitdialoque.resources
+D:\Work_GSC\_@_Save_20181005\Strat-16.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formbooking.resources
+D:\Work_GSC\_@_Save_20181005\Strat-16.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formshipinglist.resources
+D:\Work_GSC\_@_Save_20181005\Strat-16.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formsupplierslist.resources
+D:\Work_GSC\_@_Save_20181005\Strat-16.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formyarnlist.resources
+D:\Work_GSC\_@_Save_20181005\Strat-16.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.vbproj.GenerateResource.Cache
+D:\Work_GSC\_@_Save_20181005\Strat-16.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\RdlCompile.cache
+D:\Work_GSC\_@_Save_20181005\Strat-16.00\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\RdlCompile.compiled
+D:\Work_GSC\_Save_20181008\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.exe.config
+D:\Work_GSC\_Save_20181008\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.exe
+D:\Work_GSC\_Save_20181008\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.xml
+D:\Work_GSC\_Save_20181008\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.pdb
+D:\Work_GSC\_Save_20181008\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.exe
+D:\Work_GSC\_Save_20181008\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.pdb
+D:\Work_GSC\_Save_20181008\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.xml
+D:\Work_GSC\_Save_20181008\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\DevComponents.DotNetBar2.dll
+D:\Work_GSC\_Save_20181008\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\Work_GSC\_Save_20181008\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Dectextbox.pdb
+D:\Work_GSC\_Save_20181008\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Dectextbox.xml
+D:\Work_GSC\_Save_20181008\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\DevComponents.DotNetBar2.xml
+D:\Work_GSC\_Save_20181008\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Inttextbox.pdb
+D:\Work_GSC\_Save_20181008\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Inttextbox.xml
+D:\Work_GSC\_Save_20181008\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Normtextbox.pdb
+D:\Work_GSC\_Save_20181008\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Normtextbox.xml
+D:\Work_GSC\_Save_20181008\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.vbprojResolveAssemblyReference.cache
+D:\Work_GSC\_Save_20181008\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formdlvnoknittlist.resources
+D:\Work_GSC\_Save_20181008\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formfabrictypelist.resources
+D:\Work_GSC\_Save_20181008\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formknitingfrmrpt.resources
+D:\Work_GSC\_Save_20181008\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formknittingform.resources
+D:\Work_GSC\_Save_20181008\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Form_Test.resources
+D:\Work_GSC\_Save_20181008\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Form_Test2.resources
+D:\Work_GSC\_Save_20181008\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Resources.resources
+D:\Work_GSC\_Save_20181008\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formaeformreceivefabcolors.resources
+D:\Work_GSC\_Save_20181008\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formdyeddetlist.resources
+D:\Work_GSC\_Save_20181008\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formdyedlist.resources
+D:\Work_GSC\_Save_20181008\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formreceivefabcolors.resources
+D:\Work_GSC\_Save_20181008\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formrefabcolorlotno.resources
+D:\Work_GSC\_Save_20181008\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Form1.resources
+D:\Work_GSC\_Save_20181008\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formsaleyarnrpt.resources
+D:\Work_GSC\_Save_20181008\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formwaitdialoque.resources
+D:\Work_GSC\_Save_20181008\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formbooking.resources
+D:\Work_GSC\_Save_20181008\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formshipinglist.resources
+D:\Work_GSC\_Save_20181008\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formsupplierslist.resources
+D:\Work_GSC\_Save_20181008\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formyarnlist.resources
+D:\Work_GSC\_Save_20181008\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.vbproj.GenerateResource.Cache
+D:\Work_GSC\_Save_20181008\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\RdlCompile.cache
+D:\Work_GSC\_Save_20181008\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\RdlCompile.compiled
+D:\Work_GSC\_Save_20181008\Start_20.30\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.exe.config
+D:\Work_GSC\_Save_20181008\Start_20.30\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.exe
+D:\Work_GSC\_Save_20181008\Start_20.30\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.xml
+D:\Work_GSC\_Save_20181008\Start_20.30\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.pdb
+D:\Work_GSC\_Save_20181008\Start_20.30\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.exe
+D:\Work_GSC\_Save_20181008\Start_20.30\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.pdb
+D:\Work_GSC\_Save_20181008\Start_20.30\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\XpressPlus.xml
+D:\Work_GSC\_Save_20181008\Start_20.30\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\DevComponents.DotNetBar2.dll
+D:\Work_GSC\_Save_20181008\Start_20.30\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\Work_GSC\_Save_20181008\Start_20.30\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Dectextbox.pdb
+D:\Work_GSC\_Save_20181008\Start_20.30\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Dectextbox.xml
+D:\Work_GSC\_Save_20181008\Start_20.30\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\DevComponents.DotNetBar2.xml
+D:\Work_GSC\_Save_20181008\Start_20.30\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Inttextbox.pdb
+D:\Work_GSC\_Save_20181008\Start_20.30\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Inttextbox.xml
+D:\Work_GSC\_Save_20181008\Start_20.30\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Normtextbox.pdb
+D:\Work_GSC\_Save_20181008\Start_20.30\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\bin\Debug\Normtextbox.xml
+D:\Work_GSC\_Save_20181008\Start_20.30\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.vbprojResolveAssemblyReference.cache
+D:\Work_GSC\_Save_20181008\Start_20.30\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formdlvnoknittlist.resources
+D:\Work_GSC\_Save_20181008\Start_20.30\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formfabrictypelist.resources
+D:\Work_GSC\_Save_20181008\Start_20.30\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formknitingfrmrpt.resources
+D:\Work_GSC\_Save_20181008\Start_20.30\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formknittingform.resources
+D:\Work_GSC\_Save_20181008\Start_20.30\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Form_Test.resources
+D:\Work_GSC\_Save_20181008\Start_20.30\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Form_Test2.resources
+D:\Work_GSC\_Save_20181008\Start_20.30\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Resources.resources
+D:\Work_GSC\_Save_20181008\Start_20.30\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formaeformreceivefabcolors.resources
+D:\Work_GSC\_Save_20181008\Start_20.30\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formdyeddetlist.resources
+D:\Work_GSC\_Save_20181008\Start_20.30\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formdyedlist.resources
+D:\Work_GSC\_Save_20181008\Start_20.30\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formreceivefabcolors.resources
+D:\Work_GSC\_Save_20181008\Start_20.30\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formrefabcolorlotno.resources
+D:\Work_GSC\_Save_20181008\Start_20.30\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Form1.resources
+D:\Work_GSC\_Save_20181008\Start_20.30\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formsaleyarnrpt.resources
+D:\Work_GSC\_Save_20181008\Start_20.30\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formwaitdialoque.resources
+D:\Work_GSC\_Save_20181008\Start_20.30\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formbooking.resources
+D:\Work_GSC\_Save_20181008\Start_20.30\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formshipinglist.resources
+D:\Work_GSC\_Save_20181008\Start_20.30\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formsupplierslist.resources
+D:\Work_GSC\_Save_20181008\Start_20.30\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.Formyarnlist.resources
+D:\Work_GSC\_Save_20181008\Start_20.30\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\XpressPlus.vbproj.GenerateResource.Cache
+D:\Work_GSC\_Save_20181008\Start_20.30\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\RdlCompile.cache
+D:\Work_GSC\_Save_20181008\Start_20.30\Strat-09.40\XpressPlusjade\XpressPlus\XpressPlus\obj\Debug\RdlCompile.compiled
