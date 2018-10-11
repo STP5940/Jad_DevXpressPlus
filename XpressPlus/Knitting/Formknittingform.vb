@@ -1,7 +1,7 @@
 ﻿Imports System.ComponentModel
 Imports Microsoft.Reporting.WinForms
 Public Class Formknittingform
-    Private Tmasterknit, Tdetailsknit, Tmasterdlv, Tdetailsdlv, Tlist, Dttemp, Vdeliyarndet, Tmaster As DataTable
+    Private Tmasterknit, Tdetailsknit, Tmasterdlv, Tdetailsdlv, Tlist, TYanlist, Dttemp, Vdeliyarndet, Tmaster As DataTable
     Private Pagecount, Maxrec, Pagesize, Currentpage, Recno As Integer
     Private WithEvents Dtplistfm As New DateTimePicker
     Private WithEvents Dtplistto As New DateTimePicker
@@ -29,6 +29,12 @@ Public Class Formknittingform
         Dgvmas.ColumnHeadersDefaultCellStyle.Font = New Font("Microsoft Sans Serif", 11)
         Dgvmas.DefaultCellStyle.Font = New Font("Microsoft Sans Serif", 11)
         Bindinglist()
+
+        YanList.ColumnHeadersDefaultCellStyle.Font = New Font("Microsoft Sans Serif", 11)
+        YanList.DefaultCellStyle.Font = New Font("Microsoft Sans Serif", 11)
+        YanList.ColumnHeadersDefaultCellStyle.Font = New Font("Microsoft Sans Serif", 11)
+        YanList.DefaultCellStyle.Font = New Font("Microsoft Sans Serif", 11)
+        BindingYanlist()
     End Sub
     Private Sub Btmnew_Click(sender As Object, e As EventArgs) Handles Btmnew.Click
         Clrdgrid()
@@ -621,6 +627,14 @@ Public Class Formknittingform
         Dgvlist.DataSource = Tlist
         FillGrid()
         ShowRecordDetail()
+    End Sub
+    Private Sub BindingYanlist()
+        TYanlist = New DataTable
+        TYanlist = SQLCommand($"SELECT *  FROM Tdeliyarndetxp
+                            WHERE  Dlvno NOT IN (SELECT Dlvno FROM Tknittcomxp) AND Comid = '{Gscomid}'")
+        YanList.DataSource = TYanlist
+        'FillGrid()
+        'ShowRecordDetail()
     End Sub
     Private Sub Bindmasterknit()
         Tmasterknit = New DataTable
