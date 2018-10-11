@@ -54,6 +54,20 @@ Partial Class Formknittingform
         Me.ButtonItem1 = New DevComponents.DotNetBar.ButtonItem()
         Me.ButtonItem2 = New DevComponents.DotNetBar.ButtonItem()
         Me.YanList = New System.Windows.Forms.DataGridView()
+        Me.Stat = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ComidYarn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Ord = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Clothids = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Clothnos = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NwkgpcYarn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NwppcYarn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.GwkgpcYarn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.GwppcYarn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Nofc = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Updusr = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Uptype = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Uptime = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ToolStrip7 = New System.Windows.Forms.ToolStrip()
         Me.BtrefreshYan = New System.Windows.Forms.ToolStripButton()
         Me.YanSearch = New System.Windows.Forms.ToolStripButton()
@@ -211,20 +225,6 @@ Partial Class Formknittingform
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.TabItem1 = New DevComponents.DotNetBar.TabItem(Me.components)
-        Me.Stat = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ComidYarn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Ord = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Clothids = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Clothnos = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NwkgpcYarn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NwppcYarn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.GwkgpcYarn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.GwppcYarn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Nofc = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Updusr = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Uptype = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Uptime = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.TabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
@@ -475,6 +475,113 @@ Partial Class Formknittingform
         Me.YanList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.YanList.Size = New System.Drawing.Size(1006, 603)
         Me.YanList.TabIndex = 75
+        '
+        'Stat
+        '
+        Me.Stat.DataPropertyName = "Stat"
+        Me.Stat.HeaderText = ""
+        Me.Stat.Name = "Stat"
+        Me.Stat.ReadOnly = True
+        Me.Stat.Width = 10
+        '
+        'ComidYarn
+        '
+        Me.ComidYarn.DataPropertyName = "Comid"
+        Me.ComidYarn.HeaderText = "ComidYarn"
+        Me.ComidYarn.Name = "ComidYarn"
+        Me.ComidYarn.ReadOnly = True
+        Me.ComidYarn.Visible = False
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "Dlvno"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "เลขที่ใบส่งด้าย"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        '
+        'Ord
+        '
+        Me.Ord.DataPropertyName = "Ord"
+        Me.Ord.HeaderText = "Ord"
+        Me.Ord.Name = "Ord"
+        Me.Ord.ReadOnly = True
+        Me.Ord.Visible = False
+        '
+        'Clothids
+        '
+        Me.Clothids.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Clothids.DataPropertyName = "Yarnid"
+        Me.Clothids.HeaderText = "Lot ID"
+        Me.Clothids.Name = "Clothids"
+        Me.Clothids.ReadOnly = True
+        '
+        'Clothnos
+        '
+        Me.Clothnos.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Clothnos.DataPropertyName = "Lotno"
+        Me.Clothnos.HeaderText = "ประเภทผ้า"
+        Me.Clothnos.Name = "Clothnos"
+        Me.Clothnos.ReadOnly = True
+        '
+        'NwkgpcYarn
+        '
+        Me.NwkgpcYarn.DataPropertyName = "Nwkgpc"
+        Me.NwkgpcYarn.HeaderText = "Nwkgpc"
+        Me.NwkgpcYarn.Name = "NwkgpcYarn"
+        Me.NwkgpcYarn.ReadOnly = True
+        '
+        'NwppcYarn
+        '
+        Me.NwppcYarn.DataPropertyName = "Nwppc"
+        Me.NwppcYarn.HeaderText = "Nwppc"
+        Me.NwppcYarn.Name = "NwppcYarn"
+        Me.NwppcYarn.ReadOnly = True
+        '
+        'GwkgpcYarn
+        '
+        Me.GwkgpcYarn.DataPropertyName = "Gwkgpc"
+        Me.GwkgpcYarn.HeaderText = "Gwkgpc"
+        Me.GwkgpcYarn.Name = "GwkgpcYarn"
+        Me.GwkgpcYarn.ReadOnly = True
+        '
+        'GwppcYarn
+        '
+        Me.GwppcYarn.DataPropertyName = "Gwppc"
+        Me.GwppcYarn.HeaderText = "Gwppc"
+        Me.GwppcYarn.Name = "GwppcYarn"
+        Me.GwppcYarn.ReadOnly = True
+        '
+        'Nofc
+        '
+        Me.Nofc.DataPropertyName = "Nofc"
+        Me.Nofc.HeaderText = "จำนวนกล่อง"
+        Me.Nofc.Name = "Nofc"
+        Me.Nofc.ReadOnly = True
+        '
+        'Updusr
+        '
+        Me.Updusr.DataPropertyName = "Updusr"
+        Me.Updusr.HeaderText = "Updusr"
+        Me.Updusr.Name = "Updusr"
+        Me.Updusr.ReadOnly = True
+        Me.Updusr.Visible = False
+        '
+        'Uptype
+        '
+        Me.Uptype.DataPropertyName = "Uptype"
+        Me.Uptype.HeaderText = "Uptype"
+        Me.Uptype.Name = "Uptype"
+        Me.Uptype.ReadOnly = True
+        Me.Uptype.Visible = False
+        '
+        'Uptime
+        '
+        Me.Uptime.DataPropertyName = "Uptime"
+        Me.Uptime.HeaderText = "Uptime"
+        Me.Uptime.Name = "Uptime"
+        Me.Uptime.ReadOnly = True
+        Me.Uptime.Visible = False
         '
         'ToolStrip7
         '
@@ -2343,113 +2450,6 @@ Partial Class Formknittingform
         Me.TabItem1.AttachedControl = Me.TabControlPanel1
         Me.TabItem1.Name = "TabItem1"
         Me.TabItem1.Text = "รายละเอียด"
-        '
-        'Stat
-        '
-        Me.Stat.DataPropertyName = "Stat"
-        Me.Stat.HeaderText = ""
-        Me.Stat.Name = "Stat"
-        Me.Stat.ReadOnly = True
-        Me.Stat.Width = 10
-        '
-        'ComidYarn
-        '
-        Me.ComidYarn.DataPropertyName = "Comid"
-        Me.ComidYarn.HeaderText = "ComidYarn"
-        Me.ComidYarn.Name = "ComidYarn"
-        Me.ComidYarn.ReadOnly = True
-        Me.ComidYarn.Visible = False
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "Dlvno"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "เลขที่ใบส่งด้าย"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        '
-        'Ord
-        '
-        Me.Ord.DataPropertyName = "Ord"
-        Me.Ord.HeaderText = "Ord"
-        Me.Ord.Name = "Ord"
-        Me.Ord.ReadOnly = True
-        Me.Ord.Visible = False
-        '
-        'Clothids
-        '
-        Me.Clothids.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Clothids.DataPropertyName = "Yarnid"
-        Me.Clothids.HeaderText = "Lot ID"
-        Me.Clothids.Name = "Clothids"
-        Me.Clothids.ReadOnly = True
-        '
-        'Clothnos
-        '
-        Me.Clothnos.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Clothnos.DataPropertyName = "Lotno"
-        Me.Clothnos.HeaderText = "ประเภทผ้า"
-        Me.Clothnos.Name = "Clothnos"
-        Me.Clothnos.ReadOnly = True
-        '
-        'NwkgpcYarn
-        '
-        Me.NwkgpcYarn.DataPropertyName = "Nwkgpc"
-        Me.NwkgpcYarn.HeaderText = "Nwkgpc"
-        Me.NwkgpcYarn.Name = "NwkgpcYarn"
-        Me.NwkgpcYarn.ReadOnly = True
-        '
-        'NwppcYarn
-        '
-        Me.NwppcYarn.DataPropertyName = "Nwppc"
-        Me.NwppcYarn.HeaderText = "Nwppc"
-        Me.NwppcYarn.Name = "NwppcYarn"
-        Me.NwppcYarn.ReadOnly = True
-        '
-        'GwkgpcYarn
-        '
-        Me.GwkgpcYarn.DataPropertyName = "Gwkgpc"
-        Me.GwkgpcYarn.HeaderText = "Gwkgpc"
-        Me.GwkgpcYarn.Name = "GwkgpcYarn"
-        Me.GwkgpcYarn.ReadOnly = True
-        '
-        'GwppcYarn
-        '
-        Me.GwppcYarn.DataPropertyName = "Gwppc"
-        Me.GwppcYarn.HeaderText = "Gwppc"
-        Me.GwppcYarn.Name = "GwppcYarn"
-        Me.GwppcYarn.ReadOnly = True
-        '
-        'Nofc
-        '
-        Me.Nofc.DataPropertyName = "Nofc"
-        Me.Nofc.HeaderText = "จำนวนกล่อง"
-        Me.Nofc.Name = "Nofc"
-        Me.Nofc.ReadOnly = True
-        '
-        'Updusr
-        '
-        Me.Updusr.DataPropertyName = "Updusr"
-        Me.Updusr.HeaderText = "Updusr"
-        Me.Updusr.Name = "Updusr"
-        Me.Updusr.ReadOnly = True
-        Me.Updusr.Visible = False
-        '
-        'Uptype
-        '
-        Me.Uptype.DataPropertyName = "Uptype"
-        Me.Uptype.HeaderText = "Uptype"
-        Me.Uptype.Name = "Uptype"
-        Me.Uptype.ReadOnly = True
-        Me.Uptype.Visible = False
-        '
-        'Uptime
-        '
-        Me.Uptime.DataPropertyName = "Uptime"
-        Me.Uptime.HeaderText = "Uptime"
-        Me.Uptime.Name = "Uptime"
-        Me.Uptime.ReadOnly = True
-        Me.Uptime.Visible = False
         '
         'Formknittingform
         '
