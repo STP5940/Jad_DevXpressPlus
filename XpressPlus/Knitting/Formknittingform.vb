@@ -5,6 +5,7 @@ Public Class Formknittingform
     Private Pagecount, Maxrec, Pagesize, Currentpage, Recno As Integer
     Private WithEvents Dtplistfm As New DateTimePicker
     Private WithEvents Dtplistto As New DateTimePicker
+    'Private Bs As BindingSource
 
     Private Sub Formknittingform_Load(sender As Object, e As EventArgs) Handles Me.Load
         Controls.Add(Dtplistfm)
@@ -41,6 +42,8 @@ Public Class Formknittingform
         Retdocprefix()
         CloseMaster()
         Tbmycom.Text = Trim(Gscomname)
+        Tbremark.Enabled = False
+        Dgvmas.Enabled = False
     End Sub
     Private Sub Formknittingform_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         Dgvlist.ColumnHeadersDefaultCellStyle.Font = New Font("Microsoft Sans Serif", 11)
@@ -180,6 +183,8 @@ Public Class Formknittingform
         CloseMaster()
         TabControl1.SelectedTabIndex = 0
         BindingNavigator1.Enabled = False
+        Tbremark.Enabled = False
+        Dgvmas.Enabled = False
         Mainbuttoncancel()
     End Sub
     Private Sub CloseMaster()
@@ -357,6 +362,8 @@ Public Class Formknittingform
         'Clrtxtbox()
         Clrdetails()
         Tbknitcomno.Text = Trim(Dgvlist.CurrentRow.Cells("Knitcomno").Value)
+        'Bs.Position = Bs.Find("Knitcomno", Trim(Dgvlist.CurrentRow.Cells("Knitcomno").Value))
+        'Tbdlvyarnno.DataBindings.Add("Text", Bs, "Knitcomno")
         Tbknitcomno.Enabled = False
         Btfinddlvno.Enabled = False
         Dtpknitcomdate.Enabled = False
@@ -364,6 +371,7 @@ Public Class Formknittingform
         Bindmasterdlv()
         Binddetailsdlv()
         TabControl1.SelectedTabIndex = 2
+        'BindingNavigator1.Enabled = True
 
         If Dgvyarn.RowCount > 0 Then
             Dgvyarn.Rows(0).Selected = False
@@ -788,6 +796,9 @@ Public Class Formknittingform
         Tlist = SQLCommand("SELECT '' AS Stat,* FROM Vknitcommas 
                             WHERE Comid = '" & Gscomid & "'")
         Dgvlist.DataSource = Tlist
+        'Bs = New BindingSource
+        'Bs.DataSource = Tlist
+        'BindingNavigator1.BindingSource = Bs
         FillGrid()
         ShowRecordDetail()
     End Sub
@@ -1290,6 +1301,14 @@ Nwkgpc LIKE '%{Sval}%'OR Nwppc LIKE '%{Sval}%' OR Gwkgpc LIKE '%{Sval}%' OR Gwpp
     Private Sub BtrefreshYan_Click(sender As Object, e As EventArgs) Handles BtrefreshYan.Click
         BindingYanlist()
     End Sub
+
+    'Private Sub BindingNavigator1_RefreshItems(sender As Object, e As EventArgs) Handles BindingNavigator1.RefreshItems
+    '    Tsbwsave.Visible = False
+    '    'Tbdyedcomno.Enabled = False
+    '    If Btmedit.Enabled = True Then
+    '        Bindinglist()
+    '    End If
+    'End Sub
 
     Private Sub ShowRecordDetail()
         Tbrecord.Text = "แสดง " & (Dgvlist.RowCount) & " รายการ จาก " & Tlist.Rows.Count & " รายการ"
