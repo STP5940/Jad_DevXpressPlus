@@ -697,7 +697,7 @@ Public Class Formknittingform
         End Select
         Sumall()
         Btdcancel_Click(sender, e)
-        Tbremark.Focus()
+        Btfindfabtypeid.Focus()
 
     End Sub
     Private Sub Btdcancel_Click(sender As Object, e As EventArgs) Handles Btdcancel.Click
