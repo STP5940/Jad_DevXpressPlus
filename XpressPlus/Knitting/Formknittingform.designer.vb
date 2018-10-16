@@ -72,10 +72,10 @@ Partial Class Formknittingform
         Me.Mqty = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Mkg = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ToolStrip3 = New System.Windows.Forms.ToolStrip()
-        Me.Tstbsumcot = New System.Windows.Forms.ToolStripTextBox()
         Me.Tstbsumkg = New System.Windows.Forms.ToolStripTextBox()
         Me.Tstbsumroll = New System.Windows.Forms.ToolStripTextBox()
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
+        Me.Tstbsumcot = New System.Windows.Forms.ToolStripTextBox()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Tbremark = New Normtextbox.Normtextbox()
         Me.Panel8 = New System.Windows.Forms.Panel()
@@ -566,6 +566,7 @@ Partial Class Formknittingform
         '
         Me.Mclothno.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Mclothno.DataPropertyName = "Clothno"
+        Me.Mclothno.FillWeight = 17.7665!
         Me.Mclothno.HeaderText = "Description"
         Me.Mclothno.Name = "Mclothno"
         Me.Mclothno.ReadOnly = True
@@ -574,6 +575,7 @@ Partial Class Formknittingform
         '
         Me.Mftypename.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Mftypename.DataPropertyName = "Ftype"
+        Me.Mftypename.FillWeight = 17.7665!
         Me.Mftypename.HeaderText = "Fabric Type"
         Me.Mftypename.Name = "Mftypename"
         Me.Mftypename.ReadOnly = True
@@ -584,6 +586,7 @@ Partial Class Formknittingform
         Me.Mdozen.DataPropertyName = "Dozen"
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
         Me.Mdozen.DefaultCellStyle = DataGridViewCellStyle2
+        Me.Mdozen.FillWeight = 17.7665!
         Me.Mdozen.HeaderText = "Dozen"
         Me.Mdozen.Name = "Mdozen"
         Me.Mdozen.ReadOnly = True
@@ -594,6 +597,7 @@ Partial Class Formknittingform
         Me.Mfinwgt.DataPropertyName = "Finwgt"
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
         Me.Mfinwgt.DefaultCellStyle = DataGridViewCellStyle3
+        Me.Mfinwgt.FillWeight = 17.7665!
         Me.Mfinwgt.HeaderText = "Finished Weight"
         Me.Mfinwgt.Name = "Mfinwgt"
         Me.Mfinwgt.ReadOnly = True
@@ -604,6 +608,7 @@ Partial Class Formknittingform
         Me.Mfinwidth.DataPropertyName = "Fwidth"
         DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
         Me.Mfinwidth.DefaultCellStyle = DataGridViewCellStyle4
+        Me.Mfinwidth.FillWeight = 17.7665!
         Me.Mfinwidth.HeaderText = "Finished Width"
         Me.Mfinwidth.Name = "Mfinwidth"
         Me.Mfinwidth.ReadOnly = True
@@ -611,36 +616,66 @@ Partial Class Formknittingform
         '
         'Mqty
         '
-        Me.Mqty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Mqty.DataPropertyName = "Qtyroll"
         DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
         Me.Mqty.DefaultCellStyle = DataGridViewCellStyle5
+        Me.Mqty.FillWeight = 255.8376!
         Me.Mqty.HeaderText = "QTY(Rolls/พับ)"
         Me.Mqty.Name = "Mqty"
         Me.Mqty.ReadOnly = True
+        Me.Mqty.Width = 110
         '
         'Mkg
         '
-        Me.Mkg.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Mkg.DataPropertyName = "Wgtkg"
         DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
         DataGridViewCellStyle6.Format = "N2"
         DataGridViewCellStyle6.NullValue = Nothing
         Me.Mkg.DefaultCellStyle = DataGridViewCellStyle6
+        Me.Mkg.FillWeight = 355.33!
         Me.Mkg.HeaderText = "QTY(KG)"
         Me.Mkg.Name = "Mkg"
         Me.Mkg.ReadOnly = True
+        Me.Mkg.Width = 113
         '
         'ToolStrip3
         '
         Me.ToolStrip3.BackColor = System.Drawing.Color.Transparent
         Me.ToolStrip3.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.ToolStrip3.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Tstbsumcot, Me.Tstbsumkg, Me.Tstbsumroll, Me.ToolStripLabel1})
+        Me.ToolStrip3.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Tstbsumkg, Me.Tstbsumroll, Me.ToolStripLabel1, Me.Tstbsumcot})
         Me.ToolStrip3.Location = New System.Drawing.Point(0, 177)
         Me.ToolStrip3.Name = "ToolStrip3"
         Me.ToolStrip3.Size = New System.Drawing.Size(1000, 25)
         Me.ToolStrip3.TabIndex = 97
         Me.ToolStrip3.Text = "ToolStrip3"
+        '
+        'Tstbsumkg
+        '
+        Me.Tstbsumkg.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.Tstbsumkg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Tstbsumkg.Enabled = False
+        Me.Tstbsumkg.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Tstbsumkg.Name = "Tstbsumkg"
+        Me.Tstbsumkg.Size = New System.Drawing.Size(110, 25)
+        Me.Tstbsumkg.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Tstbsumroll
+        '
+        Me.Tstbsumroll.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.Tstbsumroll.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Tstbsumroll.Enabled = False
+        Me.Tstbsumroll.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Tstbsumroll.Name = "Tstbsumroll"
+        Me.Tstbsumroll.Size = New System.Drawing.Size(110, 25)
+        Me.Tstbsumroll.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'ToolStripLabel1
+        '
+        Me.ToolStripLabel1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.ToolStripLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripLabel1.Name = "ToolStripLabel1"
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(34, 22)
+        Me.ToolStripLabel1.Text = "รวม"
         '
         'Tstbsumcot
         '
@@ -651,34 +686,6 @@ Partial Class Formknittingform
         Me.Tstbsumcot.Name = "Tstbsumcot"
         Me.Tstbsumcot.Size = New System.Drawing.Size(100, 25)
         Me.Tstbsumcot.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'Tstbsumkg
-        '
-        Me.Tstbsumkg.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.Tstbsumkg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Tstbsumkg.Enabled = False
-        Me.Tstbsumkg.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Tstbsumkg.Name = "Tstbsumkg"
-        Me.Tstbsumkg.Size = New System.Drawing.Size(100, 25)
-        Me.Tstbsumkg.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'Tstbsumroll
-        '
-        Me.Tstbsumroll.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.Tstbsumroll.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Tstbsumroll.Enabled = False
-        Me.Tstbsumroll.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Tstbsumroll.Name = "Tstbsumroll"
-        Me.Tstbsumroll.Size = New System.Drawing.Size(100, 25)
-        Me.Tstbsumroll.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'ToolStripLabel1
-        '
-        Me.ToolStripLabel1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.ToolStripLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(34, 22)
-        Me.ToolStripLabel1.Text = "รวม"
         '
         'Panel7
         '
@@ -1258,7 +1265,7 @@ Partial Class Formknittingform
         '
         'ShowKgOrder
         '
-        Me.ShowKgOrder.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.ShowKgOrder.BackColor = System.Drawing.Color.White
         Me.ShowKgOrder.Enabled = False
         Me.ShowKgOrder.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.ShowKgOrder.Location = New System.Drawing.Point(929, 168)
@@ -1313,7 +1320,7 @@ Partial Class Formknittingform
         '
         'ShowRollOrder
         '
-        Me.ShowRollOrder.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.ShowRollOrder.BackColor = System.Drawing.Color.White
         Me.ShowRollOrder.Enabled = False
         Me.ShowRollOrder.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.ShowRollOrder.Location = New System.Drawing.Point(858, 168)
@@ -2696,16 +2703,6 @@ Partial Class Formknittingform
     Friend WithEvents YanKeyword As ToolStripTextBox
     Friend WithEvents ToolStripLabel5 As ToolStripLabel
     Friend WithEvents TabItem3 As DevComponents.DotNetBar.TabItem
-    Friend WithEvents Mcomid As DataGridViewTextBoxColumn
-    Friend WithEvents Mknitcomno As DataGridViewTextBoxColumn
-    Friend WithEvents Mclothid As DataGridViewTextBoxColumn
-    Friend WithEvents Mclothno As DataGridViewTextBoxColumn
-    Friend WithEvents Mftypename As DataGridViewTextBoxColumn
-    Friend WithEvents Mdozen As DataGridViewTextBoxColumn
-    Friend WithEvents Mfinwgt As DataGridViewTextBoxColumn
-    Friend WithEvents Mfinwidth As DataGridViewTextBoxColumn
-    Friend WithEvents Mqty As DataGridViewTextBoxColumn
-    Friend WithEvents Mkg As DataGridViewTextBoxColumn
     Friend WithEvents Stat As DataGridViewTextBoxColumn
     Friend WithEvents ComidYarn As DataGridViewTextBoxColumn
     Friend WithEvents DlvnoDyed As DataGridViewTextBoxColumn
@@ -2722,4 +2719,14 @@ Partial Class Formknittingform
     Friend WithEvents Uptime As DataGridViewTextBoxColumn
     Friend WithEvents QtyrollOrder As Inttextbox.Inttextbox
     Friend WithEvents WgtKgOrder As Dectextbox.Dectextbox
+    Friend WithEvents Mcomid As DataGridViewTextBoxColumn
+    Friend WithEvents Mknitcomno As DataGridViewTextBoxColumn
+    Friend WithEvents Mclothid As DataGridViewTextBoxColumn
+    Friend WithEvents Mclothno As DataGridViewTextBoxColumn
+    Friend WithEvents Mftypename As DataGridViewTextBoxColumn
+    Friend WithEvents Mdozen As DataGridViewTextBoxColumn
+    Friend WithEvents Mfinwgt As DataGridViewTextBoxColumn
+    Friend WithEvents Mfinwidth As DataGridViewTextBoxColumn
+    Friend WithEvents Mqty As DataGridViewTextBoxColumn
+    Friend WithEvents Mkg As DataGridViewTextBoxColumn
 End Class
