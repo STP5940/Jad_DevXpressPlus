@@ -502,13 +502,13 @@ Public Class Formknittingform
     End Sub
 
     'Test  QtyrollOrder.Focus()
-    Private Sub QtyrollOrder_KeyDown(sender As Object, e As KeyEventArgs) Handles QtyrollOrder.KeyDown
+    Private Sub QtyrollOrder_KeyDown(sender As Object, e As KeyEventArgs)
         If (e.KeyCode = Keys.Enter) Then
             WgtKgOrder.Focus()
         End If
     End Sub
     'Test  WgtKgOrder.Focus()
-    Private Sub WgtKgOrder_KeyDown(sender As Object, e As KeyEventArgs) Handles WgtKgOrder.KeyDown
+    Private Sub WgtKgOrder_KeyDown(sender As Object, e As KeyEventArgs)
         If (e.KeyCode = Keys.Enter) Then
             Btdadd_Click(sender, e)
             Show_Vdeliyarndet2()
@@ -709,6 +709,13 @@ Public Class Formknittingform
         Btdedit.Enabled = True
         Btddel.Enabled = True
 
+        QtyrollOrder.Enabled = True
+        WgtKgOrder.Enabled = True
+        Tbfinwgt.Enabled = True
+        Btdadd.Enabled = True
+        Btdcancel.Enabled = True
+
+
     End Sub
 
     Private Sub Btdedit_Click(sender As Object, e As EventArgs) Handles Btdedit.Click
@@ -731,7 +738,7 @@ Public Class Formknittingform
         'Tbqtyroll.Text = Format(CLng(Dgvmas.CurrentRow.Cells("Mqty").Value), "###,###")
         'Tbwgtkg.Text = Format(CDbl(Dgvmas.CurrentRow.Cells("Mkg").Value), "###,###")
         QtyrollOrder.Text = Format(CLng(Dgvmas.CurrentRow.Cells("Mqty").Value), "###,###")
-        WgtKgOrder.Text = Format(CDbl(Dgvmas.CurrentRow.Cells("Mkg").Value), "###,###")
+        WgtKgOrder.Text = Format(CDbl(Dgvmas.CurrentRow.Cells("Mkg").Value), "###,###.#0")
 
         Tbfinwgt.Text = Trim(Dgvmas.CurrentRow.Cells("Mfinwgt").Value)
         Tbdozen.Text = Trim(Dgvmas.CurrentRow.Cells("Mdozen").Value)
