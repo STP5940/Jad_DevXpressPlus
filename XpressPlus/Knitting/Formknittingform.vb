@@ -649,7 +649,7 @@ Public Class Formknittingform
         End If
         If CDbl(QtyrollOrder.Text) = 0 OrElse CDbl(WgtKgOrder.Text) = 0 Then
             Informmessage("จำนวนพับ หรือน้ำหนักสั่งทอต้องมากกว่า 0")
-            If QtyrollOrder.Text = "" Then
+            If QtyrollOrder.Text = 0 Then
                 QtyrollOrder.Select()
             Else
                 WgtKgOrder.Select()
