@@ -189,6 +189,7 @@ Public Class Formknittingform
         Mainbuttoncancel()
     End Sub
     Private Sub CloseMaster()
+        BindingNavigator1.Enabled = False
         Dtprecdate.Enabled = False
         Dtpknitcomdate.Enabled = False
         Dgvyarn.Enabled = False
