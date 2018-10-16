@@ -632,10 +632,31 @@ Public Class Formknittingform
             Informmessage("กรุณาตรวจสอบข้อมูลให้ถูกต้อง ครบถ้วน")
             Exit Sub
         End If
+
         If Validnumber() = False Then
             Informmessage("กรุณาตรวจจำนวนให้ถูกต้อง ครบถ้วน(พับ,ก.ก.)")
             Exit Sub
         End If
+
+        If QtyrollOrder.Text = "" OrElse WgtKgOrder.Text = "" Then
+            Informmessage("กรุณาตรวจสอบจำนวนพับ หรือน้ำหนักสั่งทอให้ถูกต้องครบถ้วน")
+            If QtyrollOrder.Text = "" Then
+                QtyrollOrder.Select()
+            Else
+                WgtKgOrder.Select()
+            End If
+            Exit Sub
+        End If
+        If CDbl(QtyrollOrder.Text) = 0 OrElse CDbl(WgtKgOrder.Text) = 0 Then
+            Informmessage("จำนวนพับ หรือน้ำหนักสั่งทอต้องมากกว่า 0")
+            If QtyrollOrder.Text = "" Then
+                QtyrollOrder.Select()
+            Else
+                WgtKgOrder.Select()
+            End If
+            Exit Sub
+        End If
+
         If Tbaddedit.Text = "เพิ่ม" Then
             If Chkdupyarnidingrid() = True Then
                 Informmessage("ผ้าเบอร์นี้ มีแล้ว")
