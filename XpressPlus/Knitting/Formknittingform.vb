@@ -456,17 +456,18 @@ Public Class Formknittingform
         Tbclothno.Text = Trim(Frm.Dgvmas.CurrentRow.Cells("Mname").Value)
         Tbtypename.Text = Trim(Frm.Dgvmas.CurrentRow.Cells("Ftype").Value)
         Tbfinwidth.Text = Trim(Frm.Dgvmas.CurrentRow.Cells("Fwidth").Value)
+        QtyrollOrder.Focus()
 
         If Tbtypename.Text = "RIB" Then
             Tbdozen.Text = ""
             Tbdozen.Visible = True
             Label_dozen.Visible = True
-            Tbdozen.Focus()
+            'Tbdozen.Focus()
         Else
             Tbdozen.Text = "0"
             Tbdozen.Visible = False
             Label_dozen.Visible = False
-            Tbfinwgt.Focus()
+            'Tbfinwgt.Focus()
             Exit Sub
         End If
 
@@ -477,12 +478,6 @@ Public Class Formknittingform
     '        Tbdozen.Focus()
     '    End If
     'End Sub
-    Private Sub Tbdozen_KeyDown(sender As Object, e As KeyEventArgs) Handles Tbdozen.KeyDown
-        If (e.KeyCode = Keys.Enter) Then
-            'Tbwgtkg.Focus()
-            Tbfinwgt.Focus()
-        End If
-    End Sub
 
     'Private Sub Tbwgtkg_KeyDown(sender As Object, e As KeyEventArgs) Handles Tbwgtkg.KeyDown
     '    If e.KeyCode = Keys.Enter Then
@@ -495,25 +490,20 @@ Public Class Formknittingform
     '        Tbfinwgt.Focus()
     '    End If
     'End Sub
-    Private Sub Tbfinwgt_KeyDown(sender As Object, e As KeyEventArgs) Handles Tbfinwgt.KeyDown
-        If (e.KeyCode = Keys.Enter) Then
-            QtyrollOrder.Focus()
-        End If
-    End Sub
 
     'Test  QtyrollOrder.Focus()
-    Private Sub QtyrollOrder_KeyDown(sender As Object, e As KeyEventArgs)
-        If (e.KeyCode = Keys.Enter) Then
-            WgtKgOrder.Focus()
-        End If
-    End Sub
-    'Test  WgtKgOrder.Focus()
-    Private Sub WgtKgOrder_KeyDown(sender As Object, e As KeyEventArgs)
-        If (e.KeyCode = Keys.Enter) Then
-            Btdadd_Click(sender, e)
-            Show_Vdeliyarndet2()
-        End If
-    End Sub
+    'Private Sub QtyrollOrder_KeyDown(sender As Object, e As KeyEventArgs)
+    '    If (e.KeyCode = Keys.Enter) Then
+    '        WgtKgOrder.Focus()
+    '    End If
+    'End Sub
+    ''Test  WgtKgOrder.Focus()
+    'Private Sub WgtKgOrder_KeyDown(sender As Object, e As KeyEventArgs)
+    '    If (e.KeyCode = Keys.Enter) Then
+    '        Btdadd_Click(sender, e)
+    '        Show_Vdeliyarndet2()
+    '    End If
+    'End Sub
 
 
 
@@ -1457,5 +1447,30 @@ Nwkgpc LIKE '%{Sval}%'OR Nwppc LIKE '%{Sval}%' OR Gwkgpc LIKE '%{Sval}%' OR Gwpp
         Show_Vdeliyarndet()
     End Sub
 
+    Private Sub QtyrollOrder_KeyDown(sender As Object, e As KeyEventArgs) Handles QtyrollOrder.KeyDown
+        If (e.KeyCode = Keys.Enter) Then
+            WgtKgOrder.Focus()
+        End If
+    End Sub
+
+    Private Sub WgtKgOrder_KeyDown(sender As Object, e As KeyEventArgs) Handles WgtKgOrder.KeyDown
+        If (e.KeyCode = Keys.Enter) Then
+            Tbfinwgt.Focus()
+        End If
+    End Sub
+    Private Sub Tbfinwgt_KeyDown(sender As Object, e As KeyEventArgs) Handles Tbfinwgt.KeyDown
+        If (e.KeyCode = Keys.Enter) Then
+            If Tbdozen.Visible = True Then
+                Tbdozen.Focus()
+            Else
+                Btdadd.Focus()
+            End If
+        End If
+    End Sub
+    Private Sub Tbdozen_KeyDown(sender As Object, e As KeyEventArgs) Handles Tbdozen.KeyDown
+        If (e.KeyCode = Keys.Enter) Then
+            Btdadd.Focus()
+        End If
+    End Sub
 
 End Class
