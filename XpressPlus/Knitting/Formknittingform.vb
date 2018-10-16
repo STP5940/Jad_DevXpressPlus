@@ -5,6 +5,7 @@ Public Class Formknittingform
     Private Pagecount, Maxrec, Pagesize, Currentpage, Recno As Integer
     Private WithEvents Dtplistfm As New DateTimePicker
     Private WithEvents Dtplistto As New DateTimePicker
+    Private Bs As BindingSource
     'Private Bs As BindingSource
 
     Private Sub Formknittingform_Load(sender As Object, e As EventArgs) Handles Me.Load
@@ -367,6 +368,11 @@ Public Class Formknittingform
         Tbknitcomno.Enabled = False
         Btfinddlvno.Enabled = False
         Dtpknitcomdate.Enabled = False
+        Tbknitcomno.DataBindings.Clear()
+        Tbknitcomno.Text = ""
+        Bs.Position = Bs.Find("Knitcomno", Trim(Dgvlist.CurrentRow.Cells("Knitcomno").Value))
+        Tbknitcomno.DataBindings.Add("Text", Bs, "Knitcomno")
+        Tbknitcomno.Enabled = False
         Bindmasterknit()
         Bindmasterdlv()
         Binddetailsdlv()
@@ -793,12 +799,11 @@ Public Class Formknittingform
     End Sub
     Private Sub Bindinglist()
         Tlist = New DataTable
-        Tlist = SQLCommand("SELECT '' AS Stat,* FROM Vknitcommas 
-                            WHERE Comid = '" & Gscomid & "'")
+        Tlist = SQLCommand("SELECT '' AS Stat,* FROM Vknitcommas WHERE Comid = '" & Gscomid & "'")
         Dgvlist.DataSource = Tlist
-        'Bs = New BindingSource
-        'Bs.DataSource = Tlist
-        'BindingNavigator1.BindingSource = Bs
+        Bs = New BindingSource
+        Bs.DataSource = Tlist
+        BindingNavigator1.BindingSource = Bs
         FillGrid()
         ShowRecordDetail()
     End Sub
@@ -1300,6 +1305,17 @@ Nwkgpc LIKE '%{Sval}%'OR Nwppc LIKE '%{Sval}%' OR Gwkgpc LIKE '%{Sval}%' OR Gwpp
 
     Private Sub BtrefreshYan_Click(sender As Object, e As EventArgs) Handles BtrefreshYan.Click
         BindingYanlist()
+    End Sub
+
+    Private Sub BindingNavigator1_RefreshItems(sender As Object, e As EventArgs) Handles BindingNavigator1.RefreshItems
+        Tsbwsave.Visible = False
+        Tbknitcomno.Enabled = False
+        If Btmedit.Enabled = True Then
+            'Bindmaster()
+            Bindmasterknit()
+            'Bindmasterdlv()
+            'Binddetailsdlv()
+        End If
     End Sub
 
     'Private Sub BindingNavigator1_RefreshItems(sender As Object, e As EventArgs) Handles BindingNavigator1.RefreshItems
