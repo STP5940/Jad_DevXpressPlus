@@ -138,10 +138,10 @@ Public Class Formknittingform
     End Sub
 
     Private Sub Btmsave_Click(sender As Object, e As EventArgs) Handles Btmsave.Click
-        If Tstbsumroll.Text > QtyrollStore.Text OrElse Tstbsumroll.Text < QtyrollStore.Text Then
-            Informmessage("จำนวน (Roll) ไม่ตรงกับจำนวนที่มีในระบบ")
-            Exit Sub
-        End If
+        'If Tstbsumroll.Text > QtyrollStore.Text OrElse Tstbsumroll.Text < QtyrollStore.Text Then
+        '    Informmessage("จำนวน (Roll) ไม่ตรงกับจำนวนที่มีในระบบ")
+        '    Exit Sub
+        'End If
         If WgtKgStore.Text > Tstbsumkg.Text OrElse WgtKgStore.Text < Tstbsumkg.Text Then
             Informmessage("น้ำหนัก (KG) ไม่ตรงกับน้ำหนักที่มีในระบบ")
             Exit Sub
@@ -656,10 +656,10 @@ Public Class Formknittingform
                 Exit Sub
             End If
         End If
-        If CLng(QtyrollOrder.Text) > CLng(QtyrollStore.Text) Then
-            Informmessage("จำนวน(Roll) ที่สั่งทอ มากกว่าจำนวนที่มีในระบบ")
-            Exit Sub
-        End If
+        'If CLng(QtyrollOrder.Text) > CLng(QtyrollStore.Text) Then
+        '    Informmessage("จำนวน(Roll) ที่สั่งทอ มากกว่าจำนวนที่มีในระบบ")
+        '    Exit Sub
+        'End If
         If CDbl(WgtKgOrder.Text) > CDbl(WgtKgStore.Text) Then
             Informmessage("น้ำหนัก(KG) ที่สั่งทอ มากกว่าน้ำหนักที่มีในระบบ")
             Exit Sub
