@@ -143,7 +143,7 @@ Public Class Formknittingform
         '    Exit Sub
         'End If
         If WgtKgStore.Text > Tstbsumkg.Text OrElse WgtKgStore.Text < Tstbsumkg.Text Then
-            Informmessage("น้ำหนัก (KG) ไม่ตรงกับน้ำหนักที่มีในระบบ")
+            Informmessage("น้ำหนักผ้าที่สั่งทอต้องเท่ากับเส้นด้ายที่ส่งไป")
             Exit Sub
         End If
 
@@ -661,7 +661,7 @@ Public Class Formknittingform
         '    Exit Sub
         'End If
         If CDbl(WgtKgOrder.Text) > CDbl(WgtKgStore.Text) Then
-            Informmessage("น้ำหนัก(KG) ที่สั่งทอ มากกว่าน้ำหนักที่มีในระบบ")
+            Informmessage("น้ำหนักผ้าที่สั่งทอต้องเท่ากับเส้นด้ายที่ส่งไป")
             Exit Sub
         End If
 
