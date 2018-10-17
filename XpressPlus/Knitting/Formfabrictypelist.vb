@@ -3,7 +3,7 @@
 
     Private Sub Bindingmaster()
         Tmaster = New DataTable
-        Tmaster = SQLCommand("SELECT '' AS Stat,Comid,Clothid,Clothno,Ftype,Fwidth,Yarnid1,Yarnid2 FROM Tclothxp
+        Tmaster = SQLCommand("SELECT '' AS Stat,Comid,Clothid,Clothno,Ftype,Fwidth,Yarnid1,Yarnid2,Havedoz FROM Tclothxp
         WHERE (Comid = '" & Gscomid & "' AND Sstatus = 1 AND Sactive = '1') AND (Yarnid1 = '" & Dyarnid.Text & "' OR Yarnid2 = '" & Dyarnid.Text & "')")
         Dgvmas.DataSource = Tmaster
     End Sub
