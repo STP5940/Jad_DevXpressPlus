@@ -23,9 +23,10 @@ Partial Class Formfabrictypelist
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New DevComponents.DotNetBar.TabControl()
         Me.TabControlPanel1 = New DevComponents.DotNetBar.TabControlPanel()
+        Me.Dyarnid = New Normtextbox.Normtextbox()
         Me.Dgvmas = New System.Windows.Forms.DataGridView()
         Me.Status = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Mcomid = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -33,6 +34,8 @@ Partial Class Formfabrictypelist
         Me.Mname = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Ftype = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Fwidth = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Yarnid1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Yarnid2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.Btmsearch = New System.Windows.Forms.ToolStripButton()
         Me.Tbkeyword = New System.Windows.Forms.ToolStripTextBox()
@@ -66,6 +69,7 @@ Partial Class Formfabrictypelist
         '
         'TabControlPanel1
         '
+        Me.TabControlPanel1.Controls.Add(Me.Dyarnid)
         Me.TabControlPanel1.Controls.Add(Me.Dgvmas)
         Me.TabControlPanel1.Controls.Add(Me.ToolStrip1)
         Me.TabControlPanel1.Controls.Add(Me.Btcancel)
@@ -86,20 +90,31 @@ Partial Class Formfabrictypelist
         Me.TabControlPanel1.TabIndex = 1
         Me.TabControlPanel1.TabItem = Me.TabItem1
         '
+        'Dyarnid
+        '
+        Me.Dyarnid.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
+        Me.Dyarnid.Location = New System.Drawing.Point(358, 277)
+        Me.Dyarnid.MaxLength = 120
+        Me.Dyarnid.Name = "Dyarnid"
+        Me.Dyarnid.Size = New System.Drawing.Size(22, 24)
+        Me.Dyarnid.TabIndex = 134
+        Me.Dyarnid.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.Dyarnid.Visible = False
+        '
         'Dgvmas
         '
         Me.Dgvmas.AllowUserToAddRows = False
         Me.Dgvmas.AllowUserToDeleteRows = False
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Dgvmas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Dgvmas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.Dgvmas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.Dgvmas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Status, Me.Mcomid, Me.Mid, Me.Mname, Me.Ftype, Me.Fwidth})
+        Me.Dgvmas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Status, Me.Mcomid, Me.Mid, Me.Mname, Me.Ftype, Me.Fwidth, Me.Yarnid1, Me.Yarnid2})
         Me.Dgvmas.Dock = System.Windows.Forms.DockStyle.Top
         Me.Dgvmas.Location = New System.Drawing.Point(1, 50)
         Me.Dgvmas.Name = "Dgvmas"
@@ -153,6 +168,22 @@ Partial Class Formfabrictypelist
         Me.Fwidth.Name = "Fwidth"
         Me.Fwidth.ReadOnly = True
         Me.Fwidth.Visible = False
+        '
+        'Yarnid1
+        '
+        Me.Yarnid1.DataPropertyName = "Yarnid1"
+        Me.Yarnid1.HeaderText = "Yarnid1"
+        Me.Yarnid1.Name = "Yarnid1"
+        Me.Yarnid1.ReadOnly = True
+        Me.Yarnid1.Visible = False
+        '
+        'Yarnid2
+        '
+        Me.Yarnid2.DataPropertyName = "Yarnid2"
+        Me.Yarnid2.HeaderText = "Yarnid2"
+        Me.Yarnid2.Name = "Yarnid2"
+        Me.Yarnid2.ReadOnly = True
+        Me.Yarnid2.Visible = False
         '
         'ToolStrip1
         '
@@ -250,10 +281,14 @@ Partial Class Formfabrictypelist
     Friend WithEvents Btok As DevComponents.DotNetBar.ButtonX
     Friend WithEvents TabItem1 As DevComponents.DotNetBar.TabItem
     Friend WithEvents Dgvmas As DataGridView
+    Friend WithEvents DyarnidS As Normtextbox.Normtextbox
     Friend WithEvents Status As DataGridViewTextBoxColumn
     Friend WithEvents Mcomid As DataGridViewTextBoxColumn
     Friend WithEvents Mid As DataGridViewTextBoxColumn
     Friend WithEvents Mname As DataGridViewTextBoxColumn
     Friend WithEvents Ftype As DataGridViewTextBoxColumn
     Friend WithEvents Fwidth As DataGridViewTextBoxColumn
+    Friend WithEvents Yarnid1 As DataGridViewTextBoxColumn
+    Friend WithEvents Yarnid2 As DataGridViewTextBoxColumn
+    Friend WithEvents Dyarnid As Normtextbox.Normtextbox
 End Class

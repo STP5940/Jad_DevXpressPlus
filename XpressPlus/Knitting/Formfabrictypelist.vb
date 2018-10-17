@@ -1,9 +1,10 @@
 ﻿Public Class Formfabrictypelist
     Private Tmaster As DataTable
+
     Private Sub Bindingmaster()
         Tmaster = New DataTable
-        Tmaster = SQLCommand("SELECT '' AS Stat,Comid,Clothid,Clothno,Ftype,Fwidth FROM Tclothxp
-        WHERE Comid = '" & Gscomid & "' AND Sstatus = 1 AND Sactive = '1'")
+        Tmaster = SQLCommand("SELECT '' AS Stat,Comid,Clothid,Clothno,Ftype,Fwidth,Yarnid1,Yarnid2 FROM Tclothxp
+        WHERE (Comid = '" & Gscomid & "' AND Sstatus = 1 AND Sactive = '1') AND (Yarnid1 = '" & Dyarnid.Text & "' OR Yarnid2 = '" & Dyarnid.Text & "')")
         Dgvmas.DataSource = Tmaster
     End Sub
     Private Sub Filtermastergrid()

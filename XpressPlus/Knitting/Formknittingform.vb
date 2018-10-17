@@ -441,12 +441,15 @@ Public Class Formknittingform
         Dgvyarn.CurrentRow.Selected = True
     End Sub
     Private Sub Btfindfabtypeid_Click(sender As Object, e As EventArgs) Handles Btfindfabtypeid.Click
+        'MsgBox(Dgvyarn.Rows(0).Cells("Dyarnid").Value)
+
         If Validmas() = False Then
             Informmessage("กรุณากรอกข้อมูลใบส่งด้าย ")
             Exit Sub
         End If
 
         Dim Frm As New Formfabrictypelist
+        Frm.Dyarnid.Text = Trim(Dgvyarn.Rows(0).Cells("Dyarnid").Value)
         Showdiaformcenter(Frm, Me)
         If Frm.Tbcancel.Text = "C" Then
             Exit Sub
