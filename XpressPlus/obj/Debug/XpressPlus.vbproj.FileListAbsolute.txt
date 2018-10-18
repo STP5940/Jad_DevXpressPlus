@@ -617,3 +617,4 @@ C:\Users\this\Documents\GitHub\Jad_DevXpressPlus\XpressPlus\obj\Debug\XpressPlus
 C:\Users\this\Documents\GitHub\Jad_DevXpressPlus\XpressPlus\obj\Debug\XpressPlus.vbproj.GenerateResource.Cache
 C:\Users\this\Documents\GitHub\Jad_DevXpressPlus\XpressPlus\obj\Debug\RdlCompile.cache
 C:\Users\this\Documents\GitHub\Jad_DevXpressPlus\XpressPlus\obj\Debug\RdlCompile.compiled
+C:\Users\this\Documents\GitHub\Jad_DevXpressPlus\XpressPlus\obj\Debug\XpressPlus.FormfabrictypelistForknitt.resources

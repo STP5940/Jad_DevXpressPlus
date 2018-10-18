@@ -441,7 +441,7 @@ Public Class Formknittingform
             Exit Sub
         End If
 
-        Dim Frm As New Formfabrictypelist
+        Dim Frm As New FormfabrictypelistForknitt
         Frm.Dyarnid.Text = Trim(Dgvyarn.Rows(0).Cells("Dyarnid").Value)
         Showdiaformcenter(Frm, Me)
         If Frm.Tbcancel.Text = "C" Then
