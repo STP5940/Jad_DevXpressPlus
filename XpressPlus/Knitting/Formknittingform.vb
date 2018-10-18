@@ -138,6 +138,11 @@ Public Class Formknittingform
     End Sub
 
     Private Sub Btmsave_Click(sender As Object, e As EventArgs) Handles Btmsave.Click
+        If Tbknitcomno.Text <> "NEW" Then
+            If MessageBox.Show("การแก้ไขข้อมูลอาจส่งผลกระทบต่อหน้า ใบสั่งย้อม", "คำเตือน", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) = 2 Then
+                Exit Sub
+            End If
+        End If
         'If Tstbsumroll.Text > QtyrollStore.Text OrElse Tstbsumroll.Text < QtyrollStore.Text Then
         '    Informmessage("จำนวน (Roll) ไม่ตรงกับจำนวนที่มีในระบบ")
         '    Exit Sub
