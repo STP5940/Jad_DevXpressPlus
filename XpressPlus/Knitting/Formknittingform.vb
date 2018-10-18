@@ -167,8 +167,8 @@ Public Class Formknittingform
         Else
             Editdoc()
         End If
-        Btmreports_Click(sender, e)
         Tsbwsave.Visible = False
+        Btmreports_Click(sender, e)
         Clrdgrid()
         Clrtxtbox()
         TabControl1.SelectedTabIndex = 0
@@ -361,11 +361,9 @@ Public Class Formknittingform
 
     Private Sub Ctmledit_Click(sender As Object, e As EventArgs) Handles Ctmledit.Click
         Clrdgrid()
-        'Clrtxtbox()
         Clrdetails()
+        TabControl1.SelectedTabIndex = 2
         Tbknitcomno.Text = Trim(Dgvlist.CurrentRow.Cells("Knitcomno").Value)
-        'Bs.Position = Bs.Find("Knitcomno", Trim(Dgvlist.CurrentRow.Cells("Knitcomno").Value))
-        'Tbdlvyarnno.DataBindings.Add("Text", Bs, "Knitcomno")
         Tbknitcomno.Enabled = False
         Btfinddlvno.Enabled = False
         Dtpknitcomdate.Enabled = False
@@ -377,8 +375,6 @@ Public Class Formknittingform
         Bindmasterknit()
         Bindmasterdlv()
         Binddetailsdlv()
-        TabControl1.SelectedTabIndex = 2
-        'BindingNavigator1.Enabled = True
 
         If Dgvyarn.RowCount > 0 Then
             Dgvyarn.Rows(0).Selected = False
@@ -406,9 +402,6 @@ Public Class Formknittingform
         GroupPanel2.Visible = False
         Btdbadd.Enabled = False
         Btddel.Enabled = False
-        'Btdbadd.Enabled = True
-        'Btdedit.Enabled = True
-        'Btddel.Enabled = True
         Dgvmas.Enabled = False
         Dgvyarn.Enabled = False
     End Sub
@@ -461,7 +454,7 @@ Public Class Formknittingform
         Tbfinwidth.Text = Trim(Frm.Dgvmas.CurrentRow.Cells("Fwidth").Value)
         QtyrollOrder.Focus()
 
-        If Tbtypename.Text = "RIB" Then
+        If Trim(Frm.Dgvmas.CurrentRow.Cells("Havedoz").Value) = True Then
             Tbdozen.Text = ""
             Tbdozen.Visible = True
             Label_dozen.Visible = True
@@ -621,8 +614,13 @@ Public Class Formknittingform
         End If
     End Sub
     Private Sub Btdadd_Click(sender As Object, e As EventArgs) Handles Btdadd.Click
+        'If Validinput() = False Then
+        '    Informmessage("กรุณาตรวจสอบข้อมูลให้ถูกต้อง ครบถ้วน")
+        '    Exit Sub
+        'End If
         If Validinput() = False Then
-            Informmessage("กรุณาตรวจสอบข้อมูลให้ถูกต้อง ครบถ้วน")
+            Informmessage("กรุณาเลือกเบอร์ผ้าที่ต้องการ")
+            Btfindfabtypeid.PerformClick()
             Exit Sub
         End If
 
@@ -650,6 +648,24 @@ Public Class Formknittingform
             Exit Sub
         End If
 
+        If CDbl(WgtKgOrder.Text) > CDbl(WgtKgStore.Text) Then
+            Informmessage("น้ำหนักผ้าที่สั่งทอมากกว่าเส้นด้ายที่ส่งไป")
+            WgtKgOrder.Focus()
+            Exit Sub
+        End If
+
+        If Tbfinwgt.Text = "" Then
+            Informmessage("กรุณาใส่ข้อมูล Finished Weigth")
+            Tbfinwgt.Focus()
+            Exit Sub
+        End If
+
+        If Tbdozen.Text = "" Then
+            Informmessage("กรุณาใส่ข้อมูล Dozen")
+            Tbdozen.Focus()
+            Exit Sub
+        End If
+
         If Tbaddedit.Text = "เพิ่ม" Then
             If Chkdupyarnidingrid() = True Then
                 Informmessage("ผ้าเบอร์นี้ มีแล้ว")
@@ -660,10 +676,7 @@ Public Class Formknittingform
         '    Informmessage("จำนวน(Roll) ที่สั่งทอ มากกว่าจำนวนที่มีในระบบ")
         '    Exit Sub
         'End If
-        If CDbl(WgtKgOrder.Text) > CDbl(WgtKgStore.Text) Then
-            Informmessage("น้ำหนักผ้าที่สั่งทอต้องเท่ากับเส้นด้ายที่ส่งไป")
-            Exit Sub
-        End If
+
 
         Select Case Trim(Tbaddedit.Text)
             Case "เพิ่ม"
@@ -683,6 +696,11 @@ Public Class Formknittingform
                 Dgvmas.Rows(Dgvmas.RowCount - 1).Cells("Mkg").Value = CDbl(WgtKgOrder.Text)
                 Dgvmas.Rows(Dgvmas.RowCount - 1).Cells("Mfinwgt").Value = Trim(Tbfinwgt.Text)
                 Dgvmas.Rows(Dgvmas.RowCount - 1).Cells("Mdozen").Value = Trim(Tbdozen.Text)
+                If Label_dozen.Visible = True Then
+                    Dgvmas.Rows(Dgvmas.RowCount - 1).Cells("Havedoz").Value = True
+                Else
+                    Dgvmas.Rows(Dgvmas.RowCount - 1).Cells("Havedoz").Value = False
+                End If
 
             Case "แก้ไข"
                 'Tsbwsave.Visible = True
@@ -696,6 +714,11 @@ Public Class Formknittingform
                 Dgvmas.CurrentRow.Cells("Mkg").Value = CDbl(WgtKgOrder.Text)
                 Dgvmas.CurrentRow.Cells("Mfinwgt").Value = Trim(Tbfinwgt.Text)
                 Dgvmas.CurrentRow.Cells("Mdozen").Value = Trim(Tbdozen.Text)
+                If Label_dozen.Visible = True Then
+                    Dgvmas.CurrentRow.Cells("Havedoz").Value = True
+                Else
+                    Dgvmas.CurrentRow.Cells("Havedoz").Value = False
+                End If
 
         End Select
         Sumall()
@@ -743,6 +766,20 @@ Public Class Formknittingform
             Informmessage("กรุณาตรวจสอบข้อมูลในการสั่งทอให้ครบถ้วน")
             Exit Sub
         End If
+
+        If Dgvmas.CurrentRow.Cells("Havedoz").Value = True Then
+            Tbdozen.Text = ""
+            Tbdozen.Visible = True
+            Label_dozen.Visible = True
+            'Tbdozen.Focus()
+        Else
+            Tbdozen.Text = "0"
+            Tbdozen.Visible = False
+            Label_dozen.Visible = False
+            'Tbfinwgt.Focus()
+            'Exit Sub
+        End If
+
         GroupPanel2.Visible = True
         Tbaddedit.Text = "แก้ไข"
         Tbclothid.Text = Trim(Dgvmas.CurrentRow.Cells("Mclothid").Value)
@@ -778,7 +815,7 @@ Public Class Formknittingform
     End Sub
     Private Sub Dgvmas_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles Dgvmas.CellMouseClick
         If e.Button = Windows.Forms.MouseButtons.Right Then
-            If Me.Dgvmas.Rows.Count < 1 Then Exit Sub
+            If Me.Dgvmas.Rows.Count <1 Then Exit Sub
             If e.RowIndex < 0 Then Exit Sub
             Dgvmas.CurrentCell = Dgvmas(4, e.RowIndex)
             Me.Dgvmas.Rows(e.RowIndex).Selected = True
@@ -1008,7 +1045,7 @@ Nwkgpc LIKE '%{Sval}%'OR Nwppc LIKE '%{Sval}%' OR Gwkgpc LIKE '%{Sval}%' OR Gwpp
     End Function
     Private Function Validinput() As Boolean
         Dim Valid As Boolean = False
-        If Tbclothid.Text <> "" And Tbclothno.Text <> "" And Tbtypename.Text <> "" And Tbfinwidth.Text <> "" And Tbqtyroll.Text <> "" And Tbwgtkg.Text <> "" And Tbfinwgt.Text <> "" And Tbdozen.Text <> "" Then
+        If Tbclothid.Text <> "" And Tbclothno.Text <> "" And Tbtypename.Text <> "" And Tbfinwidth.Text <> "" And Tbqtyroll.Text <> "" And Tbwgtkg.Text <> "" Then
             Valid = True
         End If
         Return Valid

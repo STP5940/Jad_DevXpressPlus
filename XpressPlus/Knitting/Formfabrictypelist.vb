@@ -59,5 +59,4 @@
         Dgvmas.DefaultCellStyle.Font = New Font("Microsoft Sans Serif", 11)
     End Sub
 
-
 End Class

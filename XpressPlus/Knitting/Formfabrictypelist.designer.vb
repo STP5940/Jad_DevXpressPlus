@@ -23,11 +23,18 @@ Partial Class Formfabrictypelist
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New DevComponents.DotNetBar.TabControl()
         Me.TabControlPanel1 = New DevComponents.DotNetBar.TabControlPanel()
         Me.Dyarnid = New Normtextbox.Normtextbox()
         Me.Dgvmas = New System.Windows.Forms.DataGridView()
+        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.Btmsearch = New System.Windows.Forms.ToolStripButton()
+        Me.Tbkeyword = New System.Windows.Forms.ToolStripTextBox()
+        Me.Tbcancel = New System.Windows.Forms.ToolStripTextBox()
+        Me.Btcancel = New DevComponents.DotNetBar.ButtonX()
+        Me.Btok = New DevComponents.DotNetBar.ButtonX()
+        Me.TabItem1 = New DevComponents.DotNetBar.TabItem(Me.components)
         Me.Status = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Mcomid = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Mid = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -36,13 +43,7 @@ Partial Class Formfabrictypelist
         Me.Fwidth = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Yarnid1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Yarnid2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.Btmsearch = New System.Windows.Forms.ToolStripButton()
-        Me.Tbkeyword = New System.Windows.Forms.ToolStripTextBox()
-        Me.Tbcancel = New System.Windows.Forms.ToolStripTextBox()
-        Me.Btcancel = New DevComponents.DotNetBar.ButtonX()
-        Me.Btok = New DevComponents.DotNetBar.ButtonX()
-        Me.TabItem1 = New DevComponents.DotNetBar.TabItem(Me.components)
+        Me.Havedoz = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.TabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabControlPanel1.SuspendLayout()
@@ -105,85 +106,22 @@ Partial Class Formfabrictypelist
         '
         Me.Dgvmas.AllowUserToAddRows = False
         Me.Dgvmas.AllowUserToDeleteRows = False
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Dgvmas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Dgvmas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.Dgvmas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.Dgvmas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Status, Me.Mcomid, Me.Mid, Me.Mname, Me.Ftype, Me.Fwidth, Me.Yarnid1, Me.Yarnid2})
+        Me.Dgvmas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Status, Me.Mcomid, Me.Mid, Me.Mname, Me.Ftype, Me.Fwidth, Me.Yarnid1, Me.Yarnid2, Me.Havedoz})
         Me.Dgvmas.Dock = System.Windows.Forms.DockStyle.Top
         Me.Dgvmas.Location = New System.Drawing.Point(1, 50)
         Me.Dgvmas.Name = "Dgvmas"
         Me.Dgvmas.ReadOnly = True
         Me.Dgvmas.Size = New System.Drawing.Size(382, 180)
         Me.Dgvmas.TabIndex = 29
-        '
-        'Status
-        '
-        Me.Status.DataPropertyName = "Stat"
-        Me.Status.HeaderText = ""
-        Me.Status.Name = "Status"
-        Me.Status.ReadOnly = True
-        Me.Status.Width = 20
-        '
-        'Mcomid
-        '
-        Me.Mcomid.DataPropertyName = "Comid"
-        Me.Mcomid.HeaderText = "Comid"
-        Me.Mcomid.Name = "Mcomid"
-        Me.Mcomid.ReadOnly = True
-        Me.Mcomid.Visible = False
-        '
-        'Mid
-        '
-        Me.Mid.DataPropertyName = "Clothid"
-        Me.Mid.HeaderText = "รหัส"
-        Me.Mid.Name = "Mid"
-        Me.Mid.ReadOnly = True
-        '
-        'Mname
-        '
-        Me.Mname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Mname.DataPropertyName = "Clothno"
-        Me.Mname.HeaderText = "เบอร์ผ้า"
-        Me.Mname.Name = "Mname"
-        Me.Mname.ReadOnly = True
-        '
-        'Ftype
-        '
-        Me.Ftype.DataPropertyName = "Ftype"
-        Me.Ftype.HeaderText = "Ftype"
-        Me.Ftype.Name = "Ftype"
-        Me.Ftype.ReadOnly = True
-        Me.Ftype.Visible = False
-        '
-        'Fwidth
-        '
-        Me.Fwidth.DataPropertyName = "Fwidth"
-        Me.Fwidth.HeaderText = "Fwidth"
-        Me.Fwidth.Name = "Fwidth"
-        Me.Fwidth.ReadOnly = True
-        Me.Fwidth.Visible = False
-        '
-        'Yarnid1
-        '
-        Me.Yarnid1.DataPropertyName = "Yarnid1"
-        Me.Yarnid1.HeaderText = "Yarnid1"
-        Me.Yarnid1.Name = "Yarnid1"
-        Me.Yarnid1.ReadOnly = True
-        Me.Yarnid1.Visible = False
-        '
-        'Yarnid2
-        '
-        Me.Yarnid2.DataPropertyName = "Yarnid2"
-        Me.Yarnid2.HeaderText = "Yarnid2"
-        Me.Yarnid2.Name = "Yarnid2"
-        Me.Yarnid2.ReadOnly = True
-        Me.Yarnid2.Visible = False
         '
         'ToolStrip1
         '
@@ -251,6 +189,77 @@ Partial Class Formfabrictypelist
         Me.TabItem1.Name = "TabItem1"
         Me.TabItem1.Text = "เบอร์ผ้า"
         '
+        'Status
+        '
+        Me.Status.DataPropertyName = "Stat"
+        Me.Status.HeaderText = ""
+        Me.Status.Name = "Status"
+        Me.Status.ReadOnly = True
+        Me.Status.Width = 20
+        '
+        'Mcomid
+        '
+        Me.Mcomid.DataPropertyName = "Comid"
+        Me.Mcomid.HeaderText = "Comid"
+        Me.Mcomid.Name = "Mcomid"
+        Me.Mcomid.ReadOnly = True
+        Me.Mcomid.Visible = False
+        '
+        'Mid
+        '
+        Me.Mid.DataPropertyName = "Clothid"
+        Me.Mid.HeaderText = "รหัส"
+        Me.Mid.Name = "Mid"
+        Me.Mid.ReadOnly = True
+        '
+        'Mname
+        '
+        Me.Mname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Mname.DataPropertyName = "Clothno"
+        Me.Mname.HeaderText = "เบอร์ผ้า"
+        Me.Mname.Name = "Mname"
+        Me.Mname.ReadOnly = True
+        '
+        'Ftype
+        '
+        Me.Ftype.DataPropertyName = "Ftype"
+        Me.Ftype.HeaderText = "Ftype"
+        Me.Ftype.Name = "Ftype"
+        Me.Ftype.ReadOnly = True
+        Me.Ftype.Visible = False
+        '
+        'Fwidth
+        '
+        Me.Fwidth.DataPropertyName = "Fwidth"
+        Me.Fwidth.HeaderText = "Fwidth"
+        Me.Fwidth.Name = "Fwidth"
+        Me.Fwidth.ReadOnly = True
+        Me.Fwidth.Visible = False
+        '
+        'Yarnid1
+        '
+        Me.Yarnid1.DataPropertyName = "Yarnid1"
+        Me.Yarnid1.HeaderText = "Yarnid1"
+        Me.Yarnid1.Name = "Yarnid1"
+        Me.Yarnid1.ReadOnly = True
+        Me.Yarnid1.Visible = False
+        '
+        'Yarnid2
+        '
+        Me.Yarnid2.DataPropertyName = "Yarnid2"
+        Me.Yarnid2.HeaderText = "Yarnid2"
+        Me.Yarnid2.Name = "Yarnid2"
+        Me.Yarnid2.ReadOnly = True
+        Me.Yarnid2.Visible = False
+        '
+        'Havedoz
+        '
+        Me.Havedoz.DataPropertyName = "Havedoz"
+        Me.Havedoz.HeaderText = "สถานะ"
+        Me.Havedoz.Name = "Havedoz"
+        Me.Havedoz.ReadOnly = True
+        Me.Havedoz.Visible = False
+        '
         'Formfabrictypelist
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -282,6 +291,7 @@ Partial Class Formfabrictypelist
     Friend WithEvents TabItem1 As DevComponents.DotNetBar.TabItem
     Friend WithEvents Dgvmas As DataGridView
     Friend WithEvents DyarnidS As Normtextbox.Normtextbox
+    Friend WithEvents Dyarnid As Normtextbox.Normtextbox
     Friend WithEvents Status As DataGridViewTextBoxColumn
     Friend WithEvents Mcomid As DataGridViewTextBoxColumn
     Friend WithEvents Mid As DataGridViewTextBoxColumn
@@ -290,5 +300,5 @@ Partial Class Formfabrictypelist
     Friend WithEvents Fwidth As DataGridViewTextBoxColumn
     Friend WithEvents Yarnid1 As DataGridViewTextBoxColumn
     Friend WithEvents Yarnid2 As DataGridViewTextBoxColumn
-    Friend WithEvents Dyarnid As Normtextbox.Normtextbox
+    Friend WithEvents Havedoz As DataGridViewTextBoxColumn
 End Class
