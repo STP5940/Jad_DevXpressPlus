@@ -674,3 +674,4 @@ C:\Users\S\Desktop\181016_GSC\Knitting_DevXpressPlus\XpressPlus\obj\Debug\Xpress
 \\192.168.100.199\Volume_1\Programing Knowledge\รับส่งงาน\GSC\ส่งให้ เป้\2018_10_25\Knitting_DevXpressPlus\XpressPlus\obj\Debug\XpressPlus.exe
 \\192.168.100.199\Volume_1\Programing Knowledge\รับส่งงาน\GSC\ส่งให้ เป้\2018_10_25\Knitting_DevXpressPlus\XpressPlus\obj\Debug\XpressPlus.xml
 \\192.168.100.199\Volume_1\Programing Knowledge\รับส่งงาน\GSC\ส่งให้ เป้\2018_10_25\Knitting_DevXpressPlus\XpressPlus\obj\Debug\XpressPlus.pdb
+C:\Users\this\Documents\GitHub\Jad_DevXpressPlus\XpressPlus\obj\Debug\XpressPlus.Formknittinglist.resources
