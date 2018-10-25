@@ -181,20 +181,22 @@ Partial Class Formknittingform
         Me.ShowKgOrder = New Normtextbox.Normtextbox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.TbfactoryID = New Normtextbox.Normtextbox()
+        Me.Listfactory = New DevComponents.DotNetBar.ButtonX()
         Me.Cbfromgsc = New System.Windows.Forms.CheckBox()
-        Me.Tbfactory = New Normtextbox.Normtextbox()
+        Me.TbfactoryName = New Normtextbox.Normtextbox()
         Me.LabelX22 = New DevComponents.DotNetBar.LabelX()
         Me.ButtonX1 = New DevComponents.DotNetBar.ButtonX()
         Me.Dtprecdate = New System.Windows.Forms.DateTimePicker()
         Me.Tbknitname = New Normtextbox.Normtextbox()
         Me.LabelX7 = New DevComponents.DotNetBar.LabelX()
         Me.Tbknitid = New Normtextbox.Normtextbox()
-        Me.Btfinddlvno = New DevComponents.DotNetBar.ButtonX()
         Me.Tbmycom = New Normtextbox.Normtextbox()
         Me.LabelX5 = New DevComponents.DotNetBar.LabelX()
         Me.Tbdlvyarnno = New Normtextbox.Normtextbox()
         Me.LabelX3 = New DevComponents.DotNetBar.LabelX()
         Me.LabelX6 = New DevComponents.DotNetBar.LabelX()
+        Me.Btfinddlvno = New DevComponents.DotNetBar.ButtonX()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.LabelX2 = New DevComponents.DotNetBar.LabelX()
         Me.Dtpknitcomdate = New System.Windows.Forms.DateTimePicker()
@@ -1993,25 +1995,50 @@ Partial Class Formknittingform
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.TbfactoryID)
+        Me.Panel1.Controls.Add(Me.Listfactory)
         Me.Panel1.Controls.Add(Me.Cbfromgsc)
-        Me.Panel1.Controls.Add(Me.Tbfactory)
+        Me.Panel1.Controls.Add(Me.TbfactoryName)
         Me.Panel1.Controls.Add(Me.LabelX22)
         Me.Panel1.Controls.Add(Me.ButtonX1)
         Me.Panel1.Controls.Add(Me.Dtprecdate)
         Me.Panel1.Controls.Add(Me.Tbknitname)
         Me.Panel1.Controls.Add(Me.LabelX7)
         Me.Panel1.Controls.Add(Me.Tbknitid)
-        Me.Panel1.Controls.Add(Me.Btfinddlvno)
         Me.Panel1.Controls.Add(Me.Tbmycom)
         Me.Panel1.Controls.Add(Me.LabelX5)
         Me.Panel1.Controls.Add(Me.Tbdlvyarnno)
         Me.Panel1.Controls.Add(Me.LabelX3)
         Me.Panel1.Controls.Add(Me.LabelX6)
+        Me.Panel1.Controls.Add(Me.Btfinddlvno)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(3, 3)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(694, 87)
         Me.Panel1.TabIndex = 0
+        '
+        'TbfactoryID
+        '
+        Me.TbfactoryID.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TbfactoryID.Enabled = False
+        Me.TbfactoryID.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TbfactoryID.Location = New System.Drawing.Point(100, 1)
+        Me.TbfactoryID.MaxLength = 120
+        Me.TbfactoryID.Name = "TbfactoryID"
+        Me.TbfactoryID.Size = New System.Drawing.Size(76, 24)
+        Me.TbfactoryID.TabIndex = 88
+        '
+        'Listfactory
+        '
+        Me.Listfactory.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.Listfactory.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.Listfactory.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Listfactory.Image = Global.XpressPlus.My.Resources.Resources.Find16
+        Me.Listfactory.Location = New System.Drawing.Point(349, 1)
+        Me.Listfactory.Name = "Listfactory"
+        Me.Listfactory.Size = New System.Drawing.Size(36, 24)
+        Me.Listfactory.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003
+        Me.Listfactory.TabIndex = 87
         '
         'Cbfromgsc
         '
@@ -2025,16 +2052,16 @@ Partial Class Formknittingform
         Me.Cbfromgsc.UseVisualStyleBackColor = True
         Me.Cbfromgsc.Visible = False
         '
-        'Tbfactory
+        'TbfactoryName
         '
-        Me.Tbfactory.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.Tbfactory.Enabled = False
-        Me.Tbfactory.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Tbfactory.Location = New System.Drawing.Point(100, 3)
-        Me.Tbfactory.MaxLength = 150
-        Me.Tbfactory.Name = "Tbfactory"
-        Me.Tbfactory.Size = New System.Drawing.Size(265, 24)
-        Me.Tbfactory.TabIndex = 85
+        Me.TbfactoryName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TbfactoryName.Enabled = False
+        Me.TbfactoryName.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.TbfactoryName.Location = New System.Drawing.Point(181, 1)
+        Me.TbfactoryName.MaxLength = 150
+        Me.TbfactoryName.Name = "TbfactoryName"
+        Me.TbfactoryName.Size = New System.Drawing.Size(160, 24)
+        Me.TbfactoryName.TabIndex = 85
         '
         'LabelX22
         '
@@ -2058,7 +2085,7 @@ Partial Class Formknittingform
         Me.ButtonX1.Enabled = False
         Me.ButtonX1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.ButtonX1.Image = Global.XpressPlus.My.Resources.Resources.Find16
-        Me.ButtonX1.Location = New System.Drawing.Point(430, 30)
+        Me.ButtonX1.Location = New System.Drawing.Point(389, 30)
         Me.ButtonX1.Name = "ButtonX1"
         Me.ButtonX1.Size = New System.Drawing.Size(36, 24)
         Me.ButtonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003
@@ -2077,7 +2104,7 @@ Partial Class Formknittingform
         Me.Tbknitname.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.Tbknitname.Enabled = False
         Me.Tbknitname.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Tbknitname.Location = New System.Drawing.Point(472, 30)
+        Me.Tbknitname.Location = New System.Drawing.Point(431, 30)
         Me.Tbknitname.MaxLength = 150
         Me.Tbknitname.Name = "Tbknitname"
         Me.Tbknitname.Size = New System.Drawing.Size(219, 24)
@@ -2103,24 +2130,11 @@ Partial Class Formknittingform
         Me.Tbknitid.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.Tbknitid.Enabled = False
         Me.Tbknitid.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Tbknitid.Location = New System.Drawing.Point(356, 30)
+        Me.Tbknitid.Location = New System.Drawing.Point(315, 30)
         Me.Tbknitid.MaxLength = 150
         Me.Tbknitid.Name = "Tbknitid"
         Me.Tbknitid.Size = New System.Drawing.Size(68, 24)
         Me.Tbknitid.TabIndex = 79
-        '
-        'Btfinddlvno
-        '
-        Me.Btfinddlvno.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.Btfinddlvno.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.Btfinddlvno.Enabled = False
-        Me.Btfinddlvno.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Btfinddlvno.Image = Global.XpressPlus.My.Resources.Resources.Find16
-        Me.Btfinddlvno.Location = New System.Drawing.Point(268, 30)
-        Me.Btfinddlvno.Name = "Btfinddlvno"
-        Me.Btfinddlvno.Size = New System.Drawing.Size(36, 24)
-        Me.Btfinddlvno.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003
-        Me.Btfinddlvno.TabIndex = 80
         '
         'Tbmycom
         '
@@ -2142,7 +2156,7 @@ Partial Class Formknittingform
         '
         Me.LabelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.LabelX5.Location = New System.Drawing.Point(310, 31)
+        Me.LabelX5.Location = New System.Drawing.Point(269, 31)
         Me.LabelX5.Name = "LabelX5"
         Me.LabelX5.Size = New System.Drawing.Size(40, 23)
         Me.LabelX5.TabIndex = 74
@@ -2188,6 +2202,20 @@ Partial Class Formknittingform
         Me.LabelX6.TabIndex = 82
         Me.LabelX6.Text = "บริษัท"
         Me.LabelX6.Visible = False
+        '
+        'Btfinddlvno
+        '
+        Me.Btfinddlvno.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.Btfinddlvno.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.Btfinddlvno.Enabled = False
+        Me.Btfinddlvno.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Btfinddlvno.Image = Global.XpressPlus.My.Resources.Resources.Find16
+        Me.Btfinddlvno.Location = New System.Drawing.Point(268, 30)
+        Me.Btfinddlvno.Name = "Btfinddlvno"
+        Me.Btfinddlvno.Size = New System.Drawing.Size(36, 24)
+        Me.Btfinddlvno.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003
+        Me.Btfinddlvno.TabIndex = 80
+        Me.Btfinddlvno.Visible = False
         '
         'Panel2
         '
@@ -2888,7 +2916,7 @@ Partial Class Formknittingform
     Friend WithEvents Mkg As DataGridViewTextBoxColumn
     Friend WithEvents Havedoz As DataGridViewTextBoxColumn
     Friend WithEvents LabelX22 As DevComponents.DotNetBar.LabelX
-    Friend WithEvents Tbfactory As Normtextbox.Normtextbox
+    Friend WithEvents TbfactoryName As Normtextbox.Normtextbox
     Friend WithEvents Paneloth As Panel
     Friend WithEvents Tbyarnname As Normtextbox.Normtextbox
     Friend WithEvents Btfindyarn As DevComponents.DotNetBar.ButtonX
@@ -2912,4 +2940,6 @@ Partial Class Formknittingform
     Friend WithEvents Updusr As DataGridViewTextBoxColumn
     Friend WithEvents Uptype As DataGridViewTextBoxColumn
     Friend WithEvents Uptime As DataGridViewTextBoxColumn
+    Friend WithEvents Listfactory As DevComponents.DotNetBar.ButtonX
+    Friend WithEvents TbfactoryID As Normtextbox.Normtextbox
 End Class

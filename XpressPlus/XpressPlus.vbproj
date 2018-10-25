@@ -120,6 +120,12 @@
     <Compile Include="Knitting\FormfabrictypelistForknitt.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Knitting\Formfactorylist.Designer.vb">
+      <DependentUpon>Formfactorylist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Knitting\Formfactorylist.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Knitting\Formknitingfrmrpt.designer.vb">
       <DependentUpon>Formknitingfrmrpt.vb</DependentUpon>
     </Compile>
@@ -247,6 +253,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Knitting\FormfabrictypelistForknitt.resx">
       <DependentUpon>FormfabrictypelistForknitt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Knitting\Formfactorylist.resx">
+      <DependentUpon>Formfactorylist.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Knitting\Formknitingfrmrpt.resx">
       <DependentUpon>Formknitingfrmrpt.vb</DependentUpon>

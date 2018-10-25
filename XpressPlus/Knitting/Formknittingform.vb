@@ -42,15 +42,15 @@ Public Class Formknittingform
     End Sub
     Private Sub Btmnew_Click(sender As Object, e As EventArgs) Handles Btmnew.Click
         Createnew()
-        Tbfactory.Text = ""
+        TbfactoryName.Text = ""
         Tbdlvyarnno.Enabled = True
         Btfinddlvno.Enabled = False
         Dtprecdate.Enabled = True
         ButtonX1.Enabled = True
         Tbknitid.Text = "10000"
         Tbknitname.Text = "เซียงเฮง"
-        Tbfactory.Enabled = True
-        Tbfactory.Select()
+        TbfactoryName.Enabled = False
+        TbfactoryName.Select()
         ToolStrip6.Visible = False
         Dgvyarn.Visible = False
         Paneloth.Visible = True
@@ -163,11 +163,16 @@ Public Class Formknittingform
         Dgvyarn.Enabled = False
         Btfinddlvno.Enabled = False
         GroupPanel2.Visible = False
+        TbfactoryID.Text = ""
         Tbqtyroll.Text = ""
         Tbwgtkg.Text = ""
         Tbwgtlbs.Text = ""
         QtyrollStore.Text = ""
         WgtKgStore.Text = ""
+        Tbyarnid.Text = ""
+        Tbyarnname.Text = ""
+        Tblbs.Text = ""
+        Tbkg.Text = ""
     End Sub
     Private Sub OpenMaster()
         Dtprecdate.Enabled = False
@@ -203,7 +208,7 @@ Public Class Formknittingform
         Frm.Tbknitcomno.Text = Trim(Tbknitcomno.Text)
         Frm.Tbredate.Text = Format(Dtprecdate.Value, "dd/MM/yyyy")
         Frm.Tbremark.Text = Trim(Tbremark.Text)
-        Frm.TextBox1.Text = Trim(Tbfactory.Text)
+        Frm.TextBox1.Text = Trim(TbfactoryName.Text)
         If Gsexpau = False Then
             Frm.ReportViewer1.ShowExportButton = False
         End If
@@ -594,6 +599,9 @@ Public Class Formknittingform
         Clrdetails()
     End Sub
     Private Sub Btdbadd_Click(sender As Object, e As EventArgs) Handles Btdbadd.Click
+        Tblbs_TextChanged(sender, e)
+        Tbkg_KeyDown(sender, e)
+        'Btfindfabtypeid.Focus()
         SelectData()
         GroupPanel2.Visible = True
         Tbaddedit.Text = "เพิ่ม"
@@ -724,21 +732,21 @@ Public Class Formknittingform
                                 WHERE Comid = '" & Gscomid & "' AND Knitcomno = '" & Trim(Tbknitcomno.Text) & "'")
         If Tmasterknit.Rows.Count > 0 Then
             If IsDBNull(Tmasterknit.Rows(0)("Yarnfrom")) Then
-                Tbfactory.Text = "GSC"
+                TbfactoryName.Text = "GSC"
             Else
-                Tbfactory.Text = Trim(Tmasterknit.Rows(0)("Yarnfrom"))
+                TbfactoryName.Text = Trim(Tmasterknit.Rows(0)("Yarnfrom"))
                 Tbknitid.Text = Trim(Tmasterknit.Rows(0)("Knitid"))
             End If
             Dtpknitcomdate.Value = Tmasterknit.Rows(0)("Knitcomdate")
             Dtprecdate.Value = Tmasterknit.Rows(0)("Rcdate")
             Tbdlvyarnno.Text = Trim(Tmasterknit.Rows(0)("Dlvno"))
             Tbremark.Text = Trim(Tmasterknit.Rows(0)("Dremark"))
-            If Tbfactory.Text = "GSC" Then
+            If TbfactoryName.Text = "GSC" Then
                 Cbfromgsc.Checked = True
                 Bindmasterdlv()
                 Btfinddlvno.Enabled = False
                 Tbdlvyarnno.Enabled = False
-                Tbfactory.Enabled = False
+                TbfactoryName.Enabled = False
                 ToolStrip6.Visible = True
                 Dgvyarn.Visible = True
                 Paneloth.Visible = False
@@ -852,7 +860,7 @@ Public Class Formknittingform
                     Dlvlbs,Dlvkg,Yarnid)
                     VALUES('" & Gscomid & "','" & Formatshortdatesave(Dtpknitcomdate.Value) & "','" & Trim(Tbknitcomno.Text) & "','" & Formatshortdatesave(Dtprecdate.Value) & "','" & Trim(Tbdlvyarnno.Text) & "',
                     '" & Trim(Tbremark.Text) & "'," & CDbl(Tstbsumkg.Text) & ",0," & CDbl(Tstbsumroll.Text) & ",0,
-                    '" & Gsuserid & "','A','" & Formatdatesave(Now) & "','" & Trim(Tbknitid.Text) & "','" & Trim(Tbfactory.Text) & "',
+                    '" & Gsuserid & "','A','" & Formatdatesave(Now) & "','" & Trim(Tbknitid.Text) & "','" & Trim(TbfactoryName.Text) & "',
                     " & Sumlbs & "," & Sumkg & ",'" & Tyarnid & "')")
     End Sub
     Private Sub Editmaster()
@@ -872,7 +880,7 @@ Public Class Formknittingform
         SQLCommand("UPDATE Tknittcomxp SET Knitcomdate = '" & Formatshortdatesave(Dtpknitcomdate.Value) & "',Rcdate = '" & Formatshortdatesave(Dtprecdate.Value) & "',
                     Dlvno = '" & Trim(Tbdlvyarnno.Text) & "',Dremark = '" & Trim(Tbremark.Text) & "',WgtKgOrder = " & CDbl(Tstbsumkg.Text) & ",WgtKgStore = 0,
                     QtyrollOrder = " & CDbl(Tstbsumroll.Text) & ",QtyrollStore = 0,Updusr = '" & Gsuserid & "',Uptype = 'E',Uptime = '" & Formatdatesave(Now) & "',
-                    Knitid = '" & Trim(Tbknitid.Text) & "',Yarnfrom = '" & Tbfactory.Text & "',Dlvlbs = " & CDbl(Tblbs.Text) & ",Dlvkg = " & CDbl(Tbkg.Text) & ",Yarnid = '" & Tyarnid & "'
+                    Knitid = '" & Trim(Tbknitid.Text) & "',Yarnfrom = '" & TbfactoryName.Text & "',Dlvlbs = " & CDbl(Tblbs.Text) & ",Dlvkg = " & CDbl(Tbkg.Text) & ",Yarnid = '" & Tyarnid & "'
                     WHERE Comid = '" & Gscomid & "' AND Knitcomno = '" & Tbknitcomno.Text & "'")
     End Sub
     Private Sub Upddetails(Etype As String)
@@ -931,7 +939,7 @@ Public Class Formknittingform
     End Sub
     Private Function Validmas() As Boolean
         Dim Valid As Boolean = False
-        If Tbdlvyarnno.Text <> "" And Tbknitcomno.Text <> "" And Tbfactory.Text <> "" Then
+        If Tbdlvyarnno.Text <> "" And Tbknitcomno.Text <> "" And TbfactoryName.Text <> "" Then
             Valid = True
         End If
         Return Valid
@@ -1090,7 +1098,7 @@ Public Class Formknittingform
         Tstbsumkg.Text = ""
         Tsbwsave.Visible = False
         Tbaddedit.Text = "เพิ่ม"
-        Tbfactory.Text = ""
+        TbfactoryName.Text = ""
         Tbclothid.Text = ""
         Tbclothno.Text = ""
         Tbtypename.Text = ""
@@ -1237,8 +1245,8 @@ Public Class Formknittingform
         End If
         Btfinddlvno.Enabled = False
         Tbdlvyarnno.Enabled = False
-        Tbfactory.Text = "GSC"
-        Tbfactory.Enabled = False
+        TbfactoryName.Text = "GSC"
+        TbfactoryName.Enabled = False
         ToolStrip6.Visible = True
         Dgvyarn.Visible = True
         Paneloth.Visible = False
@@ -1301,10 +1309,39 @@ Public Class Formknittingform
             Tbkg.Text = Format(Findkg(Tblbs.Text), "###,###.#0")
         End If
     End Sub
-    Private Sub Tblbs_TextChanged(sender As Object, e As EventArgs) Handles Tblbs.TextChanged
+
+    'Private Sub Tblbs_LostFocus(sender As Object, e As EventArgs) Handles Tblbs.LostFocus
+
+    'End Sub
+
+    Private Sub Tblbs_TextChanged(sender As Object, e As EventArgs) Handles Tblbs.LostFocus
         If Tblbs.Text <> "" Then
             Tbkg.Text = Format(Findkg(Tblbs.Text), "###,###.#0")
+        Else
+            Tbkg.Text = 0
         End If
+    End Sub
+    Private Sub Tbkg_KeyDown(sender As Object, e As EventArgs) Handles Tbkg.LostFocus
+        If Tbkg.Text <> "" Then
+            Tblbs.Text = Format(FindRekg(Tbkg.Text), "###,###.#0")
+        Else
+            Tblbs.Text = 0
+        End If
+    End Sub
+    Private Sub Tbkg_TextChanged(sender As Object, e As EventArgs) Handles Tbkg.TextChanged
+        If Tbkg.Text <> "" Then
+            SelectData()
+        End If
+    End Sub
+
+    Private Sub Listfactory_Click(sender As Object, e As EventArgs) Handles Listfactory.Click
+        Dim Frm As New Formfactorylist
+        Showdiaformcenter(Frm, Me)
+        If Frm.Tbcancel.Text = "C" Then
+            Exit Sub
+        End If
+        TbfactoryID.Text = Frm.Dgvmas.CurrentRow.Cells("factoryID").Value
+        TbfactoryName.Text = Frm.Dgvmas.CurrentRow.Cells("factoryName").Value
     End Sub
 
     Private Sub Enabledbutton()
@@ -1314,6 +1351,7 @@ Public Class Formknittingform
         Ctddel.Enabled = True
         Btdbadd.Enabled = True
     End Sub
+
     Private Sub Mainbuttoncancel()
         Btmnew.Enabled = True
         Btmedit.Enabled = False
@@ -1407,6 +1445,15 @@ Public Class Formknittingform
             Tkg = 0
         Else
             Tkg = CDbl(Tpound) * 0.453592
+        End If
+        Return Tkg
+    End Function
+    Private Function FindRekg(Tpound As String) As Double
+        Dim Tkg As Double = 0.0
+        If Tpound = "" Then
+            Tkg = 0
+        Else
+            Tkg = CDbl(Tpound) / 0.453592
         End If
         Return Tkg
     End Function
