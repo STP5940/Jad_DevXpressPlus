@@ -99,6 +99,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Dsyarndlvk.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Knitting\Dsyarndlvk.vb">
+      <DependentUpon>Dsyarndlvk.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Knitting\Formdlvnoknittlist.designer.vb">
       <DependentUpon>Formdlvnoknittlist.vb</DependentUpon>
     </Compile>
@@ -127,6 +130,12 @@
       <DependentUpon>Formknittingform.vb</DependentUpon>
     </Compile>
     <Compile Include="Knitting\Formknittingform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Knitting\Formknittinglist.designer.vb">
+      <DependentUpon>Formknittinglist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Knitting\Formknittinglist.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Knitting\Form_Test.Designer.vb">
@@ -244,6 +253,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Knitting\Formknittingform.resx">
       <DependentUpon>Formknittingform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Knitting\Formknittinglist.resx">
+      <DependentUpon>Formknittinglist.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Knitting\Form_Test.resx">
       <DependentUpon>Form_Test.vb</DependentUpon>

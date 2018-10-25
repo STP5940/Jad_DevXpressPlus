@@ -7,14 +7,14 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>fa5a14fd-e92d-42d1-b414-7a7d3e4a160d</rd:DataSourceID>
+      <rd:DataSourceID>119aab23-6bc6-4945-9aca-b1c4739657bc</rd:DataSourceID>
     </DataSource>
     <DataSource Name="Dsknittdet">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>d57a7ae0-b66d-4b32-8154-e067c2537e05</rd:DataSourceID>
+      <rd:DataSourceID>5f32470a-6b93-47bc-bc73-687bd4141264</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -68,10 +68,18 @@
           <DataField>Dlvno</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="Dlvlbs">
+          <DataField>Dlvlbs</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="Dlvkg">
+          <DataField>Dlvkg</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>Dsyarndlvk</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\Knitting\Dsyarndlvk.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\S\Desktop\GSCKNITT\XpressPlus\XpressPlus\Form\Processform\Yarnfab\Knittingform\Dsyarndlvk.xsd</rd:SchemaPath>
         <rd:TableName>DataTable1</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
@@ -115,7 +123,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>Dsknittdet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Somjate\Documents\Visual Studio 2015\Projects\Project_GSC\XpressPlusjade\XpressPlus\XpressPlus\Knitting\Dsknittdet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\S\Desktop\GSCKNITT\XpressPlus\XpressPlus\Form\Processform\Yarnfab\Knittingform\Dsknittdet.xsd</rd:SchemaPath>
         <rd:TableName>DataTable1</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
@@ -498,7 +506,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>GSC</Value>
+                                  <Value>=Parameters!Parfactory.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -620,7 +628,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=((Fields!Nwkgpc.Value * Fields!Nofc.Value) * 2.2046)</Value>
+                                  <Value>=IIf(Parameters!Parfactory.Value ="GSC",(Fields!Nwkgpc.Value*2.2046)*Fields!Nofc.Value,Fields!Dlvlbs.Value)</Value>
                                   <Style>
                                     <Format>n2</Format>
                                   </Style>
@@ -654,7 +662,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=(Fields!Nwkgpc.Value * Fields!Nofc.Value)</Value>
+                                  <Value>=IIf(Parameters!Parfactory.Value = "GSC",(Fields!Nwkgpc.Value * Fields!Nofc.Value),Fields!Dlvkg.Value)</Value>
                                   <Style>
                                     <Format>n2</Format>
                                   </Style>
@@ -729,7 +737,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(((Fields!Nwkgpc.Value * Fields!Nofc.Value) * 2.2046))</Value>
+                                  <Value>=IIf(Parameters!Parfactory.Value = "GSC",Sum(((Fields!Nwkgpc.Value * Fields!Nofc.Value) * 2.2046)),SUM(Fields!Dlvlbs.Value))</Value>
                                   <Style>
                                     <Format>n2</Format>
                                   </Style>
@@ -763,7 +771,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum((Fields!Nwkgpc.Value * Fields!Nofc.Value))</Value>
+                                  <Value>=IIf(Parameters!Parfactory.Value = "GSC",Sum((Fields!Nwkgpc.Value * Fields!Nofc.Value)),SUM(Fields!Dlvkg.Value))</Value>
                                   <Style>
                                     <Format>n2</Format>
                                   </Style>
@@ -2131,6 +2139,12 @@
     </ReportParameter>
     <ReportParameter Name="Parremark">
       <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Parfactory">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
       <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>

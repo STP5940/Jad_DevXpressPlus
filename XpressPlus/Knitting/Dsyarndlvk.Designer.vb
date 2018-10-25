@@ -305,6 +305,10 @@ Partial Public Class Dsyarndlvk
         
         Private columnDlvno As Global.System.Data.DataColumn
         
+        Private columnDlvlbs As Global.System.Data.DataColumn
+        
+        Private columnDlvkg As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -429,6 +433,22 @@ Partial Public Class Dsyarndlvk
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property DlvlbsColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDlvlbs
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property DlvkgColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDlvkg
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -465,9 +485,9 @@ Partial Public Class Dsyarndlvk
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddDataTable1Row(ByVal Custname As String, ByVal Yarnid As String, ByVal Yarndesc As String, ByVal Lotno As String, ByVal Nwkgpc As Double, ByVal Nwppc As Double, ByVal Gwkgpc As Integer, ByVal Gwppc As String, ByVal Nofc As String, ByVal Sremark As String, ByVal Dlvno As String) As DataTable1Row
+        Public Overloads Function AddDataTable1Row(ByVal Custname As String, ByVal Yarnid As String, ByVal Yarndesc As String, ByVal Lotno As String, ByVal Nwkgpc As Double, ByVal Nwppc As Double, ByVal Gwkgpc As Double, ByVal Gwppc As Double, ByVal Nofc As Integer, ByVal Sremark As String, ByVal Dlvno As String, ByVal Dlvlbs As Double, ByVal Dlvkg As Double) As DataTable1Row
             Dim rowDataTable1Row As DataTable1Row = CType(Me.NewRow,DataTable1Row)
-            Dim columnValuesArray() As Object = New Object() {Custname, Yarnid, Yarndesc, Lotno, Nwkgpc, Nwppc, Gwkgpc, Gwppc, Nofc, Sremark, Dlvno}
+            Dim columnValuesArray() As Object = New Object() {Custname, Yarnid, Yarndesc, Lotno, Nwkgpc, Nwppc, Gwkgpc, Gwppc, Nofc, Sremark, Dlvno, Dlvlbs, Dlvkg}
             rowDataTable1Row.ItemArray = columnValuesArray
             Me.Rows.Add(rowDataTable1Row)
             Return rowDataTable1Row
@@ -501,6 +521,8 @@ Partial Public Class Dsyarndlvk
             Me.columnNofc = MyBase.Columns("Nofc")
             Me.columnSremark = MyBase.Columns("Sremark")
             Me.columnDlvno = MyBase.Columns("Dlvno")
+            Me.columnDlvlbs = MyBase.Columns("Dlvlbs")
+            Me.columnDlvkg = MyBase.Columns("Dlvkg")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -518,16 +540,20 @@ Partial Public Class Dsyarndlvk
             MyBase.Columns.Add(Me.columnNwkgpc)
             Me.columnNwppc = New Global.System.Data.DataColumn("Nwppc", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnNwppc)
-            Me.columnGwkgpc = New Global.System.Data.DataColumn("Gwkgpc", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnGwkgpc = New Global.System.Data.DataColumn("Gwkgpc", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnGwkgpc)
-            Me.columnGwppc = New Global.System.Data.DataColumn("Gwppc", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnGwppc = New Global.System.Data.DataColumn("Gwppc", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnGwppc)
-            Me.columnNofc = New Global.System.Data.DataColumn("Nofc", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnNofc = New Global.System.Data.DataColumn("Nofc", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnNofc)
             Me.columnSremark = New Global.System.Data.DataColumn("Sremark", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnSremark)
             Me.columnDlvno = New Global.System.Data.DataColumn("Dlvno", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnDlvno)
+            Me.columnDlvlbs = New Global.System.Data.DataColumn("Dlvlbs", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDlvlbs)
+            Me.columnDlvkg = New Global.System.Data.DataColumn("Dlvkg", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDlvkg)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -764,10 +790,10 @@ Partial Public Class Dsyarndlvk
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property Gwkgpc() As Integer
+        Public Property Gwkgpc() As Double
             Get
                 Try 
-                    Return CType(Me(Me.tableDataTable1.GwkgpcColumn),Integer)
+                    Return CType(Me(Me.tableDataTable1.GwkgpcColumn),Double)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'Gwkgpc' in table 'DataTable1' is DBNull.", e)
                 End Try
@@ -779,10 +805,10 @@ Partial Public Class Dsyarndlvk
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property Gwppc() As String
+        Public Property Gwppc() As Double
             Get
                 Try 
-                    Return CType(Me(Me.tableDataTable1.GwppcColumn),String)
+                    Return CType(Me(Me.tableDataTable1.GwppcColumn),Double)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'Gwppc' in table 'DataTable1' is DBNull.", e)
                 End Try
@@ -794,10 +820,10 @@ Partial Public Class Dsyarndlvk
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property Nofc() As String
+        Public Property Nofc() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableDataTable1.NofcColumn),String)
+                    Return CType(Me(Me.tableDataTable1.NofcColumn),Integer)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'Nofc' in table 'DataTable1' is DBNull.", e)
                 End Try
@@ -834,6 +860,36 @@ Partial Public Class Dsyarndlvk
             End Get
             Set
                 Me(Me.tableDataTable1.DlvnoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Dlvlbs() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tableDataTable1.DlvlbsColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Dlvlbs' in table 'DataTable1' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableDataTable1.DlvlbsColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Dlvkg() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tableDataTable1.DlvkgColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Dlvkg' in table 'DataTable1' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableDataTable1.DlvkgColumn) = value
             End Set
         End Property
         
@@ -967,6 +1023,30 @@ Partial Public Class Dsyarndlvk
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetDlvnoNull()
             Me(Me.tableDataTable1.DlvnoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsDlvlbsNull() As Boolean
+            Return Me.IsNull(Me.tableDataTable1.DlvlbsColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetDlvlbsNull()
+            Me(Me.tableDataTable1.DlvlbsColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsDlvkgNull() As Boolean
+            Return Me.IsNull(Me.tableDataTable1.DlvkgColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetDlvkgNull()
+            Me(Me.tableDataTable1.DlvkgColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     

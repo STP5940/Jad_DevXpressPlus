@@ -1,45 +1,27 @@
 ﻿Imports System.ComponentModel
 Imports Microsoft.Reporting.WinForms
 Public Class Formknittingform
-    Private Tmasterknit, Tdetailsknit, Tmasterdlv, Tdetailsdlv, Tlist, TYanlist, Dttemp, Vdeliyarndet, Tmaster As DataTable
+    Private Tmasterknit, Tdetailsknit, Tmasterdlv, Tdetailsdlv, Tlist, TYanlist, Dttemp, Vdeliyarndet, Tmaster, Trollperkg As DataTable
     Private Pagecount, Maxrec, Pagesize, Currentpage, Recno As Integer
     Private WithEvents Dtplistfm As New DateTimePicker
     Private WithEvents Dtplistto As New DateTimePicker
     Private Bs As BindingSource
-    'Private Bs As BindingSource
-
     Private Sub Formknittingform_Load(sender As Object, e As EventArgs) Handles Me.Load
         Controls.Add(Dtplistfm)
-        'Dtplistfm.Value = Now
-        'Dtplistfm.Width = 130
-        'Me.ToolStrip4.Items.Insert(5, New ToolStripControlHost(Dtplistfm))
-        'Me.ToolStrip4.Items(5).Alignment = ToolStripItemAlignment.Right
-        'Controls.Add(Dtplistto)
-        'Dtplistto.Value = Now
-        'Dtplistto.Width = 130
-        'Me.ToolStrip4.Items.Insert(4, New ToolStripControlHost(Dtplistto))
-        'Me.ToolStrip4.Items(4).Alignment = ToolStripItemAlignment.Right
-        'Dtplistfm.Visible = False
-        'Dtplistto.Visible = False
-
-        '------------- Tab Fabric -------------'
         Controls.Add(Dtplistfm)
         Dtplistfm.Value = Now
         Dtplistfm.Width = 130
         Me.ToolStrip4.Items.Insert(5, New ToolStripControlHost(Dtplistfm))
         Me.ToolStrip4.Items(5).Alignment = ToolStripItemAlignment.Right
         Dtplistfm.Visible = False
-
         Controls.Add(Dtplistto)
         Dtplistto.Value = Now
         Dtplistto.Width = 130
         Me.ToolStrip4.Items.Insert(4, New ToolStripControlHost(Dtplistto))
         Me.ToolStrip4.Items(4).Alignment = ToolStripItemAlignment.Right
         Dtplistto.Visible = False
-        '------------- End Tab Fabric -------------'
-
         GroupPanel2.Visible = True
-        'Setauthorize()
+        ' Setauthorize() 'Suphat
         Retdocprefix()
         CloseMaster()
         Tbmycom.Text = Trim(Gscomname)
@@ -52,7 +34,6 @@ Public Class Formknittingform
         Dgvmas.ColumnHeadersDefaultCellStyle.Font = New Font("Microsoft Sans Serif", 11)
         Dgvmas.DefaultCellStyle.Font = New Font("Microsoft Sans Serif", 11)
         Bindinglist()
-
         YanList.ColumnHeadersDefaultCellStyle.Font = New Font("Microsoft Sans Serif", 11)
         YanList.DefaultCellStyle.Font = New Font("Microsoft Sans Serif", 11)
         YanList.ColumnHeadersDefaultCellStyle.Font = New Font("Microsoft Sans Serif", 11)
@@ -60,19 +41,21 @@ Public Class Formknittingform
         BindingYanlist()
     End Sub
     Private Sub Btmnew_Click(sender As Object, e As EventArgs) Handles Btmnew.Click
-        Clrdgrid()
-        Clrtxtbox()
-        OpenMaster()
-        TabControl1.SelectedTabIndex = 2
-        BindingNavigator1.Enabled = False
-        Mainbuttonaddedit()
-
-        Tbremark.Enabled = True
-        Dgvmas.Enabled = True
-        'Btdedit.Enabled = False
-        'Btddel.Enabled = False
+        Createnew()
+        Tbfactory.Text = ""
+        Tbdlvyarnno.Enabled = True
+        Btfinddlvno.Enabled = False
+        Dtprecdate.Enabled = True
+        ButtonX1.Enabled = True
+        Tbknitid.Text = "10000"
+        Tbknitname.Text = "เซียงเฮง"
+        Tbfactory.Enabled = True
+        Tbfactory.Select()
+        ToolStrip6.Visible = False
+        Dgvyarn.Visible = False
+        Paneloth.Visible = True
+        Cbfromgsc.Checked = False
     End Sub
-
     Private Sub NewBtn()
         Btfindfabtypeid.Enabled = True
         Dtpknitcomdate.Enabled = True
@@ -89,17 +72,7 @@ Public Class Formknittingform
         QtyrollStore.Text = ""
         WgtKgStore.Text = ""
     End Sub
-
     Private Sub Btmedit_Click(sender As Object, e As EventArgs) Handles Btmedit.Click
-        'If TabControl1.SelectedTabIndex = 0 Then
-        '    Exit Sub
-        'End If
-        'If Confirmedit() = True Then
-        '    BindingNavigator1.Enabled = False
-        '    Mainbuttonaddedit()
-        'End If
-        'BindingNavigator1.Enabled = False
-        'Mainbuttonaddedit()
         Dtpknitcomdate.Enabled = True
         Btfinddlvno.Enabled = True
         Dgvyarn.Enabled = True
@@ -114,8 +87,10 @@ Public Class Formknittingform
         Btdcancel.Enabled = True
         BindingNavigator1.Enabled = False
         Mainbuttonaddedit()
-        SelectData()
-
+        If Cbfromgsc.Checked = True Then
+            SelectData()
+        Else
+        End If
     End Sub
     Private Sub Btmdel_Click(sender As Object, e As EventArgs) Handles Btmdel.Click
         If Trim(Tbknitcomno.Text) = "NEW" Then
@@ -136,25 +111,13 @@ Public Class Formknittingform
             Mainbuttoncancel()
         End If
     End Sub
-
     Private Sub Btmsave_Click(sender As Object, e As EventArgs) Handles Btmsave.Click
-        If Tbknitcomno.Text <> "NEW" Then
-            If MessageBox.Show("การแก้ไขข้อมูลอาจส่งผลกระทบต่อหน้า ใบสั่งย้อม", "คำเตือน", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) = 2 Then
-                Exit Sub
-            End If
-        End If
-        'If Tstbsumroll.Text > QtyrollStore.Text OrElse Tstbsumroll.Text < QtyrollStore.Text Then
-        '    Informmessage("จำนวน (Roll) ไม่ตรงกับจำนวนที่มีในระบบ")
-        '    Exit Sub
-        'End If
         If WgtKgStore.Text > Tstbsumkg.Text OrElse WgtKgStore.Text < Tstbsumkg.Text Then
             Informmessage("น้ำหนักผ้าที่สั่งทอต้องเท่ากับเส้นด้ายที่ส่งไป")
             Exit Sub
         End If
-
         Tbremark.Enabled = False
         Dgvmas.Enabled = False
-
         If Tstbdocpre.Text = "" Then
             Informmessage("กรุณาติดต่อ Admin เพื่อกำหนด Prefix ของเลขที่เอกสาร")
             Exit Sub
@@ -212,7 +175,6 @@ Public Class Formknittingform
         Dgvyarn.Enabled = True
         Btfinddlvno.Enabled = True
     End Sub
-
     Private Sub CloseDetiel()
         GroupPanel2.Visible = False
         Tbfinwgt.Enabled = False
@@ -233,7 +195,6 @@ Public Class Formknittingform
             Informmessage("มีการเปลี่ยนแปลงและยังไม่ทำการบันทึก")
             Exit Sub
         End If
-        Binddetailsdlv()
         Binddetailsknit()
         Dim Frm As New Formknitingfrmrpt
         Frm.ReportViewer1.Reset()
@@ -242,6 +203,7 @@ Public Class Formknittingform
         Frm.Tbknitcomno.Text = Trim(Tbknitcomno.Text)
         Frm.Tbredate.Text = Format(Dtprecdate.Value, "dd/MM/yyyy")
         Frm.Tbremark.Text = Trim(Tbremark.Text)
+        Frm.TextBox1.Text = Trim(Tbfactory.Text)
         If Gsexpau = False Then
             Frm.ReportViewer1.ShowExportButton = False
         End If
@@ -250,14 +212,23 @@ Public Class Formknittingform
         End If
         Dim Rds, Rds1 As New ReportDataSource()
         Rds.Name = "DataSet1"
-        Rds.Value = Tdetailsdlv
+        If Cbfromgsc.Checked = True Then
+            Binddetailsdlv()
+            Rds.Value = Tdetailsdlv
+        Else
+            Dim Tmpmasdlv As New DataTable
+            Tmpmasdlv = SQLCommand("SELECT '' AS Custname,dbo.Tknittcomxp.yarnid,dbo.Tyarnxp.Yarndesc, '' AS Lotno,0 as Nwkgpc,0 as Nwppc,0 as Gwkgpc,
+                                    0 AS Gwppc,0 AS Nofc,'' AS Sremark, dbo.Tknittcomxp.Dlvno,dbo.Tknittcomxp.Dlvlbs, dbo.Tknittcomxp.Dlvkg
+                                    FROM dbo.Tknittcomxp LEFT OUTER JOIN
+                                    dbo.Tyarnxp ON dbo.Tknittcomxp.Yarnid = dbo.Tyarnxp.Yarnid
+                                    WHERE dbo.Tknittcomxp.Dlvno = '" & Trim(Tbdlvyarnno.Text) & "'")
+            Rds.Value = Tmpmasdlv
+        End If
         Frm.ReportViewer1.LocalReport.DataSources.Add(Rds)
         Rds1.Name = "DataSet2"
         Rds1.Value = Tdetailsknit
         Frm.ReportViewer1.LocalReport.DataSources.Add(Rds1)
-        'showform(Frm)
-        Frm.Show()
-
+        '  Showform(Frm) 'Suphat
         Clrtxtbox()
         Clrdgrid()
         BindingNavigator1.Enabled = False
@@ -269,7 +240,6 @@ Public Class Formknittingform
         Tscboth.Checked = True
         Tstbkeyword.Select()
         Tstbkeyword.Focus()
-
         Clrtxtbox()
         Clrdgrid()
         BindingNavigator1.Enabled = False
@@ -346,7 +316,6 @@ Public Class Formknittingform
             Editcontextlistmenu()
         End If
     End Sub
-
     Private Sub YanList_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles YanList.CellClick
         If YanList.RowCount = 0 Then
             Exit Sub
@@ -363,7 +332,6 @@ Public Class Formknittingform
             EditcontextYanList()
         End If
     End Sub
-
     Private Sub Ctmledit_Click(sender As Object, e As EventArgs) Handles Ctmledit.Click
         Clrdgrid()
         Clrdetails()
@@ -378,16 +346,16 @@ Public Class Formknittingform
         Tbknitcomno.DataBindings.Add("Text", Bs, "Knitcomno")
         Tbknitcomno.Enabled = False
         Bindmasterknit()
-        Bindmasterdlv()
+        If Cbfromgsc.Checked = True Then
+            Bindmasterdlv()
+        End If
         Binddetailsdlv()
-
         If Dgvyarn.RowCount > 0 Then
             Dgvyarn.Rows(0).Selected = False
         End If
         If Dgvmas.RowCount > 0 Then
             Dgvmas.Rows(0).Selected = False
         End If
-
         BindingNavigator1.Enabled = True
         Btmnew.Enabled = False
         Btmedit.Enabled = True
@@ -432,6 +400,25 @@ Public Class Formknittingform
         Bindmasterdlv()
         SelectData()
     End Sub
+    Private Sub ButtonX1_Click(sender As Object, e As EventArgs) Handles ButtonX1.Click
+        Dim Frm As New Formknittinglist
+        Showdiaformcenter(Frm, Me)
+        If Frm.Tbcancel.Text = "C" Then
+            Exit Sub
+        End If
+        Tbknitid.Text = Frm.Dgvmas.CurrentRow.Cells("Mid").Value
+        Tbknitname.Text = Frm.Dgvmas.CurrentRow.Cells("Mname").Value
+    End Sub
+    Private Sub Btfindyarn_Click(sender As Object, e As EventArgs) Handles Btfindyarn.Click
+        Dim Frm As New Formyarnlist
+        Showdiaformcenter(Frm, Me)
+        If Frm.Tbcancel.Text = "C" Then
+            Exit Sub
+        End If
+        Tbyarnid.Text = Trim(Frm.Dgvmas.CurrentRow.Cells("Mid").Value)
+        Tbyarnname.Text = Trim(Frm.Dgvmas.CurrentRow.Cells("Mname").Value)
+        Tblbs.Select()
+    End Sub
     Private Sub Dgvyarn_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles Dgvyarn.CellClick
         If Dgvyarn.RowCount = 0 Then
             Exit Sub
@@ -439,201 +426,88 @@ Public Class Formknittingform
         Dgvyarn.CurrentRow.Selected = True
     End Sub
     Private Sub Btfindfabtypeid_Click(sender As Object, e As EventArgs) Handles Btfindfabtypeid.Click
-        'MsgBox(Dgvyarn.Rows(0).Cells("Dyarnid").Value)
-
         If Validmas() = False Then
             Informmessage("กรุณากรอกข้อมูลใบส่งด้าย ")
             Exit Sub
         End If
-
         Dim Frm As New FormfabrictypelistForknitt
-        Frm.Dyarnid.Text = Trim(Dgvyarn.Rows(0).Cells("Dyarnid").Value)
+        If Cbfromgsc.Checked = True Then
+            Frm.Dyarnid.Text = Trim(Dgvyarn.Rows(0).Cells("Dyarnid").Value)
+        Else
+            If Tbyarnid.Text = "" Then
+                Informmessage("กรุณาเลือกเส้นด้าย")
+                Exit Sub
+            End If
+            Frm.Dyarnid.Text = Tbyarnid.Text
+        End If
         Showdiaformcenter(Frm, Me)
         If Frm.Tbcancel.Text = "C" Then
             Exit Sub
         End If
-
         Tbclothid.Text = Trim(Frm.Dgvmas.CurrentRow.Cells("Mid").Value)
         Tbclothno.Text = Trim(Frm.Dgvmas.CurrentRow.Cells("Mname").Value)
         Tbtypename.Text = Trim(Frm.Dgvmas.CurrentRow.Cells("Ftype").Value)
         Tbfinwidth.Text = Trim(Frm.Dgvmas.CurrentRow.Cells("Fwidth").Value)
         QtyrollOrder.Focus()
-
         If Trim(Frm.Dgvmas.CurrentRow.Cells("Havedoz").Value) = True Then
             Tbdozen.Text = ""
             Tbdozen.Visible = True
             Label_dozen.Visible = True
-            'Tbdozen.Focus()
         Else
             Tbdozen.Text = "0"
             Tbdozen.Visible = False
             Label_dozen.Visible = False
-            'Tbfinwgt.Focus()
             Exit Sub
         End If
-
-        'Show_Vdeliyarndet2()
     End Sub
-    'Private Sub Tbqtyroll_KeyDown(sender As Object, e As KeyEventArgs) Handles Tbqtyroll.KeyDown
-    '    If (e.KeyCode = Keys.Enter) Then
-    '        Tbdozen.Focus()
-    '    End If
-    'End Sub
-
-    'Private Sub Tbwgtkg_KeyDown(sender As Object, e As KeyEventArgs) Handles Tbwgtkg.KeyDown
-    '    If e.KeyCode = Keys.Enter Then
-    '        If Tbwgtkg.Text = "" Then
-    '            Tbwgtlbs.Text = "0"
-    '            Tbfinwgt.Focus()
-    '            Exit Sub
-    '        End If
-    '        Tbwgtlbs.Text = Format(Findpoud(Tbwgtkg.Text), "###,###")
-    '        Tbfinwgt.Focus()
-    '    End If
-    'End Sub
-
-    'Test  QtyrollOrder.Focus()
-    'Private Sub QtyrollOrder_KeyDown(sender As Object, e As KeyEventArgs)
-    '    If (e.KeyCode = Keys.Enter) Then
-    '        WgtKgOrder.Focus()
-    '    End If
-    'End Sub
-    ''Test  WgtKgOrder.Focus()
-    'Private Sub WgtKgOrder_KeyDown(sender As Object, e As KeyEventArgs)
-    '    If (e.KeyCode = Keys.Enter) Then
-    '        Btdadd_Click(sender, e)
-    '        Show_Vdeliyarndet2()
-    '    End If
-    'End Sub
-
-
-
-
-    'test---
-    'Private Sub Ctmledit2_Click(sender As Object, e As EventArgs) Handles Ctmledit2.Click
-    '    MsgBox("Hello Word")
-    '    Tbdozen.Text = "0"
-    '    Tbfinwgt.Text = "-"
-
-    '    'QtyrollStore.Text = "0"
-    '    'WgtKgStore.Text = "0"
-
-    '    'Tstbsumroll.Text = "0"
-    '    'Tstbsumkg.Text = "0"
-    '    'QtyrollOrder.Text = "0"
-    '    'WgtKgOrder.Text = "0"
-    '    'ShowRollOrder.Text = "0"
-    '    'ShowKgOrder.Text = "0"
-    '    Show_Vdeliyarndet()
-
-    'End Sub
-    'Private Sub Show_Vdeliyarndet()
-    '    Vdeliyarndet = New DataTable
-    '    'Vdeliyarndet = SQLCommand("SELECT * FROM Vdeliyarndet
-    '    '                        WHERE Comid = '" & Gscomid & "' AND Dlvno = '" & Trim(Tbdlvyarnno.Text) & "'")
-    '    Vdeliyarndet = SQLCommand("SELECT * FROM VdeliyarnCalculate
-    '                            WHERE Comid = '" & Gscomid & "' AND Dlvno = '" & Trim(Tbdlvyarnno.Text) & "'")
-    '    If Vdeliyarndet.Rows.Count > 0 Then
-    '        'TbNwkgpc.Text = Trim(Vdeliyarndet.Rows(0)("Nwkgpc"))
-    '        'TbNofc.Text = Trim(Vdeliyarndet.Rows(0)("Nofc"))
-    '        'Tbwgtkg.Text = Trim(Vdeliyarndet.Rows(0)("WgtKG"))
-    '        'Tbqtyroll.Text = Math.Round(Tbwgtkg.Text / 20)
-    '        'Tbwgtlbs.Text = Math.Round(Tbwgtkg.Text * 2.2046)
-    '        TbNwkgpc.Text = Vdeliyarndet.Rows(0)("Nwkgpc")
-    '        TbNofc.Text = Vdeliyarndet.Rows(0)("Nofc")
-    '        Tbwgtkg.Text = Convert.ToDouble(Vdeliyarndet.Rows(0)("WgtKG")).ToString("N2")
-    '        Tbqtyroll.Text = Format(CLng(Tbwgtkg.Text / 20), "###,###")
-    '        Tbwgtlbs.Text = Convert.ToDouble(Tbwgtkg.Text * 2.2046).ToString("N2")
-    '        '----------
-
-    '        ShowRollOrder.Text = Tstbsumroll.Text
-    '        ShowKgOrder.Text = Tstbsumkg.Text
-
-    '        QtyrollStore.Text = (Tbqtyroll.Text - ShowRollOrder.Text)
-    '        WgtKgStore.Text = Convert.ToDouble(Tbwgtkg.Text - ShowKgOrder.Text).ToString("N2")
-
-
-    '        'Binddetailsdlv()
-    '    End If
-    'End Sub
     Private Sub Show_Vdeliyarndet()
-        If Dgvyarn.RowCount = 0 Then
-            QtyrollStore.Text = 0
-            WgtKgStore.Text = 0
-            Exit Sub
+        Dim Kgproll As Double
+        Trollperkg = New DataTable
+        Trollperkg = SQLCommand("SELECT Rate FROM Twgtperkgxp 
+                                WHERE Comid = '" & Gscomid & "'")
+        If Trollperkg.Rows.Count > 0 Then
+            Kgproll = Trollperkg.Rows(0)("Rate")
+        Else
+            Kgproll = 20
         End If
-        Vdeliyarndet = New DataTable
-        Vdeliyarndet = SQLCommand("SELECT * FROM VdeliyarnCalculate
-                                WHERE Comid = '" & Gscomid & "' AND Dlvno = '" & Trim(Tbdlvyarnno.Text) & "'")
-        If Vdeliyarndet.Rows.Count > 0 Then
-            TbNwkgpc.Text = Vdeliyarndet.Rows(0)("Nwkgpc")
-            TbNofc.Text = Vdeliyarndet.Rows(0)("Nofc")
-            Tbwgtkg.Text = Convert.ToDouble(Vdeliyarndet.Rows(0)("WgtKG")).ToString("N2")
-            Tbqtyroll.Text = Format(CLng(Tbwgtkg.Text / 20), "###,##0")
-            If Tbqtyroll.Text = 0 Then
-                Tbqtyroll.Text = 1
+        If Cbfromgsc.Checked = True Then
+            If Dgvyarn.RowCount = 0 Then
+                QtyrollStore.Text = 0
+                WgtKgStore.Text = 0
+                Exit Sub
             End If
-            Tbwgtlbs.Text = Convert.ToDouble(Tbwgtkg.Text * 2.2046).ToString("N2")
-            '----------
-
-            ShowRollOrder.Text = Tstbsumroll.Text
-            ShowKgOrder.Text = Tstbsumkg.Text
-            QtyrollStore.Text = Format(CLng(Tbwgtkg.Text / 20), "###,##0")
-            If QtyrollStore.Text = 0 Then
-                QtyrollStore.Text = 1
-            End If
-            WgtKgStore.Text = Convert.ToDouble(Vdeliyarndet.Rows(0)("WgtKG")).ToString("N2")
-
-            'If Tbqtyroll.Text = "" Then
-            '    QtyrollStore.Text = Format(CLng(Tbwgtkg.Text / 20), "###,###")
-            '    WgtKgStore.Text = Convert.ToDouble(Vdeliyarndet.Rows(0)("WgtKG")).ToString("N2")
-            '    Exit Sub
-            '    QtyrollStore.Text = (Tbqtyroll.Text - ShowRollOrder.Text)
-            '    WgtKgStore.Text = Convert.ToDouble(Tbwgtkg.Text - ShowKgOrder.Text).ToString("N2")
-            'End If
-
-            'QtyrollStore.Text = (Tbqtyroll.Text - ShowRollOrder.Text)
-            'WgtKgStore.Text = Convert.ToDouble(Tbwgtkg.Text - ShowKgOrder.Text).ToString("N2")
-
-
-        End If
-    End Sub
-    '*******************************************
-    Private Sub Show_Vdeliyarndet2()
-        Vdeliyarndet = New DataTable
-        Vdeliyarndet = SQLCommand("SELECT * FROM VdeliyarnCalculate
+            Vdeliyarndet = New DataTable
+            Vdeliyarndet = SQLCommand("SELECT * FROM VdeliyarnCalculate
                                 WHERE Comid = '" & Gscomid & "' AND Dlvno = '" & Trim(Tbdlvyarnno.Text) & "'")
-        If Vdeliyarndet.Rows.Count > 0 Then
-            TbNwkgpc.Text = Vdeliyarndet.Rows(0)("Nwkgpc")
-            TbNofc.Text = Vdeliyarndet.Rows(0)("Nofc")
-            Tbwgtkg.Text = Convert.ToDouble(Vdeliyarndet.Rows(0)("WgtKG")).ToString("N2")
-            Tbqtyroll.Text = Format(CLng(Tbwgtkg.Text / 20), "###,###")
-            Tbwgtlbs.Text = Convert.ToDouble(Tbwgtkg.Text * 2.2046).ToString("N2")
-            '----------
-
-            ShowRollOrder.Text = Tstbsumroll.Text
-            ShowKgOrder.Text = Tstbsumkg.Text
-            QtyrollStore.Text = (Tbqtyroll.Text - ShowRollOrder.Text)
-            WgtKgStore.Text = Convert.ToDouble(Tbwgtkg.Text - ShowKgOrder.Text).ToString("N2")
-
+            If Vdeliyarndet.Rows.Count > 0 Then
+                TbNwkgpc.Text = Vdeliyarndet.Rows(0)("Nwkgpc")
+                TbNofc.Text = Vdeliyarndet.Rows(0)("Nofc")
+                Tbwgtkg.Text = Convert.ToDouble(Vdeliyarndet.Rows(0)("WgtKG")).ToString("N2")
+                Tbqtyroll.Text = Format(CLng(Tbwgtkg.Text / Kgproll), "###,##0")
+                If Tbqtyroll.Text = 0 Then
+                    Tbqtyroll.Text = 1
+                End If
+                Tbwgtlbs.Text = Convert.ToDouble(Tbwgtkg.Text * 2.2046).ToString("N2")
+                ShowRollOrder.Text = Tstbsumroll.Text
+                ShowKgOrder.Text = Tstbsumkg.Text
+                QtyrollStore.Text = Format(CLng(Tbwgtkg.Text / Kgproll), "###,##0")
+                If QtyrollStore.Text = 0 Then
+                    QtyrollStore.Text = 1
+                End If
+                WgtKgStore.Text = Convert.ToDouble(Tbsumdlvwgtkg.Text).ToString("N2")
+                QtyrollStore.Text = Format(CLng(WgtKgStore.Text / Kgproll), "###,##0")
+            End If
+        Else
+            QtyrollStore.Text = Format(CLng(Tbkg.Text / Kgproll), "###,##0")
+            WgtKgStore.Text = Convert.ToDouble(Tbkg.Text).ToString("N2")
         End If
     End Sub
     Private Sub Btdadd_Click(sender As Object, e As EventArgs) Handles Btdadd.Click
-        'If Validinput() = False Then
-        '    Informmessage("กรุณาตรวจสอบข้อมูลให้ถูกต้อง ครบถ้วน")
-        '    Exit Sub
-        'End If
         If Validinput() = False Then
             Informmessage("กรุณาเลือกเบอร์ผ้าที่ต้องการ")
             Btfindfabtypeid.PerformClick()
             Exit Sub
         End If
-
-        If Validnumber() = False Then
-            Informmessage("กรุณาตรวจจำนวนให้ถูกต้อง ครบถ้วน(พับ,ก.ก.)")
-            Exit Sub
-        End If
-
         If QtyrollOrder.Text = "" OrElse WgtKgOrder.Text = "" Then
             Informmessage("กรุณาตรวจสอบจำนวนพับ หรือน้ำหนักสั่งทอให้ถูกต้องครบถ้วน")
             If QtyrollOrder.Text = "" Then
@@ -652,37 +526,27 @@ Public Class Formknittingform
             End If
             Exit Sub
         End If
-
         If CDbl(WgtKgOrder.Text) > CDbl(WgtKgStore.Text) Then
             Informmessage("น้ำหนักผ้าที่สั่งทอมากกว่าเส้นด้ายที่ส่งไป")
             WgtKgOrder.Focus()
             Exit Sub
         End If
-
         If Tbfinwgt.Text = "" Then
             Informmessage("กรุณาใส่ข้อมูล Finished Weigth")
             Tbfinwgt.Focus()
             Exit Sub
         End If
-
         If Tbdozen.Text = "" Then
             Informmessage("กรุณาใส่ข้อมูล Dozen")
             Tbdozen.Focus()
             Exit Sub
         End If
-
         If Tbaddedit.Text = "เพิ่ม" Then
             If Chkdupyarnidingrid() = True Then
                 Informmessage("ผ้าเบอร์นี้ มีแล้ว")
                 Exit Sub
             End If
         End If
-        'If CLng(QtyrollOrder.Text) > CLng(QtyrollStore.Text) Then
-        '    Informmessage("จำนวน(Roll) ที่สั่งทอ มากกว่าจำนวนที่มีในระบบ")
-        '    Exit Sub
-        'End If
-
-
         Select Case Trim(Tbaddedit.Text)
             Case "เพิ่ม"
                 If Tbknitcomno.Text = "NEW" Then
@@ -691,7 +555,6 @@ Public Class Formknittingform
                     Tdetailsknit.Rows.Add()
                 End If
                 'Tsbwsave.Visible = True
-
                 Dgvmas.Rows(Dgvmas.RowCount - 1).Cells("Mcomid").Value = Gscomid
                 Dgvmas.Rows(Dgvmas.RowCount - 1).Cells("Mclothid").Value = Trim(Tbclothid.Text)
                 Dgvmas.Rows(Dgvmas.RowCount - 1).Cells("Mclothno").Value = Trim(Tbclothno.Text)
@@ -706,10 +569,8 @@ Public Class Formknittingform
                 Else
                     Dgvmas.Rows(Dgvmas.RowCount - 1).Cells("Havedoz").Value = False
                 End If
-
             Case "แก้ไข"
                 'Tsbwsave.Visible = True
-
                 Dgvmas.CurrentRow.Cells("Mcomid").Value = Gscomid
                 Dgvmas.CurrentRow.Cells("Mclothid").Value = Trim(Tbclothid.Text)
                 Dgvmas.CurrentRow.Cells("Mclothno").Value = Trim(Tbclothno.Text)
@@ -724,18 +585,15 @@ Public Class Formknittingform
                 Else
                     Dgvmas.CurrentRow.Cells("Havedoz").Value = False
                 End If
-
         End Select
         Sumall()
         Btdcancel_Click(sender, e)
         Btfindfabtypeid.Focus()
-
     End Sub
     Private Sub Btdcancel_Click(sender As Object, e As EventArgs) Handles Btdcancel.Click
         Clrdetails()
     End Sub
     Private Sub Btdbadd_Click(sender As Object, e As EventArgs) Handles Btdbadd.Click
-        'Btdcancel_Click(sender, e)
         SelectData()
         GroupPanel2.Visible = True
         Tbaddedit.Text = "เพิ่ม"
@@ -743,27 +601,19 @@ Public Class Formknittingform
         Tbclothno.Text = ""
         Tbtypename.Text = ""
         Tbfinwidth.Text = ""
-        'Tbqtyroll.Text = ""
-        'Tbwgtkg.Text = ""
-        'Tbwgtlbs.Text = ""
         Tbfinwgt.Text = ""
         Tbdozen.Text = ""
         Btdedit.Enabled = True
         Btddel.Enabled = True
-
         QtyrollOrder.Enabled = True
         WgtKgOrder.Enabled = True
         Tbfinwgt.Enabled = True
         Btdadd.Enabled = True
         Btdcancel.Enabled = True
-
-
     End Sub
-
     Private Sub Btdedit_Click(sender As Object, e As EventArgs) Handles Btdedit.Click
         SelectData()
         GroupPanel2.Visible = True
-
         If Dgvmas.RowCount = 0 Then
             Exit Sub
         End If
@@ -771,35 +621,26 @@ Public Class Formknittingform
             Informmessage("กรุณาตรวจสอบข้อมูลในการสั่งทอให้ครบถ้วน")
             Exit Sub
         End If
-
         If Dgvmas.CurrentRow.Cells("Havedoz").Value = True Then
             Tbdozen.Text = ""
             Tbdozen.Visible = True
             Label_dozen.Visible = True
-            'Tbdozen.Focus()
         Else
             Tbdozen.Text = "0"
             Tbdozen.Visible = False
             Label_dozen.Visible = False
-            'Tbfinwgt.Focus()
-            'Exit Sub
         End If
-
         GroupPanel2.Visible = True
         Tbaddedit.Text = "แก้ไข"
         Tbclothid.Text = Trim(Dgvmas.CurrentRow.Cells("Mclothid").Value)
         Tbclothno.Text = Trim(Dgvmas.CurrentRow.Cells("Mclothno").Value)
         Tbtypename.Text = Trim(Dgvmas.CurrentRow.Cells("Mftypename").Value)
         Tbfinwidth.Text = Trim(Dgvmas.CurrentRow.Cells("Mfinwidth").Value)
-        'Tbqtyroll.Text = Format(CLng(Dgvmas.CurrentRow.Cells("Mqty").Value), "###,###")
-        'Tbwgtkg.Text = Format(CDbl(Dgvmas.CurrentRow.Cells("Mkg").Value), "###,###")
         QtyrollOrder.Text = Format(CLng(Dgvmas.CurrentRow.Cells("Mqty").Value), "###,###")
         WgtKgOrder.Text = Format(CDbl(Dgvmas.CurrentRow.Cells("Mkg").Value), "###,###.#0")
-
         Tbfinwgt.Text = Trim(Dgvmas.CurrentRow.Cells("Mfinwgt").Value)
         Tbdozen.Text = Trim(Dgvmas.CurrentRow.Cells("Mdozen").Value)
         Tbqtyroll.Focus()
-
         Binddetailsdlv()
         Show_Vdeliyarndet()
     End Sub
@@ -820,7 +661,7 @@ Public Class Formknittingform
     End Sub
     Private Sub Dgvmas_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles Dgvmas.CellMouseClick
         If e.Button = Windows.Forms.MouseButtons.Right Then
-            If Me.Dgvmas.Rows.Count <1 Then Exit Sub
+            If Me.Dgvmas.Rows.Count < 1 Then Exit Sub
             If e.RowIndex < 0 Then Exit Sub
             Dgvmas.CurrentCell = Dgvmas(4, e.RowIndex)
             Me.Dgvmas.Rows(e.RowIndex).Selected = True
@@ -839,12 +680,12 @@ Public Class Formknittingform
     End Sub
     Private Sub Formknittingform_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         If Tbknitcomno.Text = "NEW" And Dgvmas.RowCount = 0 Then
-            'My.Forms.Formmain.Panel1.Visible = True
+            'My.Forms.Formmain.Panel1.Visible = True ' Suphat
             Exit Sub
         End If
         If Confirmcloseform("สั่งทอ") Then
             e.Cancel = False
-            'My.Forms.Formmain.Panel1.Visible = True
+            ' My.Forms.Formmain.Panel1.Visible = True  'Suphat
         Else
             e.Cancel = True
         End If
@@ -876,22 +717,70 @@ Public Class Formknittingform
         TYanlist = SQLCommand($"SELECT *  FROM Tdeliyarndetxp
                             WHERE  Dlvno NOT IN (SELECT Dlvno FROM Tknittcomxp) AND Comid = '{Gscomid}'")
         YanList.DataSource = TYanlist
-        'FillGrid()
-        'ShowRecordDetail()
     End Sub
     Private Sub Bindmasterknit()
         Tmasterknit = New DataTable
         Tmasterknit = SQLCommand("SELECT * FROM Tknittcomxp 
                                 WHERE Comid = '" & Gscomid & "' AND Knitcomno = '" & Trim(Tbknitcomno.Text) & "'")
         If Tmasterknit.Rows.Count > 0 Then
+            If IsDBNull(Tmasterknit.Rows(0)("Yarnfrom")) Then
+                Tbfactory.Text = "GSC"
+            Else
+                Tbfactory.Text = Trim(Tmasterknit.Rows(0)("Yarnfrom"))
+                Tbknitid.Text = Trim(Tmasterknit.Rows(0)("Knitid"))
+            End If
             Dtpknitcomdate.Value = Tmasterknit.Rows(0)("Knitcomdate")
             Dtprecdate.Value = Tmasterknit.Rows(0)("Rcdate")
             Tbdlvyarnno.Text = Trim(Tmasterknit.Rows(0)("Dlvno"))
             Tbremark.Text = Trim(Tmasterknit.Rows(0)("Dremark"))
+            If Tbfactory.Text = "GSC" Then
+                Cbfromgsc.Checked = True
+                Bindmasterdlv()
+                Btfinddlvno.Enabled = False
+                Tbdlvyarnno.Enabled = False
+                Tbfactory.Enabled = False
+                ToolStrip6.Visible = True
+                Dgvyarn.Visible = True
+                Paneloth.Visible = False
+            Else
+                Cbfromgsc.Checked = False
+                If IsDBNull(Tmasterknit.Rows(0)("Yarnid")) Then
+                    Tbyarnid.Text = ""
+                Else
+                    Tbyarnid.Text = Trim(Tmasterknit.Rows(0)("Yarnid"))
+                End If
+                Findknithouse()
+                Findyarn()
+                Tblbs.Text = Format(Tmasterknit.Rows(0)("Dlvlbs"), "###,###.#0")
+                Tbkg.Text = Format(Tmasterknit.Rows(0)("Dlvkg"), "###,###.#0")
+                Paneloth.Visible = True
+                ToolStrip6.Visible = False
+                Dgvyarn.Visible = False
+            End If
             Binddetailsknit()
         End If
     End Sub
-
+    Private Sub Findyarn()
+        Dim Tfyarnd As New DataTable
+        Tfyarnd = SQLCommand("SELECT Yarnid,Yarndesc FROM Tyarnxp
+                                WHERE Yarnid = '" & Trim(Tbyarnid.Text) & "'")
+        If Tfyarnd.Rows.Count > 0 Then
+            Tbyarnname.Text = Trim(Tfyarnd.Rows(0)("Yarndesc"))
+        Else
+            Tbyarnname.Text = ""
+        End If
+    End Sub
+    Private Sub Findknithouse()
+        Dim Tknitt As New DataTable
+        Tknitt = SQLCommand("SELECT Knitid,Knitdesc FROM Tknitingxp
+                                WHERE Comid = '" & Gscomid & "' AND Knitid = '" & Trim(Tbknitid.Text) & "'")
+        If Tknitt.Rows.Count > 0 Then
+            Tbknitname.Text = Trim(Tknitt.Rows(0)("Knitdesc"))
+        Else
+            Tbknitid.Text = Trim(Tmasterknit.Rows(0)("Knitid"))
+            Tbknitname.Text = "เซียงเฮง"
+        End If
+    End Sub
     Private Sub Bindmasterdlv()
         Tmasterdlv = New DataTable
         Tmasterdlv = SQLCommand("SELECT * FROM Vdeliyarnmas 
@@ -899,22 +788,16 @@ Public Class Formknittingform
         If Tmasterdlv.Rows.Count > 0 Then
             Tbknitid.Text = Trim(Tmasterdlv.Rows(0)("Knitid"))
             Tbknitname.Text = Trim(Tmasterdlv.Rows(0)("Knitdesc"))
-            'Test
             Dtprecdate.Text = Trim(Tmasterdlv.Rows(0)("Dyarndate"))
-            'Test
-
             Binddetailsdlv()
         End If
     End Sub
     Private Sub Binddetailsdlv()
         Tdetailsdlv = New DataTable
-        'Tdetailsdlv = SQLCommand("SELECT * FROM Vdeliyarndet
-        '                        WHERE Comid = '" & Gscomid & "' AND Dlvno = '" & Trim(Tbdlvyarnno.Text) & "'")
-        Tdetailsdlv = SQLCommand("SELECT * FROM VdeliyarnCalculate
+        Tdetailsdlv = SQLCommand("SELECT *,0 AS Dlvlbs, 0 AS Dlvkg FROM VdeliyarnCalculate
                                 WHERE Comid = '" & Gscomid & "' AND Dlvno = '" & Trim(Tbdlvyarnno.Text) & "'")
         Dgvyarn.DataSource = Tdetailsdlv
         Sumdlvyarn()
-        'Test
     End Sub
     Private Sub Binddetailsknit()
         Tdetailsknit = New DataTable
@@ -949,28 +832,47 @@ Public Class Formknittingform
             Insertlog(Gscomid, Gsusergroupid, Gsuserid, Gsusername, "F121", Trim(Tbknitcomno.Text), "E", "แก้ไขรายการ ใบสั่งทอ", Formatdatesave(Now), Computername, Usrproname)
         End If
     End Sub
-    'Private Sub Insertmaster()
-    '    SQLCommand("INSERT INTO Tknittcomxp(Comid,Knitcomdate,Knitcomno,Rcdate,Dlvno,
-    '                Dremark,Updusr,Uptype,Uptime)
-    '                VALUES('" & Gscomid & "','" & Formatshortdatesave(Dtpknitcomdate.Value) & "','" & Trim(Tbknitcomno.Text) & "','" & Formatshortdatesave(Dtprecdate.Value) & "','" & Trim(Tbdlvyarnno.Text) & "',
-    '                '" & Trim(Tbremark.Text) & "','" & Gsuserid & "','A','" & Formatdatesave(Now) & "')")
-    'End Sub
-    'Private Sub Editmaster()
-    '    SQLCommand("UPDATE Tknittcomxp SET Knitcomdate = '" & Formatshortdatesave(Dtpknitcomdate.Value) & "',Rcdate = '" & Formatshortdatesave(Dtprecdate.Value) & "',
-    '                Dlvno = '" & Trim(Tbdlvyarnno.Text) & "',Dremark = '" & Trim(Tbremark.Text) & "',Updusr = '" & Gsuserid & "',Uptype = 'E',
-    '                Uptime = '" & Formatdatesave(Now) & "'
-    '                WHERE Comid = '" & Gscomid & "' AND Knitcomno = '" & Tbknitcomno.Text & "'")
-    'End Sub
     Private Sub Insertmaster()
+        Dim Tyarnid As String
+        Dim Sumlbs, Sumkg As Double
+        Sumlbs = 0
+        Sumkg = 0
+        If Cbfromgsc.Checked = True Then
+            Sumkg = CDbl(Tbsumdlvwgtkg.Text)
+            Sumlbs = CDbl(Tbsumdlvwgtkg.Text) * 2.20462
+            Tyarnid = ""
+        Else
+            Sumkg = CDbl(Tbkg.Text)
+            Sumlbs = CDbl(Tblbs.Text)
+            Tyarnid = Tbyarnid.Text
+        End If
         SQLCommand("INSERT INTO Tknittcomxp(Comid,Knitcomdate,Knitcomno,Rcdate,Dlvno,
-                    Dremark,WgtKgOrder,WgtKgStore,QtyrollOrder,QtyrollStore,Updusr,Uptype,Uptime)
+                    Dremark,WgtKgOrder,WgtKgStore,QtyrollOrder,QtyrollStore,
+                    Updusr,Uptype,Uptime,Knitid,Yarnfrom,
+                    Dlvlbs,Dlvkg,Yarnid)
                     VALUES('" & Gscomid & "','" & Formatshortdatesave(Dtpknitcomdate.Value) & "','" & Trim(Tbknitcomno.Text) & "','" & Formatshortdatesave(Dtprecdate.Value) & "','" & Trim(Tbdlvyarnno.Text) & "',
-                    '" & Trim(Tbremark.Text) & "','" & WgtKgOrder.Text & "','" & ShowKgOrder.Text & "','" & QtyrollOrder.Text & "','" & ShowRollOrder.Text & "','" & Gsuserid & "','A','" & Formatdatesave(Now) & "')")
+                    '" & Trim(Tbremark.Text) & "'," & CDbl(Tstbsumkg.Text) & ",0," & CDbl(Tstbsumroll.Text) & ",0,
+                    '" & Gsuserid & "','A','" & Formatdatesave(Now) & "','" & Trim(Tbknitid.Text) & "','" & Trim(Tbfactory.Text) & "',
+                    " & Sumlbs & "," & Sumkg & ",'" & Tyarnid & "')")
     End Sub
     Private Sub Editmaster()
+        Dim Tyarnid As String
+        Dim Sumlbs, Sumkg As Double
+        Sumlbs = 0
+        Sumkg = 0
+        If Cbfromgsc.Checked = True Then
+            Sumkg = CDbl(Tbsumdlvwgtkg.Text)
+            Sumlbs = CDbl(Tbsumdlvwgtkg.Text) * 2.20462
+            Tyarnid = ""
+        Else
+            Sumkg = CDbl(Tbkg.Text)
+            Sumlbs = CDbl(Tblbs.Text)
+            Tyarnid = Tbyarnid.Text
+        End If
         SQLCommand("UPDATE Tknittcomxp SET Knitcomdate = '" & Formatshortdatesave(Dtpknitcomdate.Value) & "',Rcdate = '" & Formatshortdatesave(Dtprecdate.Value) & "',
-                    Dlvno = '" & Trim(Tbdlvyarnno.Text) & "',Dremark = '" & Trim(Tbremark.Text) & "',WgtKgOrder = '" & ShowKgOrder.Text & "',WgtKgStore = '" & WgtKgStore.Text & "',QtyrollOrder = '" & ShowRollOrder.Text & "',QtyrollStore = '" & QtyrollStore.Text & "',Updusr = '" & Gsuserid & "',Uptype = 'E',
-                    Uptime = '" & Formatdatesave(Now) & "'
+                    Dlvno = '" & Trim(Tbdlvyarnno.Text) & "',Dremark = '" & Trim(Tbremark.Text) & "',WgtKgOrder = " & CDbl(Tstbsumkg.Text) & ",WgtKgStore = 0,
+                    QtyrollOrder = " & CDbl(Tstbsumroll.Text) & ",QtyrollStore = 0,Updusr = '" & Gsuserid & "',Uptype = 'E',Uptime = '" & Formatdatesave(Now) & "',
+                    Knitid = '" & Trim(Tbknitid.Text) & "',Yarnfrom = '" & Tbfactory.Text & "',Dlvlbs = " & CDbl(Tblbs.Text) & ",Dlvkg = " & CDbl(Tbkg.Text) & ",Yarnid = '" & Tyarnid & "'
                     WHERE Comid = '" & Gscomid & "' AND Knitcomno = '" & Tbknitcomno.Text & "'")
     End Sub
     Private Sub Upddetails(Etype As String)
@@ -982,17 +884,16 @@ Public Class Formknittingform
         Dim Tclothid, Tfinwgt, Tdozen As String
         Dim Tqtyroll As Long
         Dim Twgkg As Double
-
         For I = 0 To Dgvmas.RowCount - 1
             Tclothid = Trim(Dgvmas.Rows(I).Cells("Mclothid").Value)
             Tqtyroll = Dgvmas.Rows(I).Cells("Mqty").Value
             Twgkg = Dgvmas.Rows(I).Cells("Mkg").Value
             Tfinwgt = Trim(Dgvmas.Rows(I).Cells("Mfinwgt").Value)
             Tdozen = Trim(Dgvmas.Rows(I).Cells("Mdozen").Value)
-            SQLCommand("INSERT INTO Tknittcomdetxp(Comid,Knitcomno,Clothid,Qtyroll,Wgtkg,
+            SQLCommand("INSERT INTO Tknittcomdetxp(Comid,Knitcomno,Ord,Clothid,Qtyroll,Wgtkg,
                         Finwgt,Dozen,Updusr,Uptype,Uptime)
-                        VALUES ('" & Gscomid & "','" & Trim(Tbknitcomno.Text) & "','" & Tclothid & "'," & Tqtyroll & "," & Twgkg & ",
-                                '" & Tfinwgt & "','" & Tdozen & "','" & Gsuserid & "','" & Etype & "','" & Formatdatesave(Now) & "')")
+                        VALUES ('" & Gscomid & "','" & Trim(Tbknitcomno.Text) & "'," & I + 1 & ",'" & Tclothid & "'," & Tqtyroll & "," & Twgkg & ",
+            '" & Tfinwgt & "','" & Tdozen & "','" & Gsuserid & "','" & Etype & "','" & Formatdatesave(Now) & "')")
             ProgressBarX1.Value = ((I + 1) / Dgvmas.Rows.Count) * 100
             ProgressBarX1.Text = "Saving ... " & ProgressBarX1.Value & "%"
         Next
@@ -1017,15 +918,9 @@ Public Class Formknittingform
             Exit Sub
         End If
         TYanlist = SQLCommand($"SELECT *  FROM Tdeliyarndetxp WHERE  Dlvno NOT IN (SELECT Dlvno FROM Tknittcomxp)
-AND Comid = '{Gscomid}' AND ( Dlvno LIKE '%{Sval}%' OR Yarnid LIKE '%{Sval}%' OR Lotno LIKE '%{Sval}%' OR 
-Nwkgpc LIKE '%{Sval}%'OR Nwppc LIKE '%{Sval}%' OR Gwkgpc LIKE '%{Sval}%' OR Gwppc LIKE '%{Sval}%' OR Nofc LIKE '%{Sval}%')")
-
-        'SELECT *  FROM Tdeliyarndetxp
-        'WHERE  Dlvno Not IN (SELECT Dlvno FROM Tknittcomxp) And Comid = '100'
-
+                                AND Comid = '{Gscomid}' AND ( Dlvno LIKE '%{Sval}%' OR Yarnid LIKE '%{Sval}%' OR Lotno LIKE '%{Sval}%' OR 
+                                Nwkgpc LIKE '%{Sval}%'OR Nwppc LIKE '%{Sval}%' OR Gwkgpc LIKE '%{Sval}%' OR Gwppc LIKE '%{Sval}%' OR Nofc LIKE '%{Sval}%')")
         YanList.DataSource = TYanlist
-        'FillGrid()
-        'ShowRecordDetail()
     End Sub
     Private Sub Searchlistbydate()
         Tlist = SQLCommand("SELECT '' AS Stat,* FROM Vknitcommas
@@ -1036,7 +931,7 @@ Nwkgpc LIKE '%{Sval}%'OR Nwppc LIKE '%{Sval}%' OR Gwkgpc LIKE '%{Sval}%' OR Gwpp
     End Sub
     Private Function Validmas() As Boolean
         Dim Valid As Boolean = False
-        If Tbdlvyarnno.Text <> "" And Tbknitcomno.Text <> "" Then
+        If Tbdlvyarnno.Text <> "" And Tbknitcomno.Text <> "" And Tbfactory.Text <> "" Then
             Valid = True
         End If
         Return Valid
@@ -1050,7 +945,7 @@ Nwkgpc LIKE '%{Sval}%'OR Nwppc LIKE '%{Sval}%' OR Gwkgpc LIKE '%{Sval}%' OR Gwpp
     End Function
     Private Function Validinput() As Boolean
         Dim Valid As Boolean = False
-        If Tbclothid.Text <> "" And Tbclothno.Text <> "" And Tbtypename.Text <> "" And Tbfinwidth.Text <> "" And Tbqtyroll.Text <> "" And Tbwgtkg.Text <> "" Then
+        If Tbclothid.Text <> "" And Tbclothno.Text <> "" And Tbtypename.Text <> "" And Tbfinwidth.Text <> "" Then
             Valid = True
         End If
         Return Valid
@@ -1193,10 +1088,9 @@ Nwkgpc LIKE '%{Sval}%'OR Nwppc LIKE '%{Sval}%' OR Gwkgpc LIKE '%{Sval}%' OR Gwpp
         Tbsumdlvwgtkg.Text = ""
         Tstbsumroll.Text = ""
         Tstbsumkg.Text = ""
-
         Tsbwsave.Visible = False
-        'GroupPanel2.Visible = True
         Tbaddedit.Text = "เพิ่ม"
+        Tbfactory.Text = ""
         Tbclothid.Text = ""
         Tbclothno.Text = ""
         Tbtypename.Text = ""
@@ -1209,7 +1103,6 @@ Nwkgpc LIKE '%{Sval}%'OR Nwppc LIKE '%{Sval}%' OR Gwkgpc LIKE '%{Sval}%' OR Gwpp
         Tbwgtlbs.Text = ""
         Label_dozen.Visible = False
         Tbdozen.Visible = False
-
     End Sub
     Private Sub Setauthorize()
         If Gswriau = False Then
@@ -1317,16 +1210,6 @@ Nwkgpc LIKE '%{Sval}%'OR Nwppc LIKE '%{Sval}%' OR Gwkgpc LIKE '%{Sval}%' OR Gwpp
         DisplayPageInfo()
         ShowRecordDetail()
     End Sub
-    'Private Sub Dgvyarn_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles Dgvyarn.CellMouseClick
-    '    If e.Button = Windows.Forms.MouseButtons.Right Then
-    '        If Me.Dgvyarn.Rows.Count < 1 Then Exit Sub
-    '        If e.RowIndex < 0 Then Exit Sub
-    '        Dgvyarn.CurrentCell = Dgvyarn(3, e.RowIndex)
-    '        Me.Dgvyarn.Rows(e.RowIndex).Selected = True
-    '        Editcontextlistmenu2()
-    '    End If
-    'End Sub
-
     Private Sub FillGrid()
         Pagesize = (CInt(Dgvlist.Height) \ CInt(Dgvlist.RowTemplate.Height)) - 2
         Maxrec = Tlist.Rows.Count
@@ -1346,14 +1229,20 @@ Nwkgpc LIKE '%{Sval}%'OR Nwppc LIKE '%{Sval}%' OR Gwkgpc LIKE '%{Sval}%' OR Gwpp
     Private Sub OrderDyed_Click(sender As Object, e As EventArgs) Handles OrderDyed.Click
         CloseMaster()
         Btdcancel_Click(sender, e)
-        Btmnew_Click(sender, e)
+        Createnew()
         Tbdlvyarnno.Text = Trim(YanList.CurrentRow.Cells("DlvnoDyed").Value)
         Bindmasterdlv()
         If Dgvyarn.RowCount > 0 Then
             Dgvyarn.Rows(0).Selected = False
         End If
-        'Dgvyarn_CellClick(sender, e)
-        'DlvnoDyed
+        Btfinddlvno.Enabled = False
+        Tbdlvyarnno.Enabled = False
+        Tbfactory.Text = "GSC"
+        Tbfactory.Enabled = False
+        ToolStrip6.Visible = True
+        Dgvyarn.Visible = True
+        Paneloth.Visible = False
+        Cbfromgsc.Checked = True
     End Sub
 
     Private Sub YanKeyword_KeyPress(sender As Object, e As KeyPressEventArgs) Handles YanKeyword.KeyPress
@@ -1375,21 +1264,9 @@ Nwkgpc LIKE '%{Sval}%'OR Nwppc LIKE '%{Sval}%' OR Gwkgpc LIKE '%{Sval}%' OR Gwpp
         Tsbwsave.Visible = False
         Tbknitcomno.Enabled = False
         If Btmedit.Enabled = True Then
-            'Bindmaster()
             Bindmasterknit()
-            'Bindmasterdlv()
-            'Binddetailsdlv()
         End If
     End Sub
-
-    'Private Sub BindingNavigator1_RefreshItems(sender As Object, e As EventArgs) Handles BindingNavigator1.RefreshItems
-    '    Tsbwsave.Visible = False
-    '    'Tbdyedcomno.Enabled = False
-    '    If Btmedit.Enabled = True Then
-    '        Bindinglist()
-    '    End If
-    'End Sub
-
     Private Sub ShowRecordDetail()
         Tbrecord.Text = "แสดง " & (Dgvlist.RowCount) & " รายการ จาก " & Tlist.Rows.Count & " รายการ"
     End Sub
@@ -1405,11 +1282,6 @@ Nwkgpc LIKE '%{Sval}%'OR Nwppc LIKE '%{Sval}%' OR Gwkgpc LIKE '%{Sval}%' OR Gwpp
         CtmmenuYanList.Displayed = False
         CtmmenuYanList.PopupMenu(Control.MousePosition)
     End Sub
-    'TEST
-    'Private Sub Editcontextlistmenu2()
-    '    Ctmmenugrid2.Displayed = False
-    '    Ctmmenugrid2.PopupMenu(Control.MousePosition)
-    'End Sub
     Private Sub Mainbuttonaddedit()
         Btmnew.Enabled = False
         Btmedit.Enabled = False
@@ -1420,6 +1292,21 @@ Nwkgpc LIKE '%{Sval}%'OR Nwppc LIKE '%{Sval}%' OR Gwkgpc LIKE '%{Sval}%' OR Gwpp
         Enabledbutton()
         Dgvmas.Enabled = True
     End Sub
+    Private Sub Tblbs_KeyDown(sender As Object, e As KeyEventArgs) Handles Tblbs.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            If Tblbs.Text = "" Then
+                Tbkg.Text = "0"
+                Exit Sub
+            End If
+            Tbkg.Text = Format(Findkg(Tblbs.Text), "###,###.#0")
+        End If
+    End Sub
+    Private Sub Tblbs_TextChanged(sender As Object, e As EventArgs) Handles Tblbs.TextChanged
+        If Tblbs.Text <> "" Then
+            Tbkg.Text = Format(Findkg(Tblbs.Text), "###,###.#0")
+        End If
+    End Sub
+
     Private Sub Enabledbutton()
         Btdedit.Enabled = True
         Btddel.Enabled = True
@@ -1439,11 +1326,11 @@ Nwkgpc LIKE '%{Sval}%'OR Nwppc LIKE '%{Sval}%' OR Gwkgpc LIKE '%{Sval}%' OR Gwpp
     Private Sub Disbaledbutton()
         Btdedit.Enabled = False
         Btddel.Enabled = False
+        Tbdlvyarnno.Enabled = False
         Ctdedit.Enabled = False
         Ctddel.Enabled = False
         Btdbadd.Enabled = False
     End Sub
-
     Private Function Findpoud(Tkg As String) As Double
         Dim Rpound As Double = 0.0
         If Tkg = "" Then
@@ -1459,17 +1346,10 @@ Nwkgpc LIKE '%{Sval}%'OR Nwppc LIKE '%{Sval}%' OR Gwkgpc LIKE '%{Sval}%' OR Gwpp
         Tbclothno.Text = ""
         Tbtypename.Text = ""
         Tbfinwidth.Text = ""
-        'Tbqtyroll.Text = ""
-        'Tbwgtkg.Text = ""
-        'Tbwgtlbs.Text = ""
-        'QtyrollStore.Text = ""
-        'WgtKgStore.Text = ""
         Tbfinwgt.Text = ""
         Tbdozen.Text = ""
-        'Tbremark.Text = ""
         TbNwkgpc.Text = ""
         TbNofc.Text = ""
-
         ShowRollOrder.Text = ""
         ShowKgOrder.Text = ""
         QtyrollOrder.Text = ""
@@ -1477,27 +1357,21 @@ Nwkgpc LIKE '%{Sval}%'OR Nwppc LIKE '%{Sval}%' OR Gwkgpc LIKE '%{Sval}%' OR Gwpp
     End Sub
 
     Private Sub ShowText()
-        '-------Test---
         QtyrollStore.Text = (Tbqtyroll.Text - ShowRollOrder.Text)
         WgtKgStore.Text = Convert.ToDouble(Tbwgtkg.Text - ShowKgOrder.Text).ToString("N2")
         QtyrollOrder.Text = "0"
         WgtKgOrder.Text = "0"
-        '----------
     End Sub
-
     Private Sub SelectData()
-        'MsgBox("Hello Word")
         Tbdozen.Text = "0"
         Tbfinwgt.Text = "-"
         Show_Vdeliyarndet()
     End Sub
-
     Private Sub QtyrollOrder_KeyDown(sender As Object, e As KeyEventArgs) Handles QtyrollOrder.KeyDown
         If (e.KeyCode = Keys.Enter) Then
             WgtKgOrder.Focus()
         End If
     End Sub
-
     Private Sub WgtKgOrder_KeyDown(sender As Object, e As KeyEventArgs) Handles WgtKgOrder.KeyDown
         If (e.KeyCode = Keys.Enter) Then
             Tbfinwgt.Focus()
@@ -1517,5 +1391,23 @@ Nwkgpc LIKE '%{Sval}%'OR Nwppc LIKE '%{Sval}%' OR Gwkgpc LIKE '%{Sval}%' OR Gwpp
             Btdadd.Focus()
         End If
     End Sub
-
+    Private Sub Createnew()
+        Clrdgrid()
+        Clrtxtbox()
+        OpenMaster()
+        TabControl1.SelectedTabIndex = 2
+        BindingNavigator1.Enabled = False
+        Mainbuttonaddedit()
+        Tbremark.Enabled = True
+        Dgvmas.Enabled = True
+    End Sub
+    Private Function Findkg(Tpound As String) As Double
+        Dim Tkg As Double = 0.0
+        If Tpound = "" Then
+            Tkg = 0
+        Else
+            Tkg = CDbl(Tpound) * 0.453592
+        End If
+        Return Tkg
+    End Function
 End Class

@@ -1,12 +1,11 @@
 ﻿Imports Microsoft.Reporting.WinForms
 Public Class Formknitingfrmrpt
     Private Sub Formknitingfrmrpt_Load(sender As Object, e As EventArgs) Handles Me.Load
-
         ReportViewer1.LocalReport.ReportEmbeddedResource = "XpressPlus.Rptknittingform.rdlc"
         ReportViewer1.SetDisplayMode(DisplayMode.PrintLayout)
         ReportViewer1.ZoomMode = ZoomMode.Percent
         ReportViewer1.ZoomPercent = 100
-        Dim Par2, Par3, Par4, Par5, Par6 As ReportParameter
+        Dim Par2, Par3, Par4, Par5, Par6, Par7 As ReportParameter
         Par2 = New ReportParameter("Parto", Trim(Tbto.Text), True)
         Me.ReportViewer1.LocalReport.SetParameters(New ReportParameter() {Par2})
         Par3 = New ReportParameter("Pardate", Trim(Tbdate.Text), True)
@@ -17,6 +16,8 @@ Public Class Formknitingfrmrpt
         Me.ReportViewer1.LocalReport.SetParameters(New ReportParameter() {Par5})
         Par6 = New ReportParameter("Parremark", Trim(Tbremark.Text), True)
         Me.ReportViewer1.LocalReport.SetParameters(New ReportParameter() {Par6})
+        Par7 = New ReportParameter("Parfactory", Trim(TextBox1.Text), True)
+        Me.ReportViewer1.LocalReport.SetParameters(New ReportParameter() {Par7})
         Me.ReportViewer1.RefreshReport()
     End Sub
 
