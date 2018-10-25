@@ -857,11 +857,11 @@ Public Class Formknittingform
         SQLCommand("INSERT INTO Tknittcomxp(Comid,Knitcomdate,Knitcomno,Rcdate,Dlvno,
                     Dremark,WgtKgOrder,WgtKgStore,QtyrollOrder,QtyrollStore,
                     Updusr,Uptype,Uptime,Knitid,Yarnfrom,
-                    Dlvlbs,Dlvkg,Yarnid)
+                    Yarnfactid,Yarnfrom,Dlvlbs,Dlvkg,Yarnid)
                     VALUES('" & Gscomid & "','" & Formatshortdatesave(Dtpknitcomdate.Value) & "','" & Trim(Tbknitcomno.Text) & "','" & Formatshortdatesave(Dtprecdate.Value) & "','" & Trim(Tbdlvyarnno.Text) & "',
                     '" & Trim(Tbremark.Text) & "'," & CDbl(Tstbsumkg.Text) & ",0," & CDbl(Tstbsumroll.Text) & ",0,
                     '" & Gsuserid & "','A','" & Formatdatesave(Now) & "','" & Trim(Tbknitid.Text) & "','" & Trim(TbfactoryName.Text) & "',
-                    " & Sumlbs & "," & Sumkg & ",'" & Tyarnid & "')")
+                    " & TbfactoryID.Text & "," & TbfactoryName.Text & "," & Sumlbs & "," & Sumkg & ",'" & Tyarnid & "')")
     End Sub
     Private Sub Editmaster()
         Dim Tyarnid As String
@@ -880,7 +880,7 @@ Public Class Formknittingform
         SQLCommand("UPDATE Tknittcomxp SET Knitcomdate = '" & Formatshortdatesave(Dtpknitcomdate.Value) & "',Rcdate = '" & Formatshortdatesave(Dtprecdate.Value) & "',
                     Dlvno = '" & Trim(Tbdlvyarnno.Text) & "',Dremark = '" & Trim(Tbremark.Text) & "',WgtKgOrder = " & CDbl(Tstbsumkg.Text) & ",WgtKgStore = 0,
                     QtyrollOrder = " & CDbl(Tstbsumroll.Text) & ",QtyrollStore = 0,Updusr = '" & Gsuserid & "',Uptype = 'E',Uptime = '" & Formatdatesave(Now) & "',
-                    Knitid = '" & Trim(Tbknitid.Text) & "',Yarnfrom = '" & TbfactoryName.Text & "',Dlvlbs = " & CDbl(Tblbs.Text) & ",Dlvkg = " & CDbl(Tbkg.Text) & ",Yarnid = '" & Tyarnid & "'
+                    Knitid = '" & Trim(Tbknitid.Text) & "',Yarnfrom = '" & TbfactoryName.Text & "',Yarnfactid = '" & TbfactoryID.Text & "',Yarnfrom = '" & TbfactoryName.Text & "',Dlvlbs = " & CDbl(Tblbs.Text) & ",Dlvkg = " & CDbl(Tbkg.Text) & ",Yarnid = '" & Tyarnid & "'
                     WHERE Comid = '" & Gscomid & "' AND Knitcomno = '" & Tbknitcomno.Text & "'")
     End Sub
     Private Sub Upddetails(Etype As String)
