@@ -73,8 +73,12 @@ Public Class Formknittingform
         WgtKgStore.Text = ""
     End Sub
     Private Sub Btmedit_Click(sender As Object, e As EventArgs) Handles Btmedit.Click
+        ButtonX1.Enabled = True
         Dtpknitcomdate.Enabled = True
         Btfinddlvno.Enabled = True
+        Listfactory.Enabled = True
+        Btfindyarn.Enabled = True
+        Tblbs.Enabled = True
         Dgvyarn.Enabled = True
         Tbremark.Enabled = True
         Ctdedit.Enabled = True
@@ -157,12 +161,16 @@ Public Class Formknittingform
         Mainbuttoncancel()
     End Sub
     Private Sub CloseMaster()
+        ButtonX1.Enabled = False
         BindingNavigator1.Enabled = False
         Dtprecdate.Enabled = False
         Dtpknitcomdate.Enabled = False
         Dgvyarn.Enabled = False
         Btfinddlvno.Enabled = False
         GroupPanel2.Visible = False
+        Tblbs.Enabled = False
+        Listfactory.Enabled = False
+        Btfindyarn.Enabled = False
         TbfactoryID.Text = ""
         Tbqtyroll.Text = ""
         Tbwgtkg.Text = ""
@@ -175,6 +183,9 @@ Public Class Formknittingform
         Tbkg.Text = ""
     End Sub
     Private Sub OpenMaster()
+        Listfactory.Enabled = True
+        Btfindyarn.Enabled = True
+        Tblbs.Enabled = True
         Dtprecdate.Enabled = False
         Dtpknitcomdate.Enabled = True
         Dgvyarn.Enabled = True
@@ -233,7 +244,8 @@ Public Class Formknittingform
         Rds1.Name = "DataSet2"
         Rds1.Value = Tdetailsknit
         Frm.ReportViewer1.LocalReport.DataSources.Add(Rds1)
-        '  Showform(Frm) 'Suphat
+        'Showform(Frm) 'Suphat
+        Frm.Show()
         Clrtxtbox()
         Clrdgrid()
         BindingNavigator1.Enabled = False
@@ -734,6 +746,7 @@ Public Class Formknittingform
             If IsDBNull(Tmasterknit.Rows(0)("Yarnfrom")) Then
                 TbfactoryName.Text = "GSC"
             Else
+                TbfactoryID.Text = Trim(Tmasterknit.Rows(0)("Yarnfactid"))
                 TbfactoryName.Text = Trim(Tmasterknit.Rows(0)("Yarnfrom"))
                 Tbknitid.Text = Trim(Tmasterknit.Rows(0)("Knitid"))
             End If
@@ -856,12 +869,12 @@ Public Class Formknittingform
         End If
         SQLCommand("INSERT INTO Tknittcomxp(Comid,Knitcomdate,Knitcomno,Rcdate,Dlvno,
                     Dremark,WgtKgOrder,WgtKgStore,QtyrollOrder,QtyrollStore,
-                    Updusr,Uptype,Uptime,Knitid,Yarnfrom,
-                    Yarnfactid,Yarnfrom,Dlvlbs,Dlvkg,Yarnid)
+                    Updusr,Uptype,Uptime,Knitid,Yarnfactid,Yarnfrom,
+                    Dlvlbs,Dlvkg,Yarnid)
                     VALUES('" & Gscomid & "','" & Formatshortdatesave(Dtpknitcomdate.Value) & "','" & Trim(Tbknitcomno.Text) & "','" & Formatshortdatesave(Dtprecdate.Value) & "','" & Trim(Tbdlvyarnno.Text) & "',
                     '" & Trim(Tbremark.Text) & "'," & CDbl(Tstbsumkg.Text) & ",0," & CDbl(Tstbsumroll.Text) & ",0,
-                    '" & Gsuserid & "','A','" & Formatdatesave(Now) & "','" & Trim(Tbknitid.Text) & "','" & Trim(TbfactoryName.Text) & "',
-                    " & TbfactoryID.Text & "," & TbfactoryName.Text & "," & Sumlbs & "," & Sumkg & ",'" & Tyarnid & "')")
+                    '" & Gsuserid & "','A','" & Formatdatesave(Now) & "','" & Trim(Tbknitid.Text) & "','" & TbfactoryID.Text & "','" & Trim(TbfactoryName.Text) & "',
+                    " & Sumlbs & "," & Sumkg & ",'" & Tyarnid & "')")
     End Sub
     Private Sub Editmaster()
         Dim Tyarnid As String
@@ -880,7 +893,7 @@ Public Class Formknittingform
         SQLCommand("UPDATE Tknittcomxp SET Knitcomdate = '" & Formatshortdatesave(Dtpknitcomdate.Value) & "',Rcdate = '" & Formatshortdatesave(Dtprecdate.Value) & "',
                     Dlvno = '" & Trim(Tbdlvyarnno.Text) & "',Dremark = '" & Trim(Tbremark.Text) & "',WgtKgOrder = " & CDbl(Tstbsumkg.Text) & ",WgtKgStore = 0,
                     QtyrollOrder = " & CDbl(Tstbsumroll.Text) & ",QtyrollStore = 0,Updusr = '" & Gsuserid & "',Uptype = 'E',Uptime = '" & Formatdatesave(Now) & "',
-                    Knitid = '" & Trim(Tbknitid.Text) & "',Yarnfrom = '" & TbfactoryName.Text & "',Yarnfactid = '" & TbfactoryID.Text & "',Yarnfrom = '" & TbfactoryName.Text & "',Dlvlbs = " & CDbl(Tblbs.Text) & ",Dlvkg = " & CDbl(Tbkg.Text) & ",Yarnid = '" & Tyarnid & "'
+                    Knitid = '" & Trim(Tbknitid.Text) & "',Yarnfactid = '" & TbfactoryID.Text & "',Yarnfrom = '" & TbfactoryName.Text & "',Dlvlbs = " & CDbl(Tblbs.Text) & ",Dlvkg = " & CDbl(Tbkg.Text) & ",Yarnid = '" & Tyarnid & "'
                     WHERE Comid = '" & Gscomid & "' AND Knitcomno = '" & Tbknitcomno.Text & "'")
     End Sub
     Private Sub Upddetails(Etype As String)
@@ -1247,6 +1260,8 @@ Public Class Formknittingform
         Tbdlvyarnno.Enabled = False
         TbfactoryName.Text = "GSC"
         TbfactoryName.Enabled = False
+        TbfactoryID.Text = "10000"
+        TbfactoryID.Enabled = False
         ToolStrip6.Visible = True
         Dgvyarn.Visible = True
         Paneloth.Visible = False
