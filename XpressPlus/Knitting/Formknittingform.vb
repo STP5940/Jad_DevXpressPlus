@@ -1466,13 +1466,14 @@ Public Class Formknittingform
         End If
         Return Tkg
     End Function
-    Private Function FindRekg(Tpound As String) As Double
-        Dim Tkg As Double = 0.0
-        If Tpound = "" Then
-            Tkg = 0
+
+    Private Function FindRekg(Tbkg As String) As Double
+        Dim Tpound As Double = 0.0
+        If Tbkg = "" Then
+            Tpound = 0
         Else
-            Tkg = CDbl(Tpound) / 0.453592
+            Tpound = CDbl(Tbkg) / 0.453592
         End If
-        Return Tkg
+        Return Tpound
     End Function
 End Class

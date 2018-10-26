@@ -1781,7 +1781,7 @@ Partial Class Formknittingform
         Me.Listfactory.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
         Me.Listfactory.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Listfactory.Image = Global.XpressPlus.My.Resources.Resources.Find16
-        Me.Listfactory.Location = New System.Drawing.Point(349, 1)
+        Me.Listfactory.Location = New System.Drawing.Point(182, 1)
         Me.Listfactory.Name = "Listfactory"
         Me.Listfactory.Size = New System.Drawing.Size(36, 24)
         Me.Listfactory.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003
@@ -1804,7 +1804,7 @@ Partial Class Formknittingform
         Me.TbfactoryName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TbfactoryName.Enabled = False
         Me.TbfactoryName.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.TbfactoryName.Location = New System.Drawing.Point(181, 1)
+        Me.TbfactoryName.Location = New System.Drawing.Point(223, 1)
         Me.TbfactoryName.MaxLength = 150
         Me.TbfactoryName.Name = "TbfactoryName"
         Me.TbfactoryName.Size = New System.Drawing.Size(160, 24)
