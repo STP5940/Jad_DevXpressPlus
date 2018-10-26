@@ -587,7 +587,7 @@ Public Class Formknittingform
                     Dgvmas.Rows(Dgvmas.RowCount - 1).Cells("Havedoz").Value = False
                 End If
             Case "แก้ไข"
-                'Tsbwsave.Visible = True
+                Tsbwsave.Visible = True
                 Dgvmas.CurrentRow.Cells("Mcomid").Value = Gscomid
                 Dgvmas.CurrentRow.Cells("Mclothid").Value = Trim(Tbclothid.Text)
                 Dgvmas.CurrentRow.Cells("Mclothno").Value = Trim(Tbclothno.Text)
@@ -885,6 +885,9 @@ Public Class Formknittingform
             Sumkg = CDbl(Tbsumdlvwgtkg.Text)
             Sumlbs = CDbl(Tbsumdlvwgtkg.Text) * 2.20462
             Tyarnid = ""
+            Tblbs.Text = 0
+            Tbkg.Text = 0
+
         Else
             Sumkg = CDbl(Tbkg.Text)
             Sumlbs = CDbl(Tblbs.Text)
