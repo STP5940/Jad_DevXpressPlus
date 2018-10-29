@@ -271,12 +271,34 @@ Public Class Formreceivefabcolors
                 Dgvmas.CurrentRow.Cells("Rollwage").Value = CDbl(Tbkg.Text)
         End Select
         Sumall()
-        Btdcancel_Click(sender, e)
+        'Btdcancel_Click(sender, e)
+        ClearDetail()
         Tbkg.Focus()
     End Sub
     Private Sub Btdcancel_Click(sender As Object, e As EventArgs) Handles Btdcancel.Click
         Clrtxtbox()
         Clrupdet()
+        Tbkongno.Text = ""
+        Tbkg.Text = ""
+    End Sub
+
+    Private Sub ClearMaster()
+        Tbdhid.Text = ""
+        Tbdhname.Text = ""
+        Tbmycom.Text = ""
+        Tbdyedbillno.Text = ""
+        Tbknittno.Text = ""
+        Tbcolorno.Text = ""
+        Tbrefablotno.Text = ""
+        Dtprecdate.Value = Now
+    End Sub
+    Private Sub ClearDetail()
+        Tbclothid.Text = ""
+        Tbclothno.Text = ""
+        Tbclothtype.Text = ""
+        Tbwidht.Text = ""
+        Tbshadeid.Text = ""
+        Tbshadename.Text = ""
         Tbkongno.Text = ""
         Tbkg.Text = ""
     End Sub
@@ -656,7 +678,9 @@ Public Class Formreceivefabcolors
         Return Valid
     End Function
 
-
+    Private Sub Btdedit_Click_1(sender As Object, e As EventArgs) Handles Btdedit.Click
+        Tbclothid.Text = "555"
+    End Sub
 
     Private Function Validdet() As Boolean
         Dim Valid As Boolean = False
