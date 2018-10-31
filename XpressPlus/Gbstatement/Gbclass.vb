@@ -4,7 +4,7 @@ Module Gbclass
     Public Gsuserid As String
     Public Gsusername As String
     Public Gscomname As String 'Company
-    Public Gscomid As String = "100"
+    Public Gscomid As String = "101"
     Public Pic() As Byte
     Public Gsreaau As Boolean
     Public Gswriau As Boolean

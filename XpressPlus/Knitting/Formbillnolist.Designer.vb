@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Formfactorylist
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class Formbillnolist
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()>
+    <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Formfactorylist
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()>
+    <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -28,16 +28,15 @@ Partial Class Formfactorylist
         Me.TabControl1 = New DevComponents.DotNetBar.TabControl()
         Me.TabControlPanel1 = New DevComponents.DotNetBar.TabControlPanel()
         Me.Dgvmas = New System.Windows.Forms.DataGridView()
-        Me.Status = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.factoryID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.factoryName = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.Btmsearch = New System.Windows.Forms.ToolStripButton()
         Me.Tbkeyword = New System.Windows.Forms.ToolStripTextBox()
         Me.Tbcancel = New System.Windows.Forms.ToolStripTextBox()
         Me.Btcancel = New DevComponents.DotNetBar.ButtonX()
         Me.Btok = New DevComponents.DotNetBar.ButtonX()
         Me.TabItem1 = New DevComponents.DotNetBar.TabItem(Me.components)
-        Me.Btmsearch = New System.Windows.Forms.ToolStripButton()
+        Me.Status = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Dyecomno = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.TabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabControlPanel1.SuspendLayout()
@@ -57,7 +56,7 @@ Partial Class Formfactorylist
         Me.TabControl1.SelectedTabFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.TabControl1.SelectedTabIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(384, 331)
-        Me.TabControl1.TabIndex = 9
+        Me.TabControl1.TabIndex = 10
         Me.TabControl1.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox
         Me.TabControl1.Tabs.Add(Me.TabItem1)
         Me.TabControl1.Text = "TabControl1"
@@ -97,7 +96,7 @@ Partial Class Formfactorylist
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.Dgvmas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.Dgvmas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.Dgvmas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Status, Me.factoryID, Me.factoryName})
+        Me.Dgvmas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Status, Me.Dyecomno})
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
@@ -113,30 +112,6 @@ Partial Class Formfactorylist
         Me.Dgvmas.Size = New System.Drawing.Size(382, 160)
         Me.Dgvmas.TabIndex = 29
         '
-        'Status
-        '
-        Me.Status.DataPropertyName = "Stat"
-        Me.Status.HeaderText = ""
-        Me.Status.Name = "Status"
-        Me.Status.ReadOnly = True
-        Me.Status.Width = 20
-        '
-        'factoryID
-        '
-        Me.factoryID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.factoryID.DataPropertyName = "Facid"
-        Me.factoryID.HeaderText = "รหัสโรงงาน"
-        Me.factoryID.Name = "factoryID"
-        Me.factoryID.ReadOnly = True
-        '
-        'factoryName
-        '
-        Me.factoryName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.factoryName.DataPropertyName = "Factname"
-        Me.factoryName.HeaderText = "ชื่อโรงงาน"
-        Me.factoryName.Name = "factoryName"
-        Me.factoryName.ReadOnly = True
-        '
         'ToolStrip1
         '
         Me.ToolStrip1.BackColor = System.Drawing.Color.Transparent
@@ -146,6 +121,18 @@ Partial Class Formfactorylist
         Me.ToolStrip1.Size = New System.Drawing.Size(382, 49)
         Me.ToolStrip1.TabIndex = 28
         Me.ToolStrip1.Text = "ToolStrip1"
+        '
+        'Btmsearch
+        '
+        Me.Btmsearch.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.Btmsearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Btmsearch.Image = Global.XpressPlus.My.Resources.Resources.Findicon
+        Me.Btmsearch.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.Btmsearch.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.Btmsearch.Name = "Btmsearch"
+        Me.Btmsearch.Size = New System.Drawing.Size(48, 46)
+        Me.Btmsearch.Text = "ค้นหา"
+        Me.Btmsearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'Tbkeyword
         '
@@ -191,27 +178,30 @@ Partial Class Formfactorylist
         Me.TabItem1.Name = "TabItem1"
         Me.TabItem1.Text = "โรงงานเส้นด้าย"
         '
-        'Btmsearch
+        'Status
         '
-        Me.Btmsearch.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.Btmsearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Btmsearch.Image = Global.XpressPlus.My.Resources.Resources.Findicon
-        Me.Btmsearch.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.Btmsearch.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.Btmsearch.Name = "Btmsearch"
-        Me.Btmsearch.Size = New System.Drawing.Size(48, 46)
-        Me.Btmsearch.Text = "ค้นหา"
-        Me.Btmsearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.Status.DataPropertyName = "Stat"
+        Me.Status.HeaderText = ""
+        Me.Status.Name = "Status"
+        Me.Status.ReadOnly = True
+        Me.Status.Width = 20
         '
-        'Formfactorylist
+        'Dyecomno
+        '
+        Me.Dyecomno.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Dyecomno.DataPropertyName = "Dyecomno"
+        Me.Dyecomno.HeaderText = "เลขที่ใบสั่งย้อม"
+        Me.Dyecomno.Name = "Dyecomno"
+        Me.Dyecomno.ReadOnly = True
+        '
+        'Formbillnolist
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(384, 331)
-        Me.ControlBox = False
         Me.Controls.Add(Me.TabControl1)
-        Me.Name = "Formfactorylist"
-        Me.Text = "โรงงานเส้นด้าย"
+        Me.Name = "Formbillnolist"
+        Me.Text = "เลขที่ใบสั่งย้อม"
         CType(Me.TabControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
         Me.TabControlPanel1.ResumeLayout(False)
@@ -234,6 +224,5 @@ Partial Class Formfactorylist
     Friend WithEvents Btok As DevComponents.DotNetBar.ButtonX
     Friend WithEvents TabItem1 As DevComponents.DotNetBar.TabItem
     Friend WithEvents Status As DataGridViewTextBoxColumn
-    Friend WithEvents factoryID As DataGridViewTextBoxColumn
-    Friend WithEvents factoryName As DataGridViewTextBoxColumn
+    Friend WithEvents Dyecomno As DataGridViewTextBoxColumn
 End Class

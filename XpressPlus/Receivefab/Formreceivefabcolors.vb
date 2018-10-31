@@ -18,7 +18,9 @@ Public Class Formreceivefabcolors
         Me.ToolStrip4.Items(4).Alignment = ToolStripItemAlignment.Right
         Dtplistfm.Visible = False
         Dtplistto.Visible = False
+        GroupPanel2.Visible = False
         'Setauthorize()
+        Mainbuttoncancel()
         Tbmycom.Text = Trim(Gscomname)
 
     End Sub
@@ -35,6 +37,7 @@ Public Class Formreceivefabcolors
 
         BindingNavigator1.Enabled = False
         Mainbuttonaddedit()
+        Tbrollid.Text = 1
     End Sub
     Private Sub Btmsave_Click(sender As Object, e As EventArgs) Handles Btmsave.Click
         If Validmas() = False Then
@@ -152,17 +155,21 @@ Public Class Formreceivefabcolors
     End Sub
     Private Sub Ctmledit_Click(sender As Object, e As EventArgs) Handles Ctmledit.Click
         Clrdgrid()
-        Clrtxtbox()
+        'Clrtxtbox() 'เป้
         Btdcancel_Click(sender, e)
         TabControl1.SelectedTabIndex = 1
         Tbdhid.Text = Trim(Dgvlist.CurrentRow.Cells("Ldhid").Value)
         Tbdyedbillno.Text = Trim(Dgvlist.CurrentRow.Cells("Lbilldyedno").Value)
         Tbknittno.Text = Trim(Dgvlist.CurrentRow.Cells("Lbillknitt").Value)
         Tbrefablotno.Text = Trim(Dgvlist.CurrentRow.Cells("Dlotno").Value)
+        Btmedit.Enabled = True
         Tbdyedbillno.Enabled = False
         Tbknittno.Enabled = False
         Tbrefablotno.Enabled = False
         Tbcolorno.Enabled = False
+        Btmnew.Enabled = False
+        Btmdel.Enabled = True
+        Btmreports.Enabled = True
         Bindmaster()
     End Sub
     Private Sub Btfirst_Click(sender As Object, e As EventArgs) Handles Btfirst.Click
@@ -208,10 +215,13 @@ Public Class Formreceivefabcolors
     Private Sub Btfindknitid_Click(sender As Object, e As EventArgs) Handles Btfindknitid.Click
         Dim Frm As New Formdyeddetlist
         Frm.Tbknitbill.Text = Trim(Tbknittno.Text)
+        Frm.Tbdyedbillno.Text = Trim(Tbdyedbillno.Text)
         Showdiaformcenter(Frm, Me)
         If Frm.Tbcancel.Text = "C" Then
             Exit Sub
         End If
+        AllQtyroll.Text = Trim(Frm.Dgvmas.CurrentRow.Cells("Qtyroll").Value)
+        AllQtykg.Text = Trim(Frm.Dgvmas.CurrentRow.Cells("Qtykg").Value)
         Tbclothid.Text = Trim(Frm.Dgvmas.CurrentRow.Cells("Clothid").Value)
         Tbclothno.Text = Trim(Frm.Dgvmas.CurrentRow.Cells("Mclothno").Value)
         Tbclothtype.Text = Trim(Frm.Dgvmas.CurrentRow.Cells("Ftype").Value)
@@ -251,6 +261,7 @@ Public Class Formreceivefabcolors
                     Tdetails.Rows.Add()
                 End If
                 Tsbwsave.Visible = True
+                Dgvmas.Rows(Dgvmas.RowCount - 1).Cells("rollid").Value = Trim(Tbrollid.Text)
                 Dgvmas.Rows(Dgvmas.RowCount - 1).Cells("Clothid").Value = Trim(Tbclothid.Text)
                 Dgvmas.Rows(Dgvmas.RowCount - 1).Cells("Mclothno").Value = Trim(Tbclothno.Text)
                 Dgvmas.Rows(Dgvmas.RowCount - 1).Cells("Clothtype").Value = Trim(Tbclothtype.Text)
@@ -261,6 +272,7 @@ Public Class Formreceivefabcolors
                 Dgvmas.Rows(Dgvmas.RowCount - 1).Cells("Rollwage").Value = CDbl(Tbkg.Text)
             Case "แก้ไข"
                 Tsbwsave.Visible = True
+                Dgvmas.CurrentRow.Cells("rollid").Value = Trim(Tbrollid.Text)
                 Dgvmas.CurrentRow.Cells("Clothid").Value = Trim(Tbclothid.Text)
                 Dgvmas.CurrentRow.Cells("Mclothno").Value = Trim(Tbclothno.Text)
                 Dgvmas.CurrentRow.Cells("Clothtype").Value = Trim(Tbclothtype.Text)
@@ -273,10 +285,12 @@ Public Class Formreceivefabcolors
         Sumall()
         'Btdcancel_Click(sender, e)
         ClearDetail()
+        Tbrollid.Text = Trim(rollidnew(Dgvmas, "rollid") + 1)
         Tbkg.Focus()
     End Sub
     Private Sub Btdcancel_Click(sender As Object, e As EventArgs) Handles Btdcancel.Click
-        Clrtxtbox()
+        'Clrtxtbox() ' เป้
+        ClearDetail()
         Clrupdet()
         Tbkongno.Text = ""
         Tbkg.Text = ""
@@ -293,6 +307,7 @@ Public Class Formreceivefabcolors
         Dtprecdate.Value = Now
     End Sub
     Private Sub ClearDetail()
+        Tbrollid.Text = ""
         Tbclothid.Text = ""
         Tbclothno.Text = ""
         Tbclothtype.Text = ""
@@ -424,18 +439,19 @@ Public Class Formreceivefabcolors
         ProgressBarX1.Value = 0
         Dim Frm As New Formwaitdialoque
         Frm.Show()
-        Dim Tkongno, Tclothid, Tshadeid As String
+        Dim Tkongno, Tclothid, Tshadeid, Tbrollid As String
         Dim Trollwgt As Double
         For I = 0 To Dgvmas.RowCount - 1
             Tkongno = Trim(Dgvmas.Rows(I).Cells("Mkong").Value)
             Tclothid = Trim(Dgvmas.Rows(I).Cells("Clothid").Value)
             Tshadeid = Dgvmas.Rows(I).Cells("Shadeid").Value
             Trollwgt = Dgvmas.Rows(I).Cells("Rollwage").Value
+            Tbrollid = Dgvmas.Rows(I).Cells("rollid").Value
             SQLCommand("INSERT INTO Trecfabcoldetxp(Comid,Dhid,Billdyedno,Lotno,Kongno,
                         Pubno,Clothid,Shadeid,Rollwage,
                         Instk,Updusr,Uptype,Uptime)
                         VALUES('" & Gscomid & "','" & Trim(Tbdhid.Text) & "','" & Trim(Tbdyedbillno.Text) & "','" & Trim(Tbrefablotno.Text) & "','" & Tkongno & "',
-                        '" & (I + 1) & "','" & Tclothid & "','" & Tshadeid & "'," & Trollwgt & ",
+                        '" & Trim(Tbrollid) & "','" & Tclothid & "','" & Tshadeid & "'," & Trollwgt & ",
                         '1','" & Gsuserid & "','" & Etype & "','" & Formatdatesave(Now) & "')")
             ProgressBarX1.Value = ((I + 1) / Dgvmas.Rows.Count) * 100
             ProgressBarX1.Text = "Saving ... " & ProgressBarX1.Value & "%"
@@ -511,15 +527,22 @@ Public Class Formreceivefabcolors
     Private Sub Clrtxtbox()
         Tbdyedbillno.Enabled = True
         Tbknittno.Enabled = True
+        Tbcolorno.Enabled = True
+        Tbkongno.Enabled = True
+        Tbkg.Enabled = True
         Tbrefablotno.Enabled = True
+        Dtprecdate.Enabled = True
+        Tbremark.Enabled = True
         Tbdhid.Text = ""
         Tbdhname.Text = ""
         Tbdyedbillno.Text = ""
         Tbknittno.Text = ""
         Tbcolorno.Text = ""
+        'Tbkongno.Text = ""
+        Tbkg.Text = ""
         Tbrefablotno.Text = ""
-        Dtprecdate.Value = Now
         Tbremark.Text = ""
+        Dtprecdate.Value = Now
         Tsbwsave.Visible = False
     End Sub
     Private Sub Editcontextdetmenu()
@@ -649,10 +672,12 @@ Public Class Formreceivefabcolors
         Clrupdet()
         Tbkongno.Text = ""
         Tbkg.Text = ""
+        Tbrollid.Text = 0
         Clrdgrid()
         TabControl1.SelectedTabIndex = 0
 
         Mainbuttoncancel()
+        GroupPanel2.Visible = False
         'BindingNavigator1.Enabled = False
     End Sub
     Private Sub DisplayPageInfo()
@@ -679,8 +704,95 @@ Public Class Formreceivefabcolors
     End Function
 
     Private Sub Btdedit_Click_1(sender As Object, e As EventArgs) Handles Btdedit.Click
-        Tbclothid.Text = "555"
+        If Validmas() = False Then
+            Informmessage("กรุณากรอกข้อมูลการรับผ้าสี")
+            Exit Sub
+        End If
+        GroupPanel2.Visible = True
+
+        Tbaddedit.Text = "แก้ไข"
+        Tbrollid.Text = Trim(Dgvmas.CurrentRow.Cells("rollid").Value)
+        Tbclothid.Text = Trim(Dgvmas.CurrentRow.Cells("Clothid").Value)
+        Tbclothno.Text = Trim(Dgvmas.CurrentRow.Cells("Mclothno").Value)
+        Tbclothtype.Text = Trim(Dgvmas.CurrentRow.Cells("Clothtype").Value)
+        Tbwidht.Text = Trim(Dgvmas.CurrentRow.Cells("Dwidth").Value)
+        Tbshadeid.Text = Trim(Dgvmas.CurrentRow.Cells("Shadeid").Value)
+        Tbshadename.Text = Trim(Dgvmas.CurrentRow.Cells("Shadedesc").Value)
+        Tbkongno.Text = Trim(Dgvmas.CurrentRow.Cells("Mkong").Value)
+        Tbkg.Text = Format(Dgvmas.CurrentRow.Cells("Rollwage").Value, "###,###.#0")
     End Sub
+
+    Private Sub Btfindbillno_Click(sender As Object, e As EventArgs) Handles Btfindbillno.Click
+        Dim Frm As New Formbillnolist
+        Showdiaformcenter(Frm, Me)
+        If Frm.Tbcancel.Text = "C" Then
+            Exit Sub
+        End If
+        Tbdyedbillno.Text = Trim(Frm.Dgvmas.CurrentRow.Cells("Dyecomno").Value)
+    End Sub
+
+    Private Sub Btfindknittno_Click(sender As Object, e As EventArgs) Handles Btfindknittno.Click
+        'Dim Frm As New Formknittnolist
+        'Showdiaformcenter(Frm, Me)
+        'If Frm.Tbcancel.Text = "C" Then
+        '    Exit Sub
+        'End If
+        'Tbdyedbillno.Text = Trim(Frm.Dgvmas.CurrentRow.Cells("Dyecomno").Value)
+    End Sub
+
+    Private Sub Btmedit_Click(sender As Object, e As EventArgs) Handles Btmedit.Click
+        BtEdit()
+    End Sub
+
+    Private Sub BtEdit()
+        Btmcancel.Enabled = True
+        Btmedit.Enabled = False
+        'Tbdyedbillno.Enabled = True
+        Tbknittno.Enabled = True
+        Tbcolorno.Enabled = True
+        Tbkongno.Enabled = True
+        Tbkg.Enabled = True
+        Tbrefablotno.Enabled = True
+        Dtprecdate.Enabled = True
+        Tbremark.Enabled = True
+        Tbkongno.Text = ""
+        Tbkg.Text = ""
+        Tbremark.Text = ""
+        Dtprecdate.Value = Now
+        Tsbwsave.Visible = False
+        Btmsave.Enabled = True
+        Btmreports.Enabled = False
+        Btmdel.Enabled = False
+        Btfinddyedh.Enabled = True
+        Btfindbillno.Enabled = True
+        Btfindknittno.Enabled = True
+        Btfindknitid.Enabled = True
+        Tbrollid.Enabled = True
+        Btdadd.Enabled = True
+        Btdcancel.Enabled = True
+
+        Btdedit.Enabled = True
+        Btddel.Enabled = True
+        Btdbadd.Enabled = True
+    End Sub
+
+    Private Sub Btdbadd_Click(sender As Object, e As EventArgs) Handles Btdbadd.Click
+        Tbaddedit.Text = "เพิ่ม"
+        GroupPanel2.Visible = True
+        ClearDetail()
+        Tbrollid.Text = Trim(rollidnew(Dgvmas, "rollid") + 1)
+    End Sub
+
+    Private Function rollidnew(GridName As Object, RowsName As String)
+        Dim MaxNum = 1
+        For i = 0 To GridName.RowCount - 1
+            Trim(GridName.Rows(i).Cells(RowsName).Value)
+            If Trim(GridName.Rows(i).Cells(RowsName).Value) > MaxNum Then
+                MaxNum = Trim(GridName.Rows(i).Cells(RowsName).Value)
+            End If
+        Next
+        Return MaxNum
+    End Function
 
     Private Function Validdet() As Boolean
         Dim Valid As Boolean = False
@@ -732,17 +844,37 @@ Public Class Formreceivefabcolors
         Btddel.Enabled = True
         Ctdedit.Enabled = True
         Ctddel.Enabled = True
+        Btfinddyedh.Enabled = True
+        Btfindknitid.Enabled = True
+        Btdadd.Enabled = True
+        Btdcancel.Enabled = True
     End Sub
     Private Sub Mainbuttoncancel()
+        Btfinddyedh.Enabled = False
+        Tbdyedbillno.Enabled = False
+        Tbknittno.Enabled = False
+        Tbcolorno.Enabled = False
+        Tbrefablotno.Enabled = False
+        Btfindknitid.Enabled = False
+        Tbkongno.Enabled = False
+        Tbkg.Enabled = False
+        Btdadd.Enabled = False
+        Btdcancel.Enabled = False
+        Dtprecdate.Enabled = False
         Btmnew.Enabled = True
         Btmedit.Enabled = False
         Btmdel.Enabled = False
         Btmsave.Enabled = False
         Btmcancel.Enabled = False
         Btmreports.Enabled = False
+        Tbremark.Enabled = False
+        Btfindbillno.Enabled = False
+        Btfindknittno.Enabled = False
+        Tbrollid.Enabled = False
         Disbaledbutton()
     End Sub
     Private Sub Disbaledbutton()
+        Btdbadd.Enabled = False
         Btdedit.Enabled = False
         Btddel.Enabled = False
         Ctdedit.Enabled = False

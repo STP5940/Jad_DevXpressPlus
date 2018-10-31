@@ -102,6 +102,12 @@
     <Compile Include="Knitting\Dsyarndlvk.vb">
       <DependentUpon>Dsyarndlvk.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Knitting\Formbillnolist.Designer.vb">
+      <DependentUpon>Formbillnolist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Knitting\Formbillnolist.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Knitting\Formdlvnoknittlist.designer.vb">
       <DependentUpon>Formdlvnoknittlist.vb</DependentUpon>
     </Compile>
@@ -189,6 +195,12 @@
     <Compile Include="Receivefab\Formdyedlist.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Receivefab\Formknittnolist.Designer.vb">
+      <DependentUpon>Formknittnolist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Receivefab\Formknittnolist.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Receivefab\Formreceivefabcolors.designer.vb">
       <DependentUpon>Formreceivefabcolors.vb</DependentUpon>
     </Compile>
@@ -245,6 +257,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Knitting\Formbillnolist.resx">
+      <DependentUpon>Formbillnolist.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Knitting\Formdlvnoknittlist.resx">
       <DependentUpon>Formdlvnoknittlist.vb</DependentUpon>
     </EmbeddedResource>
@@ -287,6 +302,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Receivefab\Formdyedlist.resx">
       <DependentUpon>Formdyedlist.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivefab\Formknittnolist.resx">
+      <DependentUpon>Formknittnolist.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Receivefab\Formreceivefabcolors.resx">
       <DependentUpon>Formreceivefabcolors.vb</DependentUpon>

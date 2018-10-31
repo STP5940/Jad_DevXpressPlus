@@ -51,6 +51,7 @@ Partial Class Formdyeddetlist
         Me.Tbkeyword = New System.Windows.Forms.ToolStripTextBox()
         Me.Tbcancel = New System.Windows.Forms.ToolStripTextBox()
         Me.Tbknitbill = New System.Windows.Forms.ToolStripTextBox()
+        Me.Tbdyedbillno = New System.Windows.Forms.ToolStripTextBox()
         Me.Btcancel = New DevComponents.DotNetBar.ButtonX()
         Me.Btok = New DevComponents.DotNetBar.ButtonX()
         Me.TabItem1 = New DevComponents.DotNetBar.TabItem(Me.components)
@@ -270,7 +271,7 @@ Partial Class Formdyeddetlist
         'ToolStrip1
         '
         Me.ToolStrip1.BackColor = System.Drawing.Color.Transparent
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Btmsearch, Me.Tbkeyword, Me.Tbcancel, Me.Tbknitbill})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Btmsearch, Me.Tbkeyword, Me.Tbcancel, Me.Tbknitbill, Me.Tbdyedbillno})
         Me.ToolStrip1.Location = New System.Drawing.Point(1, 1)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(582, 49)
@@ -308,6 +309,11 @@ Partial Class Formdyeddetlist
         Me.Tbknitbill.Name = "Tbknitbill"
         Me.Tbknitbill.Size = New System.Drawing.Size(25, 49)
         Me.Tbknitbill.Visible = False
+        '
+        'Tbdyedbillno
+        '
+        Me.Tbdyedbillno.Name = "Tbdyedbillno"
+        Me.Tbdyedbillno.Size = New System.Drawing.Size(25, 49)
         '
         'Btcancel
         '
@@ -387,4 +393,5 @@ Partial Class Formdyeddetlist
     Friend WithEvents Qtykg As DataGridViewTextBoxColumn
     Friend WithEvents Finwgt As DataGridViewTextBoxColumn
     Friend WithEvents Knittbill As DataGridViewTextBoxColumn
+    Friend WithEvents Tbdyedbillno As ToolStripTextBox
 End Class
