@@ -279,7 +279,9 @@ Public Class Formreceivefabcolors
                 Dgvmas.CurrentRow.Cells("Dwidth").Value = Trim(Tbwidht.Text)
                 Dgvmas.CurrentRow.Cells("Shadeid").Value = Trim(Tbshadeid.Text)
                 Dgvmas.CurrentRow.Cells("Shadedesc").Value = Trim(Tbshadename.Text)
-                Dgvmas.CurrentRow.Cells("Mkong").Value = Trim(Tbkongno.Text)
+                For i = 0 To Dgvmas.RowCount - 1
+                    Dgvmas.Rows(i).Cells("Mkong").Value = Trim(Tbkongno.Text)
+                Next
                 Dgvmas.CurrentRow.Cells("Rollwage").Value = CDbl(Tbkg.Text)
         End Select
         Sumall()
@@ -482,7 +484,7 @@ Public Class Formreceivefabcolors
         Tdetails = New DataTable
         Tdetails = SQLCommand("SELECT '' AS Stat,* FROM Vrecfabcoldet
                                 WHERE Comid = '" & Gscomid & "' AND Dhid = '" & Trim(Tbdhid.Text) & "' 
-                                AND Billdyedno = '" & Trim(Tbdyedbillno.Text) & "' AND Lotno = '" & Trim(Tbrefablotno.Text) & "'")
+                                AND Billdyedno = '" & Trim(Tbdyedbillno.Text) & "' AND Lotno = '" & Trim(Tbrefablotno.Text) & "' ORDER BY CAST(Pubno as int)")
         Dgvmas.DataSource = Tdetails
     End Sub
     Private Sub Bindinglist()
@@ -732,12 +734,13 @@ Public Class Formreceivefabcolors
     End Sub
 
     Private Sub Btfindknittno_Click(sender As Object, e As EventArgs) Handles Btfindknittno.Click
-        'Dim Frm As New Formknittnolist
-        'Showdiaformcenter(Frm, Me)
-        'If Frm.Tbcancel.Text = "C" Then
-        '    Exit Sub
-        'End If
-        'Tbdyedbillno.Text = Trim(Frm.Dgvmas.CurrentRow.Cells("Dyecomno").Value)
+        Dim Frm As New Formknittnolist
+        Frm.Tbdyedbillno.Text = Tbdyedbillno.Text
+        Showdiaformcenter(Frm, Me)
+        If Frm.Tbcancel.Text = "C" Then
+            Exit Sub
+        End If
+        Tbknittno.Text = Trim(Frm.Dgvmas.CurrentRow.Cells("Knittbill").Value)
     End Sub
 
     Private Sub Btmedit_Click(sender As Object, e As EventArgs) Handles Btmedit.Click
@@ -777,6 +780,11 @@ Public Class Formreceivefabcolors
     End Sub
 
     Private Sub Btdbadd_Click(sender As Object, e As EventArgs) Handles Btdbadd.Click
+        If Dgvmas.RowCount - 1 > 0 Then
+            Tbkongno.Enabled = False
+        Else
+            Tbkongno.Enabled = True
+        End If
         Tbaddedit.Text = "เพิ่ม"
         GroupPanel2.Visible = True
         ClearDetail()
@@ -784,7 +792,7 @@ Public Class Formreceivefabcolors
     End Sub
 
     Private Function rollidnew(GridName As Object, RowsName As String)
-        Dim MaxNum = 1
+        Dim MaxNum = 0
         For i = 0 To GridName.RowCount - 1
             Trim(GridName.Rows(i).Cells(RowsName).Value)
             If Trim(GridName.Rows(i).Cells(RowsName).Value) > MaxNum Then
@@ -793,6 +801,16 @@ Public Class Formreceivefabcolors
         Next
         Return MaxNum
     End Function
+
+    Private Sub Btddel_Click_1(sender As Object, e As EventArgs) Handles Btddel.Click
+        If Dgvmas.RowCount = 0 Then
+            Exit Sub
+        End If
+        Dgvmas.Rows.Remove(Dgvmas.CurrentRow)
+        Sumall()
+        Btdcancel_Click(sender, e)
+        Tsbwsave.Visible = True
+    End Sub
 
     Private Function Validdet() As Boolean
         Dim Valid As Boolean = False

@@ -884,7 +884,7 @@ Partial Class Formreceivefabcolors
         '
         Me.LabelX16.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX16.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.LabelX16.Location = New System.Drawing.Point(11, 59)
+        Me.LabelX16.Location = New System.Drawing.Point(186, 60)
         Me.LabelX16.Name = "LabelX16"
         Me.LabelX16.Size = New System.Drawing.Size(54, 23)
         Me.LabelX16.TabIndex = 118
@@ -894,10 +894,10 @@ Partial Class Formreceivefabcolors
         '
         Me.Tbrollid.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.Tbrollid.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Tbrollid.Location = New System.Drawing.Point(75, 59)
+        Me.Tbrollid.Location = New System.Drawing.Point(243, 60)
         Me.Tbrollid.MaxLength = 80
         Me.Tbrollid.Name = "Tbrollid"
-        Me.Tbrollid.Size = New System.Drawing.Size(104, 24)
+        Me.Tbrollid.Size = New System.Drawing.Size(120, 24)
         Me.Tbrollid.TabIndex = 117
         '
         'Btfindknitid
@@ -924,7 +924,7 @@ Partial Class Formreceivefabcolors
         Me.Tbaddedit.Enabled = False
         Me.Tbaddedit.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Tbaddedit.ForeColor = System.Drawing.Color.Black
-        Me.Tbaddedit.Location = New System.Drawing.Point(599, 2)
+        Me.Tbaddedit.Location = New System.Drawing.Point(605, 2)
         Me.Tbaddedit.Name = "Tbaddedit"
         Me.Tbaddedit.PreventEnterBeep = True
         Me.Tbaddedit.Size = New System.Drawing.Size(33, 22)
@@ -934,7 +934,7 @@ Partial Class Formreceivefabcolors
         'Tbkg
         '
         Me.Tbkg.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Tbkg.Location = New System.Drawing.Point(410, 60)
+        Me.Tbkg.Location = New System.Drawing.Point(418, 60)
         Me.Tbkg.MaxLength = 12
         Me.Tbkg.Name = "Tbkg"
         Me.Tbkg.Size = New System.Drawing.Size(73, 24)
@@ -949,7 +949,7 @@ Partial Class Formreceivefabcolors
         '
         Me.LabelX12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX12.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.LabelX12.Location = New System.Drawing.Point(489, 60)
+        Me.LabelX12.Location = New System.Drawing.Point(497, 60)
         Me.LabelX12.Name = "LabelX12"
         Me.LabelX12.Size = New System.Drawing.Size(35, 23)
         Me.LabelX12.TabIndex = 112
@@ -963,7 +963,7 @@ Partial Class Formreceivefabcolors
         '
         Me.LabelX11.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX11.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.LabelX11.Location = New System.Drawing.Point(187, 59)
+        Me.LabelX11.Location = New System.Drawing.Point(12, 60)
         Me.LabelX11.Name = "LabelX11"
         Me.LabelX11.Size = New System.Drawing.Size(54, 23)
         Me.LabelX11.TabIndex = 113
@@ -977,7 +977,7 @@ Partial Class Formreceivefabcolors
         '
         Me.LabelX13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX13.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.LabelX13.Location = New System.Drawing.Point(360, 59)
+        Me.LabelX13.Location = New System.Drawing.Point(368, 59)
         Me.LabelX13.Name = "LabelX13"
         Me.LabelX13.Size = New System.Drawing.Size(50, 23)
         Me.LabelX13.TabIndex = 111
@@ -991,7 +991,7 @@ Partial Class Formreceivefabcolors
         Me.Tbwidht.Location = New System.Drawing.Point(75, 30)
         Me.Tbwidht.MaxLength = 150
         Me.Tbwidht.Name = "Tbwidht"
-        Me.Tbwidht.Size = New System.Drawing.Size(104, 24)
+        Me.Tbwidht.Size = New System.Drawing.Size(103, 24)
         Me.Tbwidht.TabIndex = 67
         '
         'Btdcancel
@@ -1000,7 +1000,7 @@ Partial Class Formreceivefabcolors
         Me.Btdcancel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
         Me.Btdcancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Btdcancel.Image = Global.XpressPlus.My.Resources.Resources.Undo
-        Me.Btdcancel.Location = New System.Drawing.Point(630, 57)
+        Me.Btdcancel.Location = New System.Drawing.Point(638, 57)
         Me.Btdcancel.Name = "Btdcancel"
         Me.Btdcancel.Size = New System.Drawing.Size(67, 34)
         Me.Btdcancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003
@@ -1010,10 +1010,10 @@ Partial Class Formreceivefabcolors
         '
         Me.Tbkongno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.Tbkongno.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Tbkongno.Location = New System.Drawing.Point(251, 59)
+        Me.Tbkongno.Location = New System.Drawing.Point(75, 60)
         Me.Tbkongno.MaxLength = 80
         Me.Tbkongno.Name = "Tbkongno"
-        Me.Tbkongno.Size = New System.Drawing.Size(104, 24)
+        Me.Tbkongno.Size = New System.Drawing.Size(103, 24)
         Me.Tbkongno.TabIndex = 74
         '
         'Btdadd
@@ -1022,7 +1022,7 @@ Partial Class Formreceivefabcolors
         Me.Btdadd.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
         Me.Btdadd.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Btdadd.Image = Global.XpressPlus.My.Resources.Resources.Downarrow
-        Me.Btdadd.Location = New System.Drawing.Point(557, 57)
+        Me.Btdadd.Location = New System.Drawing.Point(565, 57)
         Me.Btdadd.Name = "Btdadd"
         Me.Btdadd.Size = New System.Drawing.Size(67, 34)
         Me.Btdadd.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003
@@ -1072,7 +1072,7 @@ Partial Class Formreceivefabcolors
         Me.Tbshadename.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.Tbshadename.Enabled = False
         Me.Tbshadename.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Tbshadename.Location = New System.Drawing.Point(313, 30)
+        Me.Tbshadename.Location = New System.Drawing.Point(318, 30)
         Me.Tbshadename.MaxLength = 80
         Me.Tbshadename.Name = "Tbshadename"
         Me.Tbshadename.Size = New System.Drawing.Size(135, 24)
@@ -1083,7 +1083,7 @@ Partial Class Formreceivefabcolors
         Me.Tbclothno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.Tbclothno.Enabled = False
         Me.Tbclothno.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Tbclothno.Location = New System.Drawing.Point(234, 1)
+        Me.Tbclothno.Location = New System.Drawing.Point(242, 1)
         Me.Tbclothno.MaxLength = 80
         Me.Tbclothno.Name = "Tbclothno"
         Me.Tbclothno.Size = New System.Drawing.Size(133, 24)
@@ -1094,7 +1094,7 @@ Partial Class Formreceivefabcolors
         Me.Tbclothtype.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.Tbclothtype.Enabled = False
         Me.Tbclothtype.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Tbclothtype.Location = New System.Drawing.Point(425, 1)
+        Me.Tbclothtype.Location = New System.Drawing.Point(432, 1)
         Me.Tbclothtype.MaxLength = 80
         Me.Tbclothtype.Name = "Tbclothtype"
         Me.Tbclothtype.Size = New System.Drawing.Size(168, 24)
@@ -1108,7 +1108,7 @@ Partial Class Formreceivefabcolors
         '
         Me.LabelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.LabelX7.Location = New System.Drawing.Point(369, 1)
+        Me.LabelX7.Location = New System.Drawing.Point(380, 1)
         Me.LabelX7.Name = "LabelX7"
         Me.LabelX7.Size = New System.Drawing.Size(50, 23)
         Me.LabelX7.TabIndex = 106
@@ -1119,7 +1119,7 @@ Partial Class Formreceivefabcolors
         Me.Tbshadeid.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.Tbshadeid.Enabled = False
         Me.Tbshadeid.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Tbshadeid.Location = New System.Drawing.Point(234, 30)
+        Me.Tbshadeid.Location = New System.Drawing.Point(242, 30)
         Me.Tbshadeid.MaxLength = 80
         Me.Tbshadeid.Name = "Tbshadeid"
         Me.Tbshadeid.Size = New System.Drawing.Size(73, 24)
