@@ -7,6 +7,33 @@
         Bindinglistyed()
         FilterfabGrid()
         FilteryedGrid()
+        For i = 0 To FilterAllyed.Rows.Count - 1
+            Balance.Rows.Add()
+            Balance.Rows(i).Cells("BDyedcomno").Value = FilterAllyed.Rows(i).Cells("Dyedcomno").Value
+            Balance.Rows(i).Cells("BClothidyed").Value = FilterAllyed.Rows(i).Cells("Clothidyed").Value
+            Balance.Rows(i).Cells("BClothnoyed").Value = FilterAllyed.Rows(i).Cells("Clothnoyed").Value
+            Balance.Rows(i).Cells("BFtypeyed").Value = FilterAllyed.Rows(i).Cells("Ftypeyed").Value
+            Balance.Rows(i).Cells("BFwidthyed").Value = FilterAllyed.Rows(i).Cells("Fwidthyed").Value
+            Balance.Rows(i).Cells("BQtykg").Value = FilterAllyed.Rows(i).Cells("Qtykg").Value
+            Balance.Rows(i).Cells("BQtyroll").Value = FilterAllyed.Rows(i).Cells("Qtyroll").Value
+        Next
+
+        For i = 0 To Balance.Rows.Count - 1
+            If Filterfab.Rows(i).Cells("Billdyedno").Value = Balance.Rows(i).Cells("BDyedcomno").Value And
+                  Filterfab.Rows(i).Cells("Clothid").Value = Balance.Rows(i).Cells("BClothidyed").Value And
+                  Filterfab.Rows(i).Cells("Fwidth").Value = Balance.Rows(i).Cells("BFwidthyed").Value Then
+                Balance.Rows(i).Cells("BQtyroll").Value = FilterAllyed.Rows(i).Cells("Qtyroll").Value - Filterfab.Rows(i).Cells("Qtyrollfab").Value
+                Balance.Rows(i).Cells("BQtykg").Value = FilterAllyed.Rows(i).Cells("Qtykg").Value - Filterfab.Rows(i).Cells("Rollwage").Value
+            End If
+        Next
+
+        For i = 0 To Balance.Rows.Count - 1
+            If Balance.Rows(i).Cells("BQtyroll").Value <= 0 Then
+                Balance.Rows.RemoveAt(i)
+                i += 1
+            End If
+        Next
+
     End Sub
 
     Private Sub Bindinglistfab()
@@ -24,7 +51,7 @@
 
     Private Sub FilterfabGrid()
         Dim BilldyednoArray, ClothidArray,
-            ClothnoArray, FtypeArray, FwidthArray, RollwageArray, QtyrollArray As New List(Of String)()
+            ClothnoArray, FtypeArray, FwidthArray, RollwageArray, QtyrollArray, QtyrollfabArray As New List(Of String)()
 
         BilldyednoArray.Add("")
         ClothidArray.Add("")
@@ -33,14 +60,17 @@
         FwidthArray.Add("")
         RollwageArray.Add("")
         QtyrollArray.Add("")
+        QtyrollfabArray.add("")
 
         For I = 0 To Allfab.RowCount - 1
             For Filters = 0 To BilldyednoArray.Count - 1
 
                 If BilldyednoArray(Filters) = Allfab.Rows(I).Cells("Billdyedno").Value And
+                    FwidthArray(Filters) = Allfab.Rows(I).Cells("Fwidth").Value And
                     ClothidArray(Filters) = Allfab.Rows(I).Cells("Clothid").Value Then
 
                     RollwageArray(Filters) = RollwageArray(Filters) + Allfab.Rows(I).Cells("Rollwage").Value
+                    QtyrollfabArray(Filters) = QtyrollfabArray(Filters) + 1
                     Exit For
                 End If
 
@@ -51,6 +81,7 @@
                     FtypeArray.Add(Allfab.Rows(I).Cells("Ftype").Value)
                     FwidthArray.Add(Allfab.Rows(I).Cells("Fwidth").Value)
                     RollwageArray.Add(Allfab.Rows(I).Cells("Rollwage").Value)
+                    QtyrollfabArray.Add(1)
                 End If
             Next
         Next
@@ -65,7 +96,9 @@
             Filterfab.Rows(i).Cells("Ftype").Value = FtypeArray(PontArray)
             Filterfab.Rows(i).Cells("Fwidth").Value = FwidthArray(PontArray)
             Filterfab.Rows(i).Cells("Rollwage").Value = RollwageArray(PontArray)
+            Filterfab.Rows(i).Cells("Qtyrollfab").Value = QtyrollfabArray(PontArray)
         Next
+
     End Sub
 
     Private Sub FilteryedGrid()
@@ -88,6 +121,7 @@
             For Filters = 0 To DyedcomnoArray.Count - 1
 
                 If DyedcomnoArray(Filters) = Allyed.Rows(I).Cells("Dyedcomno").Value And
+                    FwidthArray(Filters) = Allyed.Rows(I).Cells("Fwidth").Value And
                     ClothidArray(Filters) = Allyed.Rows(I).Cells("Clothid").Value Then
 
                     QtykgArray(Filters) = QtykgArray(Filters) + Allyed.Rows(I).Cells("Qtykg").Value
@@ -124,4 +158,5 @@
             FilterAllyed.Rows(i).Cells("Knittbill").Value = KnittbillArray(PontArray)
         Next
     End Sub
+
 End Class

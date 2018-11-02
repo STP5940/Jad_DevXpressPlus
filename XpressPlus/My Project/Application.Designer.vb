@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.XpressPlus.Formreceivefabcolors
+            Me.MainForm = Global.XpressPlus.Formtemp
         End Sub
     End Class
 End Namespace
