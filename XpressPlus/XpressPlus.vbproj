@@ -201,16 +201,34 @@
     <Compile Include="Receivefab\Formknittnolist.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Receivefab\Formreceivablelist.Designer.vb">
+      <DependentUpon>Formreceivablelist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Receivefab\Formreceivablelist.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Receivefab\Formreceivefabcolors.designer.vb">
       <DependentUpon>Formreceivefabcolors.vb</DependentUpon>
     </Compile>
     <Compile Include="Receivefab\Formreceivefabcolors.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Receivefab\Formreceivefabrpt.Designer.vb">
+      <DependentUpon>Formreceivefabrpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Receivefab\Formreceivefabrpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Receivefab\Formrefabcolorlotno.designer.vb">
       <DependentUpon>Formrefabcolorlotno.vb</DependentUpon>
     </Compile>
     <Compile Include="Receivefab\Formrefabcolorlotno.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Receivefab\Formtemp.Designer.vb">
+      <DependentUpon>Formtemp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Receivefab\Formtemp.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="salerepor\Form1.Designer.vb">
@@ -306,11 +324,20 @@
     <EmbeddedResource Include="Receivefab\Formknittnolist.resx">
       <DependentUpon>Formknittnolist.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Receivefab\Formreceivablelist.resx">
+      <DependentUpon>Formreceivablelist.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Receivefab\Formreceivefabcolors.resx">
       <DependentUpon>Formreceivefabcolors.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Receivefab\Formreceivefabrpt.resx">
+      <DependentUpon>Formreceivefabrpt.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Receivefab\Formrefabcolorlotno.resx">
       <DependentUpon>Formrefabcolorlotno.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivefab\Formtemp.resx">
+      <DependentUpon>Formtemp.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="salerepor\Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>

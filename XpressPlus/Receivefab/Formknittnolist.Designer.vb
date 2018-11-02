@@ -23,20 +23,20 @@ Partial Class Formknittnolist
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New DevComponents.DotNetBar.TabControl()
         Me.TabControlPanel1 = New DevComponents.DotNetBar.TabControlPanel()
         Me.Dgvmas = New System.Windows.Forms.DataGridView()
+        Me.Status = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Knittbill = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.Btmsearch = New System.Windows.Forms.ToolStripButton()
         Me.Tbkeyword = New System.Windows.Forms.ToolStripTextBox()
         Me.Tbcancel = New System.Windows.Forms.ToolStripTextBox()
+        Me.Tbdyedbillno = New System.Windows.Forms.ToolStripTextBox()
         Me.Btcancel = New DevComponents.DotNetBar.ButtonX()
         Me.Btok = New DevComponents.DotNetBar.ButtonX()
         Me.TabItem1 = New DevComponents.DotNetBar.TabItem(Me.components)
-        Me.Tbdyedbillno = New System.Windows.Forms.ToolStripTextBox()
-        Me.Status = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Knittbill = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.TabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabControlPanel1.SuspendLayout()
@@ -87,14 +87,14 @@ Partial Class Formknittnolist
         '
         Me.Dgvmas.AllowUserToAddRows = False
         Me.Dgvmas.AllowUserToDeleteRows = False
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Dgvmas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Dgvmas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.Dgvmas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Dgvmas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Status, Me.Knittbill})
         Me.Dgvmas.Dock = System.Windows.Forms.DockStyle.Top
@@ -103,6 +103,22 @@ Partial Class Formknittnolist
         Me.Dgvmas.ReadOnly = True
         Me.Dgvmas.Size = New System.Drawing.Size(382, 181)
         Me.Dgvmas.TabIndex = 29
+        '
+        'Status
+        '
+        Me.Status.DataPropertyName = "Stat"
+        Me.Status.HeaderText = ""
+        Me.Status.Name = "Status"
+        Me.Status.ReadOnly = True
+        Me.Status.Width = 20
+        '
+        'Knittbill
+        '
+        Me.Knittbill.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Knittbill.DataPropertyName = "Knittbill"
+        Me.Knittbill.HeaderText = "เลขที่บิลผ้าดิบ"
+        Me.Knittbill.Name = "Knittbill"
+        Me.Knittbill.ReadOnly = True
         '
         'ToolStrip1
         '
@@ -140,6 +156,12 @@ Partial Class Formknittnolist
         Me.Tbcancel.Size = New System.Drawing.Size(25, 49)
         Me.Tbcancel.Visible = False
         '
+        'Tbdyedbillno
+        '
+        Me.Tbdyedbillno.Name = "Tbdyedbillno"
+        Me.Tbdyedbillno.Size = New System.Drawing.Size(25, 49)
+        Me.Tbdyedbillno.Visible = False
+        '
         'Btcancel
         '
         Me.Btcancel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
@@ -169,27 +191,6 @@ Partial Class Formknittnolist
         Me.TabItem1.AttachedControl = Me.TabControlPanel1
         Me.TabItem1.Name = "TabItem1"
         Me.TabItem1.Text = "โรงย้อม"
-        '
-        'Tbdyedbillno
-        '
-        Me.Tbdyedbillno.Name = "Tbdyedbillno"
-        Me.Tbdyedbillno.Size = New System.Drawing.Size(25, 49)
-        '
-        'Status
-        '
-        Me.Status.DataPropertyName = "Stat"
-        Me.Status.HeaderText = ""
-        Me.Status.Name = "Status"
-        Me.Status.ReadOnly = True
-        Me.Status.Width = 20
-        '
-        'Knittbill
-        '
-        Me.Knittbill.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Knittbill.DataPropertyName = "Knittbill"
-        Me.Knittbill.HeaderText = "เลขที่บิลผ้าดิบ"
-        Me.Knittbill.Name = "Knittbill"
-        Me.Knittbill.ReadOnly = True
         '
         'Formknittnolist
         '
