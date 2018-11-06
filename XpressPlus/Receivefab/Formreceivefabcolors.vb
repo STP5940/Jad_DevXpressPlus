@@ -1,7 +1,7 @@
 ﻿Imports System.ComponentModel
 Imports Microsoft.Reporting.WinForms
 Public Class Formreceivefabcolors
-    Private Tmaster, Tdetails, Tlist, TSendDyelist, Dttemp As DataTable
+    Private Tmaster, Tdetails, Tlist, TSendDyelist, Dttemp, tlistfab, tlistyed As DataTable
     Private Pagecount, Maxrec, Pagesize, Currentpage, Recno As Integer
     Private WithEvents Dtplistfm As New DateTimePicker
     Private WithEvents Dtplistto As New DateTimePicker
@@ -25,17 +25,20 @@ Public Class Formreceivefabcolors
         'Setauthorize()
         Mainbuttoncancel()
         Tbmycom.Text = Trim(Gscomname)
+        BindingBalance()
 
     End Sub
     Private Sub Formreceivefabcolors_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         Dgvmas.ColumnHeadersDefaultCellStyle.Font = New Font("Microsoft Sans Serif", 11)
         Dgvmas.DefaultCellStyle.Font = New Font("Microsoft Sans Serif", 11)
-        SendDyelist.ColumnHeadersDefaultCellStyle.Font = New Font("Microsoft Sans Serif", 11)
-        SendDyelist.DefaultCellStyle.Font = New Font("Microsoft Sans Serif", 11)
+        Balance.ColumnHeadersDefaultCellStyle.Font = New Font("Microsoft Sans Serif", 11)
+        Balance.DefaultCellStyle.Font = New Font("Microsoft Sans Serif", 11)
+        ''SendDyelist.ColumnHeadersDefaultCellStyle.Font = New Font("Microsoft Sans Serif", 11)
+        ''SendDyelist.DefaultCellStyle.Font = New Font("Microsoft Sans Serif", 11)
         Dgvlist.ColumnHeadersDefaultCellStyle.Font = New Font("Microsoft Sans Serif", 11)
         Dgvlist.DefaultCellStyle.Font = New Font("Microsoft Sans Serif", 11)
         Bindinglist()
-        BindingSendDyelist()
+        'BindingSendDyelist()
     End Sub
     Private Sub Btmnew_Click(sender As Object, e As EventArgs) Handles Btmnew.Click
         Clrdgrid()
@@ -58,7 +61,7 @@ Public Class Formreceivefabcolors
             Informmessage("กรุณาตรวจสอบรายละเอียดในการส่งให้ครบถ้วน")
             Exit Sub
         End If
-        If Tbdyedbillno.Enabled = True Then
+        If Tbdyedcomno.Text = "NEW" Then
             Newdoc()
         Else
             Editdoc()
@@ -70,6 +73,7 @@ Public Class Formreceivefabcolors
         Mainbuttoncancel()
         Bindinglist()
         Btmcancel_Click(sender, e)
+        BindingBalance()
     End Sub
     Private Sub Btmdel_Click(sender As Object, e As EventArgs) Handles Btmdel.Click
         If Trim(Tbknittno.Text) = "" Then
@@ -85,6 +89,7 @@ Public Class Formreceivefabcolors
             TabControl1.SelectedTabIndex = 0
             GroupPanel2.Visible = False
             Bindinglist()
+            BindingBalance()
         End If
     End Sub
 
@@ -162,6 +167,15 @@ Public Class Formreceivefabcolors
             Editcontextlistmenu()
         End If
     End Sub
+    Private Sub Balance_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles Balance.CellMouseClick
+        If e.Button = Windows.Forms.MouseButtons.Right Then
+            If Me.Balance.Rows.Count < 1 Then Exit Sub
+            If e.RowIndex < 0 Then Exit Sub
+            Balance.CurrentCell = Balance(3, e.RowIndex)
+            Me.Balance.Rows(e.RowIndex).Selected = True
+            EditBalancelistmenu()
+        End If
+    End Sub
     Private Sub Ctmledit_Click(sender As Object, e As EventArgs) Handles Ctmledit.Click
         Clrdgrid()
         'Clrtxtbox() 'เป้
@@ -223,6 +237,11 @@ Public Class Formreceivefabcolors
 
     End Sub
     Private Sub Btfindknitid_Click(sender As Object, e As EventArgs) Handles Btfindknitid.Click
+        If Trim(Tbdyedbillno.Text) = "" Then
+            Informmessage("กรุณาเลือกเลขที่ใบสั่งย้อม")
+            Btfindbillno_Click(sender, e)
+            Exit Sub
+        End If
         Dim Frm As New Formdyeddetlist
         Frm.Tbknitbill.Text = Trim(Tbknittno.Text)
         Frm.Tbdyedbillno.Text = Trim(Tbdyedbillno.Text)
@@ -230,14 +249,14 @@ Public Class Formreceivefabcolors
         If Frm.Tbcancel.Text = "C" Then
             Exit Sub
         End If
-        AllQtyroll.Text = Trim(Frm.Dgvmas.CurrentRow.Cells("Qtyroll").Value)
-        AllQtykg.Text = Trim(Frm.Dgvmas.CurrentRow.Cells("Qtykg").Value)
-        Tbclothid.Text = Trim(Frm.Dgvmas.CurrentRow.Cells("Clothid").Value)
-        Tbclothno.Text = Trim(Frm.Dgvmas.CurrentRow.Cells("Mclothno").Value)
-        Tbclothtype.Text = Trim(Frm.Dgvmas.CurrentRow.Cells("Ftype").Value)
-        Tbwidht.Text = Trim(Frm.Dgvmas.CurrentRow.Cells("Fwidth").Value)
-        Tbshadeid.Text = Trim(Frm.Dgvmas.CurrentRow.Cells("Shadeid").Value)
-        Tbshadename.Text = Trim(Frm.Dgvmas.CurrentRow.Cells("Shadedesc").Value)
+        AllQtyroll.Text = Trim(Frm.Dgvmas.CurrentRow.Cells("BQtyroll").Value)
+        AllQtykg.Text = Trim(Frm.Dgvmas.CurrentRow.Cells("BQtykg").Value)
+        Tbclothid.Text = Trim(Frm.Dgvmas.CurrentRow.Cells("BClothidyed").Value)
+        Tbclothno.Text = Trim(Frm.Dgvmas.CurrentRow.Cells("BClothnoyed").Value)
+        Tbclothtype.Text = Trim(Frm.Dgvmas.CurrentRow.Cells("BFtypeyed").Value)
+        Tbwidht.Text = Trim(Frm.Dgvmas.CurrentRow.Cells("BFwidthyed").Value)
+        Tbshadeid.Text = Trim(Frm.Dgvmas.CurrentRow.Cells("BShadeid").Value)
+        Tbshadename.Text = Trim(Frm.Dgvmas.CurrentRow.Cells("BShadedesc").Value)
         Tbkongno.Focus()
     End Sub
     Private Sub Tbkongno_KeyDown(sender As Object, e As KeyEventArgs)
@@ -252,6 +271,55 @@ Public Class Formreceivefabcolors
     End Sub
 
     Private Sub Btdadd_Click(sender As Object, e As EventArgs) Handles Btdadd.Click
+
+        If Trim(Tbdhid.Text) = "" OrElse Trim(Tbdhname.Text) = "" Then
+            Informmessage("กรุณาเลือกโรงย้อม")
+            Exit Sub
+        End If
+        If Trim(Tbdyedbillno.Text) = "" Then
+            Informmessage("กรุณาเลือกเลขที่ใบสั่งย้อม")
+            Exit Sub
+        End If
+        If Trim(Tbknittno.Text) = "" Then
+            Informmessage("กรุณาเลือกเลขที่บิลผ้าดิบ")
+            Exit Sub
+        End If
+        If Trim(Tbcolorno.Text) = "" Then
+            Informmessage("กรุณาใส่เบอร์สี")
+            Tbcolorno.Focus()
+            Exit Sub
+        End If
+        If Trim(Tbrefablotno.Text) = "" Then
+            Informmessage("กรุณาใส่ Lot No")
+            Tbrefablotno.Focus()
+            Exit Sub
+        End If
+        If Trim(Tbclothid.Text) = "" OrElse Trim(Tbclothno.Text) = "" _
+        OrElse Trim(Tbclothtype.Text) = "" OrElse Trim(Tbwidht.Text) = "" _
+        OrElse Trim(Tbshadeid.Text) = "" OrElse Trim(Tbshadename.Text) = "" Then
+            Informmessage("กรุณาใส่ข้อมูลผ้าให้ครบ")
+            Btfindknitid.Focus()
+            Exit Sub
+        End If
+        If Trim(Tbkongno.Text) = "" Then
+            Informmessage("กรุณาใส่เบอร์กอง")
+            Tbkongno.Focus()
+            Exit Sub
+        End If
+        If Trim(Tbrollid.Text) = "" Then
+            Informmessage("กรุณาใส่เบอร์พับ")
+            Tbrollid.Focus()
+            Exit Sub
+        End If
+        If Trim(Tbkg.Text) = "" Then
+            Informmessage("กรุณาใส่น้ำหนัก")
+            Tbkg.Focus()
+            Exit Sub
+        End If
+
+
+
+
         If Validmas() = False Then
             Informmessage("กรุณากรอกข้อมูลการรับผ้าสี")
             Exit Sub
@@ -273,7 +341,7 @@ Public Class Formreceivefabcolors
                     End If
                 Next
 
-                If Tbdyedbillno.Enabled = True Then
+                If Tbdyedcomno.Text = "NEW" Then
                     Dgvmas.Rows.Add()
                 Else
                     Tdetails.Rows.Add()
@@ -417,7 +485,7 @@ Public Class Formreceivefabcolors
         Btddel_Click(sender, e)
     End Sub
     Private Sub Formreceivefabcolors_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
-        If Tbdyedbillno.Enabled = True And Dgvmas.RowCount = 0 Then
+        If Tbdyedcomno.Text = "NEW" And Dgvmas.RowCount = 0 Then
             'My.Forms.Formmain.Panel1.Visible = True
             Exit Sub
         End If
@@ -433,7 +501,7 @@ Public Class Formreceivefabcolors
             Bindinglist()
             Exit Sub
         End If
-        Tlist = SQLCommand("SELECT '' AS Stat,* FROM Vrecfabcolmas
+        Tlist = SQLCommand("Select '' AS Stat,* FROM Vrecfabcolmas
                                 WHERE Comid = '" & Gscomid & "' AND (Billdyedno LIKE '%' + '" & Sval & "' + '%' OR Billknitt LIKE '%' + '" & Sval & "' + '%' OR Reid LIKE '%' + '" & Sval & "' + '%' OR Dremark LIKE '%' + '" & Sval & "' + '%')")
         FillGrid()
         ShowRecordDetail()
@@ -468,7 +536,7 @@ Public Class Formreceivefabcolors
         End If
     End Sub
     Private Sub Editdoc()
-        If Tbdyedbillno.Enabled = True Then
+        If Tbdyedcomno.Text = "NEW" Then
             Exit Sub
         End If
         Editmaster()
@@ -587,16 +655,16 @@ Public Class Formreceivefabcolors
         FillGrid()
         ShowRecordDetail()
     End Sub
-    Private Sub BindingSendDyelist()
-        TSendDyelist = New DataTable
-        TSendDyelist = SQLCommand("SELECT '' AS Stat,* FROM Vdyedcommas WHERE Comid = '" & Gscomid & "'")
-        SendDyelist.DataSource = TSendDyelist
-        Bs = New BindingSource
-        Bs.DataSource = TSendDyelist
-        BindingNavigator1.BindingSource = Bs
-        'FillGrid()
-        'ShowRecordDetail()
-    End Sub
+    ''Private Sub BindingSendDyelist()
+    ''    TSendDyelist = New DataTable
+    ''    TSendDyelist = SQLCommand("SELECT '' AS Stat,* FROM Vdyedcommas WHERE Comid = '" & Gscomid & "'")
+    ''    SendDyelist.DataSource = TSendDyelist
+    ''    Bs = New BindingSource
+    ''    Bs.DataSource = TSendDyelist
+    ''    BindingNavigator1.BindingSource = Bs
+    ''    'FillGrid()
+    ''    'ShowRecordDetail()
+    ''End Sub
     Private Sub Sumall()
         Dim Sumkg As Double
         Dim Sumroll As Long
@@ -629,7 +697,8 @@ Public Class Formreceivefabcolors
         Dgvmas.Rows.Clear()
     End Sub
     Private Sub Clrtxtbox()
-        Tbdyedbillno.Enabled = True
+        'Tbdyedbillno.Enabled = True
+        Tbdyedcomno.Text = "NEW"
         Tbknittno.Enabled = True
         Tbcolorno.Enabled = True
         Tbkongno.Enabled = True
@@ -656,6 +725,10 @@ Public Class Formreceivefabcolors
     Private Sub Editcontextlistmenu()
         Ctmmenugrid.Displayed = False
         Ctmmenugrid.PopupMenu(Control.MousePosition)
+    End Sub
+    Private Sub EditBalancelistmenu()
+        CtmBalance.Displayed = False
+        CtmBalance.PopupMenu(Control.MousePosition)
     End Sub
     Private Function Validinput() As Boolean
         Dim Valid As Boolean = False
@@ -940,6 +1013,24 @@ Public Class Formreceivefabcolors
             Exit Sub
         End If
         Dim Frm As New Formreceivefabrpt
+        For i = 0 To Dgvmas.Rows.Count - 1
+            MsgBox(i)
+            Frm.Dgvmas.Rows.Add()
+            Frm.Dgvmas.Rows(i).Cells("rollid").Value = Dgvmas.Rows(i).Cells("rollid").Value
+            Frm.Dgvmas.Rows(i).Cells("Mclothno").Value = Dgvmas.Rows(i).Cells("Mclothno").Value
+            Frm.Dgvmas.Rows(i).Cells("Clothtype").Value = Dgvmas.Rows(i).Cells("Clothtype").Value
+            Frm.Dgvmas.Rows(i).Cells("Dwidth").Value = Dgvmas.Rows(i).Cells("Dwidth").Value
+            Frm.Dgvmas.Rows(i).Cells("Mkong").Value = Dgvmas.Rows(i).Cells("Mkong").Value
+            Frm.Dgvmas.Rows(i).Cells("Rollwage").Value = Dgvmas.Rows(i).Cells("Rollwage").Value
+        Next
+        Frm.Tbdhid.Text = Tbdhid.Text
+        Frm.Tbdhname.Text = Tbdhname.Text
+        Frm.Tbdyedbillno.Text = Tbdyedbillno.Text
+        Frm.Tbknittno.Text = Tbknittno.Text
+        Frm.Tbcolorno.Text = Tbcolorno.Text
+        Frm.Tbrefablotno.Text = Tbrefablotno.Text
+        Frm.Tbdyedcomno.Text = Tbdyedcomno.Text
+
         Frm.ReportViewer1.Reset()
         Frm.Show()
         Clrtxtbox()
@@ -947,6 +1038,223 @@ Public Class Formreceivefabcolors
         BindingNavigator1.Enabled = False
         Mainbuttoncancel()
         TabControl1.SelectedTabIndex = 0
+    End Sub
+
+    Private Sub Bindinglistfab()
+        tlistfab = New DataTable
+        tlistfab = SQLCommand("SELECT * FROM Vrecfabcoldet
+                                WHERE Comid = '" & Gscomid & "'")
+        Allfab.DataSource = tlistfab
+    End Sub
+    Private Sub Bindinglistyed()
+        tlistyed = New DataTable
+        tlistyed = SQLCommand("SELECT * FROM Vdyedcomdet
+                                WHERE Comid = '" & Gscomid & "'")
+        Allyed.DataSource = tlistyed
+    End Sub
+
+    Private Sub FilterfabGrid()
+        Dim BilldyednoArray, ClothidArray,
+            ClothnoArray, FtypeArray, FwidthArray, RollwageArray, QtyrollArray, QtyrollfabArray As New List(Of String)()
+
+        BilldyednoArray.Add("")
+        ClothidArray.Add("")
+        ClothnoArray.Add("")
+        FtypeArray.Add("")
+        FwidthArray.Add("")
+        RollwageArray.Add("")
+        QtyrollArray.Add("")
+        QtyrollfabArray.Add("")
+
+        For I = 0 To Allfab.RowCount - 1
+            For Filters = 0 To BilldyednoArray.Count - 1
+
+                If BilldyednoArray(Filters) = Allfab.Rows(I).Cells("Billdyedno").Value And
+                    FwidthArray(Filters) = Allfab.Rows(I).Cells("Fwidth").Value And
+                    ClothidArray(Filters) = Allfab.Rows(I).Cells("Clothid").Value Then
+
+                    RollwageArray(Filters) = RollwageArray(Filters) + Allfab.Rows(I).Cells("Rollwage").Value
+                    QtyrollfabArray(Filters) = QtyrollfabArray(Filters) + 1
+                    Exit For
+                End If
+
+                If Filters = BilldyednoArray.Count - 1 Then
+                    BilldyednoArray.Add(Allfab.Rows(I).Cells("Billdyedno").Value)
+                    ClothidArray.Add(Allfab.Rows(I).Cells("Clothid").Value)
+                    ClothnoArray.Add(Allfab.Rows(I).Cells("Clothno").Value)
+                    FtypeArray.Add(Allfab.Rows(I).Cells("Ftype").Value)
+                    FwidthArray.Add(Allfab.Rows(I).Cells("Fwidth").Value)
+                    RollwageArray.Add(Allfab.Rows(I).Cells("Rollwage").Value)
+                    QtyrollfabArray.Add(1)
+                End If
+            Next
+        Next
+
+        Dim PontArray As Integer = 0
+        For i = 0 To BilldyednoArray.Count - 2
+            PontArray = i + 1
+            Filterfab.Rows.Add()
+            Filterfab.Rows(i).Cells("FBilldyedno").Value = BilldyednoArray(PontArray)
+            Filterfab.Rows(i).Cells("FClothid").Value = ClothidArray(PontArray)
+            Filterfab.Rows(i).Cells("Clothno").Value = ClothnoArray(PontArray)
+            Filterfab.Rows(i).Cells("Ftype").Value = FtypeArray(PontArray)
+            Filterfab.Rows(i).Cells("Fwidth").Value = FwidthArray(PontArray)
+            Filterfab.Rows(i).Cells("FRollwage").Value = RollwageArray(PontArray)
+            Filterfab.Rows(i).Cells("Qtyrollfab").Value = QtyrollfabArray(PontArray)
+        Next
+
+    End Sub
+
+    Private Sub FilteryedGrid()
+
+        'Clothid
+        Dim DyedcomnoArray, KnittcomidArray, ClothidArray, ClothnoArray, FtypeArray, FwidthArray,
+            QtyrollArray, QtykgArray, KnittbillArray, ShadeidArray, ShadedescArray As New List(Of String)()
+
+        DyedcomnoArray.Add("")
+        KnittcomidArray.Add("")
+        ClothidArray.Add("")
+        ClothnoArray.Add("")
+        FtypeArray.Add("")
+        FwidthArray.Add("")
+        QtyrollArray.Add("")
+        QtykgArray.Add("")
+        KnittbillArray.Add("")
+        ShadeidArray.Add("")
+        ShadedescArray.Add("")
+
+        For I = 0 To Allyed.RowCount - 1
+            For Filters = 0 To DyedcomnoArray.Count - 1
+
+                If DyedcomnoArray(Filters) = Allyed.Rows(I).Cells("Dyedcomno").Value And
+                    FwidthArray(Filters) = Allyed.Rows(I).Cells("Fwidth").Value And
+                    ClothidArray(Filters) = Allyed.Rows(I).Cells("Clothid").Value Then
+
+                    QtykgArray(Filters) = QtykgArray(Filters) + Allyed.Rows(I).Cells("Qtykg").Value
+                    QtyrollArray(Filters) = QtyrollArray(Filters) + Allyed.Rows(I).Cells("Qtyroll").Value
+                    Exit For
+                End If
+
+                If Filters = DyedcomnoArray.Count - 1 Then
+                    DyedcomnoArray.Add(Allyed.Rows(I).Cells("Dyedcomno").Value)
+                    KnittcomidArray.Add(Allyed.Rows(I).Cells("Knittcomid").Value)
+                    ClothidArray.Add(Allyed.Rows(I).Cells("Clothid").Value)
+                    ClothnoArray.Add(Allyed.Rows(I).Cells("Clothno").Value)
+                    FtypeArray.Add(Allyed.Rows(I).Cells("Ftype").Value)
+                    FwidthArray.Add(Allyed.Rows(I).Cells("Fwidth").Value)
+                    QtyrollArray.Add(Allyed.Rows(I).Cells("Qtyroll").Value)
+                    QtykgArray.Add(Allyed.Rows(I).Cells("Qtykg").Value)
+                    KnittbillArray.Add(Allyed.Rows(I).Cells("Knittbill").Value)
+                    ShadeidArray.Add(Allyed.Rows(I).Cells("Shadeid").Value)
+                    ShadedescArray.Add(Allyed.Rows(I).Cells("Shadedesc").Value)
+                End If
+            Next
+        Next
+
+        Dim PontArray As Integer = 0
+        For i = 0 To DyedcomnoArray.Count - 2
+            PontArray = i + 1
+            FilterAllyed.Rows.Add()
+            FilterAllyed.Rows(i).Cells("Dyedcomno").Value = DyedcomnoArray(PontArray)
+            FilterAllyed.Rows(i).Cells("Knittcomid").Value = KnittcomidArray(PontArray)
+            FilterAllyed.Rows(i).Cells("Clothidyed").Value = ClothidArray(PontArray)
+            FilterAllyed.Rows(i).Cells("Clothnoyed").Value = ClothnoArray(PontArray)
+            FilterAllyed.Rows(i).Cells("Ftypeyed").Value = FtypeArray(PontArray)
+            FilterAllyed.Rows(i).Cells("Fwidthyed").Value = FwidthArray(PontArray)
+            FilterAllyed.Rows(i).Cells("Qtyroll").Value = QtyrollArray(PontArray)
+            FilterAllyed.Rows(i).Cells("Qtykg").Value = QtykgArray(PontArray)
+            FilterAllyed.Rows(i).Cells("Knittbill").Value = KnittbillArray(PontArray)
+            FilterAllyed.Rows(i).Cells("FShadeid").Value = ShadeidArray(PontArray)
+            FilterAllyed.Rows(i).Cells("FShadedesc").Value = ShadedescArray(PontArray)
+        Next
+    End Sub
+
+    Private Sub FilterMaster()
+        For i = 0 To FilterAllyed.Rows.Count - 1
+            Balance.Rows.Add()
+            Balance.Rows(i).Cells("BDyedcomno").Value = FilterAllyed.Rows(i).Cells("Dyedcomno").Value
+            Balance.Rows(i).Cells("BClothidyed").Value = FilterAllyed.Rows(i).Cells("Clothidyed").Value
+            Balance.Rows(i).Cells("BClothnoyed").Value = FilterAllyed.Rows(i).Cells("Clothnoyed").Value
+            Balance.Rows(i).Cells("BFtypeyed").Value = FilterAllyed.Rows(i).Cells("Ftypeyed").Value
+            Balance.Rows(i).Cells("BFwidthyed").Value = FilterAllyed.Rows(i).Cells("Fwidthyed").Value
+            Balance.Rows(i).Cells("BQtykg").Value = FilterAllyed.Rows(i).Cells("Qtykg").Value
+            Balance.Rows(i).Cells("BQtyroll").Value = FilterAllyed.Rows(i).Cells("Qtyroll").Value
+            Balance.Rows(i).Cells("BShadeid").Value = FilterAllyed.Rows(i).Cells("FShadeid").Value
+            Balance.Rows(i).Cells("BShadedesc").Value = FilterAllyed.Rows(i).Cells("FShadedesc").Value
+        Next
+
+        For i = 0 To Filterfab.Rows.Count - 1
+            For Balan = 0 To Balance.Rows.Count - 1
+                If Filterfab.Rows(i).Cells("FBilldyedno").Value = Balance.Rows(Balan).Cells("BDyedcomno").Value And
+                      Filterfab.Rows(i).Cells("FClothid").Value = Balance.Rows(Balan).Cells("BClothidyed").Value And
+                      Filterfab.Rows(i).Cells("Fwidth").Value = Balance.Rows(Balan).Cells("BFwidthyed").Value Then
+                    Balance.Rows(Balan).Cells("BQtyroll").Value = FilterAllyed.Rows(Balan).Cells("Qtyroll").Value - Filterfab.Rows(i).Cells("Qtyrollfab").Value
+                    Balance.Rows(Balan).Cells("BQtykg").Value = FilterAllyed.Rows(Balan).Cells("Qtykg").Value - Filterfab.Rows(i).Cells("FRollwage").Value
+                End If
+            Next
+        Next
+
+        For i = 0 To Balance.Rows.Count - 1
+            If i <= Balance.Rows.Count - 1 Then
+                If Balance.Rows(i).Cells("BQtyroll").Value <= 0 Then
+                    Balance.Rows.RemoveAt(i)
+                    i -= 1
+                End If
+            End If
+        Next
+
+    End Sub
+
+    Private Sub BindingBalance()
+        Filterfab.Rows.Clear()
+        FilterAllyed.Rows.Clear()
+        Balance.Rows.Clear()
+        Bindinglistfab()
+        Bindinglistyed()
+        FilterfabGrid()
+        FilteryedGrid()
+        FilterMaster()
+    End Sub
+
+    Private Sub Filtermastergrid()
+        If Trim(ToolStripTextBox3.Text) = "" Then
+            BindingBalance()
+            Exit Sub
+        End If
+        FilterAllyed.Rows.Clear()
+        Balance.Rows.Clear()
+        tlistyed.DefaultView.RowFilter = String.Format("Dyedcomno Like '%{0}%' or Clothno Like '%{0}%' or Ftype Like '%{0}%' or Fwidth Like '%{0}%'", Trim(ToolStripTextBox3.Text))
+        FilteryedGrid()
+        FilterMaster()
+    End Sub
+
+
+    Private Sub ButtonItem2_Click(sender As Object, e As EventArgs) Handles ButtonItem2.Click
+        Btmnew_Click(sender, e)
+        Btdbadd_Click(sender, e)
+        Tbdyedbillno.Text = Trim(Balance.CurrentRow.Cells("BDyedcomno").Value)
+        Tbclothid.Text = Trim(Balance.CurrentRow.Cells("BClothidyed").Value)
+        Tbclothno.Text = Trim(Balance.CurrentRow.Cells("BClothnoyed").Value)
+        Tbclothtype.Text = Trim(Balance.CurrentRow.Cells("BFtypeyed").Value)
+        Tbwidht.Text = Trim(Balance.CurrentRow.Cells("BFwidthyed").Value)
+        Tbshadeid.Text = Trim(Balance.CurrentRow.Cells("BShadeid").Value)
+        Tbshadename.Text = Trim(Balance.CurrentRow.Cells("BShadedesc").Value)
+    End Sub
+
+    Private Sub ToolStripTextBox3_KeyPress(sender As Object, e As KeyPressEventArgs) Handles ToolStripTextBox3.KeyPress
+        e.Handled = (Asc(e.KeyChar) = 39)
+    End Sub
+
+    Private Sub ToolStripButton5_Click(sender As Object, e As EventArgs) Handles ToolStripButton5.Click
+        BindingBalance()
+    End Sub
+
+    Private Sub ToolStripTextBox3_TextChanged(sender As Object, e As EventArgs) Handles ToolStripTextBox3.TextChanged
+        Balancefind_Click(sender, e)
+    End Sub
+
+    Private Sub Balancefind_Click(sender As Object, e As EventArgs) Handles Balancefind.Click
+        Filtermastergrid()
     End Sub
 
     Private Sub Btddel_Click_1(sender As Object, e As EventArgs) Handles Btddel.Click

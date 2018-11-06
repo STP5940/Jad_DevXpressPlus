@@ -515,6 +515,9 @@ Public Class Formknittingform
                 QtyrollStore.Text = Format(CLng(WgtKgStore.Text / Kgproll), "###,##0")
             End If
         Else
+            If Dgvmas.RowCount <= 0 Then
+                Exit Sub
+            End If
             QtyrollStore.Text = Format(CLng(Tbkg.Text / Kgproll), "###,##0")
             WgtKgStore.Text = Convert.ToDouble(Tbkg.Text).ToString("N2")
         End If

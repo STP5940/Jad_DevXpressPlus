@@ -167,5 +167,25 @@ Represents strongly named DataRow class.
 Row event argument class
 </summary>
 </member>
+<member name="T:XpressPlus.Datareport">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:XpressPlus.Datareport.DatareportDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:XpressPlus.Datareport.DatareportRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:XpressPlus.Datareport.DatareportRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
 </members>
 </doc>

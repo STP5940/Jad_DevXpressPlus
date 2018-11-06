@@ -6,11 +6,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{7EB23751-8DE5-4E79-AFA1-86961D5BD577}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>XpressPlus.My.MyApplication</StartupObject>
+    <StartupObject>XpressPlus.Formreceivefabcolors</StartupObject>
     <RootNamespace>XpressPlus</RootNamespace>
     <AssemblyName>XpressPlus</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <MyType>WindowsForms</MyType>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
@@ -35,7 +35,7 @@
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
-    <OptionExplicit>On</OptionExplicit>
+    <OptionExplicit>Off</OptionExplicit>
   </PropertyGroup>
   <PropertyGroup>
     <OptionCompare>Binary</OptionCompare>
@@ -101,6 +101,12 @@
     </Compile>
     <Compile Include="Knitting\Dsyarndlvk.vb">
       <DependentUpon>Dsyarndlvk.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Knitting\Form2.Designer.vb">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Knitting\Form2.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Knitting\Formbillnolist.Designer.vb">
       <DependentUpon>Formbillnolist.vb</DependentUpon>
@@ -176,6 +182,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Receivefab\Datareport.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Datareport.xsd</DependentUpon>
     </Compile>
     <Compile Include="Receivefab\Formaeformreceivefabcolors.designer.vb">
       <DependentUpon>Formaeformreceivefabcolors.vb</DependentUpon>
@@ -275,6 +286,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Knitting\Form2.resx">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Knitting\Formbillnolist.resx">
       <DependentUpon>Formbillnolist.vb</DependentUpon>
     </EmbeddedResource>
@@ -339,6 +353,7 @@
     <EmbeddedResource Include="Receivefab\Formtemp.resx">
       <DependentUpon>Formtemp.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Receivefab\Rptreceivefabform.rdlc" />
     <EmbeddedResource Include="salerepor\Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
@@ -396,6 +411,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Receivefab\Datareport.xsc">
+      <DependentUpon>Datareport.xsd</DependentUpon>
+    </None>
+    <None Include="Receivefab\Datareport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Datareport.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Receivefab\Datareport.xss">
+      <DependentUpon>Datareport.xsd</DependentUpon>
+    </None>
     <None Include="Resources\Addicon.png" />
   </ItemGroup>
   <ItemGroup>

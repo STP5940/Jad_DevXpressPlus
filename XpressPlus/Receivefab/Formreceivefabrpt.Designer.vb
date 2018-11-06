@@ -23,10 +23,36 @@ Partial Class Formreceivefabrpt
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.Btmclose = New System.Windows.Forms.ToolStripButton()
         Me.TabControl1 = New DevComponents.DotNetBar.TabControl()
         Me.TabControlPanel1 = New DevComponents.DotNetBar.TabControlPanel()
+        Me.Tbdhname = New Normtextbox.Normtextbox()
+        Me.Tbdhid = New Normtextbox.Normtextbox()
+        Me.Tbcolorno = New Normtextbox.Normtextbox()
+        Me.Tbdyedbillno = New Normtextbox.Normtextbox()
+        Me.Tbrefablotno = New Normtextbox.Normtextbox()
+        Me.Tbknittno = New Normtextbox.Normtextbox()
+        Me.Dgvmas = New System.Windows.Forms.DataGridView()
+        Me.Mstat = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.rollid = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Mcomid = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Order = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Dhid = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Mdyedhdesc = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Billdyedno = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Lotno = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Clothid = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Mclothno = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Clothtype = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Dwidth = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Shadeid = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Shadedesc = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Mkong = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Rollwage = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Instk = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Tbremark = New System.Windows.Forms.TextBox()
         Me.Tbredate = New System.Windows.Forms.TextBox()
@@ -35,10 +61,12 @@ Partial Class Formreceivefabrpt
         Me.Tbdate = New System.Windows.Forms.TextBox()
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.TabItem1 = New DevComponents.DotNetBar.TabItem(Me.components)
+        Me.Tbdyedcomno = New Normtextbox.Normtextbox()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.TabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabControlPanel1.SuspendLayout()
+        CType(Me.Dgvmas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ToolStrip1
@@ -83,6 +111,14 @@ Partial Class Formreceivefabrpt
         '
         'TabControlPanel1
         '
+        Me.TabControlPanel1.Controls.Add(Me.Tbdyedcomno)
+        Me.TabControlPanel1.Controls.Add(Me.Tbdhname)
+        Me.TabControlPanel1.Controls.Add(Me.Tbdhid)
+        Me.TabControlPanel1.Controls.Add(Me.Tbcolorno)
+        Me.TabControlPanel1.Controls.Add(Me.Tbdyedbillno)
+        Me.TabControlPanel1.Controls.Add(Me.Tbrefablotno)
+        Me.TabControlPanel1.Controls.Add(Me.Tbknittno)
+        Me.TabControlPanel1.Controls.Add(Me.Dgvmas)
         Me.TabControlPanel1.Controls.Add(Me.TextBox1)
         Me.TabControlPanel1.Controls.Add(Me.Tbremark)
         Me.TabControlPanel1.Controls.Add(Me.Tbredate)
@@ -105,6 +141,239 @@ Partial Class Formreceivefabrpt
         Me.TabControlPanel1.Style.GradientAngle = 90
         Me.TabControlPanel1.TabIndex = 1
         Me.TabControlPanel1.TabItem = Me.TabItem1
+        '
+        'Tbdhname
+        '
+        Me.Tbdhname.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.Tbdhname.Enabled = False
+        Me.Tbdhname.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Tbdhname.Location = New System.Drawing.Point(926, 116)
+        Me.Tbdhname.MaxLength = 150
+        Me.Tbdhname.Name = "Tbdhname"
+        Me.Tbdhname.Size = New System.Drawing.Size(67, 24)
+        Me.Tbdhname.TabIndex = 129
+        Me.Tbdhname.Visible = False
+        '
+        'Tbdhid
+        '
+        Me.Tbdhid.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.Tbdhid.Enabled = False
+        Me.Tbdhid.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Tbdhid.Location = New System.Drawing.Point(848, 116)
+        Me.Tbdhid.MaxLength = 150
+        Me.Tbdhid.Name = "Tbdhid"
+        Me.Tbdhid.Size = New System.Drawing.Size(72, 24)
+        Me.Tbdhid.TabIndex = 128
+        Me.Tbdhid.Visible = False
+        '
+        'Tbcolorno
+        '
+        Me.Tbcolorno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.Tbcolorno.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Tbcolorno.Location = New System.Drawing.Point(848, 176)
+        Me.Tbcolorno.MaxLength = 80
+        Me.Tbcolorno.Name = "Tbcolorno"
+        Me.Tbcolorno.Size = New System.Drawing.Size(72, 24)
+        Me.Tbcolorno.TabIndex = 126
+        Me.Tbcolorno.Visible = False
+        '
+        'Tbdyedbillno
+        '
+        Me.Tbdyedbillno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.Tbdyedbillno.Enabled = False
+        Me.Tbdyedbillno.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Tbdyedbillno.Location = New System.Drawing.Point(848, 146)
+        Me.Tbdyedbillno.MaxLength = 150
+        Me.Tbdyedbillno.Name = "Tbdyedbillno"
+        Me.Tbdyedbillno.Size = New System.Drawing.Size(72, 24)
+        Me.Tbdyedbillno.TabIndex = 124
+        Me.Tbdyedbillno.Visible = False
+        '
+        'Tbrefablotno
+        '
+        Me.Tbrefablotno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.Tbrefablotno.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Tbrefablotno.Location = New System.Drawing.Point(926, 176)
+        Me.Tbrefablotno.MaxLength = 150
+        Me.Tbrefablotno.Name = "Tbrefablotno"
+        Me.Tbrefablotno.Size = New System.Drawing.Size(67, 24)
+        Me.Tbrefablotno.TabIndex = 127
+        Me.Tbrefablotno.Visible = False
+        '
+        'Tbknittno
+        '
+        Me.Tbknittno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.Tbknittno.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Tbknittno.Location = New System.Drawing.Point(926, 145)
+        Me.Tbknittno.MaxLength = 150
+        Me.Tbknittno.Name = "Tbknittno"
+        Me.Tbknittno.Size = New System.Drawing.Size(67, 24)
+        Me.Tbknittno.TabIndex = 125
+        Me.Tbknittno.Visible = False
+        '
+        'Dgvmas
+        '
+        Me.Dgvmas.AllowUserToAddRows = False
+        Me.Dgvmas.AllowUserToDeleteRows = False
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Dgvmas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.Dgvmas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Dgvmas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Mstat, Me.rollid, Me.Mcomid, Me.Order, Me.Dhid, Me.Mdyedhdesc, Me.Billdyedno, Me.Lotno, Me.Clothid, Me.Mclothno, Me.Clothtype, Me.Dwidth, Me.Shadeid, Me.Shadedesc, Me.Mkong, Me.Rollwage, Me.Instk})
+        Me.Dgvmas.Location = New System.Drawing.Point(78, 362)
+        Me.Dgvmas.Name = "Dgvmas"
+        Me.Dgvmas.ReadOnly = True
+        Me.Dgvmas.Size = New System.Drawing.Size(670, 249)
+        Me.Dgvmas.TabIndex = 99
+        Me.Dgvmas.Visible = False
+        '
+        'Mstat
+        '
+        Me.Mstat.DataPropertyName = "Stat"
+        Me.Mstat.HeaderText = ""
+        Me.Mstat.Name = "Mstat"
+        Me.Mstat.ReadOnly = True
+        Me.Mstat.Width = 20
+        '
+        'rollid
+        '
+        Me.rollid.DataPropertyName = "Pubno"
+        Me.rollid.HeaderText = "เบอร์พับ"
+        Me.rollid.Name = "rollid"
+        Me.rollid.ReadOnly = True
+        '
+        'Mcomid
+        '
+        Me.Mcomid.DataPropertyName = "Comid"
+        Me.Mcomid.HeaderText = "Comid"
+        Me.Mcomid.Name = "Mcomid"
+        Me.Mcomid.ReadOnly = True
+        Me.Mcomid.Visible = False
+        '
+        'Order
+        '
+        Me.Order.DataPropertyName = "Pubno"
+        Me.Order.HeaderText = "ลำดับที่"
+        Me.Order.Name = "Order"
+        Me.Order.ReadOnly = True
+        Me.Order.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.Order.Visible = False
+        '
+        'Dhid
+        '
+        Me.Dhid.DataPropertyName = "Dhid"
+        Me.Dhid.HeaderText = "Dhid"
+        Me.Dhid.Name = "Dhid"
+        Me.Dhid.ReadOnly = True
+        Me.Dhid.Visible = False
+        '
+        'Mdyedhdesc
+        '
+        Me.Mdyedhdesc.DataPropertyName = "Dyedhdesc"
+        Me.Mdyedhdesc.HeaderText = "Dyedhdesc"
+        Me.Mdyedhdesc.Name = "Mdyedhdesc"
+        Me.Mdyedhdesc.ReadOnly = True
+        Me.Mdyedhdesc.Visible = False
+        '
+        'Billdyedno
+        '
+        Me.Billdyedno.DataPropertyName = "Billdyedno"
+        Me.Billdyedno.HeaderText = "Billdyedno"
+        Me.Billdyedno.Name = "Billdyedno"
+        Me.Billdyedno.ReadOnly = True
+        Me.Billdyedno.Visible = False
+        '
+        'Lotno
+        '
+        Me.Lotno.DataPropertyName = "Lotno"
+        Me.Lotno.HeaderText = "Lotno"
+        Me.Lotno.Name = "Lotno"
+        Me.Lotno.ReadOnly = True
+        Me.Lotno.Visible = False
+        '
+        'Clothid
+        '
+        Me.Clothid.DataPropertyName = "Clothid"
+        Me.Clothid.HeaderText = "Clothid"
+        Me.Clothid.Name = "Clothid"
+        Me.Clothid.ReadOnly = True
+        Me.Clothid.Visible = False
+        '
+        'Mclothno
+        '
+        Me.Mclothno.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Mclothno.DataPropertyName = "Clothno"
+        Me.Mclothno.HeaderText = "เบอร์ผ้า"
+        Me.Mclothno.Name = "Mclothno"
+        Me.Mclothno.ReadOnly = True
+        Me.Mclothno.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'Clothtype
+        '
+        Me.Clothtype.DataPropertyName = "Ftype"
+        Me.Clothtype.HeaderText = "ประเภท"
+        Me.Clothtype.Name = "Clothtype"
+        Me.Clothtype.ReadOnly = True
+        Me.Clothtype.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.Clothtype.Width = 130
+        '
+        'Dwidth
+        '
+        Me.Dwidth.DataPropertyName = "Fwidth"
+        Me.Dwidth.HeaderText = "หน้ากว้าง"
+        Me.Dwidth.Name = "Dwidth"
+        Me.Dwidth.ReadOnly = True
+        Me.Dwidth.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'Shadeid
+        '
+        Me.Shadeid.DataPropertyName = "Shadeid"
+        Me.Shadeid.HeaderText = "Shadeid"
+        Me.Shadeid.Name = "Shadeid"
+        Me.Shadeid.ReadOnly = True
+        Me.Shadeid.Visible = False
+        '
+        'Shadedesc
+        '
+        Me.Shadedesc.DataPropertyName = "Shadedesc"
+        Me.Shadedesc.HeaderText = "Shadedesc"
+        Me.Shadedesc.Name = "Shadedesc"
+        Me.Shadedesc.ReadOnly = True
+        Me.Shadedesc.Visible = False
+        '
+        'Mkong
+        '
+        Me.Mkong.DataPropertyName = "Kongno"
+        Me.Mkong.HeaderText = "เบอร์กอง"
+        Me.Mkong.Name = "Mkong"
+        Me.Mkong.ReadOnly = True
+        Me.Mkong.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.Mkong.Width = 150
+        '
+        'Rollwage
+        '
+        Me.Rollwage.DataPropertyName = "Rollwage"
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle2.Format = "N2"
+        DataGridViewCellStyle2.NullValue = Nothing
+        Me.Rollwage.DefaultCellStyle = DataGridViewCellStyle2
+        Me.Rollwage.HeaderText = "น้ำหนัก(ก.ก.)"
+        Me.Rollwage.Name = "Rollwage"
+        Me.Rollwage.ReadOnly = True
+        Me.Rollwage.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'Instk
+        '
+        Me.Instk.DataPropertyName = "Instk"
+        Me.Instk.HeaderText = "Instk"
+        Me.Instk.Name = "Instk"
+        Me.Instk.ReadOnly = True
+        Me.Instk.Visible = False
         '
         'TextBox1
         '
@@ -168,6 +437,20 @@ Partial Class Formreceivefabrpt
         Me.TabItem1.Name = "TabItem1"
         Me.TabItem1.Text = "ใบสังทอ"
         '
+        'Tbdyedcomno
+        '
+        Me.Tbdyedcomno.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Tbdyedcomno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.Tbdyedcomno.Enabled = False
+        Me.Tbdyedcomno.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Tbdyedcomno.Location = New System.Drawing.Point(926, 206)
+        Me.Tbdyedcomno.MaxLength = 150
+        Me.Tbdyedcomno.Name = "Tbdyedcomno"
+        Me.Tbdyedcomno.Size = New System.Drawing.Size(67, 24)
+        Me.Tbdyedcomno.TabIndex = 73
+        Me.Tbdyedcomno.Text = "NEW"
+        Me.Tbdyedcomno.Visible = False
+        '
         'Formreceivefabrpt
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -184,6 +467,7 @@ Partial Class Formreceivefabrpt
         Me.TabControl1.ResumeLayout(False)
         Me.TabControlPanel1.ResumeLayout(False)
         Me.TabControlPanel1.PerformLayout()
+        CType(Me.Dgvmas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -201,4 +485,29 @@ Partial Class Formreceivefabrpt
     Friend WithEvents Tbdate As TextBox
     Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
     Friend WithEvents TabItem1 As DevComponents.DotNetBar.TabItem
+    Friend WithEvents Dgvmas As DataGridView
+    Friend WithEvents Mstat As DataGridViewTextBoxColumn
+    Friend WithEvents rollid As DataGridViewTextBoxColumn
+    Friend WithEvents Mcomid As DataGridViewTextBoxColumn
+    Friend WithEvents Order As DataGridViewTextBoxColumn
+    Friend WithEvents Dhid As DataGridViewTextBoxColumn
+    Friend WithEvents Mdyedhdesc As DataGridViewTextBoxColumn
+    Friend WithEvents Billdyedno As DataGridViewTextBoxColumn
+    Friend WithEvents Lotno As DataGridViewTextBoxColumn
+    Friend WithEvents Clothid As DataGridViewTextBoxColumn
+    Friend WithEvents Mclothno As DataGridViewTextBoxColumn
+    Friend WithEvents Clothtype As DataGridViewTextBoxColumn
+    Friend WithEvents Dwidth As DataGridViewTextBoxColumn
+    Friend WithEvents Shadeid As DataGridViewTextBoxColumn
+    Friend WithEvents Shadedesc As DataGridViewTextBoxColumn
+    Friend WithEvents Mkong As DataGridViewTextBoxColumn
+    Friend WithEvents Rollwage As DataGridViewTextBoxColumn
+    Friend WithEvents Instk As DataGridViewTextBoxColumn
+    Friend WithEvents Tbdhname As Normtextbox.Normtextbox
+    Friend WithEvents Tbdhid As Normtextbox.Normtextbox
+    Friend WithEvents Tbcolorno As Normtextbox.Normtextbox
+    Friend WithEvents Tbdyedbillno As Normtextbox.Normtextbox
+    Friend WithEvents Tbrefablotno As Normtextbox.Normtextbox
+    Friend WithEvents Tbknittno As Normtextbox.Normtextbox
+    Friend WithEvents Tbdyedcomno As Normtextbox.Normtextbox
 End Class

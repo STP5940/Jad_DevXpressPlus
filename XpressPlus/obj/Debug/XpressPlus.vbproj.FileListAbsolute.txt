@@ -681,3 +681,4 @@ C:\Users\this\Documents\GitHub\Jad_DevXpressPlus\XpressPlus\obj\Debug\XpressPlus
 C:\Users\this\Documents\GitHub\Jad_DevXpressPlus\XpressPlus\obj\Debug\XpressPlus.Formreceivefabrpt.resources
 C:\Users\this\Documents\GitHub\Jad_DevXpressPlus\XpressPlus\obj\Debug\XpressPlus.Formreceivablelist.resources
 C:\Users\this\Documents\GitHub\Jad_DevXpressPlus\XpressPlus\obj\Debug\XpressPlus.Formtemp.resources
+C:\Users\this\Documents\GitHub\Jad_DevXpressPlus\XpressPlus\obj\Debug\XpressPlus.Form2.resources
