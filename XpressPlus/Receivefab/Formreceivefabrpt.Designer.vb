@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Formreceivefabrpt
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,15 +20,21 @@ Partial Class Formreceivefabrpt
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.Btmclose = New System.Windows.Forms.ToolStripButton()
         Me.TabControl1 = New DevComponents.DotNetBar.TabControl()
         Me.TabControlPanel1 = New DevComponents.DotNetBar.TabControlPanel()
+        Me.Countfabric = New System.Windows.Forms.DataGridView()
+        Me.Cclothno = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Cclothtype = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CDwidth = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Count = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Tbdyedcomno = New Normtextbox.Normtextbox()
         Me.Tbdhname = New Normtextbox.Normtextbox()
         Me.Tbdhid = New Normtextbox.Normtextbox()
         Me.Tbcolorno = New Normtextbox.Normtextbox()
@@ -53,19 +59,19 @@ Partial Class Formreceivefabrpt
         Me.Mkong = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Rollwage = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Instk = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Tbremark = New System.Windows.Forms.TextBox()
-        Me.Tbredate = New System.Windows.Forms.TextBox()
-        Me.Tbknitcomno = New System.Windows.Forms.TextBox()
-        Me.Tbto = New System.Windows.Forms.TextBox()
-        Me.Tbdate = New System.Windows.Forms.TextBox()
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.TabItem1 = New DevComponents.DotNetBar.TabItem(Me.components)
-        Me.Tbdyedcomno = New Normtextbox.Normtextbox()
+        Me.Tbredate = New System.Windows.Forms.TextBox()
+        Me.Tbto = New System.Windows.Forms.TextBox()
+        Me.Tbdate = New System.Windows.Forms.TextBox()
+        Me.Tbknitcomno = New System.Windows.Forms.TextBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.TabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabControlPanel1.SuspendLayout()
+        CType(Me.Countfabric, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Dgvmas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -111,6 +117,7 @@ Partial Class Formreceivefabrpt
         '
         'TabControlPanel1
         '
+        Me.TabControlPanel1.Controls.Add(Me.Countfabric)
         Me.TabControlPanel1.Controls.Add(Me.Tbdyedcomno)
         Me.TabControlPanel1.Controls.Add(Me.Tbdhname)
         Me.TabControlPanel1.Controls.Add(Me.Tbdhid)
@@ -142,12 +149,58 @@ Partial Class Formreceivefabrpt
         Me.TabControlPanel1.TabIndex = 1
         Me.TabControlPanel1.TabItem = Me.TabItem1
         '
+        'Countfabric
+        '
+        Me.Countfabric.AllowUserToAddRows = False
+        Me.Countfabric.AllowUserToDeleteRows = False
+        Me.Countfabric.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Countfabric.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Cclothno, Me.Cclothtype, Me.CDwidth, Me.Count})
+        Me.Countfabric.Location = New System.Drawing.Point(553, 438)
+        Me.Countfabric.Name = "Countfabric"
+        Me.Countfabric.Size = New System.Drawing.Size(443, 99)
+        Me.Countfabric.TabIndex = 130
+        Me.Countfabric.Visible = False
+        '
+        'Cclothno
+        '
+        Me.Cclothno.HeaderText = "เบอร์ผ้า"
+        Me.Cclothno.Name = "Cclothno"
+        '
+        'Cclothtype
+        '
+        Me.Cclothtype.HeaderText = "ประเภทผ้า"
+        Me.Cclothtype.Name = "Cclothtype"
+        '
+        'CDwidth
+        '
+        Me.CDwidth.HeaderText = "หน้ากว้าง"
+        Me.CDwidth.Name = "CDwidth"
+        '
+        'Count
+        '
+        Me.Count.HeaderText = "Count"
+        Me.Count.Name = "Count"
+        '
+        'Tbdyedcomno
+        '
+        Me.Tbdyedcomno.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Tbdyedcomno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.Tbdyedcomno.Enabled = False
+        Me.Tbdyedcomno.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Tbdyedcomno.Location = New System.Drawing.Point(929, 408)
+        Me.Tbdyedcomno.MaxLength = 150
+        Me.Tbdyedcomno.Name = "Tbdyedcomno"
+        Me.Tbdyedcomno.Size = New System.Drawing.Size(67, 24)
+        Me.Tbdyedcomno.TabIndex = 73
+        Me.Tbdyedcomno.Text = "NEW"
+        Me.Tbdyedcomno.Visible = False
+        '
         'Tbdhname
         '
         Me.Tbdhname.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.Tbdhname.Enabled = False
         Me.Tbdhname.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Tbdhname.Location = New System.Drawing.Point(926, 116)
+        Me.Tbdhname.Location = New System.Drawing.Point(929, 318)
         Me.Tbdhname.MaxLength = 150
         Me.Tbdhname.Name = "Tbdhname"
         Me.Tbdhname.Size = New System.Drawing.Size(67, 24)
@@ -159,7 +212,7 @@ Partial Class Formreceivefabrpt
         Me.Tbdhid.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.Tbdhid.Enabled = False
         Me.Tbdhid.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Tbdhid.Location = New System.Drawing.Point(848, 116)
+        Me.Tbdhid.Location = New System.Drawing.Point(851, 318)
         Me.Tbdhid.MaxLength = 150
         Me.Tbdhid.Name = "Tbdhid"
         Me.Tbdhid.Size = New System.Drawing.Size(72, 24)
@@ -170,7 +223,7 @@ Partial Class Formreceivefabrpt
         '
         Me.Tbcolorno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.Tbcolorno.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Tbcolorno.Location = New System.Drawing.Point(848, 176)
+        Me.Tbcolorno.Location = New System.Drawing.Point(851, 378)
         Me.Tbcolorno.MaxLength = 80
         Me.Tbcolorno.Name = "Tbcolorno"
         Me.Tbcolorno.Size = New System.Drawing.Size(72, 24)
@@ -182,7 +235,7 @@ Partial Class Formreceivefabrpt
         Me.Tbdyedbillno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.Tbdyedbillno.Enabled = False
         Me.Tbdyedbillno.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Tbdyedbillno.Location = New System.Drawing.Point(848, 146)
+        Me.Tbdyedbillno.Location = New System.Drawing.Point(851, 348)
         Me.Tbdyedbillno.MaxLength = 150
         Me.Tbdyedbillno.Name = "Tbdyedbillno"
         Me.Tbdyedbillno.Size = New System.Drawing.Size(72, 24)
@@ -193,7 +246,7 @@ Partial Class Formreceivefabrpt
         '
         Me.Tbrefablotno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.Tbrefablotno.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Tbrefablotno.Location = New System.Drawing.Point(926, 176)
+        Me.Tbrefablotno.Location = New System.Drawing.Point(929, 378)
         Me.Tbrefablotno.MaxLength = 150
         Me.Tbrefablotno.Name = "Tbrefablotno"
         Me.Tbrefablotno.Size = New System.Drawing.Size(67, 24)
@@ -204,7 +257,7 @@ Partial Class Formreceivefabrpt
         '
         Me.Tbknittno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.Tbknittno.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Tbknittno.Location = New System.Drawing.Point(926, 145)
+        Me.Tbknittno.Location = New System.Drawing.Point(929, 347)
         Me.Tbknittno.MaxLength = 150
         Me.Tbknittno.Name = "Tbknittno"
         Me.Tbknittno.Size = New System.Drawing.Size(67, 24)
@@ -215,20 +268,20 @@ Partial Class Formreceivefabrpt
         '
         Me.Dgvmas.AllowUserToAddRows = False
         Me.Dgvmas.AllowUserToDeleteRows = False
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Dgvmas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Dgvmas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.Dgvmas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Dgvmas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Mstat, Me.rollid, Me.Mcomid, Me.Order, Me.Dhid, Me.Mdyedhdesc, Me.Billdyedno, Me.Lotno, Me.Clothid, Me.Mclothno, Me.Clothtype, Me.Dwidth, Me.Shadeid, Me.Shadedesc, Me.Mkong, Me.Rollwage, Me.Instk})
-        Me.Dgvmas.Location = New System.Drawing.Point(78, 362)
+        Me.Dgvmas.Location = New System.Drawing.Point(326, 543)
         Me.Dgvmas.Name = "Dgvmas"
         Me.Dgvmas.ReadOnly = True
-        Me.Dgvmas.Size = New System.Drawing.Size(670, 249)
+        Me.Dgvmas.Size = New System.Drawing.Size(670, 101)
         Me.Dgvmas.TabIndex = 99
         Me.Dgvmas.Visible = False
         '
@@ -358,10 +411,10 @@ Partial Class Formreceivefabrpt
         'Rollwage
         '
         Me.Rollwage.DataPropertyName = "Rollwage"
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle2.Format = "N2"
-        DataGridViewCellStyle2.NullValue = Nothing
-        Me.Rollwage.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle6.Format = "N2"
+        DataGridViewCellStyle6.NullValue = Nothing
+        Me.Rollwage.DefaultCellStyle = DataGridViewCellStyle6
         Me.Rollwage.HeaderText = "น้ำหนัก(ก.ก.)"
         Me.Rollwage.Name = "Rollwage"
         Me.Rollwage.ReadOnly = True
@@ -375,53 +428,13 @@ Partial Class Formreceivefabrpt
         Me.Instk.ReadOnly = True
         Me.Instk.Visible = False
         '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(896, 58)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 22)
-        Me.TextBox1.TabIndex = 7
-        Me.TextBox1.Visible = False
-        '
         'Tbremark
         '
-        Me.Tbremark.Location = New System.Drawing.Point(790, 58)
+        Me.Tbremark.Location = New System.Drawing.Point(851, 410)
         Me.Tbremark.Name = "Tbremark"
-        Me.Tbremark.Size = New System.Drawing.Size(100, 22)
+        Me.Tbremark.Size = New System.Drawing.Size(72, 22)
         Me.Tbremark.TabIndex = 6
         Me.Tbremark.Visible = False
-        '
-        'Tbredate
-        '
-        Me.Tbredate.Location = New System.Drawing.Point(684, 58)
-        Me.Tbredate.Name = "Tbredate"
-        Me.Tbredate.Size = New System.Drawing.Size(100, 22)
-        Me.Tbredate.TabIndex = 5
-        Me.Tbredate.Visible = False
-        '
-        'Tbknitcomno
-        '
-        Me.Tbknitcomno.Location = New System.Drawing.Point(896, 30)
-        Me.Tbknitcomno.Name = "Tbknitcomno"
-        Me.Tbknitcomno.Size = New System.Drawing.Size(100, 22)
-        Me.Tbknitcomno.TabIndex = 4
-        Me.Tbknitcomno.Visible = False
-        '
-        'Tbto
-        '
-        Me.Tbto.Location = New System.Drawing.Point(684, 30)
-        Me.Tbto.Name = "Tbto"
-        Me.Tbto.Size = New System.Drawing.Size(100, 22)
-        Me.Tbto.TabIndex = 3
-        Me.Tbto.Visible = False
-        '
-        'Tbdate
-        '
-        Me.Tbdate.Location = New System.Drawing.Point(790, 30)
-        Me.Tbdate.Name = "Tbdate"
-        Me.Tbdate.Size = New System.Drawing.Size(100, 22)
-        Me.Tbdate.TabIndex = 2
-        Me.Tbdate.Visible = False
         '
         'ReportViewer1
         '
@@ -437,19 +450,45 @@ Partial Class Formreceivefabrpt
         Me.TabItem1.Name = "TabItem1"
         Me.TabItem1.Text = "ใบสังทอ"
         '
-        'Tbdyedcomno
+        'Tbredate
         '
-        Me.Tbdyedcomno.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Tbdyedcomno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.Tbdyedcomno.Enabled = False
-        Me.Tbdyedcomno.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Tbdyedcomno.Location = New System.Drawing.Point(926, 206)
-        Me.Tbdyedcomno.MaxLength = 150
-        Me.Tbdyedcomno.Name = "Tbdyedcomno"
-        Me.Tbdyedcomno.Size = New System.Drawing.Size(67, 24)
-        Me.Tbdyedcomno.TabIndex = 73
-        Me.Tbdyedcomno.Text = "NEW"
-        Me.Tbdyedcomno.Visible = False
+        Me.Tbredate.Location = New System.Drawing.Point(684, 58)
+        Me.Tbredate.Name = "Tbredate"
+        Me.Tbredate.Size = New System.Drawing.Size(100, 22)
+        Me.Tbredate.TabIndex = 5
+        Me.Tbredate.Visible = False
+        '
+        'Tbto
+        '
+        Me.Tbto.Location = New System.Drawing.Point(684, 30)
+        Me.Tbto.Name = "Tbto"
+        Me.Tbto.Size = New System.Drawing.Size(100, 22)
+        Me.Tbto.TabIndex = 3
+        Me.Tbto.Visible = False
+        '
+        'Tbdate
+        '
+        Me.Tbdate.Location = New System.Drawing.Point(896, 290)
+        Me.Tbdate.Name = "Tbdate"
+        Me.Tbdate.Size = New System.Drawing.Size(100, 22)
+        Me.Tbdate.TabIndex = 2
+        Me.Tbdate.Visible = False
+        '
+        'Tbknitcomno
+        '
+        Me.Tbknitcomno.Location = New System.Drawing.Point(896, 30)
+        Me.Tbknitcomno.Name = "Tbknitcomno"
+        Me.Tbknitcomno.Size = New System.Drawing.Size(100, 22)
+        Me.Tbknitcomno.TabIndex = 4
+        Me.Tbknitcomno.Visible = False
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(896, 58)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(100, 22)
+        Me.TextBox1.TabIndex = 7
+        Me.TextBox1.Visible = False
         '
         'Formreceivefabrpt
         '
@@ -467,6 +506,7 @@ Partial Class Formreceivefabrpt
         Me.TabControl1.ResumeLayout(False)
         Me.TabControlPanel1.ResumeLayout(False)
         Me.TabControlPanel1.PerformLayout()
+        CType(Me.Countfabric, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Dgvmas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -477,12 +517,7 @@ Partial Class Formreceivefabrpt
     Friend WithEvents Btmclose As ToolStripButton
     Friend WithEvents TabControl1 As DevComponents.DotNetBar.TabControl
     Friend WithEvents TabControlPanel1 As DevComponents.DotNetBar.TabControlPanel
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Tbremark As TextBox
-    Friend WithEvents Tbredate As TextBox
-    Friend WithEvents Tbknitcomno As TextBox
-    Friend WithEvents Tbto As TextBox
-    Friend WithEvents Tbdate As TextBox
     Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
     Friend WithEvents TabItem1 As DevComponents.DotNetBar.TabItem
     Friend WithEvents Dgvmas As DataGridView
@@ -510,4 +545,14 @@ Partial Class Formreceivefabrpt
     Friend WithEvents Tbrefablotno As Normtextbox.Normtextbox
     Friend WithEvents Tbknittno As Normtextbox.Normtextbox
     Friend WithEvents Tbdyedcomno As Normtextbox.Normtextbox
+    Friend WithEvents Countfabric As DataGridView
+    Friend WithEvents Cclothno As DataGridViewTextBoxColumn
+    Friend WithEvents Cclothtype As DataGridViewTextBoxColumn
+    Friend WithEvents CDwidth As DataGridViewTextBoxColumn
+    Friend WithEvents Count As DataGridViewTextBoxColumn
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Tbredate As TextBox
+    Friend WithEvents Tbknitcomno As TextBox
+    Friend WithEvents Tbto As TextBox
+    Friend WithEvents Tbdate As TextBox
 End Class

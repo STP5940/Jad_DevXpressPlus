@@ -183,6 +183,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Receivefab\DataCountreport.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataCountreport.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Receivefab\Datareport.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -411,6 +416,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Receivefab\DataCountreport.xsc">
+      <DependentUpon>DataCountreport.xsd</DependentUpon>
+    </None>
+    <None Include="Receivefab\DataCountreport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataCountreport.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Receivefab\DataCountreport.xss">
+      <DependentUpon>DataCountreport.xsd</DependentUpon>
+    </None>
     <None Include="Receivefab\Datareport.xsc">
       <DependentUpon>Datareport.xsd</DependentUpon>
     </None>

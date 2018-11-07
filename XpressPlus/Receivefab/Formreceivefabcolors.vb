@@ -66,10 +66,11 @@ Public Class Formreceivefabcolors
         Else
             Editdoc()
         End If
+        Tsbwsave.Visible = False
+        Btmreports_Click(sender, e)
         Btdcancel_Click(sender, e)
         Tbkongno.Text = ""
         Clrupdet()
-        Tsbwsave.Visible = False
         Mainbuttoncancel()
         Bindinglist()
         Btmcancel_Click(sender, e)
@@ -1014,7 +1015,7 @@ Public Class Formreceivefabcolors
         End If
         Dim Frm As New Formreceivefabrpt
         For i = 0 To Dgvmas.Rows.Count - 1
-            MsgBox(i)
+
             Frm.Dgvmas.Rows.Add()
             Frm.Dgvmas.Rows(i).Cells("rollid").Value = Dgvmas.Rows(i).Cells("rollid").Value
             Frm.Dgvmas.Rows(i).Cells("Mclothno").Value = Dgvmas.Rows(i).Cells("Mclothno").Value
@@ -1030,6 +1031,18 @@ Public Class Formreceivefabcolors
         Frm.Tbcolorno.Text = Tbcolorno.Text
         Frm.Tbrefablotno.Text = Tbrefablotno.Text
         Frm.Tbdyedcomno.Text = Tbdyedcomno.Text
+        Frm.Tbremark.Text = Tbremark.Text
+        Frm.Tbdate.Text = Dtprecdate.Text
+
+
+        CountfabricFilter()
+        For i = 0 To Countfabric.Rows.Count - 1
+            Frm.Countfabric.Rows.Add()
+            Frm.Countfabric.Rows(i).Cells("Cclothno").Value = Countfabric.Rows(i).Cells("Cclothno").Value
+            Frm.Countfabric.Rows(i).Cells("Cclothtype").Value = Countfabric.Rows(i).Cells("Cclothtype").Value
+            Frm.Countfabric.Rows(i).Cells("CDwidth").Value = Countfabric.Rows(i).Cells("CDwidth").Value
+            Frm.Countfabric.Rows(i).Cells("Count").Value = Countfabric.Rows(i).Cells("Count").Value
+        Next
 
         Frm.ReportViewer1.Reset()
         Frm.Show()
@@ -1038,6 +1051,45 @@ Public Class Formreceivefabcolors
         BindingNavigator1.Enabled = False
         Mainbuttoncancel()
         TabControl1.SelectedTabIndex = 0
+        Countfabric.Rows.Clear()
+    End Sub
+
+    Private Sub CountfabricFilter()
+
+        Dim Frm As New Formreceivefabrpt
+        Countfabric.Rows.Add("")
+        Dim Count As Long = 1
+        Dim CountSum As Long = 0
+        For I = 0 To Dgvmas.RowCount - 1
+            For Filters = 0 To Countfabric.Rows.Count - 1
+                If Countfabric.Rows(Filters).Cells("Cclothno").Value.ToString.ToUpper = Dgvmas.Rows(I).Cells("Mclothno").Value.ToString.ToUpper AndAlso
+                   Countfabric.Rows(Filters).Cells("Cclothtype").Value.ToString.ToUpper = Dgvmas.Rows(I).Cells("Clothtype").Value.ToString.ToUpper AndAlso
+                   Countfabric.Rows(Filters).Cells("CDwidth").Value.ToString.ToUpper = Dgvmas.Rows(I).Cells("Dwidth").Value.ToString.ToUpper Then
+                    Countfabric.Rows(Filters).Cells("Count").Value += 1
+                    Exit For
+                End If
+
+
+                If Filters = Countfabric.Rows.Count - 1 Then
+                    If Countfabric.Rows(Countfabric.Rows.Count - 1).Cells("Cclothno").Value.ToString.ToUpper <> "" Then
+                        Countfabric.Rows.Add("")
+                    End If
+                    Countfabric.Rows(CountSum).Cells("Cclothno").Value = Dgvmas.Rows(I).Cells("Mclothno").Value
+                    Countfabric.Rows(CountSum).Cells("Cclothtype").Value = Dgvmas.Rows(I).Cells("Clothtype").Value
+                    Countfabric.Rows(CountSum).Cells("CDwidth").Value = Dgvmas.Rows(I).Cells("Dwidth").Value
+                    Countfabric.Rows(CountSum).Cells("Count").Value = Count
+                    CountSum += 1
+                End If
+            Next
+        Next
+        'If Countfabric.Rows(Countfabric.Rows.Count - 1).Cells("Cclothno").Value = "" Then
+        '    For i = 0 To Countfabric.Rows.Count - 1
+        '        If i = Countfabric.Rows.Count - 1 Then
+        '            'Countfabric.Rows.Remove(Countfabric.SelectedRows(i))
+        '        End If
+        '    Next
+        'End If
+
     End Sub
 
     Private Sub Bindinglistfab()

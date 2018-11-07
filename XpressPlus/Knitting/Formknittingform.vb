@@ -515,7 +515,8 @@ Public Class Formknittingform
                 QtyrollStore.Text = Format(CLng(WgtKgStore.Text / Kgproll), "###,##0")
             End If
         Else
-            If Dgvmas.RowCount <= 0 Then
+
+            If Tbaddedit.Text = "แก้ไข" AndAlso Dgvmas.RowCount <= 0 Then
                 Exit Sub
             End If
             QtyrollStore.Text = Format(CLng(Tbkg.Text / Kgproll), "###,##0")
@@ -635,7 +636,6 @@ Public Class Formknittingform
         Btdcancel.Enabled = True
     End Sub
     Private Sub Btdedit_Click(sender As Object, e As EventArgs) Handles Btdedit.Click
-        SelectData()
         GroupPanel2.Visible = True
         If Dgvmas.RowCount = 0 Then
             Exit Sub
@@ -655,6 +655,7 @@ Public Class Formknittingform
         End If
         GroupPanel2.Visible = True
         Tbaddedit.Text = "แก้ไข"
+        SelectData()
         Tbclothid.Text = Trim(Dgvmas.CurrentRow.Cells("Mclothid").Value)
         Tbclothno.Text = Trim(Dgvmas.CurrentRow.Cells("Mclothno").Value)
         Tbtypename.Text = Trim(Dgvmas.CurrentRow.Cells("Mftypename").Value)
@@ -1272,6 +1273,7 @@ Public Class Formknittingform
         Dgvyarn.Visible = True
         Paneloth.Visible = False
         Cbfromgsc.Checked = True
+        ButtonX1.Enabled = True
     End Sub
 
     Private Sub YanKeyword_KeyPress(sender As Object, e As KeyPressEventArgs) Handles YanKeyword.KeyPress
@@ -1372,6 +1374,7 @@ Public Class Formknittingform
         Ctddel.Enabled = True
         Btdbadd.Enabled = True
     End Sub
+
 
     Private Sub Mainbuttoncancel()
         Btmnew.Enabled = True

@@ -6,7 +6,7 @@ Public Class Formreceivefabrpt
         ReportViewer1.SetDisplayMode(DisplayMode.PrintLayout)
         ReportViewer1.ZoomMode = ZoomMode.Percent
         ReportViewer1.ZoomPercent = 100
-        Dim Par2, Par3, Par4, Par5, Par6, Par7, Par8 As ReportParameter
+        Dim Par2, Par3, Par4, Par5, Par6, Par7, Par8, Par9, Par10 As ReportParameter
         Par2 = New ReportParameter("Tbdhid", Trim(Tbdhid.Text), True)
         Me.ReportViewer1.LocalReport.SetParameters(New ReportParameter() {Par2})
         Par3 = New ReportParameter("Tbdhname", Trim(Tbdhname.Text), True)
@@ -21,6 +21,11 @@ Public Class Formreceivefabrpt
         Me.ReportViewer1.LocalReport.SetParameters(New ReportParameter() {Par7})
         Par8 = New ReportParameter("Tbdyedcomno", Trim(Tbdyedcomno.Text), True)
         Me.ReportViewer1.LocalReport.SetParameters(New ReportParameter() {Par8})
+        Par9 = New ReportParameter("Tbremark", Tbremark.Text, True)
+        Me.ReportViewer1.LocalReport.SetParameters(New ReportParameter() {Par9})
+        Par10 = New ReportParameter("Tbdate", Tbdate.Text, True)
+        Me.ReportViewer1.LocalReport.SetParameters(New ReportParameter() {Par10})
+
 
         Dim rollid, Mclothno, Clothtype, Dwidth, Mkong, Rollwage As String
         Dim Datareport As New DataTable
@@ -47,6 +52,28 @@ Public Class Formreceivefabrpt
         Rds.Name = "Datareport"
         Rds.Value = Datareport
         ReportViewer1.LocalReport.DataSources.Add(Rds)
+
+        Dim Cclothno, Cclothtype, CDwidth, Count As String
+        Dim DataCountreport As New DataTable
+        With DataCountreport
+            .Columns.Add("Cclothno")
+            .Columns.Add("Cclothtype")
+            .Columns.Add("CDwidth")
+            .Columns.Add("Count")
+        End With
+        DataCountreport.Rows.Clear()
+        For i = 0 To Me.Countfabric.RowCount - 1
+            Cclothno = Me.Countfabric.Rows(i).Cells("Cclothno").Value
+            Cclothtype = Me.Countfabric.Rows(i).Cells("Cclothtype").Value
+            CDwidth = Me.Countfabric.Rows(i).Cells("CDwidth").Value
+            Count = Me.Countfabric.Rows(i).Cells("Count").Value
+            DataCountreport.Rows.Add(Cclothno, Cclothtype, CDwidth, Count)
+        Next
+
+        Dim CRds As New ReportDataSource()
+        CRds.Name = "DataCountreport"
+        CRds.Value = DataCountreport
+        ReportViewer1.LocalReport.DataSources.Add(CRds)
 
         Me.ReportViewer1.RefreshReport()
 
