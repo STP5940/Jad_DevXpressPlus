@@ -1,7 +1,7 @@
 ﻿Imports System.ComponentModel
 Imports Microsoft.Reporting.WinForms
 Public Class Formreceivefabcolors
-    Private Tmaster, Tdetails, Tlist, TSendDyelist, Dttemp, tlistfab, tlistyed As DataTable
+    Private Tmaster, Tdetails, Tlist, TSendDyelist, Dttemp, tlistfab, tlistyed, tlistnittno, tlistnamebill As DataTable
     Private Pagecount, Maxrec, Pagesize, Currentpage, Recno As Integer
     Private WithEvents Dtplistfm As New DateTimePicker
     Private WithEvents Dtplistto As New DateTimePicker
@@ -77,9 +77,9 @@ Public Class Formreceivefabcolors
         BindingBalance()
     End Sub
     Private Sub Btmdel_Click(sender As Object, e As EventArgs) Handles Btmdel.Click
-        If Trim(Tbknittno.Text) = "" Then
-            Exit Sub
-        End If
+        'If Trim(Tbknittno.Text) = "" Then
+        '    Exit Sub
+        'End If
         If Confirmdelete() = True Then
             Deldetails()
             SQLCommand("DELETE FROM Trecfabcolxp WHERE Comid = '" & Gscomid & "' 
@@ -258,8 +258,30 @@ Public Class Formreceivefabcolors
         Tbwidht.Text = Trim(Frm.Dgvmas.CurrentRow.Cells("BFwidthyed").Value)
         Tbshadeid.Text = Trim(Frm.Dgvmas.CurrentRow.Cells("BShadeid").Value)
         Tbshadename.Text = Trim(Frm.Dgvmas.CurrentRow.Cells("BShadedesc").Value)
+        DemoColor(Tbshadeid.Text)
         Tbkongno.Focus()
     End Sub
+
+    Private Sub DemoColor(RBGColor As Object)
+        Try
+            If Dgvmas.RowCount <> 0 OrElse Tbdyedcomno.Text = "NEW" Then
+                Dim EBGColor As New DataTable
+                EBGColor = SQLCommand($"SELECT Rcolor,Gcolor,Bcolor FROM Tshadexp WHERE Shadeid = '{RBGColor}'")
+                If IsDBNull(EBGColor(0)(0)) OrElse IsDBNull(EBGColor(0)(1)) OrElse IsDBNull(EBGColor(0)(2)) Then
+                    Informmessage("Shade นี้ยังไม่มีสีตัวอย่าง")
+                    DemoCode.BackColor = Color.White
+                    Exit Sub
+                End If
+                DemoCode.BackColor = Color.FromArgb(EBGColor(0)(0), EBGColor(0)(1), EBGColor(0)(2))
+            End If
+        Catch ex As Exception
+            If Tbdyedcomno.Text <> "NEW" Then
+                Informmessage("เกิดข้อผิดพลาดในการเปลี่ยนสีตัวอย่าง")
+            End If
+            DemoCode.BackColor = Color.White
+        End Try
+    End Sub
+
     Private Sub Tbkongno_KeyDown(sender As Object, e As KeyEventArgs)
         If e.KeyCode = Keys.Enter Then
             Tbkg.Focus()
@@ -279,10 +301,6 @@ Public Class Formreceivefabcolors
         End If
         If Trim(Tbdyedbillno.Text) = "" Then
             Informmessage("กรุณาเลือกเลขที่ใบสั่งย้อม")
-            Exit Sub
-        End If
-        If Trim(Tbknittno.Text) = "" Then
-            Informmessage("กรุณาเลือกเลขที่บิลผ้าดิบ")
             Exit Sub
         End If
         If Trim(Tbcolorno.Text) = "" Then
@@ -857,6 +875,7 @@ Public Class Formreceivefabcolors
         Mainbuttoncancel()
         GroupPanel2.Visible = False
         Bindinglist()
+        DemoCode.BackColor = Color.White
         'BindingNavigator1.Enabled = False
     End Sub
     Private Sub DisplayPageInfo()
@@ -876,7 +895,7 @@ Public Class Formreceivefabcolors
     End Function
     Private Function Validmas() As Boolean
         Dim Valid As Boolean = False
-        If Tbdhid.Text <> "" And Tbdhname.Text <> "" And Tbdyedbillno.Text <> "" And Tbknittno.Text <> "" And Tbcolorno.Text <> "" And Tbrefablotno.Text <> "" Then
+        If Tbdhid.Text <> "" And Tbdhname.Text <> "" And Tbdyedbillno.Text <> "" And Tbcolorno.Text <> "" And Tbrefablotno.Text <> "" Then
             Valid = True
         End If
         Return Valid
@@ -900,6 +919,7 @@ Public Class Formreceivefabcolors
             Tbshadename.Text = Trim(Dgvmas.CurrentRow.Cells("Shadedesc").Value)
             Tbkongno.Text = Trim(Dgvmas.CurrentRow.Cells("Mkong").Value)
             Tbkg.Text = Format(Dgvmas.CurrentRow.Cells("Rollwage").Value, "###,###.#0")
+            DemoColor(Tbshadeid.Text)
         Else
             ClearDetail()
             Tbkongno.Enabled = False
@@ -909,6 +929,7 @@ Public Class Formreceivefabcolors
             Btdcancel.Enabled = False
             Btfindknitid.Enabled = False
             Tbkg.Text = ""
+            DemoCode.BackColor = Color.White
             Exit Sub
         End If
 
@@ -1291,6 +1312,34 @@ Public Class Formreceivefabcolors
         Tbwidht.Text = Trim(Balance.CurrentRow.Cells("BFwidthyed").Value)
         Tbshadeid.Text = Trim(Balance.CurrentRow.Cells("BShadeid").Value)
         Tbshadename.Text = Trim(Balance.CurrentRow.Cells("BShadedesc").Value)
+        DemoColor(Tbshadeid.Text)
+        Bindinglistnittno()
+        Bindingnamebill()
+        '  SELECT Dhid FROM Tdyedcomxp WHERE Dyecomno = 'RS181100006' AND Comid = '101'
+        '  SELECT DISTINCT Knittbill FROM Vdyedcomdet WHERE Dyedcomno = 'RS181000023' AND Comid = '{Gscomid}'
+        '  SELECT Dyedhdesc FROM Tdyedhousexp WHERE Comid = '101' AND Dyedhid = '10031' AND Sstatus = 1 AND Sactive = '1'
+    End Sub
+
+    Private Sub Bindinglistnittno()
+        tlistnittno = New DataTable
+        tlistnittno = SQLCommand($"SELECT DISTINCT Knittbill FROM Vdyedcomdet
+                                    WHERE Dyedcomno = '{Tbdyedbillno.Text}' AND Comid = '{Gscomid}'")
+        For i = 0 To tlistnittno.Rows.Count - 1
+            If i > 0 Then
+                Tbknittno.Text += ","
+            End If
+            Tbknittno.Text += tlistnittno(i)(0)
+        Next
+    End Sub
+    Private Sub Bindingnamebill()
+        tlistnamebill = New DataTable
+        tlistnamebill = SQLCommand($"SELECT Dyedhid, Dyedhdesc FROM Tdyedhousexp
+                                        WHERE Comid = '101' AND Dyedhid = (SELECT Dhid FROM Tdyedcomxp
+                                        WHERE Dyecomno = '{Tbdyedbillno.Text}' AND Comid = '101')
+                                        AND Sstatus = 1 AND Sactive = '1'")
+        'MsgBox(tlistnamebill(0)(0))
+        Tbdhid.Text = tlistnamebill(0)(0)
+        Tbdhname.Text = tlistnamebill(0)(1)
     End Sub
 
     Private Sub ToolStripTextBox3_KeyPress(sender As Object, e As KeyPressEventArgs) Handles ToolStripTextBox3.KeyPress
@@ -1324,6 +1373,7 @@ Public Class Formreceivefabcolors
         Tbkg.Enabled = False
         Btdadd.Enabled = False
         Btdcancel.Enabled = False
+        DemoCode.BackColor = Color.White
     End Sub
 
     Private Function Validdet() As Boolean
