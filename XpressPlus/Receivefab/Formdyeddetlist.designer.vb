@@ -132,6 +132,7 @@ Partial Class Formdyeddetlist
         Me.Dgvmas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.BDyedcomno, Me.BClothidyed, Me.BClothnoyed, Me.BFtypeyed, Me.BFwidthyed, Me.BQtyroll, Me.BQtykg, Me.BShadeid, Me.BShadedesc})
         Me.Dgvmas.Location = New System.Drawing.Point(12, 53)
         Me.Dgvmas.Name = "Dgvmas"
+        Me.Dgvmas.ReadOnly = True
         Me.Dgvmas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.Dgvmas.Size = New System.Drawing.Size(735, 175)
         Me.Dgvmas.TabIndex = 33
@@ -141,12 +142,14 @@ Partial Class Formdyeddetlist
         Me.BDyedcomno.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.BDyedcomno.HeaderText = "เลขที่ใบสั่งย้อม"
         Me.BDyedcomno.Name = "BDyedcomno"
+        Me.BDyedcomno.ReadOnly = True
         '
         'BClothidyed
         '
         Me.BClothidyed.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.BClothidyed.HeaderText = "Clothidyed"
         Me.BClothidyed.Name = "BClothidyed"
+        Me.BClothidyed.ReadOnly = True
         Me.BClothidyed.Visible = False
         '
         'BClothnoyed
@@ -154,12 +157,14 @@ Partial Class Formdyeddetlist
         Me.BClothnoyed.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.BClothnoyed.HeaderText = "เบอร์ผ้า"
         Me.BClothnoyed.Name = "BClothnoyed"
+        Me.BClothnoyed.ReadOnly = True
         '
         'BFtypeyed
         '
         Me.BFtypeyed.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.BFtypeyed.HeaderText = "ประเภทผ้า"
         Me.BFtypeyed.Name = "BFtypeyed"
+        Me.BFtypeyed.ReadOnly = True
         '
         'BFwidthyed
         '
@@ -168,6 +173,7 @@ Partial Class Formdyeddetlist
         Me.BFwidthyed.DefaultCellStyle = DataGridViewCellStyle1
         Me.BFwidthyed.HeaderText = "หน้ากว้าง"
         Me.BFwidthyed.Name = "BFwidthyed"
+        Me.BFwidthyed.ReadOnly = True
         '
         'BQtyroll
         '
@@ -175,6 +181,7 @@ Partial Class Formdyeddetlist
         Me.BQtyroll.DefaultCellStyle = DataGridViewCellStyle2
         Me.BQtyroll.HeaderText = "พับคงเหลือ"
         Me.BQtyroll.Name = "BQtyroll"
+        Me.BQtyroll.ReadOnly = True
         '
         'BQtykg
         '
@@ -185,18 +192,21 @@ Partial Class Formdyeddetlist
         Me.BQtykg.DefaultCellStyle = DataGridViewCellStyle3
         Me.BQtykg.HeaderText = "น้ำหนักคงเหลือ"
         Me.BQtykg.Name = "BQtykg"
+        Me.BQtykg.ReadOnly = True
         Me.BQtykg.Visible = False
         '
         'BShadeid
         '
         Me.BShadeid.HeaderText = "BShadeid"
         Me.BShadeid.Name = "BShadeid"
+        Me.BShadeid.ReadOnly = True
         Me.BShadeid.Visible = False
         '
         'BShadedesc
         '
         Me.BShadedesc.HeaderText = "BShadedesc"
         Me.BShadedesc.Name = "BShadedesc"
+        Me.BShadedesc.ReadOnly = True
         Me.BShadedesc.Visible = False
         '
         'FilterAllyed

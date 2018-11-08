@@ -61,6 +61,71 @@ Public Class Formreceivefabcolors
             Informmessage("กรุณาตรวจสอบรายละเอียดในการส่งให้ครบถ้วน")
             Exit Sub
         End If
+
+        Countfabric.Rows.Clear()
+        CountfabricFilter()
+        For i = 0 To Balance.Rows.Count - 1
+            For x = 0 To Countfabric.Rows.Count - 1
+                If Balance.Rows(i).Cells("BDyedcomno").Value = Tbdyedbillno.Text AndAlso
+                   Balance.Rows(i).Cells("BClothnoyed").Value.ToString.ToUpper = Countfabric.Rows(x).Cells("Cclothno").Value.ToString.ToUpper AndAlso
+                   Balance.Rows(i).Cells("BFtypeyed").Value.ToString.ToUpper = Countfabric.Rows(x).Cells("Cclothtype").Value.ToString.ToUpper AndAlso
+                   Balance.Rows(i).Cells("BFwidthyed").Value.ToString.ToUpper = Countfabric.Rows(x).Cells("CDwidth").Value.ToString.ToUpper Then
+                    If Balance.Rows(i).Cells("BQtyroll").Value < Countfabric.Rows(x).Cells("Count").Value Then
+                        If Tbdyedcomno.Text <> "NEW" Then
+                            '
+                            For ReCount = 0 To Countfabric.Rows.Count - 1
+                                Countfabric.Rows(ReCount).Cells("Count").Value = -1
+                            Next
+
+                            For Dmas = 0 To Dgvmas.Rows.Count - 1
+                                If Dgvmas.Rows(Dmas).Cells("News").Value = 1 Then
+
+                                    For Cfab = 0 To Countfabric.Rows.Count - 1
+                                        If Countfabric.Rows(Cfab).Cells("Cclothno").Value.ToString.ToUpper = Dgvmas.Rows(Dmas).Cells("Mclothno").Value.ToString.ToUpper AndAlso
+                                           Countfabric.Rows(Cfab).Cells("Cclothtype").Value.ToString.ToUpper = Dgvmas.Rows(Dmas).Cells("Clothtype").Value.ToString.ToUpper AndAlso
+                                           Countfabric.Rows(Cfab).Cells("CDwidth").Value.ToString.ToUpper = Dgvmas.Rows(Dmas).Cells("Dwidth").Value.ToString.ToUpper Then
+                                            If Countfabric.Rows(Cfab).Cells("Count").Value = -1 Then
+                                                Countfabric.Rows(Cfab).Cells("Count").Value = 1
+                                            Else
+                                                Countfabric.Rows(Cfab).Cells("Count").Value += 1
+                                            End If
+
+                                        End If
+                                    Next
+
+                                End If
+                            Next
+
+                            For Balan = 0 To Balance.Rows.Count - 1
+                                For Countfab = 0 To Countfabric.Rows.Count - 1
+                                    If Balance.Rows(Balan).Cells("BDyedcomno").Value = Tbdyedbillno.Text AndAlso
+                                       Balance.Rows(Balan).Cells("BClothnoyed").Value.ToString.ToUpper = Countfabric.Rows(Countfab).Cells("Cclothno").Value.ToString.ToUpper AndAlso
+                                       Balance.Rows(Balan).Cells("BFtypeyed").Value.ToString.ToUpper = Countfabric.Rows(Countfab).Cells("Cclothtype").Value.ToString.ToUpper AndAlso
+                                       Balance.Rows(Balan).Cells("BFwidthyed").Value.ToString.ToUpper = Countfabric.Rows(Countfab).Cells("CDwidth").Value.ToString.ToUpper Then
+                                        If Balance.Rows(Balan).Cells("BQtyroll").Value < Countfabric.Rows(Countfab).Cells("Count").Value Then
+                                            If MessageBox.Show($"คุณทำการรับผ้า {Balance.Rows(Balan).Cells("BClothnoyed").Value} เกินมา {Countfabric.Rows(Countfab).Cells("Count").Value - Balance.Rows(i).Cells("BQtyroll").Value} พับ", "ข้อความแจ้ง", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) = DialogResult.Cancel Then
+                                                Countfabric.Rows.Clear()
+                                                Exit Sub
+                                            Else
+                                                GoTo BypassFilter
+                                            End If
+                                        End If
+                                    End If
+                                Next
+                            Next
+                        Else
+                            If MessageBox.Show($"คุณทำการรับผ้า {Balance.Rows(i).Cells("BClothnoyed").Value} เกินมา {Countfabric.Rows(x).Cells("Count").Value - Balance.Rows(i).Cells("BQtyroll").Value} พับ", "ข้อความแจ้ง", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) = DialogResult.Cancel Then
+                                Countfabric.Rows.Clear()
+                                Exit Sub
+                            End If
+                        End If
+                    End If
+                End If
+            Next
+        Next
+
+BypassFilter:
+
         If Tbdyedcomno.Text = "NEW" Then
             Newdoc()
         Else
@@ -87,6 +152,7 @@ Public Class Formreceivefabcolors
             Clrdgrid()
             Clrtxtbox()
             Mainbuttoncancel()
+            Tstbsumroll.Text = ""
             TabControl1.SelectedTabIndex = 0
             GroupPanel2.Visible = False
             Bindinglist()
@@ -161,7 +227,7 @@ Public Class Formreceivefabcolors
     End Sub
     Private Sub Dgvlist_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles Dgvlist.CellMouseClick
         If e.Button = Windows.Forms.MouseButtons.Right Then
-            If Me.Dgvlist.Rows.Count < 1 Then Exit Sub
+            If Me.Dgvlist.Rows.Count <1 Then Exit Sub
             If e.RowIndex < 0 Then Exit Sub
             Dgvlist.CurrentCell = Dgvlist(3, e.RowIndex)
             Me.Dgvlist.Rows(e.RowIndex).Selected = True
@@ -375,6 +441,7 @@ Public Class Formreceivefabcolors
                 Dgvmas.Rows(Dgvmas.RowCount - 1).Cells("Shadedesc").Value = Trim(Tbshadename.Text)
                 Dgvmas.Rows(Dgvmas.RowCount - 1).Cells("Mkong").Value = Trim(Tbkongno.Text)
                 Dgvmas.Rows(Dgvmas.RowCount - 1).Cells("Rollwage").Value = CDbl(Tbkg.Text)
+                Dgvmas.Rows(Dgvmas.RowCount - 1).Cells("News").Value = 1
                 Tbkongno.Enabled = False
                 Tbkg.Text = ""
                 Tbkg.Focus()
@@ -869,6 +936,7 @@ Public Class Formreceivefabcolors
         Tbkongno.Text = ""
         Tbkg.Text = ""
         Tbrollid.Text = 0
+        Tstbsumroll.Text = ""
         Clrdgrid()
         TabControl1.SelectedTabIndex = 0
 
@@ -1055,7 +1123,7 @@ Public Class Formreceivefabcolors
         Frm.Tbremark.Text = Tbremark.Text
         Frm.Tbdate.Text = Dtprecdate.Text
 
-
+        Countfabric.Rows.Clear()
         CountfabricFilter()
         For i = 0 To Countfabric.Rows.Count - 1
             Frm.Countfabric.Rows.Add()
@@ -1315,9 +1383,7 @@ Public Class Formreceivefabcolors
         DemoColor(Tbshadeid.Text)
         Bindinglistnittno()
         Bindingnamebill()
-        '  SELECT Dhid FROM Tdyedcomxp WHERE Dyecomno = 'RS181100006' AND Comid = '101'
-        '  SELECT DISTINCT Knittbill FROM Vdyedcomdet WHERE Dyedcomno = 'RS181000023' AND Comid = '{Gscomid}'
-        '  SELECT Dyedhdesc FROM Tdyedhousexp WHERE Comid = '101' AND Dyedhid = '10031' AND Sstatus = 1 AND Sactive = '1'
+        Tstbsumroll.Text = ""
     End Sub
 
     Private Sub Bindinglistnittno()
