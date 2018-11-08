@@ -116,7 +116,7 @@ Public Class Formknittingform
         End If
     End Sub
     Private Sub Btmsave_Click(sender As Object, e As EventArgs) Handles Btmsave.Click
-        If WgtKgStore.Text > Tstbsumkg.Text OrElse WgtKgStore.Text < Tstbsumkg.Text Then
+        If WgtKgStore.Text < Tstbsumkg.Text Then
             Informmessage("น้ำหนักผ้าที่สั่งทอต้องเท่ากับเส้นด้ายที่ส่งไป")
             Exit Sub
         End If
@@ -739,7 +739,7 @@ Public Class Formknittingform
     Private Sub BindingYanlist()
         TYanlist = New DataTable
         TYanlist = SQLCommand($"SELECT *  FROM Tdeliyarndetxp
-                            WHERE  Dlvno NOT IN (SELECT Dlvno FROM Tknittcomxp) AND Comid = '{Gscomid}'")
+                            WHERE Comid = '{Gscomid}'")
         YanList.DataSource = TYanlist
     End Sub
     Private Sub Bindmasterknit()
