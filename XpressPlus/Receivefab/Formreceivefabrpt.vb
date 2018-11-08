@@ -53,13 +53,14 @@ Public Class Formreceivefabrpt
         Rds.Value = Datareport
         ReportViewer1.LocalReport.DataSources.Add(Rds)
 
-        Dim Cclothno, Cclothtype, CDwidth, Count As String
+        Dim Cclothno, Cclothtype, CDwidth, Count, CRollwage As String
         Dim DataCountreport As New DataTable
         With DataCountreport
             .Columns.Add("Cclothno")
             .Columns.Add("Cclothtype")
             .Columns.Add("CDwidth")
             .Columns.Add("Count")
+            .Columns.Add("CRollwage")
         End With
         DataCountreport.Rows.Clear()
         For i = 0 To Me.Countfabric.RowCount - 1
@@ -67,7 +68,8 @@ Public Class Formreceivefabrpt
             Cclothtype = Me.Countfabric.Rows(i).Cells("Cclothtype").Value
             CDwidth = Me.Countfabric.Rows(i).Cells("CDwidth").Value
             Count = Me.Countfabric.Rows(i).Cells("Count").Value
-            DataCountreport.Rows.Add(Cclothno, Cclothtype, CDwidth, Count)
+            CRollwage = Format(Me.Countfabric.Rows(i).Cells("CRollwage").Value, "###,###.#0")
+            DataCountreport.Rows.Add(Cclothno, Cclothtype, CDwidth, Count, CRollwage)
         Next
 
         Dim CRds As New ReportDataSource()

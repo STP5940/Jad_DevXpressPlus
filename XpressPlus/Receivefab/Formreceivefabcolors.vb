@@ -247,6 +247,8 @@ BypassFilter:
         Clrdgrid()
         'Clrtxtbox() 'เป้
         Btdcancel_Click(sender, e)
+        Mainbuttoncancel()
+        GroupPanel2.Visible = False
         TabControl1.SelectedTabIndex = 2
         Tbdhid.Text = Trim(Dgvlist.CurrentRow.Cells("Ldhid").Value)
         Tbdyedbillno.Text = Trim(Dgvlist.CurrentRow.Cells("Lbilldyedno").Value)
@@ -1131,6 +1133,7 @@ BypassFilter:
             Frm.Countfabric.Rows(i).Cells("Cclothtype").Value = Countfabric.Rows(i).Cells("Cclothtype").Value
             Frm.Countfabric.Rows(i).Cells("CDwidth").Value = Countfabric.Rows(i).Cells("CDwidth").Value
             Frm.Countfabric.Rows(i).Cells("Count").Value = Countfabric.Rows(i).Cells("Count").Value
+            Frm.Countfabric.Rows(i).Cells("CRollwage").Value = Countfabric.Rows(i).Cells("CRollwage").Value
         Next
 
         Frm.ReportViewer1.Reset()
@@ -1155,6 +1158,7 @@ BypassFilter:
                    Countfabric.Rows(Filters).Cells("Cclothtype").Value.ToString.ToUpper = Dgvmas.Rows(I).Cells("Clothtype").Value.ToString.ToUpper AndAlso
                    Countfabric.Rows(Filters).Cells("CDwidth").Value.ToString.ToUpper = Dgvmas.Rows(I).Cells("Dwidth").Value.ToString.ToUpper Then
                     Countfabric.Rows(Filters).Cells("Count").Value += 1
+                    Countfabric.Rows(Filters).Cells("CRollwage").Value += Dgvmas.Rows(I).Cells("Rollwage").Value
                     Exit For
                 End If
 
@@ -1167,6 +1171,7 @@ BypassFilter:
                     Countfabric.Rows(CountSum).Cells("Cclothtype").Value = Dgvmas.Rows(I).Cells("Clothtype").Value
                     Countfabric.Rows(CountSum).Cells("CDwidth").Value = Dgvmas.Rows(I).Cells("Dwidth").Value
                     Countfabric.Rows(CountSum).Cells("Count").Value = Count
+                    Countfabric.Rows(CountSum).Cells("CRollwage").Value = Dgvmas.Rows(I).Cells("Rollwage").Value
                     CountSum += 1
                 End If
             Next
