@@ -138,6 +138,9 @@ Public Class Formknittingform
         End If
         If Trim(Tbknitcomno.Text) = "NEW" Then
             Newdoc()
+            If CDbl(WgtKgStore.Text) > CDbl(Tstbsumkg.Text) Then
+                MsgBox("Woww News Data !!!")
+            End If
         Else
             Editdoc()
         End If
@@ -228,12 +231,12 @@ Public Class Formknittingform
         Else
             Frm.TextBox2.Text = "0"
         End If
-        If Gsexpau = False Then
-            Frm.ReportViewer1.ShowExportButton = False
-        End If
-        If Gspriau = False Then
-            Frm.ReportViewer1.ShowPrintButton = False
-        End If
+        'If Gsexpau = False Then
+        '    Frm.ReportViewer1.ShowExportButton = False
+        'End If
+        'If Gspriau = False Then
+        '    Frm.ReportViewer1.ShowPrintButton = False
+        'End If
         Dim Rds, Rds1 As New ReportDataSource()
         Rds.Name = "DataSet1"
         If Cbfromgsc.Checked = True Then
@@ -644,10 +647,10 @@ Public Class Formknittingform
         Btdcancel.Enabled = True
     End Sub
     Private Sub Btdedit_Click(sender As Object, e As EventArgs) Handles Btdedit.Click
-        GroupPanel2.Visible = True
         If Dgvmas.RowCount = 0 Then
             Exit Sub
         End If
+        GroupPanel2.Visible = True
         If Validmas() = False Then
             Informmessage("กรุณาตรวจสอบข้อมูลในการสั่งทอให้ครบถ้วน")
             Exit Sub
@@ -783,8 +786,14 @@ Checkloop:
     End Sub
     Private Sub BindingYanlist()
         TYanlist = New DataTable
-        TYanlist = SQLCommand($"SELECT *  FROM Tdeliyarndetxp
-                            WHERE Comid = '{Gscomid}'")
+        TYanlist = SQLCommand($"SELECT Tdeliyarndetxp.Comid,Tdeliyarndetxp.Dlvno,Tdeliyarndetxp.Ord,
+                                Tdeliyarndetxp.Yarnid,Tdeliyarndetxp.Lotno,Tdeliyarndetxp.Nwkgpc,
+                                Tdeliyarndetxp.Nwppc,Tdeliyarndetxp.Gwkgpc,Tdeliyarndetxp.Gwppc,
+                                Tdeliyarndetxp.Nofc,Tdeliyarndetxp.Updusr,Tdeliyarndetxp.Uptype,
+                                Tdeliyarndetxp.Uptime,Vdeliyarnmas.Knitdesc
+                                FROM Tdeliyarndetxp LEFT OUTER JOIN Vdeliyarnmas
+                                ON Tdeliyarndetxp.Dlvno = Vdeliyarnmas.Dlvno
+                                WHERE Tdeliyarndetxp.Comid = '{Gscomid}'")
         YanList.DataSource = TYanlist
         YanListFilter()
         YanListSend()
