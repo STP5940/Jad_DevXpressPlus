@@ -27,6 +27,8 @@ Partial Class Formknitingfrmrpt
         Me.Btmclose = New System.Windows.Forms.ToolStripButton()
         Me.TabControl1 = New DevComponents.DotNetBar.TabControl()
         Me.TabControlPanel1 = New DevComponents.DotNetBar.TabControlPanel()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Tbremark = New System.Windows.Forms.TextBox()
         Me.Tbredate = New System.Windows.Forms.TextBox()
         Me.Tbknitcomno = New System.Windows.Forms.TextBox()
@@ -34,7 +36,6 @@ Partial Class Formknitingfrmrpt
         Me.Tbdate = New System.Windows.Forms.TextBox()
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.TabItem1 = New DevComponents.DotNetBar.TabItem(Me.components)
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.TabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
@@ -83,6 +84,7 @@ Partial Class Formknitingfrmrpt
         '
         'TabControlPanel1
         '
+        Me.TabControlPanel1.Controls.Add(Me.TextBox2)
         Me.TabControlPanel1.Controls.Add(Me.TextBox1)
         Me.TabControlPanel1.Controls.Add(Me.Tbremark)
         Me.TabControlPanel1.Controls.Add(Me.Tbredate)
@@ -105,6 +107,22 @@ Partial Class Formknitingfrmrpt
         Me.TabControlPanel1.Style.GradientAngle = 90
         Me.TabControlPanel1.TabIndex = 1
         Me.TabControlPanel1.TabItem = Me.TabItem1
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(896, 86)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(100, 22)
+        Me.TextBox2.TabIndex = 72
+        Me.TextBox2.Visible = False
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(896, 58)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(100, 22)
+        Me.TextBox1.TabIndex = 7
+        Me.TextBox1.Visible = False
         '
         'Tbremark
         '
@@ -160,14 +178,6 @@ Partial Class Formknitingfrmrpt
         Me.TabItem1.Name = "TabItem1"
         Me.TabItem1.Text = "ใบสังทอ"
         '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(896, 58)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 22)
-        Me.TextBox1.TabIndex = 7
-        Me.TextBox1.Visible = False
-        '
         'Formknitingfrmrpt
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -201,4 +211,5 @@ Partial Class Formknitingfrmrpt
     Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
     Friend WithEvents TabItem1 As DevComponents.DotNetBar.TabItem
     Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TextBox2 As TextBox
 End Class

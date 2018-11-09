@@ -628,7 +628,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=IIf(Parameters!Parfactory.Value ="GSC",(Fields!Nwkgpc.Value*2.2046)*Fields!Nofc.Value,Fields!Dlvlbs.Value)</Value>
+                                  <Value>=IIf(Parameters!Parfactory.Value ="GSC" and Parameters!Gscnew.Value = "1",(Fields!Nwkgpc.Value*2.2046)*Fields!Nofc.Value,Fields!Dlvlbs.Value)</Value>
                                   <Style>
                                     <Format>n2</Format>
                                   </Style>
@@ -662,7 +662,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=IIf(Parameters!Parfactory.Value = "GSC",(Fields!Nwkgpc.Value * Fields!Nofc.Value),Fields!Dlvkg.Value)</Value>
+                                  <Value>=IIf(Parameters!Parfactory.Value = "GSC" and Parameters!Gscnew.Value = "1",(Fields!Nwkgpc.Value * Fields!Nofc.Value),Fields!Dlvkg.Value)</Value>
                                   <Style>
                                     <Format>n2</Format>
                                   </Style>
@@ -737,7 +737,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=IIf(Parameters!Parfactory.Value = "GSC",Sum(((Fields!Nwkgpc.Value * Fields!Nofc.Value) * 2.2046)),SUM(Fields!Dlvlbs.Value))</Value>
+                                  <Value>=IIf(Parameters!Parfactory.Value = "GSC" and Parameters!Gscnew.Value = "1",Sum(((Fields!Nwkgpc.Value * Fields!Nofc.Value) * 2.2046)),SUM(Fields!Dlvlbs.Value))</Value>
                                   <Style>
                                     <Format>n2</Format>
                                   </Style>
@@ -771,7 +771,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=IIf(Parameters!Parfactory.Value = "GSC",Sum((Fields!Nwkgpc.Value * Fields!Nofc.Value)),SUM(Fields!Dlvkg.Value))</Value>
+                                  <Value>=IIf(Parameters!Parfactory.Value = "GSC" and Parameters!Gscnew.Value = "1",Sum((Fields!Nwkgpc.Value * Fields!Nofc.Value)),SUM(Fields!Dlvkg.Value))</Value>
                                   <Style>
                                     <Format>n2</Format>
                                   </Style>
@@ -2146,6 +2146,10 @@
       <DataType>String</DataType>
       <Nullable>true</Nullable>
       <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Gscnew">
+      <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
   </ReportParameters>

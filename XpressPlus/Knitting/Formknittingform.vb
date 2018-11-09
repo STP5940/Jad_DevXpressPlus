@@ -1,7 +1,8 @@
 ﻿Imports System.ComponentModel
 Imports Microsoft.Reporting.WinForms
 Public Class Formknittingform
-    Private Tmasterknit, Tdetailsknit, Tmasterdlv, Tdetailsdlv, Tlist, TYanlist, Dttemp, Vdeliyarndet, Tmaster, Trollperkg As DataTable
+    Private Tmasterknit, Tdetailsknit, Tmasterdlv, Tdetailsdlv, Tlist, TYanlist, Dttemp, Vdeliyarndet,
+            Tmaster, Trollperkg, FTYanlist, SendYanlist, TdetailsdlvRds As DataTable
     Private Pagecount, Maxrec, Pagesize, Currentpage, Recno As Integer
     Private WithEvents Dtplistfm As New DateTimePicker
     Private WithEvents Dtplistto As New DateTimePicker
@@ -27,6 +28,7 @@ Public Class Formknittingform
         Tbmycom.Text = Trim(Gscomname)
         Tbremark.Enabled = False
         Dgvmas.Enabled = False
+        'YanListFilter()
     End Sub
     Private Sub Formknittingform_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         Dgvlist.ColumnHeadersDefaultCellStyle.Font = New Font("Microsoft Sans Serif", 11)
@@ -116,8 +118,8 @@ Public Class Formknittingform
         End If
     End Sub
     Private Sub Btmsave_Click(sender As Object, e As EventArgs) Handles Btmsave.Click
-        If WgtKgStore.Text < Tstbsumkg.Text Then
-            Informmessage("น้ำหนักผ้าที่สั่งทอต้องเท่ากับเส้นด้ายที่ส่งไป")
+        If CDbl(WgtKgStore.Text) < CDbl(Tstbsumkg.Text) Then
+            Informmessage($"น้ำหนักผ้าที่สั่งทอต้องเท่ากับเส้นด้ายที่ส่งไป")
             Exit Sub
         End If
         Tbremark.Enabled = False
@@ -220,6 +222,12 @@ Public Class Formknittingform
         Frm.Tbredate.Text = Format(Dtprecdate.Value, "dd/MM/yyyy")
         Frm.Tbremark.Text = Trim(Tbremark.Text)
         Frm.TextBox1.Text = Trim(TbfactoryName.Text)
+
+        If Cbfromgsc.Checked = True Then
+            Frm.TextBox2.Text = "1"
+        Else
+            Frm.TextBox2.Text = "0"
+        End If
         If Gsexpau = False Then
             Frm.ReportViewer1.ShowExportButton = False
         End If
@@ -229,8 +237,8 @@ Public Class Formknittingform
         Dim Rds, Rds1 As New ReportDataSource()
         Rds.Name = "DataSet1"
         If Cbfromgsc.Checked = True Then
-            Binddetailsdlv()
-            Rds.Value = Tdetailsdlv
+            BinddetailsdlvRds()
+            Rds.Value = TdetailsdlvRds
         Else
             Dim Tmpmasdlv As New DataTable
             Tmpmasdlv = SQLCommand("SELECT '' AS Custname,dbo.Tknittcomxp.yarnid,dbo.Tyarnxp.Yarndesc, '' AS Lotno,0 as Nwkgpc,0 as Nwppc,0 as Gwkgpc,
@@ -714,6 +722,43 @@ Public Class Formknittingform
             e.Cancel = True
         End If
     End Sub
+
+    Private Sub YanListFilter()
+
+        FTYanlist = New DataTable
+        FTYanlist = SQLCommand($"SELECT Dlvno,SUM(NWKGPC*Nofc) AS Netpound FROM Tdeliyarndetxp
+	                            WHERE Comid = '{Gscomid}'
+	                            GROUP BY Dlvno")
+
+        FYanList.DataSource = FTYanlist
+    End Sub
+    Private Sub YanListSend()
+        SendYanlist = New DataTable
+        SendYanlist = SQLCommand($"SELECT Dlvno,SUM(WgtKgOrder) As OrderSum FROM Tknittcomxp
+								WHERE Comid = '{Gscomid}'
+								GROUP BY Dlvno")
+
+        SendYan.DataSource = SendYanlist
+    End Sub
+
+    Private Sub YanCutSend()
+        For FYan = 0 To FYanList.RowCount - 1
+            For SYan = 0 To SendYan.Rows.Count - 1
+                If FYanList.Rows(FYan).Cells("FDlvno").Value = SendYan.Rows(SYan).Cells("SDlvno").Value And
+                   FYanList.Rows(FYan).Cells("Netpound").Value <= SendYan.Rows(SYan).Cells("OrderSum").Value Then
+Checkloop:
+                    For Del = 0 To YanList.Rows.Count - 1
+                        If YanList.Rows(Del).Cells("DlvnoDyed").Value = SendYan.Rows(SYan).Cells("SDlvno").Value Then
+                            YanList.Rows.RemoveAt(Del)
+                            GoTo Checkloop
+                        End If
+                    Next
+
+                End If
+            Next
+        Next
+    End Sub
+
     Private Sub Retdocprefix()
         Dim Tdocpre = New DataTable
         Tdocpre = SQLCommand("SELECT Docid,Prefix FROM Tdocprexp WHERE Comid = '" & Gscomid & "' AND 
@@ -741,6 +786,9 @@ Public Class Formknittingform
         TYanlist = SQLCommand($"SELECT *  FROM Tdeliyarndetxp
                             WHERE Comid = '{Gscomid}'")
         YanList.DataSource = TYanlist
+        YanListFilter()
+        YanListSend()
+        YanCutSend()
     End Sub
     Private Sub Bindmasterknit()
         Tmasterknit = New DataTable
@@ -758,7 +806,17 @@ Public Class Formknittingform
             Dtprecdate.Value = Tmasterknit.Rows(0)("Rcdate")
             Tbdlvyarnno.Text = Trim(Tmasterknit.Rows(0)("Dlvno"))
             Tbremark.Text = Trim(Tmasterknit.Rows(0)("Dremark"))
-            If TbfactoryName.Text = "GSC" Then
+            If IsDBNull(Tmasterknit.Rows(0)("Dlvlbs")) Then
+                Cbfromgsc.Checked = True
+            Else
+                If Tmasterknit.Rows(0)("Dlvlbs") = 0 Then
+                    Cbfromgsc.Checked = True
+                Else
+                    Cbfromgsc.Checked = False
+                End If
+            End If
+
+            If Cbfromgsc.Checked = True Then
                 Cbfromgsc.Checked = True
                 Bindmasterdlv()
                 Btfinddlvno.Enabled = False
@@ -824,6 +882,11 @@ Public Class Formknittingform
         Dgvyarn.DataSource = Tdetailsdlv
         Sumdlvyarn()
     End Sub
+    Private Sub BinddetailsdlvRds()
+        TdetailsdlvRds = New DataTable
+        TdetailsdlvRds = SQLCommand("SELECT *,0 AS Dlvlbs, 0 AS Dlvkg FROM VdeliyarnCalculate
+                                WHERE Comid = '" & Gscomid & "' AND Dlvno = '" & Trim(Tbdlvyarnno.Text) & "' AND Knitcomno = '" & Trim(Tbknitcomno.Text) & "'")
+    End Sub
     Private Sub Binddetailsknit()
         Tdetailsknit = New DataTable
         Tdetailsknit = SQLCommand("SELECT * FROM Vknitcomdet
@@ -863,8 +926,10 @@ Public Class Formknittingform
         Sumlbs = 0
         Sumkg = 0
         If Cbfromgsc.Checked = True Then
-            Sumkg = CDbl(Tbsumdlvwgtkg.Text)
-            Sumlbs = CDbl(Tbsumdlvwgtkg.Text) * 2.20462
+            'Sumkg = CDbl(Tbsumdlvwgtkg.Text) 'พี่หรั่งเขียน เป้คอมเม้น
+            'Sumlbs = CDbl(Tbsumdlvwgtkg.Text) * 2.20462 'พี่หรั่งเขียน เป้คอมเม้น
+            Sumkg = 0
+            Sumlbs = 0
             Tyarnid = ""
         Else
             Sumkg = CDbl(Tbkg.Text)
