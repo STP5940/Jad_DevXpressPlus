@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{7EB23751-8DE5-4E79-AFA1-86961D5BD577}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>XpressPlus.Formknittingform</StartupObject>
+    <StartupObject>XpressPlus.Formreceivefabcolors</StartupObject>
     <RootNamespace>XpressPlus</RootNamespace>
     <AssemblyName>XpressPlus</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -102,12 +102,6 @@
     <Compile Include="Knitting\Dsyarndlvk.vb">
       <DependentUpon>Dsyarndlvk.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Knitting\Form2.Designer.vb">
-      <DependentUpon>Form2.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Knitting\Form2.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Knitting\Formbillnolist.Designer.vb">
       <DependentUpon>Formbillnolist.vb</DependentUpon>
     </Compile>
@@ -154,18 +148,6 @@
       <DependentUpon>Formknittinglist.vb</DependentUpon>
     </Compile>
     <Compile Include="Knitting\Formknittinglist.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Knitting\Form_Test.Designer.vb">
-      <DependentUpon>Form_Test.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Knitting\Form_Test.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Knitting\Form_Test2.Designer.vb">
-      <DependentUpon>Form_Test2.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Knitting\Form_Test2.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -291,9 +273,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Knitting\Form2.resx">
-      <DependentUpon>Form2.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Knitting\Formbillnolist.resx">
       <DependentUpon>Formbillnolist.vb</DependentUpon>
     </EmbeddedResource>
@@ -317,12 +296,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Knitting\Formknittinglist.resx">
       <DependentUpon>Formknittinglist.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Knitting\Form_Test.resx">
-      <DependentUpon>Form_Test.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Knitting\Form_Test2.resx">
-      <DependentUpon>Form_Test2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Knitting\Rptknittingform.rdlc" />
     <EmbeddedResource Include="My Project\Resources.resx">

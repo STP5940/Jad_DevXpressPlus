@@ -599,8 +599,6 @@ C:\Users\this\Documents\GitHub\Jad_DevXpressPlus\XpressPlus\obj\Debug\XpressPlus
 C:\Users\this\Documents\GitHub\Jad_DevXpressPlus\XpressPlus\obj\Debug\XpressPlus.Formfabrictypelist.resources
 C:\Users\this\Documents\GitHub\Jad_DevXpressPlus\XpressPlus\obj\Debug\XpressPlus.Formknitingfrmrpt.resources
 C:\Users\this\Documents\GitHub\Jad_DevXpressPlus\XpressPlus\obj\Debug\XpressPlus.Formknittingform.resources
-C:\Users\this\Documents\GitHub\Jad_DevXpressPlus\XpressPlus\obj\Debug\XpressPlus.Form_Test.resources
-C:\Users\this\Documents\GitHub\Jad_DevXpressPlus\XpressPlus\obj\Debug\XpressPlus.Form_Test2.resources
 C:\Users\this\Documents\GitHub\Jad_DevXpressPlus\XpressPlus\obj\Debug\XpressPlus.Resources.resources
 C:\Users\this\Documents\GitHub\Jad_DevXpressPlus\XpressPlus\obj\Debug\XpressPlus.Formaeformreceivefabcolors.resources
 C:\Users\this\Documents\GitHub\Jad_DevXpressPlus\XpressPlus\obj\Debug\XpressPlus.Formdyeddetlist.resources
@@ -681,4 +679,3 @@ C:\Users\this\Documents\GitHub\Jad_DevXpressPlus\XpressPlus\obj\Debug\XpressPlus
 C:\Users\this\Documents\GitHub\Jad_DevXpressPlus\XpressPlus\obj\Debug\XpressPlus.Formreceivefabrpt.resources
 C:\Users\this\Documents\GitHub\Jad_DevXpressPlus\XpressPlus\obj\Debug\XpressPlus.Formreceivablelist.resources
 C:\Users\this\Documents\GitHub\Jad_DevXpressPlus\XpressPlus\obj\Debug\XpressPlus.Formtemp.resources
-C:\Users\this\Documents\GitHub\Jad_DevXpressPlus\XpressPlus\obj\Debug\XpressPlus.Form2.resources

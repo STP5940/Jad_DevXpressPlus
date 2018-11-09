@@ -144,7 +144,7 @@
                   <TextRun>
                     <Value>สถานที่รับ :</Value>
                     <Style>
-                      <FontSize>11pt</FontSize>
+                      <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -209,7 +209,7 @@
                   <TextRun>
                     <Value>รายละเอียดเส้นด้าย</Value>
                     <Style>
-                      <FontSize>11pt</FontSize>
+                      <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -221,7 +221,7 @@
             <Top>0.38889in</Top>
             <Left>0.38542in</Left>
             <Height>0.25in</Height>
-            <Width>1.28125in</Width>
+            <Width>1.54167in</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -242,7 +242,7 @@
                   <TextRun>
                     <Value>รายการสั่งทอ</Value>
                     <Style>
-                      <FontSize>11pt</FontSize>
+                      <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -270,22 +270,22 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>2.36796in</Width>
+                  <Width>2.40525in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.17708in</Width>
+                  <Width>1.21437in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.83333in</Width>
+                  <Width>1.72868in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.57292in</Width>
+                  <Width>1.52929in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>1.15599in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>1.14146in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -303,7 +303,7 @@
                                 <TextRun>
                                   <Value>เส้นด้ายโรงงาน</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -318,6 +318,13 @@
                             <Border>
                               <Style>Solid</Style>
                             </Border>
+                            <TopBorder>
+                              <Width>3pt</Width>
+                            </TopBorder>
+                            <LeftBorder>
+                              <Width>3pt</Width>
+                            </LeftBorder>
+                            <BackgroundColor>Gainsboro</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -337,7 +344,7 @@
                                 <TextRun>
                                   <Value>เลขที่บิลโรงงาน</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -352,6 +359,10 @@
                             <Border>
                               <Style>Solid</Style>
                             </Border>
+                            <TopBorder>
+                              <Width>3pt</Width>
+                            </TopBorder>
+                            <BackgroundColor>Gainsboro</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -371,7 +382,7 @@
                                 <TextRun>
                                   <Value>เส้นด้าย</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -386,6 +397,10 @@
                             <Border>
                               <Style>Solid</Style>
                             </Border>
+                            <TopBorder>
+                              <Width>3pt</Width>
+                            </TopBorder>
+                            <BackgroundColor>Gainsboro</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -405,7 +420,7 @@
                                 <TextRun>
                                   <Value>Lot</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -420,6 +435,10 @@
                             <Border>
                               <Style>Solid</Style>
                             </Border>
+                            <TopBorder>
+                              <Width>3pt</Width>
+                            </TopBorder>
+                            <BackgroundColor>Gainsboro</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -437,9 +456,9 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>จำนวน LBS</Value>
+                                  <Value>จำนวน (LBS)</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -454,6 +473,10 @@
                             <Border>
                               <Style>Solid</Style>
                             </Border>
+                            <TopBorder>
+                              <Width>3pt</Width>
+                            </TopBorder>
+                            <BackgroundColor>Gainsboro</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -471,9 +494,9 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>จำนวน KG</Value>
+                                  <Value>น้ำหนัก (KG)</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -488,6 +511,13 @@
                             <Border>
                               <Style>Solid</Style>
                             </Border>
+                            <TopBorder>
+                              <Width>3pt</Width>
+                            </TopBorder>
+                            <RightBorder>
+                              <Width>3pt</Width>
+                            </RightBorder>
+                            <BackgroundColor>Gainsboro</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -510,9 +540,15 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
+                                  <Value xml:space="preserve"> </Value>
+                                  <Style>
+                                    <FontSize>12pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
                                   <Value>=Parameters!Parfactory.Value</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>12pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -524,6 +560,9 @@
                             <Border>
                               <Style>Solid</Style>
                             </Border>
+                            <LeftBorder>
+                              <Width>3pt</Width>
+                            </LeftBorder>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -543,7 +582,7 @@
                                 <TextRun>
                                   <Value>=Fields!Dlvno.Value</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>12pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -574,7 +613,7 @@
                                 <TextRun>
                                   <Value>=Fields!Yarndesc.Value</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>12pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -605,12 +644,12 @@
                                 <TextRun>
                                   <Value>=Fields!Lotno.Value</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>12pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Left</TextAlign>
+                                <TextAlign>Center</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -638,7 +677,7 @@
                                 <TextRun>
                                   <Value>=IIf(Parameters!Parfactory.Value ="GSC" and Parameters!Gscnew.Value = "1",(Fields!Nwkgpc.Value*2.2046)*Fields!Nofc.Value,Fields!Dlvlbs.Value)</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>12pt</FontSize>
                                     <Format>n2</Format>
                                   </Style>
                                 </TextRun>
@@ -672,7 +711,7 @@
                                 <TextRun>
                                   <Value>=IIf(Parameters!Parfactory.Value = "GSC" and Parameters!Gscnew.Value = "1",(Fields!Nwkgpc.Value * Fields!Nofc.Value),Fields!Dlvkg.Value)</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>12pt</FontSize>
                                     <Format>n2</Format>
                                   </Style>
                                 </TextRun>
@@ -687,6 +726,9 @@
                             <Border>
                               <Style>Solid</Style>
                             </Border>
+                            <RightBorder>
+                              <Width>3pt</Width>
+                            </RightBorder>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -711,7 +753,7 @@
                                 <TextRun>
                                   <Value>Total</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>12pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -725,6 +767,12 @@
                             <Border>
                               <Style>Solid</Style>
                             </Border>
+                            <BottomBorder>
+                              <Width>3pt</Width>
+                            </BottomBorder>
+                            <LeftBorder>
+                              <Width>3pt</Width>
+                            </LeftBorder>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -748,7 +796,7 @@
                                 <TextRun>
                                   <Value>=IIf(Parameters!Parfactory.Value = "GSC" and Parameters!Gscnew.Value = "1",Sum(((Fields!Nwkgpc.Value * Fields!Nofc.Value) * 2.2046)),SUM(Fields!Dlvlbs.Value))</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>12pt</FontSize>
                                     <Format>n2</Format>
                                   </Style>
                                 </TextRun>
@@ -763,6 +811,9 @@
                             <Border>
                               <Style>Solid</Style>
                             </Border>
+                            <BottomBorder>
+                              <Width>3pt</Width>
+                            </BottomBorder>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -782,7 +833,7 @@
                                 <TextRun>
                                   <Value>=IIf(Parameters!Parfactory.Value = "GSC" and Parameters!Gscnew.Value = "1",Sum((Fields!Nwkgpc.Value * Fields!Nofc.Value)),SUM(Fields!Dlvkg.Value))</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>12pt</FontSize>
                                     <Format>n2</Format>
                                   </Style>
                                 </TextRun>
@@ -797,6 +848,12 @@
                             <Border>
                               <Style>Solid</Style>
                             </Border>
+                            <BottomBorder>
+                              <Width>3pt</Width>
+                            </BottomBorder>
+                            <RightBorder>
+                              <Width>3pt</Width>
+                            </RightBorder>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -836,7 +893,7 @@
             <Top>0.70833in</Top>
             <Left>0.375in</Left>
             <Height>0.75in</Height>
-            <Width>8.95129in</Width>
+            <Width>9.17504in</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>
@@ -853,7 +910,7 @@
                   <TextRun>
                     <Value>=Parameters!Parto.Value</Value>
                     <Style>
-                      <FontSize>11pt</FontSize>
+                      <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -885,7 +942,7 @@
                   <TextRun>
                     <Value>=Parameters!Parredate.Value</Value>
                     <Style>
-                      <FontSize>11pt</FontSize>
+                      <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -912,28 +969,28 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>0.72006in</Width>
+                  <Width>0.85758in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.13043in</Width>
+                  <Width>1.96045in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.06131in</Width>
+                  <Width>1.88541in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.95964in</Width>
+                  <Width>1.16565in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.95964in</Width>
+                  <Width>0.93999in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.95964in</Width>
+                  <Width>0.93999in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.53468in</Width>
+                  <Width>1.44559in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.12418in</Width>
+                  <Width>1.35453in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -951,7 +1008,7 @@
                                 <TextRun>
                                   <Value>Item No.</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -966,6 +1023,13 @@
                             <Border>
                               <Style>Solid</Style>
                             </Border>
+                            <TopBorder>
+                              <Width>3pt</Width>
+                            </TopBorder>
+                            <LeftBorder>
+                              <Width>3pt</Width>
+                            </LeftBorder>
+                            <BackgroundColor>Gainsboro</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -985,7 +1049,7 @@
                                 <TextRun>
                                   <Value>Description</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -1000,6 +1064,10 @@
                             <Border>
                               <Style>Solid</Style>
                             </Border>
+                            <TopBorder>
+                              <Width>3pt</Width>
+                            </TopBorder>
+                            <BackgroundColor>Gainsboro</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -1019,7 +1087,7 @@
                                 <TextRun>
                                   <Value>Fabric Type</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -1034,6 +1102,10 @@
                             <Border>
                               <Style>Solid</Style>
                             </Border>
+                            <TopBorder>
+                              <Width>3pt</Width>
+                            </TopBorder>
+                            <BackgroundColor>Gainsboro</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -1053,7 +1125,7 @@
                                 <TextRun>
                                   <Value>Qty(Roll/พับ)</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -1068,6 +1140,10 @@
                             <Border>
                               <Style>Solid</Style>
                             </Border>
+                            <TopBorder>
+                              <Width>3pt</Width>
+                            </TopBorder>
+                            <BackgroundColor>Gainsboro</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -1087,7 +1163,7 @@
                                 <TextRun>
                                   <Value>Qty(Kg)</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -1102,6 +1178,10 @@
                             <Border>
                               <Style>Solid</Style>
                             </Border>
+                            <TopBorder>
+                              <Width>3pt</Width>
+                            </TopBorder>
+                            <BackgroundColor>Gainsboro</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -1121,7 +1201,7 @@
                                 <TextRun>
                                   <Value>Dozen</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -1136,6 +1216,10 @@
                             <Border>
                               <Style>Solid</Style>
                             </Border>
+                            <TopBorder>
+                              <Width>3pt</Width>
+                            </TopBorder>
+                            <BackgroundColor>Gainsboro</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -1155,7 +1239,7 @@
                                 <TextRun>
                                   <Value>Finished Weight</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -1170,6 +1254,10 @@
                             <Border>
                               <Style>Solid</Style>
                             </Border>
+                            <TopBorder>
+                              <Width>3pt</Width>
+                            </TopBorder>
+                            <BackgroundColor>Gainsboro</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -1189,7 +1277,7 @@
                                 <TextRun>
                                   <Value>Finished Width</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -1204,6 +1292,13 @@
                             <Border>
                               <Style>Solid</Style>
                             </Border>
+                            <TopBorder>
+                              <Width>3pt</Width>
+                            </TopBorder>
+                            <RightBorder>
+                              <Width>3pt</Width>
+                            </RightBorder>
+                            <BackgroundColor>Gainsboro</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -1228,7 +1323,7 @@
                                 <TextRun>
                                   <Value>=RowNumber(nothing)</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>12pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1242,6 +1337,9 @@
                             <Border>
                               <Style>Solid</Style>
                             </Border>
+                            <LeftBorder>
+                              <Width>3pt</Width>
+                            </LeftBorder>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -1261,7 +1359,7 @@
                                 <TextRun>
                                   <Value>=Fields!Clothno.Value</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>12pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1292,7 +1390,7 @@
                                 <TextRun>
                                   <Value>=Fields!Ftype.Value</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>12pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1323,7 +1421,7 @@
                                 <TextRun>
                                   <Value>=Fields!Qtyroll.Value</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>12pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1356,7 +1454,7 @@
                                 <TextRun>
                                   <Value>=Fields!Wgtkg.Value</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>12pt</FontSize>
                                     <Format>n2</Format>
                                   </Style>
                                 </TextRun>
@@ -1390,7 +1488,7 @@
                                 <TextRun>
                                   <Value>=Fields!Dozen.Value</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>12pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1423,7 +1521,7 @@
                                 <TextRun>
                                   <Value>=Fields!Finwgt.Value</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>12pt</FontSize>
                                     <Format>n2</Format>
                                   </Style>
                                 </TextRun>
@@ -1457,7 +1555,7 @@
                                 <TextRun>
                                   <Value>=Fields!Fwidth.Value</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>12pt</FontSize>
                                     <Format>n2</Format>
                                   </Style>
                                 </TextRun>
@@ -1472,6 +1570,9 @@
                             <Border>
                               <Style>Solid</Style>
                             </Border>
+                            <RightBorder>
+                              <Width>3pt</Width>
+                            </RightBorder>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -1496,7 +1597,7 @@
                                 <TextRun>
                                   <Value>Total</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>12pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1510,6 +1611,12 @@
                             <Border>
                               <Style>Solid</Style>
                             </Border>
+                            <BottomBorder>
+                              <Width>4pt</Width>
+                            </BottomBorder>
+                            <LeftBorder>
+                              <Width>3pt</Width>
+                            </LeftBorder>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -1532,7 +1639,7 @@
                                 <TextRun>
                                   <Value>=Sum(Fields!Qtyroll.Value)</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>12pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1546,6 +1653,9 @@
                             <Border>
                               <Style>Solid</Style>
                             </Border>
+                            <BottomBorder>
+                              <Width>4pt</Width>
+                            </BottomBorder>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -1565,7 +1675,7 @@
                                 <TextRun>
                                   <Value>=Sum(Fields!Wgtkg.Value)</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>12pt</FontSize>
                                     <Format>n2</Format>
                                   </Style>
                                 </TextRun>
@@ -1580,6 +1690,9 @@
                             <Border>
                               <Style>Solid</Style>
                             </Border>
+                            <BottomBorder>
+                              <Width>4pt</Width>
+                            </BottomBorder>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -1599,7 +1712,7 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>12pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1613,6 +1726,9 @@
                             <Border>
                               <Style>Solid</Style>
                             </Border>
+                            <BottomBorder>
+                              <Width>4pt</Width>
+                            </BottomBorder>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -1632,7 +1748,7 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>12pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1646,6 +1762,9 @@
                             <Border>
                               <Style>Solid</Style>
                             </Border>
+                            <BottomBorder>
+                              <Width>4pt</Width>
+                            </BottomBorder>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -1665,7 +1784,7 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>12pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1679,12 +1798,19 @@
                             <Border>
                               <Style>Solid</Style>
                             </Border>
+                            <BottomBorder>
+                              <Width>4pt</Width>
+                            </BottomBorder>
+                            <RightBorder>
+                              <Width>3pt</Width>
+                            </RightBorder>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -1720,7 +1846,7 @@
             <Top>1.99722in</Top>
             <Left>0.375in</Left>
             <Height>0.75in</Height>
-            <Width>10.44954in</Width>
+            <Width>10.54919in</Width>
             <ZIndex>7</ZIndex>
             <Style>
               <Border>
@@ -1729,7 +1855,7 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>72.05492mm</Height>
+        <Height>72.58409mm</Height>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1752,7 +1878,7 @@
                     <TextRun>
                       <Value>Knitting Form/ใบสั่งทอ</Value>
                       <Style>
-                        <FontSize>12pt</FontSize>
+                        <FontSize>14pt</FontSize>
                         <FontWeight>Bold</FontWeight>
                       </Style>
                     </TextRun>
@@ -1786,7 +1912,7 @@
                     <TextRun>
                       <Value>From/จาก :</Value>
                       <Style>
-                        <FontSize>11pt</FontSize>
+                        <FontSize>12pt</FontSize>
                         <FontWeight>Bold</FontWeight>
                       </Style>
                     </TextRun>
@@ -1819,7 +1945,7 @@
                     <TextRun>
                       <Value>To/ถึง :</Value>
                       <Style>
-                        <FontSize>11pt</FontSize>
+                        <FontSize>12pt</FontSize>
                         <FontWeight>Bold</FontWeight>
                       </Style>
                     </TextRun>
@@ -1852,7 +1978,7 @@
                     <TextRun>
                       <Value>Date :</Value>
                       <Style>
-                        <FontSize>11pt</FontSize>
+                        <FontSize>12pt</FontSize>
                         <FontWeight>Bold</FontWeight>
                       </Style>
                     </TextRun>
@@ -1862,9 +1988,9 @@
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
               <Top>0.54457in</Top>
-              <Left>8.96208in</Left>
+              <Left>8.70166in</Left>
               <Height>0.25in</Height>
-              <Width>0.52103in</Width>
+              <Width>0.80429in</Width>
               <ZIndex>3</ZIndex>
               <Style>
                 <Border>
@@ -1883,9 +2009,9 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Bill :</Value>
+                      <Value>Bill No :</Value>
                       <Style>
-                        <FontSize>11pt</FontSize>
+                        <FontSize>12pt</FontSize>
                         <FontWeight>Bold</FontWeight>
                       </Style>
                     </TextRun>
@@ -1895,9 +2021,9 @@
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
               <Top>0.90221in</Top>
-              <Left>8.96208in</Left>
+              <Left>8.70166in</Left>
               <Height>0.25in</Height>
-              <Width>0.52103in</Width>
+              <Width>0.80429in</Width>
               <ZIndex>4</ZIndex>
               <Style>
                 <Border>
@@ -1918,7 +2044,7 @@
                     <TextRun>
                       <Value>Knitspeed</Value>
                       <Style>
-                        <FontSize>11pt</FontSize>
+                        <FontSize>12pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -1929,7 +2055,7 @@
               <Top>0.59597in</Top>
               <Left>1.32167in</Left>
               <Height>0.25in</Height>
-              <Width>7.44212in</Width>
+              <Width>7.29629in</Width>
               <ZIndex>5</ZIndex>
               <Style>
                 <Border>
@@ -1950,7 +2076,7 @@
                     <TextRun>
                       <Value>=Parameters!Parto.Value</Value>
                       <Style>
-                        <FontSize>11pt</FontSize>
+                        <FontSize>12pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -1982,7 +2108,7 @@
                     <TextRun>
                       <Value>=Parameters!Pardate.Value</Value>
                       <Style>
-                        <FontSize>11pt</FontSize>
+                        <FontSize>12pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -1993,9 +2119,9 @@
               </Paragraphs>
               <rd:DefaultName>Parfrm</rd:DefaultName>
               <Top>0.54457in</Top>
-              <Left>9.55255in</Left>
+              <Left>9.5754in</Left>
               <Height>0.25in</Height>
-              <Width>1.26157in</Width>
+              <Width>1.23873in</Width>
               <ZIndex>7</ZIndex>
               <Style>
                 <Border>
@@ -2016,7 +2142,7 @@
                     <TextRun>
                       <Value>=Parameters!Parbill.Value</Value>
                       <Style>
-                        <FontSize>11pt</FontSize>
+                        <FontSize>12pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -2027,9 +2153,9 @@
               </Paragraphs>
               <rd:DefaultName>Parfrm</rd:DefaultName>
               <Top>0.90221in</Top>
-              <Left>9.54214in</Left>
+              <Left>9.5754in</Left>
               <Height>0.25in</Height>
-              <Width>1.27199in</Width>
+              <Width>1.23873in</Width>
               <ZIndex>8</ZIndex>
               <Style>
                 <Border>
@@ -2074,7 +2200,7 @@
                     <TextRun>
                       <Value>หมายเหตุ</Value>
                       <Style>
-                        <FontSize>11pt</FontSize>
+                        <FontSize>12pt</FontSize>
                         <FontWeight>Bold</FontWeight>
                       </Style>
                     </TextRun>
@@ -2086,7 +2212,7 @@
               <Top>0.24517cm</Top>
               <Left>0.38542in</Left>
               <Height>0.25in</Height>
-              <Width>0.63542in</Width>
+              <Width>0.86681in</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -2118,7 +2244,7 @@
                     <TextRun>
                       <Value>=Parameters!Parremark.Value</Value>
                       <Style>
-                        <FontSize>11pt</FontSize>
+                        <FontSize>12pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -2127,9 +2253,9 @@
               </Paragraphs>
               <rd:DefaultName>Parfrm</rd:DefaultName>
               <Top>0.09652in</Top>
-              <Left>1.12375in</Left>
+              <Left>1.32167in</Left>
               <Height>0.25in</Height>
-              <Width>9.69038in</Width>
+              <Width>9.60254in</Width>
               <ZIndex>2</ZIndex>
               <Style>
                 <Border>

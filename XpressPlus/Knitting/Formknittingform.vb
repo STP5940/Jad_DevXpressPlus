@@ -138,7 +138,7 @@ Public Class Formknittingform
         End If
         If Trim(Tbknitcomno.Text) = "NEW" Then
             Newdoc()
-            If CDbl(WgtKgStore.Text) > CDbl(Tstbsumkg.Text) Then
+            If CDbl(WgtKgStore.Text) > CDbl(Tstbsumkg.Text) AndAlso Cbfromgsc.Checked = False Then
                 MsgBox("Woww News Data !!!")
             End If
         Else
