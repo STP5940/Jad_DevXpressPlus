@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Module Gbclass
     Public Gsusergroupid As String
-    Public Gsuserid As String
+    Public Gsuserid As String = "1001"
     Public Gsusername As String
     Public Gscomname As String 'Company
     Public Gscomid As String = "101"
@@ -130,8 +130,8 @@ Module Gbclass
         Dim ObjConn As New SqlConnection
         Dim DT As New DataTable
         'ObjConn.ConnectionString = "Data Source = S-PC;Initial Catalog = EXPRESSPLUS;Persist Security Info=True;User ID = SA;Password = !password#"
-        ObjConn.ConnectionString = "Data Source = ECSSERVER;Initial Catalog = EXPRESSPLUS;Persist Security Info=True;User ID = SA;Password = Ecs@1234"
-        'ObjConn.ConnectionString = "Data Source = Somjate;Initial Catalog = EXPRESSPLUS;Persist Security Info=True;User ID = SA;Password = Passw0rd"
+        'ObjConn.ConnectionString = "Data Source = ECSSERVER;Initial Catalog = EXPRESSPLUS;Persist Security Info=True;User ID = SA;Password = Ecs@1234"
+        ObjConn.ConnectionString = "Data Source = (local);Initial Catalog = EXPRESSPLUS;Persist Security Info=True;User ID = SA;Password = 1234"
         ObjConn.Open()
         DTadapter = New SqlDataAdapter(Sqltext, ObjConn)
         DTadapter.Fill(DT)

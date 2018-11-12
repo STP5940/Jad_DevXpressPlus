@@ -76,6 +76,7 @@ Public Class Formknittingform
     End Sub
     Private Sub Btmedit_Click(sender As Object, e As EventArgs) Handles Btmedit.Click
         ButtonX1.Enabled = True
+        Tbremark.Enabled = True
         Dtpknitcomdate.Enabled = True
         Btfinddlvno.Enabled = True
         Listfactory.Enabled = True
@@ -140,6 +141,13 @@ Public Class Formknittingform
             Newdoc()
             If CDbl(WgtKgStore.Text) > CDbl(Tstbsumkg.Text) AndAlso Cbfromgsc.Checked = False Then
                 MsgBox("Woww News Data !!!")
+                InsertmasterOther()
+                MsgBox("Woww News Data 2 !!!")
+                UpddetailsOther("A")
+                If Gsusername = "SUPHATS" Then
+                Else
+                    Insertlog(Gscomid, Gsusergroupid, Gsuserid, Gsusername, "F121", Trim(Tbknitcomno.Text), "A", "สร้างรายการ ใบสั่งทอจากภายนอก", Formatdatesave(Now), Computername, Usrproname)
+                End If
             End If
         Else
             Editdoc()
@@ -163,6 +171,7 @@ Public Class Formknittingform
         BindingNavigator1.Enabled = False
         Tbremark.Enabled = False
         Dgvmas.Enabled = False
+        Tbremark.Enabled = False
         Mainbuttoncancel()
     End Sub
     Private Sub CloseMaster()
@@ -405,6 +414,8 @@ Public Class Formknittingform
         Btddel.Enabled = False
         Dgvmas.Enabled = False
         Dgvyarn.Enabled = False
+        Tbremark.Enabled = False
+
     End Sub
     Private Sub Btfirst_Click(sender As Object, e As EventArgs) Handles Btfirst.Click
         Befirst()
@@ -881,6 +892,7 @@ Checkloop:
             Tbknitid.Text = Trim(Tmasterdlv.Rows(0)("Knitid"))
             Tbknitname.Text = Trim(Tmasterdlv.Rows(0)("Knitdesc"))
             Dtprecdate.Text = Trim(Tmasterdlv.Rows(0)("Dyarndate"))
+            Tbremark.Text = Trim(Tmasterdlv.Rows(0)("Dremark"))
             Binddetailsdlv()
         End If
     End Sub
@@ -954,6 +966,11 @@ Checkloop:
                     '" & Gsuserid & "','A','" & Formatdatesave(Now) & "','" & Trim(Tbknitid.Text) & "','" & TbfactoryID.Text & "','" & Trim(TbfactoryName.Text) & "',
                     " & Sumlbs & "," & Sumkg & ",'" & Tyarnid & "')")
     End Sub
+    Private Sub InsertmasterOther()
+        SQLCommand($"INSERT INTO Tdeliyarnxp(Comid,Dyarndate,Dlvno,Knitid,Dremark,Sremark,Sstatus,Updusr,Uptype,Uptime)
+                    VALUES('{Gscomid}','{Formatshortdatesave(Dtpknitcomdate.Value)}','{Trim(Tbdlvyarnno.Text)}',
+                           '{Trim(Tbknitid.Text)}','{Trim(Tbremark.Text)}','ส่งด้ายไปโรงทอ','1','{Gsuserid}','A','{Formatdatesave(Now)}')")
+    End Sub
     Private Sub Editmaster()
         Dim Tyarnid As String
         Dim Sumlbs, Sumkg As Double
@@ -1002,6 +1019,16 @@ Checkloop:
         Frm.Close()
         ProgressBarX1.Text = "Ready"
         ProgressBarX1.Value = 0
+    End Sub
+    Private Sub UpddetailsOther(Etype As String)
+        'Deldetails(Tbknitcomno.Text)
+        'MsgBox(Gscomid)
+        'MsgBox(Trim(Tbknitcomno.Text))
+        'MsgBox(Gsuserid)
+        'MsgBox(Etype)
+        'MsgBox(Formatdatesave(Now))
+        SQLCommand($"INSERT INTO Tdeliyarndetxp(Comid,Dlvno,Ord,Yarnid,Lotno,Nwkgpc,Nwppc,Gwkgpc,Gwppc,Nofc,Updusr,Uptype,Uptime)
+                        VALUES ('{Gscomid}','{Trim(Tbdlvyarnno.Text)}','1','{Trim(Tbyarnid.Text)}','','{Trim(Tbkg.Text)}','{Trim(Tblbs.Text)}','0','0','1','10001','{Etype}','{Formatdatesave(Now)}')")
     End Sub
     Private Sub Searchlistbyoth(Sval As String)
         If Sval = "" Then

@@ -1,7 +1,7 @@
 ﻿Imports System.ComponentModel
 Imports Microsoft.Reporting.WinForms
 Public Class Formreceivefabcolors
-    Private Tmaster, Tdetails, Tlist, TSendDyelist, Dttemp, tlistfab, tlistyed, tlistnittno, tlistnamebill As DataTable
+    Private Tmaster, Tdetails, Tlist, TSendDyelist, Dttemp, tlistfab, tlistyed, tlistnittno, tlistnamebill, ListLotNo As DataTable
     Private Pagecount, Maxrec, Pagesize, Currentpage, Recno As Integer
     Private WithEvents Dtplistfm As New DateTimePicker
     Private WithEvents Dtplistto As New DateTimePicker
@@ -127,6 +127,11 @@ Public Class Formreceivefabcolors
 BypassFilter:
 
         If Tbdyedcomno.Text = "NEW" Then
+            ListLotNo = SQLCommand($"SELECT Lotno FROM Trecfabcoldetxp where Lotno = '{Trim(Tbrefablotno.Text)}'")
+            If ListLotNo.Rows.Count > 0 Then
+                Informmessage("มีเลข Lot No นี้แล้วในระบบ")
+                Exit Sub
+            End If
             Newdoc()
         Else
             Editdoc()
@@ -141,6 +146,7 @@ BypassFilter:
         Btmcancel_Click(sender, e)
         BindingBalance()
     End Sub
+
     Private Sub Btmdel_Click(sender As Object, e As EventArgs) Handles Btmdel.Click
         'If Trim(Tbknittno.Text) = "" Then
         '    Exit Sub
@@ -613,6 +619,10 @@ BypassFilter:
         End If
     End Sub
     Private Sub Newdoc()
+        If Trim(Tstbdocpre.Text) = "" Then
+            Informmessage("กรุณาติดต่อ Admin เพื่อขอเลข Prefix")
+            Exit Sub
+        End If
         Tbdyedcomno.Text = Trim(Tstbdocpre.Text) & Genid()
         Insertmaster()
         SQLCommand("UPDATE Tdocprexp SET Lvalue = '" & Trim(Tbdyedcomno.Text).Remove(0, 2) & "',Updusr = '" & Gsuserid & "',Uptype = 'E',Uptime = '" & Formatdatesave(Now) & "' 
@@ -641,11 +651,10 @@ BypassFilter:
                     '" & Tbcolorno.Text & "','" & Trim(Tbremark.Text) & "','" & Gsuserid & "','A','" & Formatdatesave(Now) & "')")
     End Sub
     Private Sub Editmaster()
-        SQLCommand("UPDATE Trecfabcolxp SET Billknitt = '" & Trim(Tbknittno.Text) & "',Recdate = '" & Formatdatesave(Dtprecdate.Value) & "',
+        SQLCommand("UPDATE Trecfabcolxp SET Dhid = '" & Trim(Tbdhid.Text) & "',Billknitt = '" & Trim(Tbknittno.Text) & "',Recdate = '" & Formatdatesave(Dtprecdate.Value) & "',
                     Dyedcolor = '" & Trim(Tbcolorno.Text) & "',Dremark = '" & Trim(Tbremark.Text) & "',Updusr = '" & Gsuserid & "',
                     Uptype = 'E',Uptime = '" & Formatdatesave(Now) & "'
-                    WHERE Comid = '" & Gscomid & "' AND Dhid = '" & Trim(Tbdhid.Text) & "' AND Billdyedno = '" & Trim(Tbdyedbillno.Text) & "' AND
-                    Lotno = '" & Tbrefablotno.Text & "'")
+                    WHERE Comid = '" & Gscomid & "' AND Reid = '" & Trim(Tbdyedcomno.Text) & "'")
     End Sub
     Private Sub Deldetails()
         SQLCommand("DELETE FROM Trecfabcoldetxp 
