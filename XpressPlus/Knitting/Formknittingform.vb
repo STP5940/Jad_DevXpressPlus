@@ -140,9 +140,7 @@ Public Class Formknittingform
         If Trim(Tbknitcomno.Text) = "NEW" Then
             Newdoc()
             If CDbl(WgtKgStore.Text) > CDbl(Tstbsumkg.Text) AndAlso Cbfromgsc.Checked = False Then
-                MsgBox("Woww News Data !!!")
                 InsertmasterOther()
-                MsgBox("Woww News Data 2 !!!")
                 UpddetailsOther("A")
                 If Gsusername = "SUPHATS" Then
                 Else
@@ -888,6 +886,7 @@ Checkloop:
         Tmasterdlv = New DataTable
         Tmasterdlv = SQLCommand("SELECT * FROM Vdeliyarnmas 
                                 WHERE Comid = '" & Gscomid & "' AND Dlvno = '" & Trim(Tbdlvyarnno.Text) & "'")
+
         If Tmasterdlv.Rows.Count > 0 Then
             Tbknitid.Text = Trim(Tmasterdlv.Rows(0)("Knitid"))
             Tbknitname.Text = Trim(Tmasterdlv.Rows(0)("Knitdesc"))
@@ -898,8 +897,9 @@ Checkloop:
     End Sub
     Private Sub Binddetailsdlv()
         Tdetailsdlv = New DataTable
-        Tdetailsdlv = SQLCommand("SELECT *,0 AS Dlvlbs, 0 AS Dlvkg FROM VdeliyarnCalculate
-                                WHERE Comid = '" & Gscomid & "' AND Dlvno = '" & Trim(Tbdlvyarnno.Text) & "'")
+        Tdetailsdlv = SQLCommand("SELECT DISTINCT Dlvno,Comid,Dlvno,Ord,Yarnid,Yarndesc,Lotno,Nwkgpc,Nwppc,
+				                  Gwkgpc,Gwppc,Nofc,WgtKg,0 As Dlvlbs, 0 AS Dlvkg FROM VdeliyarnCalculate
+                                  WHERE Comid = '" & Gscomid & "' AND Dlvno = '" & Trim(Tbdlvyarnno.Text) & "'")
         Dgvyarn.DataSource = Tdetailsdlv
         Sumdlvyarn()
     End Sub
@@ -1021,14 +1021,8 @@ Checkloop:
         ProgressBarX1.Value = 0
     End Sub
     Private Sub UpddetailsOther(Etype As String)
-        'Deldetails(Tbknitcomno.Text)
-        'MsgBox(Gscomid)
-        'MsgBox(Trim(Tbknitcomno.Text))
-        'MsgBox(Gsuserid)
-        'MsgBox(Etype)
-        'MsgBox(Formatdatesave(Now))
         SQLCommand($"INSERT INTO Tdeliyarndetxp(Comid,Dlvno,Ord,Yarnid,Lotno,Nwkgpc,Nwppc,Gwkgpc,Gwppc,Nofc,Updusr,Uptype,Uptime)
-                        VALUES ('{Gscomid}','{Trim(Tbdlvyarnno.Text)}','1','{Trim(Tbyarnid.Text)}','','{Trim(Tbkg.Text)}','{Trim(Tblbs.Text)}','0','0','1','10001','{Etype}','{Formatdatesave(Now)}')")
+                        VALUES ('{Gscomid}','{Trim(Tbdlvyarnno.Text)}','1','{Trim(Tbyarnid.Text)}','-','{Trim(Tbkg.Text)}','{Trim(Tblbs.Text)}','0','0','1','10001','{Etype}','{Formatdatesave(Now)}')")
     End Sub
     Private Sub Searchlistbyoth(Sval As String)
         If Sval = "" Then
@@ -1452,6 +1446,7 @@ Checkloop:
             Tblbs.Text = 0
         End If
     End Sub
+
     Private Sub Tbkg_TextChanged(sender As Object, e As EventArgs) Handles Tbkg.TextChanged
         If Tbkg.Text <> "" Then
             SelectData()

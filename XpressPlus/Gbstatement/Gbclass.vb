@@ -131,7 +131,7 @@ Module Gbclass
         Dim DT As New DataTable
         'ObjConn.ConnectionString = "Data Source = S-PC;Initial Catalog = EXPRESSPLUS;Persist Security Info=True;User ID = SA;Password = !password#"
         'ObjConn.ConnectionString = "Data Source = ECSSERVER;Initial Catalog = EXPRESSPLUS;Persist Security Info=True;User ID = SA;Password = Ecs@1234"
-        ObjConn.ConnectionString = "Data Source = (local);Initial Catalog = EXPRESSPLUS;Persist Security Info=True;User ID = SA;Password = 1234"
+        ObjConn.ConnectionString = "Data Source = localhost;Initial Catalog = EXPRESSPLUS;Persist Security Info=True;User ID = SA;Password = 1234"
         ObjConn.Open()
         DTadapter = New SqlDataAdapter(Sqltext, ObjConn)
         DTadapter.Fill(DT)

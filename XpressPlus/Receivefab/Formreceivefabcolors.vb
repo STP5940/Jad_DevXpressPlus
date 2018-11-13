@@ -944,10 +944,11 @@ BypassFilter:
     Private Sub Btmcancel_Click(sender As Object, e As EventArgs) Handles Btmcancel.Click
         Clrtxtbox()
         Clrupdet()
-        Tbkongno.Text = ""
-        Tbkg.Text = ""
-        Tbrollid.Text = 0
         Tstbsumroll.Text = ""
+        Tstbsumkg.Text = ""
+        Tbkongno.Text = ""
+        Tbrollid.Text = 0
+        Tbkg.Text = ""
         Clrdgrid()
         TabControl1.SelectedTabIndex = 0
 
@@ -1153,6 +1154,7 @@ BypassFilter:
         Mainbuttoncancel()
         TabControl1.SelectedTabIndex = 0
         Countfabric.Rows.Clear()
+        Btmcancel_Click(sender, e)
     End Sub
 
     Private Sub CountfabricFilter()
