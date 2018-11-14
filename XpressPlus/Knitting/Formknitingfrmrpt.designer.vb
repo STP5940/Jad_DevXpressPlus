@@ -27,6 +27,8 @@ Partial Class Formknitingfrmrpt
         Me.Btmclose = New System.Windows.Forms.ToolStripButton()
         Me.TabControl1 = New DevComponents.DotNetBar.TabControl()
         Me.TabControlPanel1 = New DevComponents.DotNetBar.TabControlPanel()
+        Me.GSumSend = New System.Windows.Forms.DataGridView()
+        Me.Tbdlvyarnno = New Normtextbox.Normtextbox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Tbremark = New System.Windows.Forms.TextBox()
@@ -40,6 +42,7 @@ Partial Class Formknitingfrmrpt
         CType(Me.TabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabControlPanel1.SuspendLayout()
+        CType(Me.GSumSend, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ToolStrip1
@@ -84,6 +87,8 @@ Partial Class Formknitingfrmrpt
         '
         'TabControlPanel1
         '
+        Me.TabControlPanel1.Controls.Add(Me.GSumSend)
+        Me.TabControlPanel1.Controls.Add(Me.Tbdlvyarnno)
         Me.TabControlPanel1.Controls.Add(Me.TextBox2)
         Me.TabControlPanel1.Controls.Add(Me.TextBox1)
         Me.TabControlPanel1.Controls.Add(Me.Tbremark)
@@ -107,6 +112,28 @@ Partial Class Formknitingfrmrpt
         Me.TabControlPanel1.Style.GradientAngle = 90
         Me.TabControlPanel1.TabIndex = 1
         Me.TabControlPanel1.TabItem = Me.TabItem1
+        '
+        'GSumSend
+        '
+        Me.GSumSend.AllowUserToAddRows = False
+        Me.GSumSend.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.GSumSend.Location = New System.Drawing.Point(568, 141)
+        Me.GSumSend.Name = "GSumSend"
+        Me.GSumSend.Size = New System.Drawing.Size(240, 150)
+        Me.GSumSend.TabIndex = 78
+        Me.GSumSend.Visible = False
+        '
+        'Tbdlvyarnno
+        '
+        Me.Tbdlvyarnno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.Tbdlvyarnno.Enabled = False
+        Me.Tbdlvyarnno.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Tbdlvyarnno.Location = New System.Drawing.Point(730, 86)
+        Me.Tbdlvyarnno.MaxLength = 150
+        Me.Tbdlvyarnno.Name = "Tbdlvyarnno"
+        Me.Tbdlvyarnno.Size = New System.Drawing.Size(160, 24)
+        Me.Tbdlvyarnno.TabIndex = 77
+        Me.Tbdlvyarnno.Visible = False
         '
         'TextBox2
         '
@@ -194,6 +221,7 @@ Partial Class Formknitingfrmrpt
         Me.TabControl1.ResumeLayout(False)
         Me.TabControlPanel1.ResumeLayout(False)
         Me.TabControlPanel1.PerformLayout()
+        CType(Me.GSumSend, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -212,4 +240,6 @@ Partial Class Formknitingfrmrpt
     Friend WithEvents TabItem1 As DevComponents.DotNetBar.TabItem
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Tbdlvyarnno As Normtextbox.Normtextbox
+    Friend WithEvents GSumSend As DataGridView
 End Class

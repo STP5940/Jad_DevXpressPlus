@@ -2,7 +2,7 @@
 Imports Microsoft.Reporting.WinForms
 Public Class Formknittingform
     Private Tmasterknit, Tdetailsknit, Tmasterdlv, Tdetailsdlv, Tlist, TYanlist, Dttemp, Vdeliyarndet,
-            Tmaster, Trollperkg, FTYanlist, SendYanlist, TdetailsdlvRds As DataTable
+            Tmaster, Trollperkg, FTYanlist, SendYanlist, TdetailsdlvRds, TBYanlist As DataTable
     Private Pagecount, Maxrec, Pagesize, Currentpage, Recno As Integer
     Private WithEvents Dtplistfm As New DateTimePicker
     Private WithEvents Dtplistto As New DateTimePicker
@@ -38,9 +38,11 @@ Public Class Formknittingform
         Bindinglist()
         YanList.ColumnHeadersDefaultCellStyle.Font = New Font("Microsoft Sans Serif", 11)
         YanList.DefaultCellStyle.Font = New Font("Microsoft Sans Serif", 11)
-        YanList.ColumnHeadersDefaultCellStyle.Font = New Font("Microsoft Sans Serif", 11)
-        YanList.DefaultCellStyle.Font = New Font("Microsoft Sans Serif", 11)
+        BYanList.ColumnHeadersDefaultCellStyle.Font = New Font("Microsoft Sans Serif", 11)
+        BYanList.DefaultCellStyle.Font = New Font("Microsoft Sans Serif", 11)
+
         BindingYanlist()
+        BindingBYanlist()
     End Sub
     Private Sub Btmnew_Click(sender As Object, e As EventArgs) Handles Btmnew.Click
         Createnew()
@@ -57,22 +59,6 @@ Public Class Formknittingform
         Dgvyarn.Visible = False
         Paneloth.Visible = True
         Cbfromgsc.Checked = False
-    End Sub
-    Private Sub NewBtn()
-        Btfindfabtypeid.Enabled = True
-        Dtpknitcomdate.Enabled = True
-        QtyrollOrder.Enabled = True
-        Btfinddlvno.Enabled = True
-        Dtprecdate.Enabled = True
-        WgtKgOrder.Enabled = True
-        Btdcancel.Enabled = True
-        Tbfinwgt.Enabled = True
-        Dgvyarn.Enabled = True
-        Btdadd.Enabled = True
-        Dgvmas.Enabled = True
-        GroupPanel2.Visible = True
-        QtyrollStore.Text = ""
-        WgtKgStore.Text = ""
     End Sub
     Private Sub Btmedit_Click(sender As Object, e As EventArgs) Handles Btmedit.Click
         ButtonX1.Enabled = True
@@ -172,49 +158,6 @@ Public Class Formknittingform
         Tbremark.Enabled = False
         Mainbuttoncancel()
     End Sub
-    Private Sub CloseMaster()
-        ButtonX1.Enabled = False
-        BindingNavigator1.Enabled = False
-        Dtprecdate.Enabled = False
-        Dtpknitcomdate.Enabled = False
-        Dgvyarn.Enabled = False
-        Btfinddlvno.Enabled = False
-        GroupPanel2.Visible = False
-        Tblbs.Enabled = False
-        Listfactory.Enabled = False
-        Btfindyarn.Enabled = False
-        TbfactoryID.Text = ""
-        Tbqtyroll.Text = ""
-        Tbwgtkg.Text = ""
-        Tbwgtlbs.Text = ""
-        QtyrollStore.Text = ""
-        WgtKgStore.Text = ""
-        Tbyarnid.Text = ""
-        Tbyarnname.Text = ""
-        Tblbs.Text = ""
-        Tbkg.Text = ""
-    End Sub
-    Private Sub OpenMaster()
-        Listfactory.Enabled = True
-        Btfindyarn.Enabled = True
-        Tblbs.Enabled = True
-        Dtprecdate.Enabled = False
-        Dtpknitcomdate.Enabled = True
-        Dgvyarn.Enabled = True
-        Btfinddlvno.Enabled = True
-    End Sub
-    Private Sub CloseDetiel()
-        GroupPanel2.Visible = False
-        Tbfinwgt.Enabled = False
-        Dgvmas.Enabled = False
-        Btfindfabtypeid.Enabled = False
-        WgtKgOrder.Enabled = False
-        Btdcancel.Enabled = False
-        Btdadd.Enabled = False
-        QtyrollOrder.Enabled = False
-        QtyrollStore.Text = ""
-        WgtKgStore.Text = ""
-    End Sub
     Private Sub Btmreports_Click(sender As Object, e As EventArgs) Handles Btmreports.Click
         If Dgvmas.RowCount = 0 Then
             Exit Sub
@@ -232,6 +175,7 @@ Public Class Formknittingform
         Frm.Tbredate.Text = Format(Dtprecdate.Value, "dd/MM/yyyy")
         Frm.Tbremark.Text = Trim(Tbremark.Text)
         Frm.TextBox1.Text = Trim(TbfactoryName.Text)
+        Frm.Tbdlvyarnno.Text = Trim(Tbdlvyarnno.Text)
 
         If Cbfromgsc.Checked = True Then
             Frm.TextBox2.Text = "1"
@@ -357,7 +301,6 @@ Public Class Formknittingform
         End If
         YanList.CurrentRow.Selected = True
     End Sub
-
     Private Sub YanList_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles YanList.CellMouseClick
         If e.Button = Windows.Forms.MouseButtons.Right Then
             If Me.YanList.Rows.Count < 1 Then Exit Sub
@@ -495,52 +438,6 @@ Public Class Formknittingform
             Tbdozen.Visible = False
             Label_dozen.Visible = False
             Exit Sub
-        End If
-    End Sub
-    Private Sub Show_Vdeliyarndet()
-        Dim Kgproll As Double
-        Trollperkg = New DataTable
-        Trollperkg = SQLCommand("SELECT Rate FROM Twgtperkgxp 
-                                WHERE Comid = '" & Gscomid & "'")
-        If Trollperkg.Rows.Count > 0 Then
-            Kgproll = Trollperkg.Rows(0)("Rate")
-        Else
-            Kgproll = 20
-        End If
-        If Cbfromgsc.Checked = True Then
-            If Dgvyarn.RowCount = 0 Then
-                QtyrollStore.Text = 0
-                WgtKgStore.Text = 0
-                Exit Sub
-            End If
-            Vdeliyarndet = New DataTable
-            Vdeliyarndet = SQLCommand("SELECT * FROM VdeliyarnCalculate
-                                WHERE Comid = '" & Gscomid & "' AND Dlvno = '" & Trim(Tbdlvyarnno.Text) & "'")
-            If Vdeliyarndet.Rows.Count > 0 Then
-                TbNwkgpc.Text = Vdeliyarndet.Rows(0)("Nwkgpc")
-                TbNofc.Text = Vdeliyarndet.Rows(0)("Nofc")
-                Tbwgtkg.Text = Convert.ToDouble(Vdeliyarndet.Rows(0)("WgtKG")).ToString("N2")
-                Tbqtyroll.Text = Format(CLng(Tbwgtkg.Text / Kgproll), "###,##0")
-                If Tbqtyroll.Text = 0 Then
-                    Tbqtyroll.Text = 1
-                End If
-                Tbwgtlbs.Text = Convert.ToDouble(Tbwgtkg.Text * 2.2046).ToString("N2")
-                ShowRollOrder.Text = Tstbsumroll.Text
-                ShowKgOrder.Text = Tstbsumkg.Text
-                QtyrollStore.Text = Format(CLng(Tbwgtkg.Text / Kgproll), "###,##0")
-                If QtyrollStore.Text = 0 Then
-                    QtyrollStore.Text = 1
-                End If
-                WgtKgStore.Text = Convert.ToDouble(Tbsumdlvwgtkg.Text).ToString("N2")
-                QtyrollStore.Text = Format(CLng(WgtKgStore.Text / Kgproll), "###,##0")
-            End If
-        Else
-
-            If Tbaddedit.Text = "แก้ไข" AndAlso Dgvmas.RowCount <= 0 Then
-                Exit Sub
-            End If
-            QtyrollStore.Text = Format(CLng(Tbkg.Text / Kgproll), "###,##0")
-            WgtKgStore.Text = Convert.ToDouble(Tbkg.Text).ToString("N2")
         End If
     End Sub
     Private Sub Btdadd_Click(sender As Object, e As EventArgs) Handles Btdadd.Click
@@ -734,7 +631,199 @@ Public Class Formknittingform
             e.Cancel = True
         End If
     End Sub
+    Private Sub OrderDyed_Click(sender As Object, e As EventArgs) Handles OrderDyed.Click
+        CloseMaster()
+        Btdcancel_Click(sender, e)
+        Createnew()
+        Tbdlvyarnno.Text = Trim(YanList.CurrentRow.Cells("DlvnoDyed").Value)
+        Bindmasterdlv()
+        If Dgvyarn.RowCount > 0 Then
+            Dgvyarn.Rows(0).Selected = False
+        End If
+        Btfinddlvno.Enabled = False
+        Tbdlvyarnno.Enabled = False
+        TbfactoryName.Text = "GSC"
+        TbfactoryName.Enabled = False
+        TbfactoryID.Text = "10000"
+        TbfactoryID.Enabled = False
+        ToolStrip6.Visible = True
+        Dgvyarn.Visible = True
+        Paneloth.Visible = False
+        Cbfromgsc.Checked = True
+        ButtonX1.Enabled = True
+    End Sub
+    Private Sub YanKeyword_KeyPress(sender As Object, e As KeyPressEventArgs) Handles YanKeyword.KeyPress
+        e.Handled = (Asc(e.KeyChar) = 39)
+    End Sub
+    Private Sub YanKeyword_TextChanged(sender As Object, e As EventArgs) Handles YanKeyword.TextChanged
+        YanSearch_Click(sender, e)
+    End Sub
+    Private Sub YanSearch_Click(sender As Object, e As EventArgs) Handles YanSearch.Click
+        SearchlistYan(Trim(YanKeyword.Text))
+    End Sub
+    Private Sub BtrefreshYan_Click(sender As Object, e As EventArgs) Handles BtrefreshYan.Click
+        BindingYanlist()
+    End Sub
+    Private Sub BindingNavigator1_RefreshItems(sender As Object, e As EventArgs) Handles BindingNavigator1.RefreshItems
+        Tsbwsave.Visible = False
+        Tbknitcomno.Enabled = False
+        If Btmedit.Enabled = True Then
+            Bindmasterknit()
+        End If
+    End Sub
+    Private Sub Tblbs_KeyDown(sender As Object, e As KeyEventArgs) Handles Tblbs.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            If Tblbs.Text = "" Then
+                Tbkg.Text = "0"
+                Exit Sub
+            End If
+            Tbkg.Text = Format(Findkg(Tblbs.Text), "###,###.#0")
+        End If
+    End Sub
+    Private Sub Tblbs_TextChanged(sender As Object, e As EventArgs) Handles Tblbs.LostFocus
+        If Tblbs.Text <> "" Then
+            Tbkg.Text = Format(Findkg(Tblbs.Text), "###,###.#0")
+        Else
+            Tbkg.Text = 0
+        End If
+    End Sub
+    Private Sub Tbkg_KeyDown(sender As Object, e As EventArgs) Handles Tbkg.LostFocus
+        If Tbkg.Text <> "" Then
+            Tblbs.Text = Format(FindRekg(Tbkg.Text), "###,###.#0")
+        Else
+            Tblbs.Text = 0
+        End If
+    End Sub
+    Private Sub Tbkg_TextChanged(sender As Object, e As EventArgs) Handles Tbkg.TextChanged
+        If Tbkg.Text <> "" Then
+            SelectData()
+        End If
+    End Sub
+    Private Sub Listfactory_Click(sender As Object, e As EventArgs) Handles Listfactory.Click
+        Dim Frm As New Formfactorylist
+        Showdiaformcenter(Frm, Me)
+        If Frm.Tbcancel.Text = "C" Then
+            Exit Sub
+        End If
+        TbfactoryID.Text = Frm.Dgvmas.CurrentRow.Cells("factoryID").Value
+        TbfactoryName.Text = Frm.Dgvmas.CurrentRow.Cells("factoryName").Value
+    End Sub
+    Private Sub QtyrollOrder_KeyDown(sender As Object, e As KeyEventArgs) Handles QtyrollOrder.KeyDown
+        If (e.KeyCode = Keys.Enter) Then
+            WgtKgOrder.Focus()
+        End If
+    End Sub
+    Private Sub WgtKgOrder_KeyDown(sender As Object, e As KeyEventArgs) Handles WgtKgOrder.KeyDown
+        If (e.KeyCode = Keys.Enter) Then
+            Tbfinwgt.Focus()
+        End If
+    End Sub
+    Private Sub Tbfinwgt_KeyDown(sender As Object, e As KeyEventArgs) Handles Tbfinwgt.KeyDown
+        If (e.KeyCode = Keys.Enter) Then
+            If Tbdozen.Visible = True Then
+                Tbdozen.Focus()
+            Else
+                Btdadd.Focus()
+            End If
+        End If
+    End Sub
+    Private Sub Tbdozen_KeyDown(sender As Object, e As KeyEventArgs) Handles Tbdozen.KeyDown
+        If (e.KeyCode = Keys.Enter) Then
+            Btdadd.Focus()
+        End If
+    End Sub
 
+
+
+    Private Sub CloseMaster()
+        ButtonX1.Enabled = False
+        BindingNavigator1.Enabled = False
+        Dtprecdate.Enabled = False
+        Dtpknitcomdate.Enabled = False
+        Dgvyarn.Enabled = False
+        Btfinddlvno.Enabled = False
+        GroupPanel2.Visible = False
+        Tblbs.Enabled = False
+        Listfactory.Enabled = False
+        Btfindyarn.Enabled = False
+        TbfactoryID.Text = ""
+        Tbqtyroll.Text = ""
+        Tbwgtkg.Text = ""
+        Tbwgtlbs.Text = ""
+        QtyrollStore.Text = ""
+        WgtKgStore.Text = ""
+        Tbyarnid.Text = ""
+        Tbyarnname.Text = ""
+        Tblbs.Text = ""
+        Tbkg.Text = ""
+    End Sub
+    Private Sub OpenMaster()
+        Listfactory.Enabled = True
+        Btfindyarn.Enabled = True
+        Tblbs.Enabled = True
+        Dtprecdate.Enabled = False
+        Dtpknitcomdate.Enabled = True
+        Dgvyarn.Enabled = True
+        Btfinddlvno.Enabled = True
+    End Sub
+    Private Sub CloseDetiel()
+        GroupPanel2.Visible = False
+        Tbfinwgt.Enabled = False
+        Dgvmas.Enabled = False
+        Btfindfabtypeid.Enabled = False
+        WgtKgOrder.Enabled = False
+        Btdcancel.Enabled = False
+        Btdadd.Enabled = False
+        QtyrollOrder.Enabled = False
+        QtyrollStore.Text = ""
+        WgtKgStore.Text = ""
+    End Sub
+    Private Sub Show_Vdeliyarndet()
+        Dim Kgproll As Double
+        Trollperkg = New DataTable
+        Trollperkg = SQLCommand("SELECT Rate FROM Twgtperkgxp 
+                                WHERE Comid = '" & Gscomid & "'")
+        If Trollperkg.Rows.Count > 0 Then
+            Kgproll = Trollperkg.Rows(0)("Rate")
+        Else
+            Kgproll = 20
+        End If
+        If Cbfromgsc.Checked = True Then
+            If Dgvyarn.RowCount = 0 Then
+                QtyrollStore.Text = 0
+                WgtKgStore.Text = 0
+                Exit Sub
+            End If
+            Vdeliyarndet = New DataTable
+            Vdeliyarndet = SQLCommand("SELECT * FROM VdeliyarnCalculate
+                                WHERE Comid = '" & Gscomid & "' AND Dlvno = '" & Trim(Tbdlvyarnno.Text) & "'")
+            If Vdeliyarndet.Rows.Count > 0 Then
+                TbNwkgpc.Text = Vdeliyarndet.Rows(0)("Nwkgpc")
+                TbNofc.Text = Vdeliyarndet.Rows(0)("Nofc")
+                Tbwgtkg.Text = Convert.ToDouble(Vdeliyarndet.Rows(0)("WgtKG")).ToString("N2")
+                Tbqtyroll.Text = Format(CLng(Tbwgtkg.Text / Kgproll), "###,##0")
+                If Tbqtyroll.Text = 0 Then
+                    Tbqtyroll.Text = 1
+                End If
+                Tbwgtlbs.Text = Convert.ToDouble(Tbwgtkg.Text * 2.2046).ToString("N2")
+                ShowRollOrder.Text = Tstbsumroll.Text
+                ShowKgOrder.Text = Tstbsumkg.Text
+                QtyrollStore.Text = Format(CLng(Tbwgtkg.Text / Kgproll), "###,##0")
+                If QtyrollStore.Text = 0 Then
+                    QtyrollStore.Text = 1
+                End If
+                WgtKgStore.Text = Convert.ToDouble(Tbsumdlvwgtkg.Text).ToString("N2")
+                QtyrollStore.Text = Format(CLng(WgtKgStore.Text / Kgproll), "###,##0")
+            End If
+        Else
+
+            If Tbaddedit.Text = "แก้ไข" AndAlso Dgvmas.RowCount <= 0 Then
+                Exit Sub
+            End If
+            QtyrollStore.Text = Format(CLng(Tbkg.Text / Kgproll), "###,##0")
+            WgtKgStore.Text = Convert.ToDouble(Tbkg.Text).ToString("N2")
+        End If
+    End Sub
     Private Sub YanListFilter()
 
         FTYanlist = New DataTable
@@ -752,7 +841,6 @@ Public Class Formknittingform
 
         SendYan.DataSource = SendYanlist
     End Sub
-
     Private Sub YanCutSend()
         For FYan = 0 To FYanList.RowCount - 1
             For SYan = 0 To SendYan.Rows.Count - 1
@@ -770,7 +858,6 @@ Checkloop:
             Next
         Next
     End Sub
-
     Private Sub Retdocprefix()
         Dim Tdocpre = New DataTable
         Tdocpre = SQLCommand("SELECT Docid,Prefix FROM Tdocprexp WHERE Comid = '" & Gscomid & "' AND 
@@ -796,8 +883,9 @@ Checkloop:
     Private Sub BindingYanlist()
         TYanlist = New DataTable
         TYanlist = SQLCommand($"SELECT Tdeliyarndetxp.Comid,Tdeliyarndetxp.Dlvno,Tdeliyarndetxp.Ord,
-                                Tdeliyarndetxp.Yarnid,Tdeliyarndetxp.Lotno,Tdeliyarndetxp.Nwkgpc,
-                                Tdeliyarndetxp.Nwppc,Tdeliyarndetxp.Gwkgpc,Tdeliyarndetxp.Gwppc,
+                                Tdeliyarndetxp.Yarnid,Tdeliyarndetxp.Lotno,
+                                Tdeliyarndetxp.Nwppc,Tdeliyarndetxp.Nwkgpc,
+                                Tdeliyarndetxp.Gwppc,Tdeliyarndetxp.Gwkgpc,
                                 Tdeliyarndetxp.Nofc,Tdeliyarndetxp.Updusr,Tdeliyarndetxp.Uptype,
                                 Tdeliyarndetxp.Uptime,Vdeliyarnmas.Knitdesc
                                 FROM Tdeliyarndetxp LEFT OUTER JOIN Vdeliyarnmas
@@ -807,6 +895,22 @@ Checkloop:
         YanListFilter()
         YanListSend()
         YanCutSend()
+    End Sub
+    Private Sub BindingBYanlist()
+        TBYanlist = New DataTable
+        TBYanlist = SQLCommand($"SELECT Tdeliyarndetxp.Comid,Tdeliyarndetxp.Dlvno,Tdeliyarndetxp.Ord,
+                                Tdeliyarndetxp.Yarnid,Tdeliyarndetxp.Lotno,
+                                Tdeliyarndetxp.Nwppc,Tdeliyarndetxp.Nwkgpc,
+                                Tdeliyarndetxp.Gwppc,Tdeliyarndetxp.Gwkgpc,
+                                Tdeliyarndetxp.Nofc,Tdeliyarndetxp.Updusr,Tdeliyarndetxp.Uptype,
+                                Tdeliyarndetxp.Uptime,Vdeliyarnmas.Knitdesc
+                                FROM Tdeliyarndetxp LEFT OUTER JOIN Vdeliyarnmas
+                                ON Tdeliyarndetxp.Dlvno = Vdeliyarnmas.Dlvno
+                                WHERE Tdeliyarndetxp.Comid = '{Gscomid}'")
+        BYanList.DataSource = TBYanlist
+        'BYanListFilter()
+        'BYanListSend()
+        'BYanCutSend()
     End Sub
     Private Sub Bindmasterknit()
         Tmasterknit = New DataTable
@@ -1021,6 +1125,9 @@ Checkloop:
         ProgressBarX1.Value = 0
     End Sub
     Private Sub UpddetailsOther(Etype As String)
+        'MsgBox(Trim(Tbyarnid.Text))
+        'MsgBox(CDbl(Tstbsumkg.Text))
+        'MsgBox(Trim(Tbyarnid.Text) - CDbl(Tstbsumkg.Text))
         SQLCommand($"INSERT INTO Tdeliyarndetxp(Comid,Dlvno,Ord,Yarnid,Lotno,Nwkgpc,Nwppc,Gwkgpc,Gwppc,Nofc,Updusr,Uptype,Uptime)
                         VALUES ('{Gscomid}','{Trim(Tbdlvyarnno.Text)}','1','{Trim(Tbyarnid.Text)}','-','{Trim(Tbkg.Text)}','{Trim(Tblbs.Text)}','0','0','1','10001','{Etype}','{Formatdatesave(Now)}')")
     End Sub
@@ -1052,49 +1159,6 @@ Checkloop:
         FillGrid()
         ShowRecordDetail()
     End Sub
-    Private Function Validmas() As Boolean
-        Dim Valid As Boolean = False
-        If Tbdlvyarnno.Text <> "" And Tbknitcomno.Text <> "" And TbfactoryName.Text <> "" Then
-            Valid = True
-        End If
-        Return Valid
-    End Function
-    Private Function Validdet() As Boolean
-        Dim Valid As Boolean = False
-        If Dgvmas.RowCount > 0 Then
-            Valid = True
-        End If
-        Return Valid
-    End Function
-    Private Function Validinput() As Boolean
-        Dim Valid As Boolean = False
-        If Tbclothid.Text <> "" And Tbclothno.Text <> "" And Tbtypename.Text <> "" And Tbfinwidth.Text <> "" Then
-            Valid = True
-        End If
-        Return Valid
-    End Function
-    Private Function Validnumber() As Boolean
-        Dim Valid As Boolean = False
-        If CLng(Tbqtyroll.Text) > 0 And CDbl(Tbwgtkg.Text) > 0 Then
-            Valid = True
-        End If
-        Return Valid
-    End Function
-    Private Function Chkdupyarnidingrid() As Boolean
-        Dim Dup As Boolean = False
-        If Dgvmas.RowCount = 0 Then
-            Dup = False
-        Else
-            Dim I As Integer
-            For I = 0 To Dgvmas.RowCount - 1
-                If Trim(Tbclothid.Text) = Trim(Dgvmas.Rows(I).Cells("Mclothid").Value) Then
-                    Dup = True
-                    Exit For
-                End If
-            Next
-        End If
-        Return Dup
-    End Function
     Private Sub Sumdlvyarn()
         Dim Sumnwkg, Sumgwkg, Sumwgtkg As Double
         Dim Sumctn As Long
@@ -1159,37 +1223,6 @@ Checkloop:
         ProgressBarX1.Text = "Ready"
         ProgressBarX1.Value = 0
     End Sub
-    Private Function Genid() As String
-        Dim Genbill As New DataTable
-        Dim Sautoid, Tmpyear, Tmpmonth, Tmpday, Tmpsearch As String
-        Tmpyear = Now.Year - 2000
-        If Now.Month < 10 Then
-            Tmpmonth = "0" & Now.Month
-        Else
-            Tmpmonth = Now.Month
-        End If
-        If Now.Day < 10 Then
-            Tmpday = "0" & Now.Day
-        Else
-            Tmpday = Now.Day
-        End If
-        Tmpsearch = Tmpyear & Tmpmonth
-        Sautoid = ""
-        Genbill = SQLCommand("SELECT ISNULL(MAX(CAST(Lvalue as BIGINT)), 0) + 1 as Autoid FROM Tdocprexp 
-                                WHERE LEFT(Lvalue,4) = '" & Tmpsearch & "' AND  Comid = '" & Gscomid & "' 
-                                AND Docid = '" & Trim(Tstbdocpreid.Text) & "' AND Prefix = '" & Trim(Tstbdocpre.Text) & "'")
-        If Genbill.Rows.Count > 0 Then
-            Sautoid = Genbill.Rows(0)("Autoid")
-        Else
-            Sautoid = "1"
-        End If
-        If Sautoid = "1" Then
-            Sautoid = Tmpsearch & "00001"
-        Else
-            Sautoid = Sautoid
-        End If
-        Return Sautoid
-    End Function
     Private Sub Clrdgrid()
         Dgvmas.AutoGenerateColumns = False
         Dgvmas.DataSource = Nothing
@@ -1246,14 +1279,6 @@ Checkloop:
             Btmreports.Visible = False
         End If
     End Sub
-    Private Function Checkfillbutton() As Boolean
-        If Pagesize = 0 Then
-            Informmessage("Set the Page Size, And Then click the ""Fill Grid"" button!")
-            Checkfillbutton = False
-        Else
-            Checkfillbutton = True
-        End If
-    End Function
     Private Sub Befirst()
         Try
             If Not Checkfillbutton() Then Return
@@ -1344,54 +1369,8 @@ Checkloop:
         Recno = 0
         LoadPage()
     End Sub
-
     Private Sub DisplayPageInfo()
         Tbpage.Text = "หน้า " & Currentpage.ToString & "/" & Pagecount.ToString
-    End Sub
-
-    Private Sub OrderDyed_Click(sender As Object, e As EventArgs) Handles OrderDyed.Click
-        CloseMaster()
-        Btdcancel_Click(sender, e)
-        Createnew()
-        Tbdlvyarnno.Text = Trim(YanList.CurrentRow.Cells("DlvnoDyed").Value)
-        Bindmasterdlv()
-        If Dgvyarn.RowCount > 0 Then
-            Dgvyarn.Rows(0).Selected = False
-        End If
-        Btfinddlvno.Enabled = False
-        Tbdlvyarnno.Enabled = False
-        TbfactoryName.Text = "GSC"
-        TbfactoryName.Enabled = False
-        TbfactoryID.Text = "10000"
-        TbfactoryID.Enabled = False
-        ToolStrip6.Visible = True
-        Dgvyarn.Visible = True
-        Paneloth.Visible = False
-        Cbfromgsc.Checked = True
-        ButtonX1.Enabled = True
-    End Sub
-
-    Private Sub YanKeyword_KeyPress(sender As Object, e As KeyPressEventArgs) Handles YanKeyword.KeyPress
-        e.Handled = (Asc(e.KeyChar) = 39)
-    End Sub
-    Private Sub YanKeyword_TextChanged(sender As Object, e As EventArgs) Handles YanKeyword.TextChanged
-        YanSearch_Click(sender, e)
-    End Sub
-
-    Private Sub YanSearch_Click(sender As Object, e As EventArgs) Handles YanSearch.Click
-        SearchlistYan(Trim(YanKeyword.Text))
-    End Sub
-
-    Private Sub BtrefreshYan_Click(sender As Object, e As EventArgs) Handles BtrefreshYan.Click
-        BindingYanlist()
-    End Sub
-
-    Private Sub BindingNavigator1_RefreshItems(sender As Object, e As EventArgs) Handles BindingNavigator1.RefreshItems
-        Tsbwsave.Visible = False
-        Tbknitcomno.Enabled = False
-        If Btmedit.Enabled = True Then
-            Bindmasterknit()
-        End If
     End Sub
     Private Sub ShowRecordDetail()
         Tbrecord.Text = "แสดง " & (Dgvlist.RowCount) & " รายการ จาก " & Tlist.Rows.Count & " รายการ"
@@ -1418,51 +1397,6 @@ Checkloop:
         Enabledbutton()
         Dgvmas.Enabled = True
     End Sub
-    Private Sub Tblbs_KeyDown(sender As Object, e As KeyEventArgs) Handles Tblbs.KeyDown
-        If e.KeyCode = Keys.Enter Then
-            If Tblbs.Text = "" Then
-                Tbkg.Text = "0"
-                Exit Sub
-            End If
-            Tbkg.Text = Format(Findkg(Tblbs.Text), "###,###.#0")
-        End If
-    End Sub
-
-    'Private Sub Tblbs_LostFocus(sender As Object, e As EventArgs) Handles Tblbs.LostFocus
-
-    'End Sub
-
-    Private Sub Tblbs_TextChanged(sender As Object, e As EventArgs) Handles Tblbs.LostFocus
-        If Tblbs.Text <> "" Then
-            Tbkg.Text = Format(Findkg(Tblbs.Text), "###,###.#0")
-        Else
-            Tbkg.Text = 0
-        End If
-    End Sub
-    Private Sub Tbkg_KeyDown(sender As Object, e As EventArgs) Handles Tbkg.LostFocus
-        If Tbkg.Text <> "" Then
-            Tblbs.Text = Format(FindRekg(Tbkg.Text), "###,###.#0")
-        Else
-            Tblbs.Text = 0
-        End If
-    End Sub
-
-    Private Sub Tbkg_TextChanged(sender As Object, e As EventArgs) Handles Tbkg.TextChanged
-        If Tbkg.Text <> "" Then
-            SelectData()
-        End If
-    End Sub
-
-    Private Sub Listfactory_Click(sender As Object, e As EventArgs) Handles Listfactory.Click
-        Dim Frm As New Formfactorylist
-        Showdiaformcenter(Frm, Me)
-        If Frm.Tbcancel.Text = "C" Then
-            Exit Sub
-        End If
-        TbfactoryID.Text = Frm.Dgvmas.CurrentRow.Cells("factoryID").Value
-        TbfactoryName.Text = Frm.Dgvmas.CurrentRow.Cells("factoryName").Value
-    End Sub
-
     Private Sub Enabledbutton()
         Btdedit.Enabled = True
         Btddel.Enabled = True
@@ -1471,7 +1405,26 @@ Checkloop:
         Btdbadd.Enabled = True
     End Sub
 
+    Private Sub Tbdlvyarnno_TextChanged(sender As Object, e As EventArgs) Handles Tbdlvyarnno.TextChanged
 
+    End Sub
+
+    Private Sub NewBtn()
+        Btfindfabtypeid.Enabled = True
+        Dtpknitcomdate.Enabled = True
+        QtyrollOrder.Enabled = True
+        Btfinddlvno.Enabled = True
+        Dtprecdate.Enabled = True
+        WgtKgOrder.Enabled = True
+        Btdcancel.Enabled = True
+        Tbfinwgt.Enabled = True
+        Dgvyarn.Enabled = True
+        Btdadd.Enabled = True
+        Dgvmas.Enabled = True
+        GroupPanel2.Visible = True
+        QtyrollStore.Text = ""
+        WgtKgStore.Text = ""
+    End Sub
     Private Sub Mainbuttoncancel()
         Btmnew.Enabled = True
         Btmedit.Enabled = False
@@ -1513,7 +1466,6 @@ Checkloop:
         QtyrollOrder.Text = ""
         WgtKgOrder.Text = ""
     End Sub
-
     Private Sub ShowText()
         QtyrollStore.Text = (Tbqtyroll.Text - ShowRollOrder.Text)
         WgtKgStore.Text = Convert.ToDouble(Tbwgtkg.Text - ShowKgOrder.Text).ToString("N2")
@@ -1525,30 +1477,6 @@ Checkloop:
         Tbfinwgt.Text = "-"
         Show_Vdeliyarndet()
     End Sub
-    Private Sub QtyrollOrder_KeyDown(sender As Object, e As KeyEventArgs) Handles QtyrollOrder.KeyDown
-        If (e.KeyCode = Keys.Enter) Then
-            WgtKgOrder.Focus()
-        End If
-    End Sub
-    Private Sub WgtKgOrder_KeyDown(sender As Object, e As KeyEventArgs) Handles WgtKgOrder.KeyDown
-        If (e.KeyCode = Keys.Enter) Then
-            Tbfinwgt.Focus()
-        End If
-    End Sub
-    Private Sub Tbfinwgt_KeyDown(sender As Object, e As KeyEventArgs) Handles Tbfinwgt.KeyDown
-        If (e.KeyCode = Keys.Enter) Then
-            If Tbdozen.Visible = True Then
-                Tbdozen.Focus()
-            Else
-                Btdadd.Focus()
-            End If
-        End If
-    End Sub
-    Private Sub Tbdozen_KeyDown(sender As Object, e As KeyEventArgs) Handles Tbdozen.KeyDown
-        If (e.KeyCode = Keys.Enter) Then
-            Btdadd.Focus()
-        End If
-    End Sub
     Private Sub Createnew()
         Clrdgrid()
         Clrtxtbox()
@@ -1559,6 +1487,8 @@ Checkloop:
         Tbremark.Enabled = True
         Dgvmas.Enabled = True
     End Sub
+
+
     Private Function Findkg(Tpound As String) As Double
         Dim Tkg As Double = 0.0
         If Tpound = "" Then
@@ -1568,7 +1498,6 @@ Checkloop:
         End If
         Return Tkg
     End Function
-
     Private Function FindRekg(Tbkg As String) As Double
         Dim Tpound As Double = 0.0
         If Tbkg = "" Then
@@ -1577,5 +1506,87 @@ Checkloop:
             Tpound = CDbl(Tbkg) / 0.453592
         End If
         Return Tpound
+    End Function
+    Private Function Chkdupyarnidingrid() As Boolean
+        Dim Dup As Boolean = False
+        If Dgvmas.RowCount = 0 Then
+            Dup = False
+        Else
+            Dim I As Integer
+            For I = 0 To Dgvmas.RowCount - 1
+                If Trim(Tbclothid.Text) = Trim(Dgvmas.Rows(I).Cells("Mclothid").Value) Then
+                    Dup = True
+                    Exit For
+                End If
+            Next
+        End If
+        Return Dup
+    End Function
+    Private Function Checkfillbutton() As Boolean
+        If Pagesize = 0 Then
+            Informmessage("Set the Page Size, And Then click the ""Fill Grid"" button!")
+            Checkfillbutton = False
+        Else
+            Checkfillbutton = True
+        End If
+    End Function
+    Private Function Validnumber() As Boolean
+        Dim Valid As Boolean = False
+        If CLng(Tbqtyroll.Text) > 0 And CDbl(Tbwgtkg.Text) > 0 Then
+            Valid = True
+        End If
+        Return Valid
+    End Function
+    Private Function Validinput() As Boolean
+        Dim Valid As Boolean = False
+        If Tbclothid.Text <> "" And Tbclothno.Text <> "" And Tbtypename.Text <> "" And Tbfinwidth.Text <> "" Then
+            Valid = True
+        End If
+        Return Valid
+    End Function
+    Private Function Validmas() As Boolean
+        Dim Valid As Boolean = False
+        If Tbdlvyarnno.Text <> "" And Tbknitcomno.Text <> "" And TbfactoryName.Text <> "" Then
+            Valid = True
+        End If
+        Return Valid
+    End Function
+    Private Function Validdet() As Boolean
+        Dim Valid As Boolean = False
+        If Dgvmas.RowCount > 0 Then
+            Valid = True
+        End If
+        Return Valid
+    End Function
+    Private Function Genid() As String
+        Dim Genbill As New DataTable
+        Dim Sautoid, Tmpyear, Tmpmonth, Tmpday, Tmpsearch As String
+        Tmpyear = Now.Year - 2000
+        If Now.Month < 10 Then
+            Tmpmonth = "0" & Now.Month
+        Else
+            Tmpmonth = Now.Month
+        End If
+        If Now.Day < 10 Then
+            Tmpday = "0" & Now.Day
+        Else
+            Tmpday = Now.Day
+        End If
+        Tmpsearch = Tmpyear & Tmpmonth
+        Sautoid = ""
+        Genbill = SQLCommand("SELECT ISNULL(MAX(CAST(Lvalue as BIGINT)), 0) + 1 as Autoid FROM Tdocprexp 
+                                WHERE LEFT(Lvalue,4) = '" & Tmpsearch & "' AND  Comid = '" & Gscomid & "' 
+                                AND Docid = '" & Trim(Tstbdocpreid.Text) & "' AND Prefix = '" & Trim(Tstbdocpre.Text) & "'")
+        If Genbill.Rows.Count > 0 Then
+            Sautoid = Genbill.Rows(0)("Autoid")
+        Else
+            Sautoid = "1"
+        End If
+        If Sautoid = "1" Then
+            Sautoid = Tmpsearch & "00001"
+        Else
+            Sautoid = Sautoid
+        End If
+        Return Sautoid
     End Function
 End Class
