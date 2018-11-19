@@ -195,11 +195,11 @@ Public Class Formknittingform
             Rds.Value = TdetailsdlvRds
         Else
             Dim Tmpmasdlv As New DataTable
-            Tmpmasdlv = SQLCommand("SELECT '' AS Custname,dbo.Tknittcomxp.yarnid,dbo.Tyarnxp.Yarndesc, '' AS Lotno,0 as Nwkgpc,0 as Nwppc,0 as Gwkgpc,
+            Tmpmasdlv = SQLCommand("SELECT '' AS Custname,dbo.Tknittcomxp.Knitcomno,dbo.Tknittcomxp.yarnid,dbo.Tyarnxp.Yarndesc, '' AS Lotno,0 as Nwkgpc,0 as Nwppc,0 as Gwkgpc,
                                     0 AS Gwppc,0 AS Nofc,'' AS Sremark, dbo.Tknittcomxp.Dlvno,dbo.Tknittcomxp.Dlvlbs, dbo.Tknittcomxp.Dlvkg
                                     FROM dbo.Tknittcomxp LEFT OUTER JOIN
                                     dbo.Tyarnxp ON dbo.Tknittcomxp.Yarnid = dbo.Tyarnxp.Yarnid
-                                    WHERE dbo.Tknittcomxp.Dlvno = '" & Trim(Tbdlvyarnno.Text) & "'")
+                                    WHERE dbo.Tknittcomxp.Dlvno = '" & Trim(Tbdlvyarnno.Text) & "' AND dbo.Tknittcomxp.Knitcomno = '" & Trim(Tbknitcomno.Text) & "' ")
             Rds.Value = Tmpmasdlv
         End If
         Frm.ReportViewer1.LocalReport.DataSources.Add(Rds)
