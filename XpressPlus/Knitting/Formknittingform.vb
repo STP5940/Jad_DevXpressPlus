@@ -44,7 +44,6 @@ Public Class Formknittingform
         BindingYanlist()
         BindingBYanlist()
         For i = 0 To YanList.RowCount - 1
-            YanList.Rows(i).Cells("balansend").Value = Format(FindRekg(BindingNetKG($"{YanList.Rows(i).Cells("DlvnoDyed").Value}")), "###,##0.#0")
             YanList.Rows(i).Cells("balanhave").Value = Format(BindingNitSend($"{YanList.Rows(i).Cells("DlvnoDyed").Value}") - FindRekg(BindingNetKG($"{YanList.Rows(i).Cells("DlvnoDyed").Value}")), "###,###.#0")
         Next
         Bindinglist()
@@ -109,8 +108,8 @@ Public Class Formknittingform
             Mainbuttoncancel()
         End If
         Btmcancel_Click(sender, e)
+        'BindingYanlist()
         For i = 0 To YanList.RowCount - 1
-            YanList.Rows(i).Cells("balansend").Value = Format(FindRekg(BindingNetKG($"{YanList.Rows(i).Cells("DlvnoDyed").Value}")), "###,##0.#0")
             YanList.Rows(i).Cells("balanhave").Value = Format(BindingNitSend($"{YanList.Rows(i).Cells("DlvnoDyed").Value}") - FindRekg(BindingNetKG($"{YanList.Rows(i).Cells("DlvnoDyed").Value}")), "###,###.#0")
         Next
         Bindinglist()
@@ -169,7 +168,6 @@ Public Class Formknittingform
         Mainbuttoncancel()
         Btmcancel_Click(sender, e)
         For i = 0 To YanList.RowCount - 1
-            YanList.Rows(i).Cells("balansend").Value = Format(FindRekg(BindingNetKG($"{YanList.Rows(i).Cells("DlvnoDyed").Value}")), "###,##0.#0")
             YanList.Rows(i).Cells("balanhave").Value = Format(BindingNitSend($"{YanList.Rows(i).Cells("DlvnoDyed").Value}") - FindRekg(BindingNetKG($"{YanList.Rows(i).Cells("DlvnoDyed").Value}")), "###,###.#0")
         Next
         Bindinglist()
@@ -251,7 +249,6 @@ Public Class Formknittingform
         Mainbuttoncancel()
         TabControl1.SelectedTabIndex = 0
         For i = 0 To YanList.RowCount - 1
-            YanList.Rows(i).Cells("balansend").Value = Format(FindRekg(BindingNetKG($"{YanList.Rows(i).Cells("DlvnoDyed").Value}")), "###,##0.#0")
             YanList.Rows(i).Cells("balanhave").Value = Format(BindingNitSend($"{YanList.Rows(i).Cells("DlvnoDyed").Value}") - FindRekg(BindingNetKG($"{YanList.Rows(i).Cells("DlvnoDyed").Value}")), "###,###.#0")
         Next
         Bindinglist()
@@ -706,7 +703,6 @@ Public Class Formknittingform
     Private Sub BtrefreshYan_Click(sender As Object, e As EventArgs) Handles BtrefreshYan.Click
         BindingYanlist()
         For i = 0 To YanList.RowCount - 1
-            YanList.Rows(i).Cells("balansend").Value = Format(FindRekg(BindingNetKG($"{YanList.Rows(i).Cells("DlvnoDyed").Value}")), "###,##0.#0")
             YanList.Rows(i).Cells("balanhave").Value = Format(BindingNitSend($"{YanList.Rows(i).Cells("DlvnoDyed").Value}") - FindRekg(BindingNetKG($"{YanList.Rows(i).Cells("DlvnoDyed").Value}")), "###,###.#0")
         Next
         Bindinglist()
@@ -931,11 +927,10 @@ Checkloop:
         TYanlist = New DataTable
         TYanlist = SQLCommand($"SELECT Tdeliyarndetxp.Comid,Tdeliyarndetxp.Dlvno,Tdeliyarndetxp.Ord,
                                 Tdeliyarndetxp.Yarnid,Tdeliyarndetxp.Lotno,
-                                Tdeliyarndetxp.Nwppc*Tdeliyarndetxp.Nofc AS Nwppc,
-                                Tdeliyarndetxp.Nwkgpc*Tdeliyarndetxp.Nofc AS Nwkgpc,
+                                Tdeliyarndetxp.Nwppc,Tdeliyarndetxp.Nwkgpc,
                                 Tdeliyarndetxp.Gwppc,Tdeliyarndetxp.Gwkgpc,
                                 Tdeliyarndetxp.Nofc,Tdeliyarndetxp.Updusr,Tdeliyarndetxp.Uptype,
-                                Tdeliyarndetxp.Uptime,Vdeliyarnmas.Knitdesc,'' AS balanhave,'' AS balansend
+                                Tdeliyarndetxp.Uptime,Vdeliyarnmas.Knitdesc,'' AS balanhave
                                 FROM Tdeliyarndetxp LEFT OUTER JOIN Vdeliyarnmas
                                 ON Tdeliyarndetxp.Dlvno = Vdeliyarnmas.Dlvno
                                 WHERE Tdeliyarndetxp.Comid = '{Gscomid}'")
