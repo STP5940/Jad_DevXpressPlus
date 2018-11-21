@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Formknittnolist
+Partial Class FormknittnolistOld
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -30,13 +30,13 @@ Partial Class Formknittnolist
         Me.Status = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Knittbill = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.Btmsearch = New System.Windows.Forms.ToolStripButton()
         Me.Tbkeyword = New System.Windows.Forms.ToolStripTextBox()
         Me.Tbcancel = New System.Windows.Forms.ToolStripTextBox()
         Me.Tbdyedbillno = New System.Windows.Forms.ToolStripTextBox()
         Me.Btcancel = New DevComponents.DotNetBar.ButtonX()
         Me.Btok = New DevComponents.DotNetBar.ButtonX()
         Me.TabItem1 = New DevComponents.DotNetBar.TabItem(Me.components)
-        Me.Btmsearch = New System.Windows.Forms.ToolStripButton()
         CType(Me.TabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabControlPanel1.SuspendLayout()
@@ -56,7 +56,7 @@ Partial Class Formknittnolist
         Me.TabControl1.SelectedTabFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.TabControl1.SelectedTabIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(384, 331)
-        Me.TabControl1.TabIndex = 7
+        Me.TabControl1.TabIndex = 8
         Me.TabControl1.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox
         Me.TabControl1.Tabs.Add(Me.TabItem1)
         Me.TabControl1.Text = "TabControl1"
@@ -130,6 +130,18 @@ Partial Class Formknittnolist
         Me.ToolStrip1.TabIndex = 28
         Me.ToolStrip1.Text = "ToolStrip1"
         '
+        'Btmsearch
+        '
+        Me.Btmsearch.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.Btmsearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Btmsearch.Image = Global.XpressPlus.My.Resources.Resources.Findicon
+        Me.Btmsearch.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.Btmsearch.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.Btmsearch.Name = "Btmsearch"
+        Me.Btmsearch.Size = New System.Drawing.Size(48, 46)
+        Me.Btmsearch.Text = "ค้นหา"
+        Me.Btmsearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        '
         'Tbkeyword
         '
         Me.Tbkeyword.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
@@ -180,27 +192,15 @@ Partial Class Formknittnolist
         Me.TabItem1.Name = "TabItem1"
         Me.TabItem1.Text = "โรงย้อม"
         '
-        'Btmsearch
-        '
-        Me.Btmsearch.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.Btmsearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Btmsearch.Image = Global.XpressPlus.My.Resources.Resources.Findicon
-        Me.Btmsearch.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.Btmsearch.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.Btmsearch.Name = "Btmsearch"
-        Me.Btmsearch.Size = New System.Drawing.Size(48, 46)
-        Me.Btmsearch.Text = "ค้นหา"
-        Me.Btmsearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        '
-        'Formknittnolist
+        'FormknittnolistOld
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(384, 331)
         Me.ControlBox = False
         Me.Controls.Add(Me.TabControl1)
-        Me.Name = "Formknittnolist"
-        Me.Text = "เลขที่บิลผ้าดิบ"
+        Me.Name = "FormknittnolistOld"
+        Me.Text = "FormknittnolistOld"
         CType(Me.TabControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
         Me.TabControlPanel1.ResumeLayout(False)
@@ -215,14 +215,14 @@ Partial Class Formknittnolist
     Friend WithEvents TabControl1 As DevComponents.DotNetBar.TabControl
     Friend WithEvents TabControlPanel1 As DevComponents.DotNetBar.TabControlPanel
     Friend WithEvents Dgvmas As DataGridView
+    Friend WithEvents Status As DataGridViewTextBoxColumn
+    Friend WithEvents Knittbill As DataGridViewTextBoxColumn
     Friend WithEvents ToolStrip1 As ToolStrip
     Friend WithEvents Btmsearch As ToolStripButton
     Friend WithEvents Tbkeyword As ToolStripTextBox
     Friend WithEvents Tbcancel As ToolStripTextBox
+    Friend WithEvents Tbdyedbillno As ToolStripTextBox
     Friend WithEvents Btcancel As DevComponents.DotNetBar.ButtonX
     Friend WithEvents Btok As DevComponents.DotNetBar.ButtonX
     Friend WithEvents TabItem1 As DevComponents.DotNetBar.TabItem
-    Friend WithEvents Tbdyedbillno As ToolStripTextBox
-    Friend WithEvents Status As DataGridViewTextBoxColumn
-    Friend WithEvents Knittbill As DataGridViewTextBoxColumn
 End Class
