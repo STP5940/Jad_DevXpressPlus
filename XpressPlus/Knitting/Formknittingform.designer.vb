@@ -23,27 +23,9 @@ Partial Class Formknittingform
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle26 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle29 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Formknittingform))
         Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -53,7 +35,27 @@ Partial Class Formknittingform
         Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Formknittingform))
+        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle26 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle29 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle30 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle31 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle32 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.Btmclose = New System.Windows.Forms.ToolStripButton()
         Me.Btmfind = New System.Windows.Forms.ToolStripButton()
@@ -77,27 +79,42 @@ Partial Class Formknittingform
         Me.CtmmenuYanList = New DevComponents.DotNetBar.ButtonItem()
         Me.OrderDyed = New DevComponents.DotNetBar.ButtonItem()
         Me.YanList = New System.Windows.Forms.DataGridView()
-        Me.Stat = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ComidYarn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DlvnoDyed = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Ord = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Clothids = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Clothnos = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.VKnitdesc = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NwppcYarn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.GwppcYarn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NwkgpcYarn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.GwkgpcYarn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Nofc = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Updusr = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Uptype = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Uptime = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ToolStrip7 = New System.Windows.Forms.ToolStrip()
         Me.BtrefreshYan = New System.Windows.Forms.ToolStripButton()
         Me.YanSearch = New System.Windows.Forms.ToolStripButton()
         Me.YanKeyword = New System.Windows.Forms.ToolStripTextBox()
         Me.ToolStripLabel5 = New System.Windows.Forms.ToolStripLabel()
         Me.TabItem3 = New DevComponents.DotNetBar.TabItem(Me.components)
+        Me.TabControlPanel2 = New DevComponents.DotNetBar.TabControlPanel()
+        Me.ContextMenuBar1 = New DevComponents.DotNetBar.ContextMenuBar()
+        Me.Ctmmenugrid = New DevComponents.DotNetBar.ButtonItem()
+        Me.Ctmledit = New DevComponents.DotNetBar.ButtonItem()
+        Me.Dgvlist = New System.Windows.Forms.DataGridView()
+        Me.Status = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Comid = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Knitcomdate = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Knitcomno = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Rcdate = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Dlvno = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Knitid = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Knitdesc = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Dremark = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ToolStrip5 = New System.Windows.Forms.ToolStrip()
+        Me.Btfirst = New System.Windows.Forms.ToolStripButton()
+        Me.Btprev = New System.Windows.Forms.ToolStripButton()
+        Me.Tbpage = New System.Windows.Forms.ToolStripTextBox()
+        Me.Btnext = New System.Windows.Forms.ToolStripButton()
+        Me.Btlast = New System.Windows.Forms.ToolStripButton()
+        Me.Tbrecord = New System.Windows.Forms.ToolStripTextBox()
+        Me.ToolStrip4 = New System.Windows.Forms.ToolStrip()
+        Me.Btrefresh = New System.Windows.Forms.ToolStripButton()
+        Me.Btlistfind = New System.Windows.Forms.ToolStripButton()
+        Me.Tstbkeyword = New System.Windows.Forms.ToolStripTextBox()
+        Me.Tscboth = New XpressPlus.ToolStripCheckBox()
+        Me.ToolStripLabel4 = New System.Windows.Forms.ToolStripLabel()
+        Me.Tscbdate = New XpressPlus.ToolStripCheckBox()
+        Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel()
+        Me.TabItem2 = New DevComponents.DotNetBar.TabItem(Me.components)
         Me.TabControlPanel1 = New DevComponents.DotNetBar.TabControlPanel()
         Me.GroupPanel3 = New DevComponents.DotNetBar.Controls.GroupPanel()
         Me.ContextMenuBar2 = New DevComponents.DotNetBar.ContextMenuBar()
@@ -261,36 +278,23 @@ Partial Class Formknittingform
         Me.ToolStripTextBox1 = New System.Windows.Forms.ToolStripTextBox()
         Me.ToolStripLabel6 = New System.Windows.Forms.ToolStripLabel()
         Me.TabItem4 = New DevComponents.DotNetBar.TabItem(Me.components)
-        Me.TabControlPanel2 = New DevComponents.DotNetBar.TabControlPanel()
-        Me.ContextMenuBar1 = New DevComponents.DotNetBar.ContextMenuBar()
-        Me.Ctmmenugrid = New DevComponents.DotNetBar.ButtonItem()
-        Me.Ctmledit = New DevComponents.DotNetBar.ButtonItem()
-        Me.Dgvlist = New System.Windows.Forms.DataGridView()
-        Me.Status = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Comid = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Knitcomdate = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Knitcomno = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Rcdate = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Dlvno = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Knitid = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Knitdesc = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Dremark = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ToolStrip5 = New System.Windows.Forms.ToolStrip()
-        Me.Btfirst = New System.Windows.Forms.ToolStripButton()
-        Me.Btprev = New System.Windows.Forms.ToolStripButton()
-        Me.Tbpage = New System.Windows.Forms.ToolStripTextBox()
-        Me.Btnext = New System.Windows.Forms.ToolStripButton()
-        Me.Btlast = New System.Windows.Forms.ToolStripButton()
-        Me.Tbrecord = New System.Windows.Forms.ToolStripTextBox()
-        Me.ToolStrip4 = New System.Windows.Forms.ToolStrip()
-        Me.Btrefresh = New System.Windows.Forms.ToolStripButton()
-        Me.Btlistfind = New System.Windows.Forms.ToolStripButton()
-        Me.Tstbkeyword = New System.Windows.Forms.ToolStripTextBox()
-        Me.Tscboth = New XpressPlus.ToolStripCheckBox()
-        Me.ToolStripLabel4 = New System.Windows.Forms.ToolStripLabel()
-        Me.Tscbdate = New XpressPlus.ToolStripCheckBox()
-        Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel()
-        Me.TabItem2 = New DevComponents.DotNetBar.TabItem(Me.components)
+        Me.Stat = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ComidYarn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DlvnoDyed = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Ord = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Clothids = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Clothnos = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VKnitdesc = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NwppcYarn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.GwppcYarn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NwkgpcYarn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.GwkgpcYarn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Nofc = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Updusr = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Uptype = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Uptime = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.balansend = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.balanhave = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.TabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
@@ -300,6 +304,11 @@ Partial Class Formknittingform
         CType(Me.ContextMenuBar4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.YanList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip7.SuspendLayout()
+        Me.TabControlPanel2.SuspendLayout()
+        CType(Me.ContextMenuBar1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Dgvlist, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ToolStrip5.SuspendLayout()
+        Me.ToolStrip4.SuspendLayout()
         Me.TabControlPanel1.SuspendLayout()
         Me.GroupPanel3.SuspendLayout()
         CType(Me.ContextMenuBar2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -326,11 +335,6 @@ Partial Class Formknittingform
         CType(Me.BFYanList, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BYanList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip8.SuspendLayout()
-        Me.TabControlPanel2.SuspendLayout()
-        CType(Me.ContextMenuBar1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Dgvlist, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.ToolStrip5.SuspendLayout()
-        Me.ToolStrip4.SuspendLayout()
         Me.SuspendLayout()
         '
         'ToolStrip1
@@ -462,10 +466,10 @@ Partial Class Formknittingform
         '
         Me.TabControl1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TabControl1.CanReorderTabs = True
-        Me.TabControl1.Controls.Add(Me.TabControlPanel1)
-        Me.TabControl1.Controls.Add(Me.TabControlPanel4)
         Me.TabControl1.Controls.Add(Me.TabControlPanel3)
         Me.TabControl1.Controls.Add(Me.TabControlPanel2)
+        Me.TabControl1.Controls.Add(Me.TabControlPanel1)
+        Me.TabControl1.Controls.Add(Me.TabControlPanel4)
         Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabControl1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.TabControl1.ForeColor = System.Drawing.Color.Black
@@ -509,14 +513,14 @@ Partial Class Formknittingform
         '
         Me.SendYan.AllowUserToAddRows = False
         Me.SendYan.AllowUserToDeleteRows = False
-        DataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle21.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        DataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.SendYan.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle21
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.SendYan.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.SendYan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.SendYan.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.SDlvno, Me.OrderSum})
         Me.SendYan.Location = New System.Drawing.Point(747, 600)
@@ -546,14 +550,14 @@ Partial Class Formknittingform
         '
         Me.FYanList.AllowUserToAddRows = False
         Me.FYanList.AllowUserToDeleteRows = False
-        DataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle22.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        DataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.FYanList.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle22
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.FYanList.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.FYanList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.FYanList.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.FDlvno, Me.Netpound})
         Me.FYanList.Location = New System.Drawing.Point(747, 536)
@@ -612,160 +616,24 @@ Partial Class Formknittingform
         '
         Me.YanList.AllowUserToAddRows = False
         Me.YanList.AllowUserToDeleteRows = False
-        DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle23.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        DataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.YanList.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle23
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.YanList.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.YanList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.YanList.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Stat, Me.ComidYarn, Me.DlvnoDyed, Me.Ord, Me.Clothids, Me.Clothnos, Me.VKnitdesc, Me.NwppcYarn, Me.GwppcYarn, Me.NwkgpcYarn, Me.GwkgpcYarn, Me.Nofc, Me.Updusr, Me.Uptype, Me.Uptime})
+        Me.YanList.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Stat, Me.ComidYarn, Me.DlvnoDyed, Me.Ord, Me.Clothids, Me.Clothnos, Me.VKnitdesc, Me.NwppcYarn, Me.GwppcYarn, Me.NwkgpcYarn, Me.GwkgpcYarn, Me.Nofc, Me.Updusr, Me.Uptype, Me.Uptime, Me.balansend, Me.balanhave})
         Me.YanList.Dock = System.Windows.Forms.DockStyle.Fill
         Me.YanList.Location = New System.Drawing.Point(1, 50)
+        Me.YanList.MultiSelect = False
         Me.YanList.Name = "YanList"
         Me.YanList.ReadOnly = True
         Me.YanList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.YanList.Size = New System.Drawing.Size(1006, 603)
         Me.YanList.TabIndex = 75
-        '
-        'Stat
-        '
-        Me.Stat.DataPropertyName = "Stat"
-        Me.Stat.HeaderText = ""
-        Me.Stat.Name = "Stat"
-        Me.Stat.ReadOnly = True
-        Me.Stat.Width = 10
-        '
-        'ComidYarn
-        '
-        Me.ComidYarn.DataPropertyName = "Comid"
-        Me.ComidYarn.HeaderText = "ComidYarn"
-        Me.ComidYarn.Name = "ComidYarn"
-        Me.ComidYarn.ReadOnly = True
-        Me.ComidYarn.Visible = False
-        '
-        'DlvnoDyed
-        '
-        Me.DlvnoDyed.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DlvnoDyed.DataPropertyName = "Dlvno"
-        Me.DlvnoDyed.HeaderText = "เลขที่ใบส่งด้าย"
-        Me.DlvnoDyed.Name = "DlvnoDyed"
-        Me.DlvnoDyed.ReadOnly = True
-        '
-        'Ord
-        '
-        Me.Ord.DataPropertyName = "Ord"
-        Me.Ord.HeaderText = "Ord"
-        Me.Ord.Name = "Ord"
-        Me.Ord.ReadOnly = True
-        Me.Ord.Visible = False
-        '
-        'Clothids
-        '
-        Me.Clothids.DataPropertyName = "Yarnid"
-        Me.Clothids.HeaderText = "Lot ID"
-        Me.Clothids.Name = "Clothids"
-        Me.Clothids.ReadOnly = True
-        Me.Clothids.Visible = False
-        '
-        'Clothnos
-        '
-        Me.Clothnos.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Clothnos.DataPropertyName = "Lotno"
-        Me.Clothnos.HeaderText = "Lot No"
-        Me.Clothnos.Name = "Clothnos"
-        Me.Clothnos.ReadOnly = True
-        '
-        'VKnitdesc
-        '
-        Me.VKnitdesc.DataPropertyName = "Knitdesc"
-        DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.VKnitdesc.DefaultCellStyle = DataGridViewCellStyle24
-        Me.VKnitdesc.HeaderText = "โรงทอ"
-        Me.VKnitdesc.Name = "VKnitdesc"
-        Me.VKnitdesc.ReadOnly = True
-        Me.VKnitdesc.Width = 120
-        '
-        'NwppcYarn
-        '
-        Me.NwppcYarn.DataPropertyName = "Nwppc"
-        DataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle25.Format = "N2"
-        DataGridViewCellStyle25.NullValue = Nothing
-        Me.NwppcYarn.DefaultCellStyle = DataGridViewCellStyle25
-        Me.NwppcYarn.HeaderText = "น้ําหนักสุทธิ(lb)"
-        Me.NwppcYarn.Name = "NwppcYarn"
-        Me.NwppcYarn.ReadOnly = True
-        Me.NwppcYarn.Width = 130
-        '
-        'GwppcYarn
-        '
-        Me.GwppcYarn.DataPropertyName = "Gwppc"
-        DataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle26.Format = "N2"
-        DataGridViewCellStyle26.NullValue = Nothing
-        Me.GwppcYarn.DefaultCellStyle = DataGridViewCellStyle26
-        Me.GwppcYarn.HeaderText = "รวมกล่อง(lb)"
-        Me.GwppcYarn.Name = "GwppcYarn"
-        Me.GwppcYarn.ReadOnly = True
-        Me.GwppcYarn.Width = 120
-        '
-        'NwkgpcYarn
-        '
-        Me.NwkgpcYarn.DataPropertyName = "Nwkgpc"
-        DataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.NwkgpcYarn.DefaultCellStyle = DataGridViewCellStyle27
-        Me.NwkgpcYarn.HeaderText = "น้ําหนักสุทธิ(Kg)"
-        Me.NwkgpcYarn.Name = "NwkgpcYarn"
-        Me.NwkgpcYarn.ReadOnly = True
-        Me.NwkgpcYarn.Width = 130
-        '
-        'GwkgpcYarn
-        '
-        Me.GwkgpcYarn.DataPropertyName = "Gwkgpc"
-        DataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle28.Format = "N2"
-        DataGridViewCellStyle28.NullValue = Nothing
-        Me.GwkgpcYarn.DefaultCellStyle = DataGridViewCellStyle28
-        Me.GwkgpcYarn.HeaderText = "รวมกล่อง(Kg)"
-        Me.GwkgpcYarn.Name = "GwkgpcYarn"
-        Me.GwkgpcYarn.ReadOnly = True
-        Me.GwkgpcYarn.Width = 120
-        '
-        'Nofc
-        '
-        Me.Nofc.DataPropertyName = "Nofc"
-        DataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.Nofc.DefaultCellStyle = DataGridViewCellStyle29
-        Me.Nofc.HeaderText = "จำนวนกล่อง"
-        Me.Nofc.Name = "Nofc"
-        Me.Nofc.ReadOnly = True
-        '
-        'Updusr
-        '
-        Me.Updusr.DataPropertyName = "Updusr"
-        Me.Updusr.HeaderText = "Updusr"
-        Me.Updusr.Name = "Updusr"
-        Me.Updusr.ReadOnly = True
-        Me.Updusr.Visible = False
-        '
-        'Uptype
-        '
-        Me.Uptype.DataPropertyName = "Uptype"
-        Me.Uptype.HeaderText = "Uptype"
-        Me.Uptype.Name = "Uptype"
-        Me.Uptype.ReadOnly = True
-        Me.Uptype.Visible = False
-        '
-        'Uptime
-        '
-        Me.Uptime.DataPropertyName = "Uptime"
-        Me.Uptime.HeaderText = "Uptime"
-        Me.Uptime.Name = "Uptime"
-        Me.Uptime.ReadOnly = True
-        Me.Uptime.Visible = False
         '
         'ToolStrip7
         '
@@ -822,6 +690,309 @@ Partial Class Formknittingform
         Me.TabItem3.AttachedControl = Me.TabControlPanel3
         Me.TabItem3.Name = "TabItem3"
         Me.TabItem3.Text = "เส้นด้ายที่ยังไม่ได้สั่งทอ"
+        '
+        'TabControlPanel2
+        '
+        Me.TabControlPanel2.Controls.Add(Me.ContextMenuBar1)
+        Me.TabControlPanel2.Controls.Add(Me.Dgvlist)
+        Me.TabControlPanel2.Controls.Add(Me.ToolStrip5)
+        Me.TabControlPanel2.Controls.Add(Me.ToolStrip4)
+        Me.TabControlPanel2.DisabledBackColor = System.Drawing.Color.Empty
+        Me.TabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControlPanel2.Location = New System.Drawing.Point(0, 26)
+        Me.TabControlPanel2.Name = "TabControlPanel2"
+        Me.TabControlPanel2.Padding = New System.Windows.Forms.Padding(1)
+        Me.TabControlPanel2.Size = New System.Drawing.Size(1008, 654)
+        Me.TabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
+        Me.TabControlPanel2.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.TabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.TabControlPanel2.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(156, Byte), Integer))
+        Me.TabControlPanel2.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
+            Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
+        Me.TabControlPanel2.Style.GradientAngle = 90
+        Me.TabControlPanel2.TabIndex = 5
+        Me.TabControlPanel2.TabItem = Me.TabItem2
+        '
+        'ContextMenuBar1
+        '
+        Me.ContextMenuBar1.DockSide = DevComponents.DotNetBar.eDockSide.Document
+        Me.ContextMenuBar1.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ContextMenuBar1.IsMaximized = False
+        Me.ContextMenuBar1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.Ctmmenugrid})
+        Me.ContextMenuBar1.Location = New System.Drawing.Point(407, 200)
+        Me.ContextMenuBar1.Name = "ContextMenuBar1"
+        Me.ContextMenuBar1.Size = New System.Drawing.Size(84, 25)
+        Me.ContextMenuBar1.Stretch = True
+        Me.ContextMenuBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2007
+        Me.ContextMenuBar1.TabIndex = 69
+        Me.ContextMenuBar1.TabStop = False
+        '
+        'Ctmmenugrid
+        '
+        Me.Ctmmenugrid.AutoExpandOnClick = True
+        Me.Ctmmenugrid.GlobalName = "bEditPopup"
+        Me.Ctmmenugrid.Name = "Ctmmenugrid"
+        Me.Ctmmenugrid.PopupAnimation = DevComponents.DotNetBar.ePopupAnimation.SystemDefault
+        Me.Ctmmenugrid.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.Ctmledit})
+        Me.Ctmmenugrid.Text = "EditGrid"
+        '
+        'Ctmledit
+        '
+        Me.Ctmledit.BeginGroup = True
+        Me.Ctmledit.Name = "Ctmledit"
+        Me.Ctmledit.Text = "เลือกรายการ"
+        '
+        'Dgvlist
+        '
+        Me.Dgvlist.AllowUserToAddRows = False
+        Me.Dgvlist.AllowUserToDeleteRows = False
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Dgvlist.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle12
+        Me.Dgvlist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Dgvlist.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Status, Me.Comid, Me.Knitcomdate, Me.Knitcomno, Me.Rcdate, Me.Dlvno, Me.Knitid, Me.Knitdesc, Me.Dremark})
+        Me.Dgvlist.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Dgvlist.Location = New System.Drawing.Point(1, 50)
+        Me.Dgvlist.Name = "Dgvlist"
+        Me.Dgvlist.ReadOnly = True
+        Me.Dgvlist.Size = New System.Drawing.Size(1006, 562)
+        Me.Dgvlist.TabIndex = 68
+        '
+        'Status
+        '
+        Me.Status.DataPropertyName = "Stat"
+        Me.Status.HeaderText = ""
+        Me.Status.Name = "Status"
+        Me.Status.ReadOnly = True
+        Me.Status.Width = 20
+        '
+        'Comid
+        '
+        Me.Comid.DataPropertyName = "Comid"
+        Me.Comid.HeaderText = "Comid"
+        Me.Comid.Name = "Comid"
+        Me.Comid.ReadOnly = True
+        Me.Comid.Visible = False
+        '
+        'Knitcomdate
+        '
+        Me.Knitcomdate.DataPropertyName = "Knitcomdate"
+        Me.Knitcomdate.HeaderText = "วันที่"
+        Me.Knitcomdate.Name = "Knitcomdate"
+        Me.Knitcomdate.ReadOnly = True
+        '
+        'Knitcomno
+        '
+        Me.Knitcomno.DataPropertyName = "Knitcomno"
+        Me.Knitcomno.HeaderText = "เลขที่"
+        Me.Knitcomno.Name = "Knitcomno"
+        Me.Knitcomno.ReadOnly = True
+        Me.Knitcomno.Width = 150
+        '
+        'Rcdate
+        '
+        Me.Rcdate.DataPropertyName = "Rcdate"
+        Me.Rcdate.HeaderText = "Rcdate"
+        Me.Rcdate.Name = "Rcdate"
+        Me.Rcdate.ReadOnly = True
+        Me.Rcdate.Visible = False
+        '
+        'Dlvno
+        '
+        Me.Dlvno.DataPropertyName = "Dlvno"
+        Me.Dlvno.HeaderText = "Dlvno"
+        Me.Dlvno.Name = "Dlvno"
+        Me.Dlvno.ReadOnly = True
+        Me.Dlvno.Visible = False
+        '
+        'Knitid
+        '
+        Me.Knitid.DataPropertyName = "Knitid"
+        Me.Knitid.HeaderText = "Knitid"
+        Me.Knitid.Name = "Knitid"
+        Me.Knitid.ReadOnly = True
+        Me.Knitid.Visible = False
+        '
+        'Knitdesc
+        '
+        Me.Knitdesc.DataPropertyName = "Knitdesc"
+        Me.Knitdesc.HeaderText = "โรงทอ"
+        Me.Knitdesc.Name = "Knitdesc"
+        Me.Knitdesc.ReadOnly = True
+        Me.Knitdesc.Width = 250
+        '
+        'Dremark
+        '
+        Me.Dremark.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Dremark.DataPropertyName = "Dremark"
+        Me.Dremark.HeaderText = "หมายเหตุ"
+        Me.Dremark.Name = "Dremark"
+        Me.Dremark.ReadOnly = True
+        '
+        'ToolStrip5
+        '
+        Me.ToolStrip5.BackColor = System.Drawing.Color.Transparent
+        Me.ToolStrip5.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.ToolStrip5.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Btfirst, Me.Btprev, Me.Tbpage, Me.Btnext, Me.Btlast, Me.Tbrecord})
+        Me.ToolStrip5.Location = New System.Drawing.Point(1, 612)
+        Me.ToolStrip5.Name = "ToolStrip5"
+        Me.ToolStrip5.Size = New System.Drawing.Size(1006, 41)
+        Me.ToolStrip5.TabIndex = 67
+        Me.ToolStrip5.Text = "ToolStrip5"
+        '
+        'Btfirst
+        '
+        Me.Btfirst.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
+        Me.Btfirst.Image = Global.XpressPlus.My.Resources.Resources.Firsticon
+        Me.Btfirst.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.Btfirst.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.Btfirst.Name = "Btfirst"
+        Me.Btfirst.Size = New System.Drawing.Size(60, 38)
+        Me.Btfirst.Text = "หน้าแรก"
+        Me.Btfirst.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        '
+        'Btprev
+        '
+        Me.Btprev.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
+        Me.Btprev.Image = Global.XpressPlus.My.Resources.Resources.Lefticon
+        Me.Btprev.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.Btprev.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.Btprev.Name = "Btprev"
+        Me.Btprev.Size = New System.Drawing.Size(61, 38)
+        Me.Btprev.Text = "ก่อนหน้า"
+        Me.Btprev.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        '
+        'Tbpage
+        '
+        Me.Tbpage.Enabled = False
+        Me.Tbpage.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
+        Me.Tbpage.Name = "Tbpage"
+        Me.Tbpage.Size = New System.Drawing.Size(120, 41)
+        Me.Tbpage.Text = "หน้า 0/0"
+        '
+        'Btnext
+        '
+        Me.Btnext.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
+        Me.Btnext.Image = Global.XpressPlus.My.Resources.Resources.Righticon
+        Me.Btnext.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.Btnext.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.Btnext.Name = "Btnext"
+        Me.Btnext.Size = New System.Drawing.Size(44, 38)
+        Me.Btnext.Text = "ถัดไป"
+        Me.Btnext.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        '
+        'Btlast
+        '
+        Me.Btlast.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
+        Me.Btlast.Image = Global.XpressPlus.My.Resources.Resources.Lasticon
+        Me.Btlast.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.Btlast.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.Btlast.Name = "Btlast"
+        Me.Btlast.Size = New System.Drawing.Size(51, 38)
+        Me.Btlast.Text = "สุดท้าย"
+        Me.Btlast.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        '
+        'Tbrecord
+        '
+        Me.Tbrecord.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.Tbrecord.Enabled = False
+        Me.Tbrecord.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
+        Me.Tbrecord.Name = "Tbrecord"
+        Me.Tbrecord.Size = New System.Drawing.Size(200, 41)
+        Me.Tbrecord.Text = "แสดง 0 รายการ จาก 0 รายการ"
+        Me.Tbrecord.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'ToolStrip4
+        '
+        Me.ToolStrip4.BackColor = System.Drawing.Color.Transparent
+        Me.ToolStrip4.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Btrefresh, Me.Btlistfind, Me.Tstbkeyword, Me.Tscboth, Me.ToolStripLabel4, Me.Tscbdate, Me.ToolStripLabel3})
+        Me.ToolStrip4.Location = New System.Drawing.Point(1, 1)
+        Me.ToolStrip4.Name = "ToolStrip4"
+        Me.ToolStrip4.Size = New System.Drawing.Size(1006, 49)
+        Me.ToolStrip4.TabIndex = 66
+        Me.ToolStrip4.Text = "ToolStrip4"
+        '
+        'Btrefresh
+        '
+        Me.Btrefresh.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.Btrefresh.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btrefresh.Image = Global.XpressPlus.My.Resources.Resources.Updated
+        Me.Btrefresh.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.Btrefresh.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.Btrefresh.Name = "Btrefresh"
+        Me.Btrefresh.Size = New System.Drawing.Size(71, 46)
+        Me.Btrefresh.Text = "Refresh"
+        Me.Btrefresh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.Btrefresh.Visible = False
+        '
+        'Btlistfind
+        '
+        Me.Btlistfind.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.Btlistfind.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btlistfind.Image = Global.XpressPlus.My.Resources.Resources.Findicon
+        Me.Btlistfind.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.Btlistfind.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.Btlistfind.Name = "Btlistfind"
+        Me.Btlistfind.Size = New System.Drawing.Size(48, 46)
+        Me.Btlistfind.Text = "ค้นหา"
+        Me.Btlistfind.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        '
+        'Tstbkeyword
+        '
+        Me.Tstbkeyword.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.Tstbkeyword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Tstbkeyword.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Tstbkeyword.Name = "Tstbkeyword"
+        Me.Tstbkeyword.Size = New System.Drawing.Size(120, 49)
+        '
+        'Tscboth
+        '
+        Me.Tscboth.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.Tscboth.BackColor = System.Drawing.Color.Transparent
+        Me.Tscboth.Checked = True
+        Me.Tscboth.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Tscboth.Name = "Tscboth"
+        Me.Tscboth.Size = New System.Drawing.Size(55, 46)
+        Me.Tscboth.Text = "อื่นๆ"
+        Me.Tscboth.ToolStripCheckBoxEnabled = True
+        '
+        'ToolStripLabel4
+        '
+        Me.ToolStripLabel4.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.ToolStripLabel4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripLabel4.Name = "ToolStripLabel4"
+        Me.ToolStripLabel4.Size = New System.Drawing.Size(24, 46)
+        Me.ToolStripLabel4.Text = "ถึง"
+        '
+        'Tscbdate
+        '
+        Me.Tscbdate.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.Tscbdate.BackColor = System.Drawing.Color.Transparent
+        Me.Tscbdate.Checked = False
+        Me.Tscbdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Tscbdate.Name = "Tscbdate"
+        Me.Tscbdate.Size = New System.Drawing.Size(55, 46)
+        Me.Tscbdate.Text = "วันที่"
+        Me.Tscbdate.ToolStripCheckBoxEnabled = True
+        '
+        'ToolStripLabel3
+        '
+        Me.ToolStripLabel3.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.ToolStripLabel3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripLabel3.Name = "ToolStripLabel3"
+        Me.ToolStripLabel3.Size = New System.Drawing.Size(68, 46)
+        Me.ToolStripLabel3.Text = "ค้นหาจาก"
+        '
+        'TabItem2
+        '
+        Me.TabItem2.AttachedControl = Me.TabControlPanel2
+        Me.TabItem2.Name = "TabItem2"
+        Me.TabItem2.Text = "ผ้าในโรงทอ"
         '
         'TabControlPanel1
         '
@@ -933,14 +1104,14 @@ Partial Class Formknittingform
         '
         Me.Dgvmas.AllowUserToAddRows = False
         Me.Dgvmas.AllowUserToDeleteRows = False
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Dgvmas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        DataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Dgvmas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle13
         Me.Dgvmas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Dgvmas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Mcomid, Me.Mknitcomno, Me.Mclothid, Me.Mclothno, Me.Mftypename, Me.Mdozen, Me.Mfinwgt, Me.Mfinwidth, Me.Mqty, Me.Mkg, Me.Havedoz})
         Me.Dgvmas.Dock = System.Windows.Forms.DockStyle.Fill
@@ -996,8 +1167,8 @@ Partial Class Formknittingform
         'Mdozen
         '
         Me.Mdozen.DataPropertyName = "Dozen"
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.Mdozen.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.Mdozen.DefaultCellStyle = DataGridViewCellStyle14
         Me.Mdozen.FillWeight = 17.7665!
         Me.Mdozen.HeaderText = "Dozen"
         Me.Mdozen.Name = "Mdozen"
@@ -1007,8 +1178,8 @@ Partial Class Formknittingform
         '
         Me.Mfinwgt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Mfinwgt.DataPropertyName = "Finwgt"
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.Mfinwgt.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.Mfinwgt.DefaultCellStyle = DataGridViewCellStyle15
         Me.Mfinwgt.FillWeight = 17.7665!
         Me.Mfinwgt.HeaderText = "Finished Weight"
         Me.Mfinwgt.Name = "Mfinwgt"
@@ -1018,8 +1189,8 @@ Partial Class Formknittingform
         '
         Me.Mfinwidth.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Mfinwidth.DataPropertyName = "Fwidth"
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.Mfinwidth.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.Mfinwidth.DefaultCellStyle = DataGridViewCellStyle16
         Me.Mfinwidth.FillWeight = 17.7665!
         Me.Mfinwidth.HeaderText = "Finished Width"
         Me.Mfinwidth.Name = "Mfinwidth"
@@ -1029,8 +1200,8 @@ Partial Class Formknittingform
         'Mqty
         '
         Me.Mqty.DataPropertyName = "Qtyroll"
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.Mqty.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.Mqty.DefaultCellStyle = DataGridViewCellStyle17
         Me.Mqty.FillWeight = 255.8376!
         Me.Mqty.HeaderText = "QTY(Rolls/พับ)"
         Me.Mqty.Name = "Mqty"
@@ -1040,10 +1211,10 @@ Partial Class Formknittingform
         'Mkg
         '
         Me.Mkg.DataPropertyName = "Wgtkg"
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle6.Format = "N2"
-        DataGridViewCellStyle6.NullValue = Nothing
-        Me.Mkg.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle18.Format = "N2"
+        DataGridViewCellStyle18.NullValue = Nothing
+        Me.Mkg.DefaultCellStyle = DataGridViewCellStyle18
         Me.Mkg.FillWeight = 355.33!
         Me.Mkg.HeaderText = "QTY(KG)"
         Me.Mkg.Name = "Mkg"
@@ -1940,14 +2111,14 @@ Partial Class Formknittingform
         '
         Me.Dgvyarn.AllowUserToAddRows = False
         Me.Dgvyarn.AllowUserToDeleteRows = False
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Dgvyarn.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle19.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        DataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Dgvyarn.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle19
         Me.Dgvyarn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Dgvyarn.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Dcomid, Me.Ydlvno, Me.Dyarnid, Me.Dyarnname, Me.Dlot, Me.Nwkgpc, Me.Nwppc, Me.Gwkgpc, Me.Gwppc, Me.Dynopack, Me.WgtKG, Me.Sremark})
         Me.Dgvyarn.Dock = System.Windows.Forms.DockStyle.Top
@@ -2004,10 +2175,10 @@ Partial Class Formknittingform
         'Nwkgpc
         '
         Me.Nwkgpc.DataPropertyName = "Nwkgpc"
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle8.Format = "N2"
-        DataGridViewCellStyle8.NullValue = Nothing
-        Me.Nwkgpc.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle20.Format = "N2"
+        DataGridViewCellStyle20.NullValue = Nothing
+        Me.Nwkgpc.DefaultCellStyle = DataGridViewCellStyle20
         Me.Nwkgpc.HeaderText = "N.WT/CTN(ก.ก.)"
         Me.Nwkgpc.Name = "Nwkgpc"
         Me.Nwkgpc.ReadOnly = True
@@ -2024,10 +2195,10 @@ Partial Class Formknittingform
         'Gwkgpc
         '
         Me.Gwkgpc.DataPropertyName = "Gwkgpc"
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle9.Format = "N2"
-        DataGridViewCellStyle9.NullValue = Nothing
-        Me.Gwkgpc.DefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle21.Format = "N2"
+        DataGridViewCellStyle21.NullValue = Nothing
+        Me.Gwkgpc.DefaultCellStyle = DataGridViewCellStyle21
         Me.Gwkgpc.HeaderText = "GR.WT/CTN(ก.ก.)"
         Me.Gwkgpc.Name = "Gwkgpc"
         Me.Gwkgpc.ReadOnly = True
@@ -2044,8 +2215,8 @@ Partial Class Formknittingform
         'Dynopack
         '
         Me.Dynopack.DataPropertyName = "Nofc"
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.Dynopack.DefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.Dynopack.DefaultCellStyle = DataGridViewCellStyle22
         Me.Dynopack.HeaderText = "จำนวนกล่อง"
         Me.Dynopack.Name = "Dynopack"
         Me.Dynopack.ReadOnly = True
@@ -2054,9 +2225,9 @@ Partial Class Formknittingform
         'WgtKG
         '
         Me.WgtKG.DataPropertyName = "WgtKG"
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle11.Format = "N2"
-        Me.WgtKG.DefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle23.Format = "N2"
+        Me.WgtKG.DefaultCellStyle = DataGridViewCellStyle23
         Me.WgtKG.HeaderText = "จำนวน(ก.ก.)"
         Me.WgtKG.Name = "WgtKG"
         Me.WgtKG.ReadOnly = True
@@ -2537,14 +2708,14 @@ Partial Class Formknittingform
         '
         Me.BSendYan.AllowUserToAddRows = False
         Me.BSendYan.AllowUserToDeleteRows = False
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.BSendYan.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle24.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        DataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.BSendYan.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle24
         Me.BSendYan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.BSendYan.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.BSDlvno, Me.BOrderSum})
         Me.BSendYan.Location = New System.Drawing.Point(747, 600)
@@ -2574,14 +2745,14 @@ Partial Class Formknittingform
         '
         Me.BFYanList.AllowUserToAddRows = False
         Me.BFYanList.AllowUserToDeleteRows = False
-        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        DataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.BFYanList.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle25.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        DataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.BFYanList.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle25
         Me.BFYanList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.BFYanList.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.BFDlvno, Me.BNetpound})
         Me.BFYanList.Location = New System.Drawing.Point(747, 536)
@@ -2611,14 +2782,14 @@ Partial Class Formknittingform
         '
         Me.BYanList.AllowUserToAddRows = False
         Me.BYanList.AllowUserToDeleteRows = False
-        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        DataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.BYanList.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle26.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        DataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.BYanList.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle26
         Me.BYanList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.BYanList.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.BStat, Me.BComidYarn, Me.BDlvnoDyed, Me.BOrd, Me.BClothids, Me.BClothnos, Me.BVKnitdesc, Me.BNwppcYarn, Me.BNwkgpcYarn, Me.BGwppcYarn, Me.BGwkgpcYarn, Me.BNofc, Me.BUpdusr, Me.BUptype, Me.BUptime})
         Me.BYanList.Dock = System.Windows.Forms.DockStyle.Fill
@@ -2680,8 +2851,8 @@ Partial Class Formknittingform
         'BVKnitdesc
         '
         Me.BVKnitdesc.DataPropertyName = "Knitdesc"
-        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.BVKnitdesc.DefaultCellStyle = DataGridViewCellStyle15
+        DataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.BVKnitdesc.DefaultCellStyle = DataGridViewCellStyle27
         Me.BVKnitdesc.HeaderText = "โรงทอ"
         Me.BVKnitdesc.Name = "BVKnitdesc"
         Me.BVKnitdesc.ReadOnly = True
@@ -2690,10 +2861,10 @@ Partial Class Formknittingform
         'BNwppcYarn
         '
         Me.BNwppcYarn.DataPropertyName = "Nwppc"
-        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle16.Format = "N2"
-        DataGridViewCellStyle16.NullValue = Nothing
-        Me.BNwppcYarn.DefaultCellStyle = DataGridViewCellStyle16
+        DataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle28.Format = "N2"
+        DataGridViewCellStyle28.NullValue = Nothing
+        Me.BNwppcYarn.DefaultCellStyle = DataGridViewCellStyle28
         Me.BNwppcYarn.HeaderText = "น้ําหนักสุทธิ(lb)"
         Me.BNwppcYarn.Name = "BNwppcYarn"
         Me.BNwppcYarn.ReadOnly = True
@@ -2702,8 +2873,8 @@ Partial Class Formknittingform
         'BNwkgpcYarn
         '
         Me.BNwkgpcYarn.DataPropertyName = "Nwkgpc"
-        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.BNwkgpcYarn.DefaultCellStyle = DataGridViewCellStyle17
+        DataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.BNwkgpcYarn.DefaultCellStyle = DataGridViewCellStyle29
         Me.BNwkgpcYarn.HeaderText = "น้ําหนักสุทธิ(Kg)"
         Me.BNwkgpcYarn.Name = "BNwkgpcYarn"
         Me.BNwkgpcYarn.ReadOnly = True
@@ -2712,10 +2883,10 @@ Partial Class Formknittingform
         'BGwppcYarn
         '
         Me.BGwppcYarn.DataPropertyName = "Gwppc"
-        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle18.Format = "N2"
-        DataGridViewCellStyle18.NullValue = Nothing
-        Me.BGwppcYarn.DefaultCellStyle = DataGridViewCellStyle18
+        DataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle30.Format = "N2"
+        DataGridViewCellStyle30.NullValue = Nothing
+        Me.BGwppcYarn.DefaultCellStyle = DataGridViewCellStyle30
         Me.BGwppcYarn.HeaderText = "รวมกล่อง(lb)"
         Me.BGwppcYarn.Name = "BGwppcYarn"
         Me.BGwppcYarn.ReadOnly = True
@@ -2724,10 +2895,10 @@ Partial Class Formknittingform
         'BGwkgpcYarn
         '
         Me.BGwkgpcYarn.DataPropertyName = "Gwkgpc"
-        DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle19.Format = "N2"
-        DataGridViewCellStyle19.NullValue = Nothing
-        Me.BGwkgpcYarn.DefaultCellStyle = DataGridViewCellStyle19
+        DataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle31.Format = "N2"
+        DataGridViewCellStyle31.NullValue = Nothing
+        Me.BGwkgpcYarn.DefaultCellStyle = DataGridViewCellStyle31
         Me.BGwkgpcYarn.HeaderText = "รวมกล่อง(Kg)"
         Me.BGwkgpcYarn.Name = "BGwkgpcYarn"
         Me.BGwkgpcYarn.ReadOnly = True
@@ -2736,8 +2907,8 @@ Partial Class Formknittingform
         'BNofc
         '
         Me.BNofc.DataPropertyName = "Nofc"
-        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.BNofc.DefaultCellStyle = DataGridViewCellStyle20
+        DataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.BNofc.DefaultCellStyle = DataGridViewCellStyle32
         Me.BNofc.HeaderText = "จำนวนกล่อง"
         Me.BNofc.Name = "BNofc"
         Me.BNofc.ReadOnly = True
@@ -2823,308 +2994,168 @@ Partial Class Formknittingform
         Me.TabItem4.Text = "รายการคงเหลือ"
         Me.TabItem4.Visible = False
         '
-        'TabControlPanel2
+        'Stat
         '
-        Me.TabControlPanel2.Controls.Add(Me.ContextMenuBar1)
-        Me.TabControlPanel2.Controls.Add(Me.Dgvlist)
-        Me.TabControlPanel2.Controls.Add(Me.ToolStrip5)
-        Me.TabControlPanel2.Controls.Add(Me.ToolStrip4)
-        Me.TabControlPanel2.DisabledBackColor = System.Drawing.Color.Empty
-        Me.TabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControlPanel2.Location = New System.Drawing.Point(0, 26)
-        Me.TabControlPanel2.Name = "TabControlPanel2"
-        Me.TabControlPanel2.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel2.Size = New System.Drawing.Size(1008, 654)
-        Me.TabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
-        Me.TabControlPanel2.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.TabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.TabControlPanel2.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(156, Byte), Integer))
-        Me.TabControlPanel2.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
-            Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
-        Me.TabControlPanel2.Style.GradientAngle = 90
-        Me.TabControlPanel2.TabIndex = 5
-        Me.TabControlPanel2.TabItem = Me.TabItem2
+        Me.Stat.DataPropertyName = "Stat"
+        Me.Stat.HeaderText = ""
+        Me.Stat.Name = "Stat"
+        Me.Stat.ReadOnly = True
+        Me.Stat.Width = 10
         '
-        'ContextMenuBar1
+        'ComidYarn
         '
-        Me.ContextMenuBar1.DockSide = DevComponents.DotNetBar.eDockSide.Document
-        Me.ContextMenuBar1.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ContextMenuBar1.IsMaximized = False
-        Me.ContextMenuBar1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.Ctmmenugrid})
-        Me.ContextMenuBar1.Location = New System.Drawing.Point(407, 200)
-        Me.ContextMenuBar1.Name = "ContextMenuBar1"
-        Me.ContextMenuBar1.Size = New System.Drawing.Size(84, 25)
-        Me.ContextMenuBar1.Stretch = True
-        Me.ContextMenuBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2007
-        Me.ContextMenuBar1.TabIndex = 69
-        Me.ContextMenuBar1.TabStop = False
+        Me.ComidYarn.DataPropertyName = "Comid"
+        Me.ComidYarn.HeaderText = "ComidYarn"
+        Me.ComidYarn.Name = "ComidYarn"
+        Me.ComidYarn.ReadOnly = True
+        Me.ComidYarn.Visible = False
         '
-        'Ctmmenugrid
+        'DlvnoDyed
         '
-        Me.Ctmmenugrid.AutoExpandOnClick = True
-        Me.Ctmmenugrid.GlobalName = "bEditPopup"
-        Me.Ctmmenugrid.Name = "Ctmmenugrid"
-        Me.Ctmmenugrid.PopupAnimation = DevComponents.DotNetBar.ePopupAnimation.SystemDefault
-        Me.Ctmmenugrid.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.Ctmledit})
-        Me.Ctmmenugrid.Text = "EditGrid"
+        Me.DlvnoDyed.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DlvnoDyed.DataPropertyName = "Dlvno"
+        Me.DlvnoDyed.HeaderText = "เลขที่ใบส่งด้าย"
+        Me.DlvnoDyed.Name = "DlvnoDyed"
+        Me.DlvnoDyed.ReadOnly = True
         '
-        'Ctmledit
+        'Ord
         '
-        Me.Ctmledit.BeginGroup = True
-        Me.Ctmledit.Name = "Ctmledit"
-        Me.Ctmledit.Text = "เลือกรายการ"
+        Me.Ord.DataPropertyName = "Ord"
+        Me.Ord.HeaderText = "Ord"
+        Me.Ord.Name = "Ord"
+        Me.Ord.ReadOnly = True
+        Me.Ord.Visible = False
         '
-        'Dgvlist
+        'Clothids
         '
-        Me.Dgvlist.AllowUserToAddRows = False
-        Me.Dgvlist.AllowUserToDeleteRows = False
-        DataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle30.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        DataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Dgvlist.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle30
-        Me.Dgvlist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.Dgvlist.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Status, Me.Comid, Me.Knitcomdate, Me.Knitcomno, Me.Rcdate, Me.Dlvno, Me.Knitid, Me.Knitdesc, Me.Dremark})
-        Me.Dgvlist.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Dgvlist.Location = New System.Drawing.Point(1, 50)
-        Me.Dgvlist.Name = "Dgvlist"
-        Me.Dgvlist.ReadOnly = True
-        Me.Dgvlist.Size = New System.Drawing.Size(1006, 562)
-        Me.Dgvlist.TabIndex = 68
+        Me.Clothids.DataPropertyName = "Yarnid"
+        Me.Clothids.HeaderText = "Lot ID"
+        Me.Clothids.Name = "Clothids"
+        Me.Clothids.ReadOnly = True
+        Me.Clothids.Visible = False
         '
-        'Status
+        'Clothnos
         '
-        Me.Status.DataPropertyName = "Stat"
-        Me.Status.HeaderText = ""
-        Me.Status.Name = "Status"
-        Me.Status.ReadOnly = True
-        Me.Status.Width = 20
+        Me.Clothnos.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Clothnos.DataPropertyName = "Lotno"
+        Me.Clothnos.HeaderText = "Lot No"
+        Me.Clothnos.Name = "Clothnos"
+        Me.Clothnos.ReadOnly = True
         '
-        'Comid
+        'VKnitdesc
         '
-        Me.Comid.DataPropertyName = "Comid"
-        Me.Comid.HeaderText = "Comid"
-        Me.Comid.Name = "Comid"
-        Me.Comid.ReadOnly = True
-        Me.Comid.Visible = False
+        Me.VKnitdesc.DataPropertyName = "Knitdesc"
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.VKnitdesc.DefaultCellStyle = DataGridViewCellStyle4
+        Me.VKnitdesc.HeaderText = "โรงทอ"
+        Me.VKnitdesc.Name = "VKnitdesc"
+        Me.VKnitdesc.ReadOnly = True
+        Me.VKnitdesc.Width = 130
         '
-        'Knitcomdate
+        'NwppcYarn
         '
-        Me.Knitcomdate.DataPropertyName = "Knitcomdate"
-        Me.Knitcomdate.HeaderText = "วันที่"
-        Me.Knitcomdate.Name = "Knitcomdate"
-        Me.Knitcomdate.ReadOnly = True
+        Me.NwppcYarn.DataPropertyName = "Nwppc"
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle5.Format = "N2"
+        DataGridViewCellStyle5.NullValue = Nothing
+        Me.NwppcYarn.DefaultCellStyle = DataGridViewCellStyle5
+        Me.NwppcYarn.HeaderText = "ส่งเส้นด้ายสุทธิ(lb)"
+        Me.NwppcYarn.Name = "NwppcYarn"
+        Me.NwppcYarn.ReadOnly = True
+        Me.NwppcYarn.Width = 140
         '
-        'Knitcomno
+        'GwppcYarn
         '
-        Me.Knitcomno.DataPropertyName = "Knitcomno"
-        Me.Knitcomno.HeaderText = "เลขที่"
-        Me.Knitcomno.Name = "Knitcomno"
-        Me.Knitcomno.ReadOnly = True
-        Me.Knitcomno.Width = 150
+        Me.GwppcYarn.DataPropertyName = "Gwppc"
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle6.Format = "N2"
+        DataGridViewCellStyle6.NullValue = Nothing
+        Me.GwppcYarn.DefaultCellStyle = DataGridViewCellStyle6
+        Me.GwppcYarn.HeaderText = "รวมกล่อง(lb)"
+        Me.GwppcYarn.Name = "GwppcYarn"
+        Me.GwppcYarn.ReadOnly = True
+        Me.GwppcYarn.Width = 120
         '
-        'Rcdate
+        'NwkgpcYarn
         '
-        Me.Rcdate.DataPropertyName = "Rcdate"
-        Me.Rcdate.HeaderText = "Rcdate"
-        Me.Rcdate.Name = "Rcdate"
-        Me.Rcdate.ReadOnly = True
-        Me.Rcdate.Visible = False
+        Me.NwkgpcYarn.DataPropertyName = "Nwkgpc"
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle7.Format = "N2"
+        DataGridViewCellStyle7.NullValue = Nothing
+        Me.NwkgpcYarn.DefaultCellStyle = DataGridViewCellStyle7
+        Me.NwkgpcYarn.HeaderText = "ส่งเส้นด้ายสุทธิ(Kg)"
+        Me.NwkgpcYarn.Name = "NwkgpcYarn"
+        Me.NwkgpcYarn.ReadOnly = True
+        Me.NwkgpcYarn.Width = 145
         '
-        'Dlvno
+        'GwkgpcYarn
         '
-        Me.Dlvno.DataPropertyName = "Dlvno"
-        Me.Dlvno.HeaderText = "Dlvno"
-        Me.Dlvno.Name = "Dlvno"
-        Me.Dlvno.ReadOnly = True
-        Me.Dlvno.Visible = False
+        Me.GwkgpcYarn.DataPropertyName = "Gwkgpc"
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle8.Format = "N2"
+        DataGridViewCellStyle8.NullValue = Nothing
+        Me.GwkgpcYarn.DefaultCellStyle = DataGridViewCellStyle8
+        Me.GwkgpcYarn.HeaderText = "รวมกล่อง(Kg)"
+        Me.GwkgpcYarn.Name = "GwkgpcYarn"
+        Me.GwkgpcYarn.ReadOnly = True
+        Me.GwkgpcYarn.Width = 120
         '
-        'Knitid
+        'Nofc
         '
-        Me.Knitid.DataPropertyName = "Knitid"
-        Me.Knitid.HeaderText = "Knitid"
-        Me.Knitid.Name = "Knitid"
-        Me.Knitid.ReadOnly = True
-        Me.Knitid.Visible = False
+        Me.Nofc.DataPropertyName = "Nofc"
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.Nofc.DefaultCellStyle = DataGridViewCellStyle9
+        Me.Nofc.HeaderText = "จำนวนกล่อง"
+        Me.Nofc.Name = "Nofc"
+        Me.Nofc.ReadOnly = True
         '
-        'Knitdesc
+        'Updusr
         '
-        Me.Knitdesc.DataPropertyName = "Knitdesc"
-        Me.Knitdesc.HeaderText = "โรงทอ"
-        Me.Knitdesc.Name = "Knitdesc"
-        Me.Knitdesc.ReadOnly = True
-        Me.Knitdesc.Width = 250
+        Me.Updusr.DataPropertyName = "Updusr"
+        Me.Updusr.HeaderText = "Updusr"
+        Me.Updusr.Name = "Updusr"
+        Me.Updusr.ReadOnly = True
+        Me.Updusr.Visible = False
         '
-        'Dremark
+        'Uptype
         '
-        Me.Dremark.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Dremark.DataPropertyName = "Dremark"
-        Me.Dremark.HeaderText = "หมายเหตุ"
-        Me.Dremark.Name = "Dremark"
-        Me.Dremark.ReadOnly = True
+        Me.Uptype.DataPropertyName = "Uptype"
+        Me.Uptype.HeaderText = "Uptype"
+        Me.Uptype.Name = "Uptype"
+        Me.Uptype.ReadOnly = True
+        Me.Uptype.Visible = False
         '
-        'ToolStrip5
+        'Uptime
         '
-        Me.ToolStrip5.BackColor = System.Drawing.Color.Transparent
-        Me.ToolStrip5.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.ToolStrip5.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Btfirst, Me.Btprev, Me.Tbpage, Me.Btnext, Me.Btlast, Me.Tbrecord})
-        Me.ToolStrip5.Location = New System.Drawing.Point(1, 612)
-        Me.ToolStrip5.Name = "ToolStrip5"
-        Me.ToolStrip5.Size = New System.Drawing.Size(1006, 41)
-        Me.ToolStrip5.TabIndex = 67
-        Me.ToolStrip5.Text = "ToolStrip5"
+        Me.Uptime.DataPropertyName = "Uptime"
+        Me.Uptime.HeaderText = "Uptime"
+        Me.Uptime.Name = "Uptime"
+        Me.Uptime.ReadOnly = True
+        Me.Uptime.Visible = False
         '
-        'Btfirst
+        'balansend
         '
-        Me.Btfirst.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.Btfirst.Image = Global.XpressPlus.My.Resources.Resources.Firsticon
-        Me.Btfirst.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.Btfirst.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.Btfirst.Name = "Btfirst"
-        Me.Btfirst.Size = New System.Drawing.Size(60, 38)
-        Me.Btfirst.Text = "หน้าแรก"
-        Me.Btfirst.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.balansend.DataPropertyName = "balansend"
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle10.Format = "N2"
+        DataGridViewCellStyle10.NullValue = Nothing
+        Me.balansend.DefaultCellStyle = DataGridViewCellStyle10
+        Me.balansend.HeaderText = "สั่งทอไปแล้ว(lb)"
+        Me.balansend.Name = "balansend"
+        Me.balansend.ReadOnly = True
+        Me.balansend.Width = 130
         '
-        'Btprev
+        'balanhave
         '
-        Me.Btprev.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.Btprev.Image = Global.XpressPlus.My.Resources.Resources.Lefticon
-        Me.Btprev.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.Btprev.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.Btprev.Name = "Btprev"
-        Me.Btprev.Size = New System.Drawing.Size(61, 38)
-        Me.Btprev.Text = "ก่อนหน้า"
-        Me.Btprev.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        '
-        'Tbpage
-        '
-        Me.Tbpage.Enabled = False
-        Me.Tbpage.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.Tbpage.Name = "Tbpage"
-        Me.Tbpage.Size = New System.Drawing.Size(120, 41)
-        Me.Tbpage.Text = "หน้า 0/0"
-        '
-        'Btnext
-        '
-        Me.Btnext.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.Btnext.Image = Global.XpressPlus.My.Resources.Resources.Righticon
-        Me.Btnext.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.Btnext.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.Btnext.Name = "Btnext"
-        Me.Btnext.Size = New System.Drawing.Size(44, 38)
-        Me.Btnext.Text = "ถัดไป"
-        Me.Btnext.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        '
-        'Btlast
-        '
-        Me.Btlast.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.Btlast.Image = Global.XpressPlus.My.Resources.Resources.Lasticon
-        Me.Btlast.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.Btlast.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.Btlast.Name = "Btlast"
-        Me.Btlast.Size = New System.Drawing.Size(51, 38)
-        Me.Btlast.Text = "สุดท้าย"
-        Me.Btlast.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        '
-        'Tbrecord
-        '
-        Me.Tbrecord.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.Tbrecord.Enabled = False
-        Me.Tbrecord.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.Tbrecord.Name = "Tbrecord"
-        Me.Tbrecord.Size = New System.Drawing.Size(200, 41)
-        Me.Tbrecord.Text = "แสดง 0 รายการ จาก 0 รายการ"
-        Me.Tbrecord.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'ToolStrip4
-        '
-        Me.ToolStrip4.BackColor = System.Drawing.Color.Transparent
-        Me.ToolStrip4.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Btrefresh, Me.Btlistfind, Me.Tstbkeyword, Me.Tscboth, Me.ToolStripLabel4, Me.Tscbdate, Me.ToolStripLabel3})
-        Me.ToolStrip4.Location = New System.Drawing.Point(1, 1)
-        Me.ToolStrip4.Name = "ToolStrip4"
-        Me.ToolStrip4.Size = New System.Drawing.Size(1006, 49)
-        Me.ToolStrip4.TabIndex = 66
-        Me.ToolStrip4.Text = "ToolStrip4"
-        '
-        'Btrefresh
-        '
-        Me.Btrefresh.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.Btrefresh.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btrefresh.Image = Global.XpressPlus.My.Resources.Resources.Updated
-        Me.Btrefresh.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.Btrefresh.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.Btrefresh.Name = "Btrefresh"
-        Me.Btrefresh.Size = New System.Drawing.Size(71, 46)
-        Me.Btrefresh.Text = "Refresh"
-        Me.Btrefresh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.Btrefresh.Visible = False
-        '
-        'Btlistfind
-        '
-        Me.Btlistfind.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.Btlistfind.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btlistfind.Image = Global.XpressPlus.My.Resources.Resources.Findicon
-        Me.Btlistfind.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.Btlistfind.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.Btlistfind.Name = "Btlistfind"
-        Me.Btlistfind.Size = New System.Drawing.Size(48, 46)
-        Me.Btlistfind.Text = "ค้นหา"
-        Me.Btlistfind.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        '
-        'Tstbkeyword
-        '
-        Me.Tstbkeyword.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.Tstbkeyword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Tstbkeyword.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Tstbkeyword.Name = "Tstbkeyword"
-        Me.Tstbkeyword.Size = New System.Drawing.Size(120, 49)
-        '
-        'Tscboth
-        '
-        Me.Tscboth.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.Tscboth.BackColor = System.Drawing.Color.Transparent
-        Me.Tscboth.Checked = True
-        Me.Tscboth.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Tscboth.Name = "Tscboth"
-        Me.Tscboth.Size = New System.Drawing.Size(55, 46)
-        Me.Tscboth.Text = "อื่นๆ"
-        Me.Tscboth.ToolStripCheckBoxEnabled = True
-        '
-        'ToolStripLabel4
-        '
-        Me.ToolStripLabel4.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.ToolStripLabel4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolStripLabel4.Name = "ToolStripLabel4"
-        Me.ToolStripLabel4.Size = New System.Drawing.Size(24, 46)
-        Me.ToolStripLabel4.Text = "ถึง"
-        '
-        'Tscbdate
-        '
-        Me.Tscbdate.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.Tscbdate.BackColor = System.Drawing.Color.Transparent
-        Me.Tscbdate.Checked = False
-        Me.Tscbdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Tscbdate.Name = "Tscbdate"
-        Me.Tscbdate.Size = New System.Drawing.Size(55, 46)
-        Me.Tscbdate.Text = "วันที่"
-        Me.Tscbdate.ToolStripCheckBoxEnabled = True
-        '
-        'ToolStripLabel3
-        '
-        Me.ToolStripLabel3.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.ToolStripLabel3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolStripLabel3.Name = "ToolStripLabel3"
-        Me.ToolStripLabel3.Size = New System.Drawing.Size(68, 46)
-        Me.ToolStripLabel3.Text = "ค้นหาจาก"
-        '
-        'TabItem2
-        '
-        Me.TabItem2.AttachedControl = Me.TabControlPanel2
-        Me.TabItem2.Name = "TabItem2"
-        Me.TabItem2.Text = "ผ้าในโรงทอ"
+        Me.balanhave.DataPropertyName = "balanhave"
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle11.Format = "N2"
+        DataGridViewCellStyle11.NullValue = Nothing
+        Me.balanhave.DefaultCellStyle = DataGridViewCellStyle11
+        Me.balanhave.HeaderText = "ยอดคงเหลือ(lb)"
+        Me.balanhave.Name = "balanhave"
+        Me.balanhave.ReadOnly = True
+        Me.balanhave.Width = 130
         '
         'Formknittingform
         '
@@ -3149,6 +3180,14 @@ Partial Class Formknittingform
         CType(Me.YanList, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ToolStrip7.ResumeLayout(False)
         Me.ToolStrip7.PerformLayout()
+        Me.TabControlPanel2.ResumeLayout(False)
+        Me.TabControlPanel2.PerformLayout()
+        CType(Me.ContextMenuBar1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Dgvlist, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ToolStrip5.ResumeLayout(False)
+        Me.ToolStrip5.PerformLayout()
+        Me.ToolStrip4.ResumeLayout(False)
+        Me.ToolStrip4.PerformLayout()
         Me.TabControlPanel1.ResumeLayout(False)
         Me.TabControlPanel1.PerformLayout()
         Me.GroupPanel3.ResumeLayout(False)
@@ -3191,14 +3230,6 @@ Partial Class Formknittingform
         CType(Me.BYanList, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ToolStrip8.ResumeLayout(False)
         Me.ToolStrip8.PerformLayout()
-        Me.TabControlPanel2.ResumeLayout(False)
-        Me.TabControlPanel2.PerformLayout()
-        CType(Me.ContextMenuBar1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Dgvlist, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ToolStrip5.ResumeLayout(False)
-        Me.ToolStrip5.PerformLayout()
-        Me.ToolStrip4.ResumeLayout(False)
-        Me.ToolStrip4.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -3399,21 +3430,6 @@ Partial Class Formknittingform
     Friend WithEvents OrderSum As DataGridViewTextBoxColumn
     Friend WithEvents FDlvno As DataGridViewTextBoxColumn
     Friend WithEvents Netpound As DataGridViewTextBoxColumn
-    Friend WithEvents Stat As DataGridViewTextBoxColumn
-    Friend WithEvents ComidYarn As DataGridViewTextBoxColumn
-    Friend WithEvents DlvnoDyed As DataGridViewTextBoxColumn
-    Friend WithEvents Ord As DataGridViewTextBoxColumn
-    Friend WithEvents Clothids As DataGridViewTextBoxColumn
-    Friend WithEvents Clothnos As DataGridViewTextBoxColumn
-    Friend WithEvents VKnitdesc As DataGridViewTextBoxColumn
-    Friend WithEvents NwppcYarn As DataGridViewTextBoxColumn
-    Friend WithEvents GwppcYarn As DataGridViewTextBoxColumn
-    Friend WithEvents NwkgpcYarn As DataGridViewTextBoxColumn
-    Friend WithEvents GwkgpcYarn As DataGridViewTextBoxColumn
-    Friend WithEvents Nofc As DataGridViewTextBoxColumn
-    Friend WithEvents Updusr As DataGridViewTextBoxColumn
-    Friend WithEvents Uptype As DataGridViewTextBoxColumn
-    Friend WithEvents Uptime As DataGridViewTextBoxColumn
     Friend WithEvents TabControlPanel4 As DevComponents.DotNetBar.TabControlPanel
     Friend WithEvents BSendYan As DataGridView
     Friend WithEvents BFYanList As DataGridView
@@ -3443,4 +3459,21 @@ Partial Class Formknittingform
     Friend WithEvents BUpdusr As DataGridViewTextBoxColumn
     Friend WithEvents BUptype As DataGridViewTextBoxColumn
     Friend WithEvents BUptime As DataGridViewTextBoxColumn
+    Friend WithEvents Stat As DataGridViewTextBoxColumn
+    Friend WithEvents ComidYarn As DataGridViewTextBoxColumn
+    Friend WithEvents DlvnoDyed As DataGridViewTextBoxColumn
+    Friend WithEvents Ord As DataGridViewTextBoxColumn
+    Friend WithEvents Clothids As DataGridViewTextBoxColumn
+    Friend WithEvents Clothnos As DataGridViewTextBoxColumn
+    Friend WithEvents VKnitdesc As DataGridViewTextBoxColumn
+    Friend WithEvents NwppcYarn As DataGridViewTextBoxColumn
+    Friend WithEvents GwppcYarn As DataGridViewTextBoxColumn
+    Friend WithEvents NwkgpcYarn As DataGridViewTextBoxColumn
+    Friend WithEvents GwkgpcYarn As DataGridViewTextBoxColumn
+    Friend WithEvents Nofc As DataGridViewTextBoxColumn
+    Friend WithEvents Updusr As DataGridViewTextBoxColumn
+    Friend WithEvents Uptype As DataGridViewTextBoxColumn
+    Friend WithEvents Uptime As DataGridViewTextBoxColumn
+    Friend WithEvents balansend As DataGridViewTextBoxColumn
+    Friend WithEvents balanhave As DataGridViewTextBoxColumn
 End Class

@@ -43,6 +43,11 @@ Public Class Formknittingform
 
         BindingYanlist()
         BindingBYanlist()
+        For i = 0 To YanList.RowCount - 1
+            YanList.Rows(i).Cells("balansend").Value = Format(FindRekg(BindingNetKG($"{YanList.Rows(i).Cells("DlvnoDyed").Value}")), "###,##0.#0")
+            YanList.Rows(i).Cells("balanhave").Value = Format(BindingNitSend($"{YanList.Rows(i).Cells("DlvnoDyed").Value}") - FindRekg(BindingNetKG($"{YanList.Rows(i).Cells("DlvnoDyed").Value}")), "###,###.#0")
+        Next
+        Bindinglist()
     End Sub
     Private Sub Btmnew_Click(sender As Object, e As EventArgs) Handles Btmnew.Click
         Createnew()
@@ -103,8 +108,17 @@ Public Class Formknittingform
             BindingNavigator1.Enabled = False
             Mainbuttoncancel()
         End If
+        Btmcancel_Click(sender, e)
+        For i = 0 To YanList.RowCount - 1
+            YanList.Rows(i).Cells("balansend").Value = Format(FindRekg(BindingNetKG($"{YanList.Rows(i).Cells("DlvnoDyed").Value}")), "###,##0.#0")
+            YanList.Rows(i).Cells("balanhave").Value = Format(BindingNitSend($"{YanList.Rows(i).Cells("DlvnoDyed").Value}") - FindRekg(BindingNetKG($"{YanList.Rows(i).Cells("DlvnoDyed").Value}")), "###,###.#0")
+        Next
+        Bindinglist()
     End Sub
     Private Sub Btmsave_Click(sender As Object, e As EventArgs) Handles Btmsave.Click
+        If Dgvmas.RowCount = 0 Then
+            Exit Sub
+        End If
         If CDbl(WgtKgStore.Text) < CDbl(Tstbsumkg.Text) Then
             Informmessage($"น้ำหนักผ้าที่สั่งทอต้องเท่ากับเส้นด้ายที่ส่งไป")
             Exit Sub
@@ -135,6 +149,14 @@ Public Class Formknittingform
             End If
         Else
             Editdoc()
+            If CDbl(WgtKgStore.Text) > CDbl(Tstbsumkg.Text) AndAlso Cbfromgsc.Checked = False Then
+                InsertmasterOther()
+                UpddetailsOther("A")
+                If Gsusername = "SUPHATS" Then
+                Else
+                    Insertlog(Gscomid, Gsusergroupid, Gsuserid, Gsusername, "F121", Trim(Tbknitcomno.Text), "A", "สร้างรายการ ใบสั่งทอจากภายนอก", Formatdatesave(Now), Computername, Usrproname)
+                End If
+            End If
         End If
         Tsbwsave.Visible = False
         Btmreports_Click(sender, e)
@@ -146,6 +168,11 @@ Public Class Formknittingform
         BindingNavigator1.Enabled = False
         Mainbuttoncancel()
         Btmcancel_Click(sender, e)
+        For i = 0 To YanList.RowCount - 1
+            YanList.Rows(i).Cells("balansend").Value = Format(FindRekg(BindingNetKG($"{YanList.Rows(i).Cells("DlvnoDyed").Value}")), "###,##0.#0")
+            YanList.Rows(i).Cells("balanhave").Value = Format(BindingNitSend($"{YanList.Rows(i).Cells("DlvnoDyed").Value}") - FindRekg(BindingNetKG($"{YanList.Rows(i).Cells("DlvnoDyed").Value}")), "###,###.#0")
+        Next
+        Bindinglist()
     End Sub
     Private Sub Btmcancel_Click(sender As Object, e As EventArgs) Handles Btmcancel.Click
         Clrtxtbox()
@@ -176,6 +203,16 @@ Public Class Formknittingform
         Frm.Tbremark.Text = Trim(Tbremark.Text)
         Frm.TextBox1.Text = Trim(TbfactoryName.Text)
         Frm.Tbdlvyarnno.Text = Trim(Tbdlvyarnno.Text)
+
+        If Format(BindingNitSend($"{Trim(Tbdlvyarnno.Text)}") - FindRekg(BindingNetKG($"{Trim(Tbdlvyarnno.Text)}")), "###,##0.#0") > 0.2 Or Format(BindingNitSend($"{Trim(Tbdlvyarnno.Text)}") - FindRekg(BindingNetKG($"{Trim(Tbdlvyarnno.Text)}")), "###,##0.#0") < -0.2 Then
+            'MsgBox(Format(BindingNitSend($"{Trim(Tbdlvyarnno.Text)}") - FindRekg(BindingNetKG($"{Trim(Tbdlvyarnno.Text)}")), "###,##0.#0"))
+            Frm.balanhave.Text = Format(BindingNitSend($"{Trim(Tbdlvyarnno.Text)}") - FindRekg(BindingNetKG($"{Trim(Tbdlvyarnno.Text)}")), "###,##0.#0")
+            If BindingNitSend($"{Trim(Tbdlvyarnno.Text)}") = 0 Then
+                Frm.balanhave.Text = 0
+            End If
+        Else
+            Frm.balanhave.Text = 0
+        End If
 
         If Cbfromgsc.Checked = True Then
             Frm.TextBox2.Text = "1"
@@ -213,6 +250,11 @@ Public Class Formknittingform
         BindingNavigator1.Enabled = False
         Mainbuttoncancel()
         TabControl1.SelectedTabIndex = 0
+        For i = 0 To YanList.RowCount - 1
+            YanList.Rows(i).Cells("balansend").Value = Format(FindRekg(BindingNetKG($"{YanList.Rows(i).Cells("DlvnoDyed").Value}")), "###,##0.#0")
+            YanList.Rows(i).Cells("balanhave").Value = Format(BindingNitSend($"{YanList.Rows(i).Cells("DlvnoDyed").Value}") - FindRekg(BindingNetKG($"{YanList.Rows(i).Cells("DlvnoDyed").Value}")), "###,###.#0")
+        Next
+        Bindinglist()
     End Sub
     Private Sub Btmfind_Click(sender As Object, e As EventArgs) Handles Btmfind.Click
         TabControl1.SelectedTabIndex = 0
@@ -305,7 +347,7 @@ Public Class Formknittingform
         If e.Button = Windows.Forms.MouseButtons.Right Then
             If Me.YanList.Rows.Count < 1 Then Exit Sub
             If e.RowIndex < 0 Then Exit Sub
-            YanList.CurrentCell = YanList(2, e.RowIndex)
+            'YanList.CurrentCell = YanList(2, e.RowIndex)
             Me.YanList.Rows(e.RowIndex).Selected = True
             EditcontextYanList()
         End If
@@ -533,7 +575,7 @@ Public Class Formknittingform
     End Sub
     Private Sub Btdbadd_Click(sender As Object, e As EventArgs) Handles Btdbadd.Click
         Tblbs_TextChanged(sender, e)
-        Tbkg_KeyDown(sender, e)
+        'Tbkg_KeyDown(sender, e)
         'Btfindfabtypeid.Focus()
         SelectData()
         GroupPanel2.Visible = True
@@ -663,6 +705,11 @@ Public Class Formknittingform
     End Sub
     Private Sub BtrefreshYan_Click(sender As Object, e As EventArgs) Handles BtrefreshYan.Click
         BindingYanlist()
+        For i = 0 To YanList.RowCount - 1
+            YanList.Rows(i).Cells("balansend").Value = Format(FindRekg(BindingNetKG($"{YanList.Rows(i).Cells("DlvnoDyed").Value}")), "###,##0.#0")
+            YanList.Rows(i).Cells("balanhave").Value = Format(BindingNitSend($"{YanList.Rows(i).Cells("DlvnoDyed").Value}") - FindRekg(BindingNetKG($"{YanList.Rows(i).Cells("DlvnoDyed").Value}")), "###,###.#0")
+        Next
+        Bindinglist()
     End Sub
     Private Sub BindingNavigator1_RefreshItems(sender As Object, e As EventArgs) Handles BindingNavigator1.RefreshItems
         Tsbwsave.Visible = False
@@ -884,10 +931,11 @@ Checkloop:
         TYanlist = New DataTable
         TYanlist = SQLCommand($"SELECT Tdeliyarndetxp.Comid,Tdeliyarndetxp.Dlvno,Tdeliyarndetxp.Ord,
                                 Tdeliyarndetxp.Yarnid,Tdeliyarndetxp.Lotno,
-                                Tdeliyarndetxp.Nwppc,Tdeliyarndetxp.Nwkgpc,
+                                Tdeliyarndetxp.Nwppc*Tdeliyarndetxp.Nofc AS Nwppc,
+                                Tdeliyarndetxp.Nwkgpc*Tdeliyarndetxp.Nofc AS Nwkgpc,
                                 Tdeliyarndetxp.Gwppc,Tdeliyarndetxp.Gwkgpc,
                                 Tdeliyarndetxp.Nofc,Tdeliyarndetxp.Updusr,Tdeliyarndetxp.Uptype,
-                                Tdeliyarndetxp.Uptime,Vdeliyarnmas.Knitdesc
+                                Tdeliyarndetxp.Uptime,Vdeliyarnmas.Knitdesc,'' AS balanhave,'' AS balansend
                                 FROM Tdeliyarndetxp LEFT OUTER JOIN Vdeliyarnmas
                                 ON Tdeliyarndetxp.Dlvno = Vdeliyarnmas.Dlvno
                                 WHERE Tdeliyarndetxp.Comid = '{Gscomid}'")
@@ -898,7 +946,7 @@ Checkloop:
     End Sub
     Private Sub BindingBYanlist()
         TBYanlist = New DataTable
-        TBYanlist = SQLCommand($"SELECT Tdeliyarndetxp.Comid,Tdeliyarndetxp.Dlvno,Tdeliyarndetxp.Ord,
+        TBYanlist = SQLCommand($"Select Tdeliyarndetxp.Comid,Tdeliyarndetxp.Dlvno,Tdeliyarndetxp.Ord,
                                 Tdeliyarndetxp.Yarnid,Tdeliyarndetxp.Lotno,
                                 Tdeliyarndetxp.Nwppc,Tdeliyarndetxp.Nwkgpc,
                                 Tdeliyarndetxp.Gwppc,Tdeliyarndetxp.Gwkgpc,
@@ -965,6 +1013,34 @@ Checkloop:
             Binddetailsknit()
         End If
     End Sub
+    Private Function BindingNitSend(So As String)
+        Tlist = New DataTable
+        Tlist = SQLCommand($"SELECT Tdeliyarndetxp.Dlvno,SUM(Tdeliyarndetxp.Nwppc*Tdeliyarndetxp.Nofc) AS NetKG 
+                                FROM Tdeliyarndetxp
+	                            WHERE Tdeliyarndetxp.Comid = '{Gscomid}' 
+                                AND Tdeliyarndetxp.Dlvno = '{So}'
+	                            GROUP BY Tdeliyarndetxp.Dlvno -- ได้เป็นปอนที่มี")
+        If Tlist.Rows.Count = 0 Then
+            Return 0
+            Exit Function
+        End If
+        Return Tlist(0)(1)
+    End Function
+    Private Function BindingNetKG(So As String)
+        Tlist = New DataTable
+        Tlist = SQLCommand($"SELECT dbo.Vknitcommas.Dlvno, SUM(dbo.Vknitcomdet.Wgtkg) AS NitSend
+								FROM dbo.Vknitcommas LEFT OUTER JOIN
+								dbo.Vknitcomdet ON dbo.Vknitcommas.Comid = dbo.Vknitcomdet.Comid
+								AND dbo.Vknitcommas.Knitcomno = dbo.Vknitcomdet.Knitcomno
+								WHERE Vknitcommas.Comid = '{Gscomid}' 
+                                AND Vknitcommas.Dlvno = '{So}' 
+                                GROUP BY Vknitcommas.Dlvno -- ส่งไป")
+        If Tlist.Rows.Count = 0 Then
+            Return 0
+            Exit Function
+        End If
+        Return Tlist(0)(1)
+    End Function
     Private Sub Findyarn()
         Dim Tfyarnd As New DataTable
         Tfyarnd = SQLCommand("SELECT Yarnid,Yarndesc FROM Tyarnxp
@@ -1071,6 +1147,12 @@ Checkloop:
                     " & Sumlbs & "," & Sumkg & ",'" & Tyarnid & "')")
     End Sub
     Private Sub InsertmasterOther()
+        Dim COUNTS As New DataTable
+        COUNTS = SQLCommand($"SELECT COUNT(*) AS COUNTS FROM Tdeliyarnxp WHERE Dlvno = '{Trim(Tbdlvyarnno.Text)}'")
+        If COUNTS(0)(0) >= 1 Then
+            Exit Sub
+        End If
+        'Trim(Tbdlvyarnno.Text)
         SQLCommand($"INSERT INTO Tdeliyarnxp(Comid,Dyarndate,Dlvno,Knitid,Dremark,Sremark,Sstatus,Updusr,Uptype,Uptime)
                     VALUES('{Gscomid}','{Formatshortdatesave(Dtpknitcomdate.Value)}','{Trim(Tbdlvyarnno.Text)}',
                            '{Trim(Tbknitid.Text)}','{Trim(Tbremark.Text)}','ส่งด้ายไปโรงทอ','1','{Gsuserid}','A','{Formatdatesave(Now)}')")
@@ -1128,6 +1210,17 @@ Checkloop:
         'MsgBox(Trim(Tbyarnid.Text))
         'MsgBox(CDbl(Tstbsumkg.Text))
         'MsgBox(Trim(Tbyarnid.Text) - CDbl(Tstbsumkg.Text))
+        Dim COUNTS As New DataTable
+        COUNTS = SQLCommand($"SELECT COUNT(*) AS COUNTS FROM Tdeliyarndetxp WHERE Dlvno = '{Trim(Tbdlvyarnno.Text)}'")
+        If COUNTS(0)(0) >= 1 Then
+            SQLCommand($"UPDATE Tdeliyarndetxp SET Comid = '{Gscomid}',Ord = '1',Yarnid = '{Trim(Tbyarnid.Text)}',
+                                                Lotno = '-',Nwkgpc = '{Trim(Tbkg.Text)}',Nwppc = '{Trim(Tblbs.Text)}',
+                                                Gwkgpc = '0',Gwppc = '0',Nofc = '1',Updusr = '10001',Uptype = '{Etype}',
+                                                Uptime = '{Formatdatesave(Now)}'
+                                                WHERE Dlvno = '{Trim(Tbdlvyarnno.Text)}'")
+            Exit Sub
+        End If
+
         SQLCommand($"INSERT INTO Tdeliyarndetxp(Comid,Dlvno,Ord,Yarnid,Lotno,Nwkgpc,Nwppc,Gwkgpc,Gwppc,Nofc,Updusr,Uptype,Uptime)
                         VALUES ('{Gscomid}','{Trim(Tbdlvyarnno.Text)}','1','{Trim(Tbyarnid.Text)}','-','{Trim(Tbkg.Text)}','{Trim(Tblbs.Text)}','0','0','1','10001','{Etype}','{Formatdatesave(Now)}')")
     End Sub
@@ -1404,11 +1497,6 @@ Checkloop:
         Ctddel.Enabled = True
         Btdbadd.Enabled = True
     End Sub
-
-    Private Sub Tbdlvyarnno_TextChanged(sender As Object, e As EventArgs) Handles Tbdlvyarnno.TextChanged
-
-    End Sub
-
     Private Sub NewBtn()
         Btfindfabtypeid.Enabled = True
         Dtpknitcomdate.Enabled = True

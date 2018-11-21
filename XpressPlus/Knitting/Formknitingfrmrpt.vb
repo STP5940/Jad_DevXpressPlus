@@ -5,7 +5,7 @@ Public Class Formknitingfrmrpt
         ReportViewer1.SetDisplayMode(DisplayMode.PrintLayout)
         ReportViewer1.ZoomMode = ZoomMode.Percent
         ReportViewer1.ZoomPercent = 100
-        Dim Par2, Par3, Par4, Par5, Par6, Par7, Par8 As ReportParameter
+        Dim Par2, Par3, Par4, Par5, Par6, Par7, Par8, par9 As ReportParameter
         Par2 = New ReportParameter("Parto", Trim(Tbto.Text), True)
         Me.ReportViewer1.LocalReport.SetParameters(New ReportParameter() {Par2})
         Par3 = New ReportParameter("Pardate", Trim(Tbdate.Text), True)
@@ -20,6 +20,9 @@ Public Class Formknitingfrmrpt
         Me.ReportViewer1.LocalReport.SetParameters(New ReportParameter() {Par7})
         Par8 = New ReportParameter("Gscnew", Trim(TextBox2.Text), True)
         Me.ReportViewer1.LocalReport.SetParameters(New ReportParameter() {Par8})
+        Par9 = New ReportParameter("balanhave", Trim(balanhave.Text), True)
+        Me.ReportViewer1.LocalReport.SetParameters(New ReportParameter() {Par9})
+
 
         'Dim LBS, Dlvno As String
         'Dim DataTable2 As New DataTable

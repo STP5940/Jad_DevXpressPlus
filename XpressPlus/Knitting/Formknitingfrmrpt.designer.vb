@@ -27,6 +27,7 @@ Partial Class Formknitingfrmrpt
         Me.Btmclose = New System.Windows.Forms.ToolStripButton()
         Me.TabControl1 = New DevComponents.DotNetBar.TabControl()
         Me.TabControlPanel1 = New DevComponents.DotNetBar.TabControlPanel()
+        Me.balanhave = New Normtextbox.Normtextbox()
         Me.GSumSend = New System.Windows.Forms.DataGridView()
         Me.Tbdlvyarnno = New Normtextbox.Normtextbox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
@@ -87,6 +88,7 @@ Partial Class Formknitingfrmrpt
         '
         'TabControlPanel1
         '
+        Me.TabControlPanel1.Controls.Add(Me.balanhave)
         Me.TabControlPanel1.Controls.Add(Me.GSumSend)
         Me.TabControlPanel1.Controls.Add(Me.Tbdlvyarnno)
         Me.TabControlPanel1.Controls.Add(Me.TextBox2)
@@ -112,6 +114,18 @@ Partial Class Formknitingfrmrpt
         Me.TabControlPanel1.Style.GradientAngle = 90
         Me.TabControlPanel1.TabIndex = 1
         Me.TabControlPanel1.TabItem = Me.TabItem1
+        '
+        'balanhave
+        '
+        Me.balanhave.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.balanhave.Enabled = False
+        Me.balanhave.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.balanhave.Location = New System.Drawing.Point(896, 114)
+        Me.balanhave.MaxLength = 150
+        Me.balanhave.Name = "balanhave"
+        Me.balanhave.Size = New System.Drawing.Size(100, 24)
+        Me.balanhave.TabIndex = 79
+        Me.balanhave.Visible = False
         '
         'GSumSend
         '
@@ -242,4 +256,5 @@ Partial Class Formknitingfrmrpt
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Tbdlvyarnno As Normtextbox.Normtextbox
     Friend WithEvents GSumSend As DataGridView
+    Friend WithEvents balanhave As Normtextbox.Normtextbox
 End Class
