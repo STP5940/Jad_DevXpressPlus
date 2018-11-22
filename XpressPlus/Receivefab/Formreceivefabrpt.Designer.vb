@@ -23,12 +23,18 @@ Partial Class Formreceivefabrpt
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.Btmclose = New System.Windows.Forms.ToolStripButton()
         Me.TabControl1 = New DevComponents.DotNetBar.TabControl()
         Me.TabControlPanel1 = New DevComponents.DotNetBar.TabControlPanel()
+        Me.Countfabric = New System.Windows.Forms.DataGridView()
+        Me.Cclothno = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Cclothtype = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CDwidth = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Count = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CRollwage = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Tbdyedcomno = New Normtextbox.Normtextbox()
         Me.Tbdhname = New Normtextbox.Normtextbox()
         Me.Tbdhid = New Normtextbox.Normtextbox()
@@ -62,18 +68,12 @@ Partial Class Formreceivefabrpt
         Me.Tbdate = New System.Windows.Forms.TextBox()
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.TabItem1 = New DevComponents.DotNetBar.TabItem(Me.components)
-        Me.Countfabric = New System.Windows.Forms.DataGridView()
-        Me.Cclothno = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Cclothtype = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CDwidth = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Count = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CRollwage = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.TabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabControlPanel1.SuspendLayout()
-        CType(Me.Dgvmas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Countfabric, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Dgvmas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ToolStrip1
@@ -149,6 +149,44 @@ Partial Class Formreceivefabrpt
         Me.TabControlPanel1.Style.GradientAngle = 90
         Me.TabControlPanel1.TabIndex = 1
         Me.TabControlPanel1.TabItem = Me.TabItem1
+        '
+        'Countfabric
+        '
+        Me.Countfabric.AllowUserToAddRows = False
+        Me.Countfabric.AllowUserToDeleteRows = False
+        Me.Countfabric.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Countfabric.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Cclothno, Me.Cclothtype, Me.CDwidth, Me.Count, Me.CRollwage})
+        Me.Countfabric.Location = New System.Drawing.Point(471, 451)
+        Me.Countfabric.Name = "Countfabric"
+        Me.Countfabric.Size = New System.Drawing.Size(525, 86)
+        Me.Countfabric.TabIndex = 130
+        Me.Countfabric.Visible = False
+        '
+        'Cclothno
+        '
+        Me.Cclothno.HeaderText = "เบอร์ผ้า"
+        Me.Cclothno.Name = "Cclothno"
+        '
+        'Cclothtype
+        '
+        Me.Cclothtype.HeaderText = "ประเภทผ้า"
+        Me.Cclothtype.Name = "Cclothtype"
+        '
+        'CDwidth
+        '
+        Me.CDwidth.HeaderText = "หน้ากว้าง"
+        Me.CDwidth.Name = "CDwidth"
+        '
+        'Count
+        '
+        Me.Count.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Count.HeaderText = "Count"
+        Me.Count.Name = "Count"
+        '
+        'CRollwage
+        '
+        Me.CRollwage.HeaderText = "CRollwage"
+        Me.CRollwage.Name = "CRollwage"
         '
         'Tbdyedcomno
         '
@@ -237,14 +275,14 @@ Partial Class Formreceivefabrpt
         '
         Me.Dgvmas.AllowUserToAddRows = False
         Me.Dgvmas.AllowUserToDeleteRows = False
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Dgvmas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Dgvmas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.Dgvmas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Dgvmas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Mstat, Me.rollid, Me.Mcomid, Me.Order, Me.Dhid, Me.Mdyedhdesc, Me.Billdyedno, Me.Lotno, Me.Clothid, Me.Mclothno, Me.Clothtype, Me.Dwidth, Me.Shadeid, Me.Shadedesc, Me.Mkong, Me.Rollwage, Me.Instk})
         Me.Dgvmas.Location = New System.Drawing.Point(326, 543)
@@ -380,10 +418,10 @@ Partial Class Formreceivefabrpt
         'Rollwage
         '
         Me.Rollwage.DataPropertyName = "Rollwage"
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle4.Format = "N2"
-        DataGridViewCellStyle4.NullValue = Nothing
-        Me.Rollwage.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle2.Format = "N2"
+        DataGridViewCellStyle2.NullValue = Nothing
+        Me.Rollwage.DefaultCellStyle = DataGridViewCellStyle2
         Me.Rollwage.HeaderText = "น้ำหนัก(ก.ก.)"
         Me.Rollwage.Name = "Rollwage"
         Me.Rollwage.ReadOnly = True
@@ -457,45 +495,7 @@ Partial Class Formreceivefabrpt
         '
         Me.TabItem1.AttachedControl = Me.TabControlPanel1
         Me.TabItem1.Name = "TabItem1"
-        Me.TabItem1.Text = "ใบสังทอ"
-        '
-        'Countfabric
-        '
-        Me.Countfabric.AllowUserToAddRows = False
-        Me.Countfabric.AllowUserToDeleteRows = False
-        Me.Countfabric.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.Countfabric.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Cclothno, Me.Cclothtype, Me.CDwidth, Me.Count, Me.CRollwage})
-        Me.Countfabric.Location = New System.Drawing.Point(471, 451)
-        Me.Countfabric.Name = "Countfabric"
-        Me.Countfabric.Size = New System.Drawing.Size(525, 86)
-        Me.Countfabric.TabIndex = 130
-        Me.Countfabric.Visible = False
-        '
-        'Cclothno
-        '
-        Me.Cclothno.HeaderText = "เบอร์ผ้า"
-        Me.Cclothno.Name = "Cclothno"
-        '
-        'Cclothtype
-        '
-        Me.Cclothtype.HeaderText = "ประเภทผ้า"
-        Me.Cclothtype.Name = "Cclothtype"
-        '
-        'CDwidth
-        '
-        Me.CDwidth.HeaderText = "หน้ากว้าง"
-        Me.CDwidth.Name = "CDwidth"
-        '
-        'Count
-        '
-        Me.Count.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Count.HeaderText = "Count"
-        Me.Count.Name = "Count"
-        '
-        'CRollwage
-        '
-        Me.CRollwage.HeaderText = "CRollwage"
-        Me.CRollwage.Name = "CRollwage"
+        Me.TabItem1.Text = "ใบรับผ้าสีจากโรงย้อม"
         '
         'Formreceivefabrpt
         '
@@ -513,8 +513,8 @@ Partial Class Formreceivefabrpt
         Me.TabControl1.ResumeLayout(False)
         Me.TabControlPanel1.ResumeLayout(False)
         Me.TabControlPanel1.PerformLayout()
-        CType(Me.Dgvmas, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Countfabric, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Dgvmas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
