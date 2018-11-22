@@ -200,7 +200,7 @@ Partial Class FormknittnolistOld
         Me.ControlBox = False
         Me.Controls.Add(Me.TabControl1)
         Me.Name = "FormknittnolistOld"
-        Me.Text = "FormknittnolistOld"
+        Me.Text = "เลขที่บิลผ้าดิบ"
         CType(Me.TabControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
         Me.TabControlPanel1.ResumeLayout(False)

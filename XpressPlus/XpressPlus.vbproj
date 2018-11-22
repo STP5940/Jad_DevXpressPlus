@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{7EB23751-8DE5-4E79-AFA1-86961D5BD577}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>XpressPlus.Formknittingform</StartupObject>
+    <StartupObject>XpressPlus.FormreceivefabcolorsOld</StartupObject>
     <RootNamespace>XpressPlus</RootNamespace>
     <AssemblyName>XpressPlus</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -170,6 +170,54 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ReceivefabOld\FormaeformreceivefabcolorsOld.designer.vb">
+      <DependentUpon>FormaeformreceivefabcolorsOld.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReceivefabOld\FormaeformreceivefabcolorsOld.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceivefabOld\FormdyeddetlistOld.designer.vb">
+      <DependentUpon>FormdyeddetlistOld.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReceivefabOld\FormdyeddetlistOld.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceivefabOld\FormdyedlistOld.designer.vb">
+      <DependentUpon>FormdyedlistOld.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReceivefabOld\FormdyedlistOld.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceivefabOld\FormknittnolistOld.designer.vb">
+      <DependentUpon>FormknittnolistOld.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReceivefabOld\FormknittnolistOld.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceivefabOld\FormreceivefabcolorsOld.designer.vb">
+      <DependentUpon>FormreceivefabcolorsOld.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReceivefabOld\FormreceivefabcolorsOld.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceivefabOld\FormreceivefabrptOld.designer.vb">
+      <DependentUpon>FormreceivefabrptOld.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReceivefabOld\FormreceivefabrptOld.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceivefabOld\FormrefabcolorlotnoOld.designer.vb">
+      <DependentUpon>FormrefabcolorlotnoOld.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReceivefabOld\FormrefabcolorlotnoOld.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceivefabOld\FormsheadbyfabOld.Designer.vb">
+      <DependentUpon>FormsheadbyfabOld.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReceivefabOld\FormsheadbyfabOld.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Receivefab\DataCountreport.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -308,6 +356,30 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceivefabOld\FormaeformreceivefabcolorsOld.resx">
+      <DependentUpon>FormaeformreceivefabcolorsOld.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceivefabOld\FormdyeddetlistOld.resx">
+      <DependentUpon>FormdyeddetlistOld.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceivefabOld\FormdyedlistOld.resx">
+      <DependentUpon>FormdyedlistOld.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceivefabOld\FormknittnolistOld.resx">
+      <DependentUpon>FormknittnolistOld.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceivefabOld\FormreceivefabcolorsOld.resx">
+      <DependentUpon>FormreceivefabcolorsOld.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceivefabOld\FormreceivefabrptOld.resx">
+      <DependentUpon>FormreceivefabrptOld.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceivefabOld\FormrefabcolorlotnoOld.resx">
+      <DependentUpon>FormrefabcolorlotnoOld.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceivefabOld\FormsheadbyfabOld.resx">
+      <DependentUpon>FormsheadbyfabOld.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Receivefab\Formaeformreceivefabcolors.resx">
       <DependentUpon>Formaeformreceivefabcolors.vb</DependentUpon>

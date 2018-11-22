@@ -47,8 +47,8 @@ Partial Class FormaeformreceivefabcolorsOld
         Me.Tbcancel = New DevComponents.DotNetBar.Controls.TextBoxX()
         Me.Btcancel = New DevComponents.DotNetBar.ButtonX()
         Me.Btok = New DevComponents.DotNetBar.ButtonX()
-        Me.TabControl1 = New DevComponents.DotNetBar.TabControl()
         Me.Btfindshade = New DevComponents.DotNetBar.ButtonX()
+        Me.TabControl1 = New DevComponents.DotNetBar.TabControl()
         Me.TabControlPanel1.SuspendLayout()
         CType(Me.TabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
@@ -389,6 +389,18 @@ Partial Class FormaeformreceivefabcolorsOld
         Me.Btok.TabIndex = 0
         Me.Btok.Text = "ตกลง"
         '
+        'Btfindshade
+        '
+        Me.Btfindshade.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.Btfindshade.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.Btfindshade.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Btfindshade.Image = Global.XpressPlus.My.Resources.Resources.Find16
+        Me.Btfindshade.Location = New System.Drawing.Point(192, 4)
+        Me.Btfindshade.Name = "Btfindshade"
+        Me.Btfindshade.Size = New System.Drawing.Size(36, 24)
+        Me.Btfindshade.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003
+        Me.Btfindshade.TabIndex = 91
+        '
         'TabControl1
         '
         Me.TabControl1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -406,18 +418,6 @@ Partial Class FormaeformreceivefabcolorsOld
         Me.TabControl1.Tabs.Add(Me.TabItem1)
         Me.TabControl1.Text = "TabControl1"
         '
-        'Btfindshade
-        '
-        Me.Btfindshade.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.Btfindshade.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.Btfindshade.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Btfindshade.Image = Global.XpressPlus.My.Resources.Resources.Find16
-        Me.Btfindshade.Location = New System.Drawing.Point(192, 4)
-        Me.Btfindshade.Name = "Btfindshade"
-        Me.Btfindshade.Size = New System.Drawing.Size(36, 24)
-        Me.Btfindshade.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003
-        Me.Btfindshade.TabIndex = 91
-        '
         'FormaeformreceivefabcolorsOld
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -426,7 +426,7 @@ Partial Class FormaeformreceivefabcolorsOld
         Me.ControlBox = False
         Me.Controls.Add(Me.TabControl1)
         Me.Name = "FormaeformreceivefabcolorsOld"
-        Me.Text = "FormaeformreceivefabcolorsOld"
+        Me.Text = "เพิ่ม แก้ไข รายการผ้าสี"
         Me.TabControlPanel1.ResumeLayout(False)
         Me.TabControlPanel1.PerformLayout()
         CType(Me.TabControl1, System.ComponentModel.ISupportInitialize).EndInit()

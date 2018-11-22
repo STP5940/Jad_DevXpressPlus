@@ -679,3 +679,11 @@ C:\Users\this\Documents\GitHub\Jad_DevXpressPlus\XpressPlus\obj\Debug\XpressPlus
 C:\Users\this\Documents\GitHub\Jad_DevXpressPlus\XpressPlus\obj\Debug\XpressPlus.Formreceivefabrpt.resources
 C:\Users\this\Documents\GitHub\Jad_DevXpressPlus\XpressPlus\obj\Debug\XpressPlus.Formreceivablelist.resources
 C:\Users\this\Documents\GitHub\Jad_DevXpressPlus\XpressPlus\obj\Debug\XpressPlus.Formtemp.resources
+C:\Users\this\Documents\GitHub\Jad_DevXpressPlus\XpressPlus\obj\Debug\XpressPlus.FormaeformreceivefabcolorsOld.resources
+C:\Users\this\Documents\GitHub\Jad_DevXpressPlus\XpressPlus\obj\Debug\XpressPlus.FormdyeddetlistOld.resources
+C:\Users\this\Documents\GitHub\Jad_DevXpressPlus\XpressPlus\obj\Debug\XpressPlus.FormdyedlistOld.resources
+C:\Users\this\Documents\GitHub\Jad_DevXpressPlus\XpressPlus\obj\Debug\XpressPlus.FormknittnolistOld.resources
+C:\Users\this\Documents\GitHub\Jad_DevXpressPlus\XpressPlus\obj\Debug\XpressPlus.FormreceivefabcolorsOld.resources
+C:\Users\this\Documents\GitHub\Jad_DevXpressPlus\XpressPlus\obj\Debug\XpressPlus.FormreceivefabrptOld.resources
+C:\Users\this\Documents\GitHub\Jad_DevXpressPlus\XpressPlus\obj\Debug\XpressPlus.FormrefabcolorlotnoOld.resources
+C:\Users\this\Documents\GitHub\Jad_DevXpressPlus\XpressPlus\obj\Debug\XpressPlus.FormsheadbyfabOld.resources

@@ -54,7 +54,7 @@
     End Function
 
     Private Sub Btfindshade_Click(sender As Object, e As EventArgs) Handles Btfindshade.Click
-        Dim Frm As New Formdyeddetlist
+        Dim Frm As New FormdyeddetlistOld
         Frm.Tbknitbill.Text = Trim(Tbknittbill.Text)
         Showdiaformcenter(Frm, Me)
     End Sub
